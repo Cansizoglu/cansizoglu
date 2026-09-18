@@ -9,7 +9,7 @@ import { posts, postBySlug } from '@/data/blog'
 import { services } from '@/data/services'
 import { centralDistricts } from '@/data/districts'
 import { site } from '@/data/site'
-import { pageMeta, articleJsonLd, breadcrumbJsonLd } from '@/lib/seo'
+import { pageMeta, articleJsonLd } from '@/lib/seo'
 import { createLinker } from '@/lib/autolink'
 import RelatedLinks from '@/components/RelatedLinks'
 import { relatedForPost } from '@/lib/related'
@@ -181,10 +181,6 @@ export default function BlogPostPage({ params }: Props) {
             path: `/blog/${post.slug}`,
             date: post.date,
           }),
-          breadcrumbJsonLd([
-            { name: 'Blog', path: '/blog' },
-            { name: post.title, path: `/blog/${post.slug}` },
-          ]),
         ]}
       />
     </>

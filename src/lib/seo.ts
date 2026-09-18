@@ -8,29 +8,45 @@ type PageMetaInput = {
   images?: string[]
 }
 
+/**
+ * Google başlığı yaklaşık 600 piksel sonra kesiyor; Türkçe metinde bu 60-62
+ * karaktere denk geliyor. Marka adı sona sığıyorsa uzun, sığmıyorsa kısa
+ * biçimiyle ekleniyor; ikisi de sığmıyorsa başlık markasız kalıyor. Böylece
+ * anahtar kelime her zaman başta ve görünür oluyor.
+ */
+const TITLE_MAX = 62
+
+export function composeTitle(title: string) {
+  for (const suffix of [` | ${site.name}`, ' | Cansızoğlu', '']) {
+    if (title.length + suffix.length <= TITLE_MAX) return title + suffix
+  }
+  return title
+}
+
 export function pageMeta({ title, description, path, images }: PageMetaInput): Metadata {
   const url = `${site.url}${path}`
+  const fullTitle = composeTitle(title)
   return {
-    title,
+    title: { absolute: fullTitle },
     description,
     alternates: { canonical: url },
     openGraph: {
       type: 'website',
       locale: 'tr_TR',
       url,
-      title,
+      title: fullTitle,
       description,
       siteName: site.name,
       images: (images ?? ['/img/slider-1.jpg']).map((src) => ({
         url: `${site.url}${src}`,
         width: 1200,
         height: 630,
-        alt: title,
+        alt: fullTitle,
       })),
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: fullTitle,
       description,
     },
   }

@@ -310,7 +310,7 @@ export const posts: BlogPost[] = [
   {
     slug: 'beyaz-esya-tasima-rehberi',
     title: 'Beyaz Eşya Taşıma: Buzdolabı ve Çamaşır Makinesi Kuralları',
-    metaTitle: 'Beyaz Eşya Taşıma | Buzdolabı ve Çamaşır Makinesi Nasıl Taşınır?',
+    metaTitle: 'Beyaz Eşya Taşıma | Buzdolabı ve Makine Nakliyesi',
     metaDescription:
       'Beyaz eşya taşıma kuralları: buzdolabı neden dik taşınmalı, çamaşır makinesi nakliye vidaları, bulaşık makinesi ve fırın için taşıma hazırlığı.',
     excerpt:

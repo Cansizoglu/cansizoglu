@@ -213,7 +213,7 @@ export const kecioren: District = {
       ],
     },
     {
-      slug: 'hasköy',
+      slug: 'haskoy',
       name: 'Hasköy',
       intro:
         'Hasköy, Keçiören ile Altındağ sınırında yer alan, ulaşımı kolay bir bölge. Taşımalarda aktarma ihtiyacı az.',

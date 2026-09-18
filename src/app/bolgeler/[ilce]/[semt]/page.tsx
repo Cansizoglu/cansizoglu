@@ -29,9 +29,11 @@ export function generateMetadata({ params }: Props): Metadata {
   const district = districtByPath(params.ilce)
   const neighborhood = district ? neighborhoodBySlug(district, params.semt) : undefined
   if (!district || !neighborhood) return {}
+  // "Şereflikoçhisar Merkez | Şereflikoçhisar Ankara" gibi tekrarlarda ilçe adı atlanıyor.
+  const scope = neighborhood.name.startsWith(district.name) ? 'Ankara' : `${district.name} Ankara`
   return pageMeta({
-    title: `${neighborhood.name} Evden Eve Nakliyat | ${district.name} Ankara`,
-    description: `${neighborhood.name} evden eve nakliyat: ${district.name} ${neighborhood.name}'de asansörlü, ambalajlı ve sigortalı ev taşıma hizmeti. Ücretsiz keşif ve aynı gün kurulum.`,
+    title: `${neighborhood.name} Evden Eve Nakliyat | ${scope}`,
+    description: `${neighborhood.name} evden eve nakliyat: ${scope} içinde asansörlü, ambalajlı ve sigortalı ev taşıma. Ücretsiz keşif, aynı gün söküm, taşıma ve kurulum.`,
     path: `/bolgeler/${district.path}/${neighborhood.slug}`,
   })
 }

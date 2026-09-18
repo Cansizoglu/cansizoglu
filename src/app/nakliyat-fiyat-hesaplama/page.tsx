@@ -6,7 +6,7 @@ import PriceCalculator from '@/components/PriceCalculator'
 import PriceTable from '@/components/PriceTable'
 import CtaBand from '@/components/CtaBand'
 import Faq from '@/components/Faq'
-import { pageMeta, breadcrumbJsonLd } from '@/lib/seo'
+import { pageMeta } from '@/lib/seo'
 import { priceFactors, calculator, priceUpdatedAt } from '@/data/pricing'
 
 const faq = [
@@ -33,9 +33,9 @@ const faq = [
 ]
 
 export const metadata: Metadata = pageMeta({
-  title: 'Ankara Nakliyat Fiyat Hesaplama | Evden Eve Nakliyat Km Hesaplama',
+  title: 'Ankara Nakliyat Fiyat Hesaplama | Km ve Kat Hesabı',
   description:
-    'Ankara evden eve nakliyat fiyat hesaplama aracı: ilçe, ev tipi, kat ve km bilgisine göre taşınma maliyetinizi saniyeler içinde hesaplayın. Kesin fiyat için ücretsiz keşif.',
+    'Ankara evden eve nakliyat fiyat hesaplama aracı: ilçe, ev tipi, kat ve km bilgisine göre taşınma maliyetinizi saniyeler içinde hesaplayın.',
   path: '/nakliyat-fiyat-hesaplama',
 })
 
@@ -43,17 +43,6 @@ export default function CalculatorPage() {
   return (
     <>
       <Breadcrumbs items={[{ name: 'Fiyat Hesaplama', path: '/nakliyat-fiyat-hesaplama' }]} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            breadcrumbJsonLd([
-              { name: 'Fiyat Hesaplama', path: '/nakliyat-fiyat-hesaplama' },
-            ]),
-          ),
-        }}
-      />
-
       <section className="py-12">
         <div className="container-site">
           <SectionTitle

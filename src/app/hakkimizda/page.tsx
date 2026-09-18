@@ -11,7 +11,7 @@ import { pageMeta } from '@/lib/seo'
 export const metadata: Metadata = pageMeta({
   title: 'Hakkımızda | Cansızoğlu Nakliyat Ankara',
   description:
-    'Cansızoğlu Nakliyat, 1998’den bu yana Ankara’da faaliyet gösteren bir aile şirketi. Evden eve nakliyat, ofis taşıma, asansörlü taşımacılık ve depolama hizmeti veriyoruz.',
+    'Cansızoğlu Nakliyat 1998’den bu yana Ankara’da çalışan bir aile şirketi. Evden eve nakliyat, ofis taşıma, asansörlü taşımacılık ve depolama hizmeti veriyoruz.',
   path: '/hakkimizda',
   images: ['/img/ofis.webp'],
 })
