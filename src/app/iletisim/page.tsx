@@ -68,7 +68,7 @@ export default function ContactPage() {
                 </span>
                 <h2 className="text-base">{channel.title}</h2>
                 <p className="mt-1 font-semibold text-brand-800">{channel.value}</p>
-                <p className="mt-1 text-sm text-slate-500">{channel.note}</p>
+                <p className="mt-1 text-sm text-slate-600">{channel.note}</p>
               </a>
             ))}
           </div>

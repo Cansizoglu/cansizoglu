@@ -21,7 +21,7 @@ export default function DistrictSidebar({
     <aside className="space-y-6">
       <nav className="rounded-xl border border-brand-100 p-6" aria-label={`${district.name} semtleri`}>
         <h2 className="text-lg">{district.name} Semtleri</h2>
-        <p className="mt-1 text-sm text-slate-500">
+        <p className="mt-1 text-sm text-slate-600">
           Semtinizi seçerek o bölgedeki çalışma şeklimizi görün.
         </p>
         <ul className="mt-4 space-y-1">
@@ -86,7 +86,7 @@ export default function DistrictSidebar({
 
       <nav className="rounded-xl border border-brand-100 p-6" aria-label="Taşınma rehberi">
         <h2 className="text-lg">Taşınma rehberi</h2>
-        <p className="mt-1 text-sm text-slate-500">
+        <p className="mt-1 text-sm text-slate-600">
           Taşınmadan önce işinize yarayacak yazılarımız.
         </p>
         <ul className="mt-4 space-y-3 text-sm">

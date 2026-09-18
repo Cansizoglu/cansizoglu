@@ -338,7 +338,7 @@ export default function QuoteForm() {
             placeholder="Sonuç"
           />
         </Field>
-        <p className="mt-2 text-xs text-slate-500">
+        <p className="mt-2 text-xs text-slate-600">
           Bu soru otomatik form gönderimlerini engellemek için sorulur.
         </p>
       </div>
@@ -359,7 +359,7 @@ export default function QuoteForm() {
           Telefonla bildir: {site.phone.gsm}
         </a>
       </div>
-      <p className="mt-4 text-xs leading-5 text-slate-500">
+      <p className="mt-4 text-xs leading-5 text-slate-600">
         Formu gönderdiğinizde bilgileriniz WhatsApp üzerinden tarafımıza iletilir.
         Verileriniz yalnızca fiyat teklifi vermek amacıyla kullanılır.
       </p>

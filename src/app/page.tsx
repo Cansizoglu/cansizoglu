@@ -281,7 +281,7 @@ export default function HomePage() {
                   <span className="block font-semibold text-brand-900">
                     {district.name} Evden Eve Nakliyat
                   </span>
-                  <span className="mt-1 block text-sm text-slate-500">
+                  <span className="mt-1 block text-sm text-slate-600">
                     {district.neighborhoods.length} semtte hizmet
                   </span>
                 </span>

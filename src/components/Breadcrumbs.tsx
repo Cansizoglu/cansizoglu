@@ -9,7 +9,7 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
   return (
     <div className="border-b border-brand-100 bg-brand-50/60">
       <nav className="container-site py-3 text-sm" aria-label="Site haritası">
-        <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-slate-500">
+        <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-slate-600">
           {all.map((item, i) => {
             const last = i === all.length - 1
             return (

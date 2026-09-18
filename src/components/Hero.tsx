@@ -47,16 +47,32 @@ const quickServices = [
 
 export default function Hero() {
   const [index, setIndex] = useState(0)
+  /**
+   * Diğer slaytlar ilk boyamadan sonra DOM'a girer. Hepsi baştan basılsaydı
+   * ekranda görünmeseler bile tarayıcı üçünü birden indirir ve LCP görseli
+   * bant genişliğini onlarla paylaşırdı.
+   */
+  const [rest, setRest] = useState(false)
   const paused = useRef(false)
   const active = slides[index]
 
-  const go = useCallback((i: number) => setIndex((i + slides.length) % slides.length), [])
+  const go = useCallback((i: number) => {
+    setRest(true)
+    setIndex((i + slides.length) % slides.length)
+  }, [])
 
   useEffect(() => {
+    const mount = window.setTimeout(() => setRest(true), 2000)
     const timer = setInterval(() => {
-      if (!paused.current) setIndex((i) => (i + 1) % slides.length)
+      if (!paused.current) {
+        setRest(true)
+        setIndex((i) => (i + 1) % slides.length)
+      }
     }, 7000)
-    return () => clearInterval(timer)
+    return () => {
+      window.clearTimeout(mount)
+      clearInterval(timer)
+    }
   }, [])
 
   return (
@@ -72,21 +88,24 @@ export default function Hero() {
         Masaüstünde: bölümün tamamını kaplayan zemin.
       */}
       <div className="relative aspect-[16/7] w-full overflow-hidden sm:aspect-[16/6] lg:absolute lg:inset-0 lg:aspect-auto">
-        {slides.map((slide, i) => (
-          <Image
-            key={slide.image}
-            src={slide.image}
-            alt={slide.alt}
-            fill
-            priority={i === 0}
-            fetchPriority={i === 0 ? 'high' : 'auto'}
-            loading={i === 0 ? 'eager' : 'lazy'}
-            sizes="(max-width: 1024px) 100vw, 100vw"
-            className={`object-cover transition-opacity duration-1000 ease-out ${
-              i === index ? 'opacity-100' : 'opacity-0'
-            }`}
-          />
-        ))}
+        {slides.map((slide, i) =>
+          i === 0 || rest ? (
+            <Image
+              key={slide.image}
+              src={slide.image}
+              alt={slide.alt}
+              fill
+              priority={i === 0}
+              fetchPriority={i === 0 ? 'high' : 'auto'}
+              loading={i === 0 ? 'eager' : 'lazy'}
+              quality={i === 0 ? 70 : 72}
+              sizes="100vw"
+              className={`object-cover transition-opacity duration-1000 ease-out ${
+                i === index ? 'opacity-100' : 'opacity-0'
+              }`}
+            />
+          ) : null,
+        )}
         {/* Okunabilirlik degradesi sadece masaüstünde gerekli */}
         <div
           className="absolute inset-0 hidden bg-gradient-to-r from-brand-950/95 via-brand-950/80 to-brand-950/40 lg:block"

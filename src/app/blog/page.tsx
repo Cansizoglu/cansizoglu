@@ -35,7 +35,7 @@ export default function BlogPage() {
           <div className="grid gap-5 lg:grid-cols-3">
             {posts.map((post) => (
               <article key={post.slug} className="card flex flex-col">
-                <div className="flex items-center gap-3 text-xs text-slate-500">
+                <div className="flex items-center gap-3 text-xs text-slate-600">
                   <time dateTime={post.date}>{dateFormatter.format(new Date(post.date))}</time>
                   <span aria-hidden="true">·</span>
                   <span>{post.readingMinutes} dk okuma</span>

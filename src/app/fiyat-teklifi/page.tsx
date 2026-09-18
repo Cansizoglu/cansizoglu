@@ -90,7 +90,7 @@ export default function QuotePage() {
                     </a>
                   </li>
                 </ul>
-                <p className="mt-4 text-xs text-slate-500">{site.hours}</p>
+                <p className="mt-4 text-xs text-slate-600">{site.hours}</p>
               </div>
 
               {info.map((item) => (

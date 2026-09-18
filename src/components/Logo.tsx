@@ -2,7 +2,7 @@ import { site } from '@/data/site'
 
 export default function Logo({ variant = 'dark' }: { variant?: 'dark' | 'light' }) {
   const textColor = variant === 'light' ? 'text-white' : 'text-brand-800'
-  const subColor = variant === 'light' ? 'text-brand-100' : 'text-slate-500'
+  const subColor = variant === 'light' ? 'text-brand-100' : 'text-slate-600'
   return (
     <span className="flex items-center gap-2 sm:gap-2.5">
       <svg viewBox="0 0 40 40" className="h-9 w-9 shrink-0 sm:h-10 sm:w-10" aria-hidden="true">

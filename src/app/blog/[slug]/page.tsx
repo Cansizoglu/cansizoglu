@@ -57,7 +57,7 @@ export default function BlogPostPage({ params }: Props) {
         <div className="container-site grid gap-10 lg:grid-cols-[1fr_320px]">
           <div>
             <header className="mb-8">
-              <div className="flex items-center gap-3 text-sm text-slate-500">
+              <div className="flex items-center gap-3 text-sm text-slate-600">
                 <time dateTime={post.date}>{dateFormatter.format(new Date(post.date))}</time>
                 <span aria-hidden="true">·</span>
                 <span>{post.readingMinutes} dakikalık okuma</span>

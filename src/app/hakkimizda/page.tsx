@@ -101,7 +101,7 @@ export default function AboutPage() {
                 className="absolute inset-0 h-full w-full border-0"
               />
             </div>
-            <p className="mt-3 text-center text-sm text-slate-500">
+            <p className="mt-3 text-center text-sm text-slate-600">
               Videoyu{' '}
               <a
                 href={site.social.youtube}

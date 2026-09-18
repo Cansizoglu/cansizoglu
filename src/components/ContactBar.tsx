@@ -96,7 +96,7 @@ export default function ContactBar() {
         href={whatsappHref}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-40 hidden items-center gap-2.5 rounded-full bg-[#1f9c4d] py-3 pl-4 pr-5 font-semibold text-white shadow-lg ring-1 ring-black/5 transition hover:bg-[#18813f] lg:inline-flex"
+        className="fixed bottom-6 right-6 z-40 hidden items-center gap-2.5 rounded-full bg-[#178440] py-3 pl-4 pr-5 font-semibold text-white shadow-lg ring-1 ring-black/5 transition hover:bg-[#126a34] lg:inline-flex"
       >
         <Icon name="whatsapp" className="h-6 w-6" />
         <span className="text-sm">WhatsApp</span>

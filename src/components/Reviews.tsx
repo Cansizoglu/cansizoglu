@@ -19,7 +19,7 @@ const dateFormatter = new Intl.DateTimeFormat('tr-TR', {
 
 function Stars({ count }: { count: number }) {
   return (
-    <span className="flex gap-0.5" aria-label={`${count} yıldız`}>
+    <span className="flex gap-0.5" role="img" aria-label={`${count} yıldız`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <Icon
           key={i}
@@ -46,10 +46,10 @@ export default function Reviews() {
             </blockquote>
             <figcaption className="mt-4 border-t border-brand-100 pt-3">
               <span className="block text-sm font-semibold text-brand-900">{review.ad}</span>
-              <span className="block text-xs text-slate-500">
+              <span className="block text-xs text-slate-600">
                 {review.semt} · {review.hizmet}
               </span>
-              <span className="block text-xs text-slate-400">
+              <span className="block text-xs text-slate-600">
                 {dateFormatter.format(new Date(review.tarih))}
               </span>
             </figcaption>

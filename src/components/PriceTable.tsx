@@ -5,7 +5,13 @@ import { priceRows, priceIncluded, priceUpdatedAt, formatTl } from '@/data/prici
 export default function PriceTable() {
   return (
     <div>
-      <div className="overflow-x-auto rounded-xl border border-brand-100 shadow-sm">
+      <div
+        // Dar ekranda tablo yana kayar; klavye kullananların da kaydırabilmesi için odaklanabilir.
+        tabIndex={0}
+        role="region"
+        aria-label="Ankara evden eve nakliyat fiyat listesi"
+        className="overflow-x-auto rounded-xl border border-brand-100 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600"
+      >
         <table className="w-full min-w-[560px] border-collapse text-left text-sm">
           <caption className="sr-only">
             Ankara evden eve nakliyat fiyat listesi, {priceUpdatedAt}
@@ -28,7 +34,7 @@ export default function PriceTable() {
               <tr key={row.type} className="bg-white even:bg-brand-50/50">
                 <th scope="row" className="px-4 py-3.5 font-semibold text-brand-900">
                   {row.type}
-                  <span className="mt-0.5 block text-xs font-normal text-slate-500">
+                  <span className="mt-0.5 block text-xs font-normal text-slate-600">
                     {row.note}
                   </span>
                 </th>
