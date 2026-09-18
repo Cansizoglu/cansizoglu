@@ -109,7 +109,7 @@ export default function NeighborhoodPage({ params }: Props) {
               <p>{linkify(neighborhood.intro)}</p>
               <p>
                 {neighborhood.name}, {district.name} ilçesine bağlı. Bu bölgedeki
-                taşımalarda ekibimiz {site.address.full} adresindeki merkezimizden yola
+                taşımalarda ekibimiz {site.address.short} adresindeki merkezimizden yola
                 çıkar; söküm, ambalajlama, yükleme ve yeni adreste kurulum aynı gün içinde
                 tamamlanır.
               </p>

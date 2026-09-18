@@ -19,11 +19,13 @@ export const site = {
   },
   email: 'info@ankaraevdenevenakliye.net.tr',
   address: {
-    street: 'Altındağ',
+    street: 'Zübeyde Hanım Mah. Aslanbey Cad. No: 44/C',
+    postalCode: '06070',
     district: 'Altındağ',
     city: 'Ankara',
     country: 'TR',
-    full: 'Altındağ / Ankara',
+    full: 'Zübeyde Hanım Mah. Aslanbey Cad. No: 44/C, 06070 Altındağ / Ankara',
+    short: 'Altındağ / Ankara',
   },
   hours: 'Pazartesi - Cumartesi 08:00 - 20:00, Pazar randevu ile',
   social: {

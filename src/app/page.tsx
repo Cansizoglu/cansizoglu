@@ -10,6 +10,7 @@ import CtaBand from '@/components/CtaBand'
 import Tabs from '@/components/Tabs'
 import PriceTable from '@/components/PriceTable'
 import Reviews from '@/components/Reviews'
+import { createLinker } from '@/lib/autolink'
 import { services } from '@/data/services'
 import { districts } from '@/data/districts'
 import { posts } from '@/data/blog'
@@ -86,6 +87,8 @@ const homeFaq = [
 ]
 
 export default function HomePage() {
+  const linkifyHome = createLinker('/', 6)
+
   return (
     <>
       <Hero />
@@ -347,6 +350,38 @@ export default function HomePage() {
                 </span>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/*
+        Müşterilerin aynı hizmeti arattığı farklı kelimeler: taşıma şirketi,
+        nakliyeci, evden eve kargo gibi. Listeleme yerine düz metin içinde,
+        gerçekten ne yaptığımızı anlatarak geçiyorlar.
+      */}
+      <section className="py-10 sm:py-16">
+        <div className="container-site">
+          <SectionTitle
+            eyebrow="Ne arıyorsanız aynı kapıya çıkıyor"
+            title="Nakliyat, nakliye, taşımacılık: hepsi aynı işin adı"
+            description="İnsanlar aynı hizmeti farklı kelimelerle arıyor. Hangisiyle bulursanız bulun, karşınıza çıkan ekip aynı."
+          />
+          <div className="prose-tr max-w-3xl">
+            <p>
+              {linkifyHome(
+                'Kimi müşterimiz bize evden eve nakliyat diye ulaşıyor, kimi evden eve taşıma, kimi de kısaca nakliye diyor. Bir kısmı taşıma şirketi veya taşıma firması arıyor, bir kısmı nakliyeci. Ankara nakliyat firmaları arasında arama yaparken kullandığınız kelime ne olursa olsun anlatılan iş aynı: eşyanızın sökülmesi, ambalajlanması, taşınması ve yeni adreste kurulması.',
+              )}
+            </p>
+            <p>
+              {linkifyHome(
+                'Evden eve nakliye ile evden eve taşıma firması aramanız arasında bizim açımızdan fark yok; ikisinde de aynı ekip, aynı araç ve aynı sözleşme devreye giriyor. Tek eşya veya birkaç koli taşıtacaksanız, bunun için sıkça kullanılan evden eve kargo tabiri de bizde parça eşya taşıma olarak geçiyor ve küçük nakliye aracıyla yapılıyor.',
+              )}
+            </p>
+            <p>
+              {linkifyHome(
+                'Ankara nakliyat fiyatları konusunda da durum aynı: ister ev taşıma fiyatı deyin ister nakliye fiyatı, rakamı belirleyen şey eşya miktarı, kat, asansör ihtiyacı ve mesafedir. Fiyatı keşifte yazılı veriyoruz ve taşıma günü değiştirmiyoruz.',
+              )}
+            </p>
           </div>
         </div>
       </section>

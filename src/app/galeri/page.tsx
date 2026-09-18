@@ -14,7 +14,6 @@ export const metadata: Metadata = pageMeta({
   description:
     'Cansızoğlu Nakliyat araç filosu, taşıma asansörü, ambalaj malzemeleri ve sahadaki çalışmalarımızdan fotoğraflar.',
   path: '/galeri',
-  images: ['/img/slider-1.jpg'],
 })
 
 export default function GalleryPage() {

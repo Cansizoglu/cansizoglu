@@ -5,9 +5,9 @@ import reviewData from '@/data/reviews.json'
 
 type Review = {
   ad: string
-  semt: string
   puan: number
   tarih: string
+  /** Yorumda açıkça geçmiyorsa boş bırakılır; tahmin yazılmaz. */
   hizmet: string
   yorum: string
 }
@@ -37,7 +37,7 @@ export default function Reviews() {
 
   return (
     <>
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
         {reviews.map((review) => (
           <figure key={review.ad} className="flex flex-col rounded-xl border border-brand-100 bg-white p-5">
             <Stars count={review.puan} />
@@ -47,10 +47,13 @@ export default function Reviews() {
             <figcaption className="mt-4 border-t border-brand-100 pt-3">
               <span className="block text-sm font-semibold text-brand-900">{review.ad}</span>
               <span className="block text-xs text-slate-600">
-                {review.semt} · {review.hizmet}
+                {[review.hizmet, dateFormatter.format(new Date(review.tarih))]
+                  .filter(Boolean)
+                  .join(' · ')}
               </span>
-              <span className="block text-xs text-slate-600">
-                {dateFormatter.format(new Date(review.tarih))}
+              <span className="mt-1.5 inline-flex items-center gap-1 text-xs font-medium text-slate-600">
+                <Icon name="star-full" className="h-3 w-3 text-amber-500" />
+                {reviewData.kaynak} yorumu
               </span>
             </figcaption>
           </figure>

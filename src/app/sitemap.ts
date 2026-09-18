@@ -3,6 +3,7 @@ import { site } from '@/data/site'
 import { services } from '@/data/services'
 import { districts } from '@/data/districts'
 import { posts } from '@/data/blog'
+import { aboutPages } from '@/data/aboutPages'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
@@ -13,6 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/bolgeler`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${site.url}/fiyat-teklifi`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${site.url}/hakkimizda`, lastModified: now, changeFrequency: 'yearly', priority: 0.6 },
+    ...aboutPages.map((page) => ({
+      url: `${site.url}/hakkimizda/${page.slug}`,
+      lastModified: now,
+      changeFrequency: 'yearly' as const,
+      priority: 0.4,
+    })),
     { url: `${site.url}/iletisim`, lastModified: now, changeFrequency: 'yearly', priority: 0.7 },
     { url: `${site.url}/galeri`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${site.url}/nakliyat-fiyat-hesaplama`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },

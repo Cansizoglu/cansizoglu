@@ -34,7 +34,7 @@ export function generateMetadata({ params }: Props): Metadata {
     title: post.metaTitle,
     description: post.metaDescription,
     path: `/blog/${post.slug}`,
-    images: [post.image.src],
+    images: [post.image],
   })
 }
 

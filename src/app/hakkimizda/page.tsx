@@ -13,7 +13,14 @@ export const metadata: Metadata = pageMeta({
   description:
     'Cansızoğlu Nakliyat 1998’den bu yana Ankara’da çalışan bir aile şirketi. Evden eve nakliyat, ofis taşıma, asansörlü taşımacılık ve depolama hizmeti veriyoruz.',
   path: '/hakkimizda',
-  images: ['/img/ofis.webp'],
+  images: [
+    {
+      src: '/img/ofis.webp',
+      width: 1242,
+      height: 699,
+      alt: 'Cansızoğlu Nakliyat’ın Ankara Altındağ’daki ofisinin tabelalı cephesi',
+    },
+  ],
 })
 
 const values = [

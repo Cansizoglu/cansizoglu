@@ -4,9 +4,11 @@ import Icon from './Icon'
 import { site } from '@/data/site'
 import { services } from '@/data/services'
 import { districts } from '@/data/districts'
+import { aboutPages } from '@/data/aboutPages'
 
 const corporate = [
   { href: '/hakkimizda', label: 'Hakkımızda' },
+  ...aboutPages.map((p) => ({ href: `/hakkimizda/${p.slug}`, label: p.navLabel })),
   { href: '/hizmetler', label: 'Hizmetlerimiz' },
   { href: '/bolgeler', label: 'Hizmet Bölgeleri' },
   { href: '/nakliyat-fiyat-hesaplama', label: 'Fiyat Hesaplama' },

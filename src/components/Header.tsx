@@ -8,6 +8,7 @@ import Icon from './Icon'
 import { site } from '@/data/site'
 import { services } from '@/data/services'
 import { districts } from '@/data/districts'
+import { aboutPages } from '@/data/aboutPages'
 
 const mainNav = [
   { href: '/', label: 'Anasayfa' },
@@ -16,7 +17,7 @@ const mainNav = [
   { href: '/nakliyat-fiyat-hesaplama', label: 'Fiyat Hesapla' },
   { href: '/galeri', label: 'Galeri' },
   { href: '/blog', label: 'Blog' },
-  { href: '/hakkimizda', label: 'Hakkımızda' },
+  { href: '/hakkimizda', label: 'Hakkımızda', mega: 'about' as const },
   { href: '/iletisim', label: 'İletişim' },
 ]
 
@@ -37,7 +38,7 @@ export default function Header() {
         <div className="container-site flex h-10 items-center justify-between text-xs">
           <p className="flex items-center gap-2">
             <Icon name="pin" className="h-4 w-4" />
-            {site.address.full} · {site.hours}
+            {site.address.short} · {site.hours}
           </p>
           <div className="flex items-center gap-5">
             <a className="flex items-center gap-1.5 hover:text-brand-200" href={site.phone.landlineHref}>
@@ -91,6 +92,25 @@ export default function Header() {
                   </Link>
                 </div>
               ) : null}
+              {item.mega === 'about' ? (
+                <div className="invisible absolute left-0 top-full w-64 rounded-xl border border-brand-100 bg-white p-2 opacity-0 shadow-xl transition group-hover:visible group-hover:opacity-100">
+                  <Link
+                    href="/hakkimizda"
+                    className="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-800"
+                  >
+                    Hakkımızda
+                  </Link>
+                  {aboutPages.map((page) => (
+                    <Link
+                      key={page.slug}
+                      href={`/hakkimizda/${page.slug}`}
+                      className="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-800"
+                    >
+                      {page.navLabel}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
               {item.mega === 'districts' ? (
                 <div className="invisible absolute left-0 top-full w-[640px] rounded-xl border border-brand-100 bg-white p-4 opacity-0 shadow-xl transition group-hover:visible group-hover:opacity-100">
                   <div className="grid grid-cols-3 gap-0.5">
@@ -140,13 +160,29 @@ export default function Header() {
         <div className="border-t border-brand-100 bg-white lg:hidden">
           <nav className="container-site flex flex-col py-3" aria-label="Mobil menü">
             {mainNav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="border-b border-slate-100 py-3 text-sm font-semibold text-slate-700"
-              >
-                {item.label}
-              </Link>
+              <div key={item.href} className="border-b border-slate-100">
+                <Link
+                  href={item.href}
+                  className="block py-3 text-sm font-semibold text-slate-700"
+                >
+                  {item.label}
+                </Link>
+                {/* Kurumsal sayfalar mobilde de Hakkımızda'nın altında görünür */}
+                {item.mega === 'about' ? (
+                  <ul className="mb-2 space-y-1 border-l-2 border-brand-100 pl-3">
+                    {aboutPages.map((page) => (
+                      <li key={page.slug}>
+                        <Link
+                          href={`/hakkimizda/${page.slug}`}
+                          className="block py-1.5 text-sm text-slate-600"
+                        >
+                          {page.navLabel}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </div>
             ))}
             <Link href="/fiyat-teklifi" className="btn-primary mt-4">
               Ücretsiz Fiyat Teklifi Al

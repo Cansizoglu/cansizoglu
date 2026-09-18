@@ -1,11 +1,37 @@
 import type { Metadata } from 'next'
 import { site } from '@/data/site'
 
+type ShareImage = {
+  src: string
+  width: number
+  height: number
+  alt?: string
+}
+
 type PageMetaInput = {
   title: string
   description: string
   path: string
-  images?: string[]
+  images?: (string | ShareImage)[]
+}
+
+/**
+ * Paylaşım görselinin varsayılanı. WhatsApp, Facebook ve X büyük önizlemeyi
+ * yalnızca 1.91:1 oranındaki görselde gösteriyor; bu yüzden slider görseli
+ * (1920x600) yerine bu oran için ayrıca hazırlanmış kapak kullanılıyor.
+ */
+const DEFAULT_SHARE_IMAGE: ShareImage = {
+  src: '/img/og-cansizoglu-nakliyat.jpg',
+  width: 1200,
+  height: 630,
+  alt: 'Cansızoğlu Nakliyat taşıma aracı ve mobil asansörü, çağrı hattı 444 0 510',
+}
+
+const MIME: Record<string, string> = {
+  jpg: 'image/jpeg',
+  jpeg: 'image/jpeg',
+  png: 'image/png',
+  webp: 'image/webp',
 }
 
 /**
@@ -26,6 +52,23 @@ export function composeTitle(title: string) {
 export function pageMeta({ title, description, path, images }: PageMetaInput): Metadata {
   const url = `${site.url}${path}`
   const fullTitle = composeTitle(title)
+  /*
+    Görselin gerçek ölçüsü bildirilmezse tarayıcı ve sosyal medya tarafı
+    önizlemeyi ya küçük gösteriyor ya da hiç göstermiyor. Bu yüzden ölçüsü
+    bilinmeyen bir görsel gönderilirse varsayılan kapağa düşülüyor.
+  */
+  const shareImages: ShareImage[] = (images ?? [DEFAULT_SHARE_IMAGE]).map((img) =>
+    typeof img === 'string' ? DEFAULT_SHARE_IMAGE : img,
+  )
+  const ogImages = shareImages.map((img) => ({
+    url: `${site.url}${img.src}`,
+    secureUrl: `${site.url}${img.src}`,
+    width: img.width,
+    height: img.height,
+    alt: img.alt ?? fullTitle,
+    type: MIME[img.src.split('.').pop() ?? ''] ?? 'image/jpeg',
+  }))
+
   return {
     title: { absolute: fullTitle },
     description,
@@ -37,17 +80,13 @@ export function pageMeta({ title, description, path, images }: PageMetaInput): M
       title: fullTitle,
       description,
       siteName: site.name,
-      images: (images ?? ['/img/slider-1.jpg']).map((src) => ({
-        url: `${site.url}${src}`,
-        width: 1200,
-        height: 630,
-        alt: fullTitle,
-      })),
+      images: ogImages,
     },
     twitter: {
       card: 'summary_large_image',
       title: fullTitle,
       description,
+      images: ogImages.map((img) => ({ url: img.url, alt: img.alt })),
     },
   }
 }
@@ -69,6 +108,7 @@ export function localBusinessJsonLd() {
     address: {
       '@type': 'PostalAddress',
       streetAddress: site.address.street,
+      postalCode: site.address.postalCode,
       addressLocality: site.address.district,
       addressRegion: site.address.city,
       addressCountry: site.address.country,

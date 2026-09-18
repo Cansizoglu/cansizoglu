@@ -1,41 +1,53 @@
 {
-  "_aciklama": "ÖRNEK yorumlardır. Gerçek Google yorumlarınızla değiştirin.",
-  "_yapisalVeri": "schemaAktif alanı false iken yorumlar Google'a yapısal veri olarak gönderilmez. Gerçek yorumları girdikten sonra true yapın; uydurma yorumu yapısal veriyle yayınlamak Google tarafından cezalandırılır.",
+  "_aciklama": "Google Haritalar işletme kaydındaki gerçek müşteri yorumları. Musa'nın 18.09.2026'da gönderdiği ekran görüntülerinden girildi. Yorum metinleri müşterilerin kendi cümleleri; sadece eksik Türkçe harfler tamamlandı, kelimelere dokunulmadı. Google'da kısaltılmış (Daha fazla) yorumlarda cümle ortasında kesilen kısım atıldı, sonuna … konuldu.",
+  "_tarihler": "Google göreli tarih gösterdiği için (3 hafta önce, 2 ay önce) tarihler yaklaşıktır. Kesin tarihi bilirseniz düzeltin.",
+  "_yapisalVeri": "schemaAktif FALSE kalmalı. Yorumlar gerçek ama Google Haritalar'dan alındı; Google, başka bir platformdan toplanan yorumların Review/AggregateRating yapısal verisiyle işaretlenmesini yasaklıyor. Yıldızlı sonuç istiyorsanız yorumları sitenin kendi formu üzerinden toplamak gerekir.",
   "schemaAktif": false,
-  "ortalamaPuan": 4.9,
-  "yorumSayisi": 0,
+  "ortalamaPuan": 5,
+  "yorumSayisi": 6,
+  "kaynak": "Google",
   "yorumlar": [
     {
-      "ad": "Örnek Müşteri 1",
-      "semt": "Keçiören",
+      "ad": "Mansur Aslan",
       "puan": 5,
-      "tarih": "2026-08-14",
+      "tarih": "2026-08-28",
+      "hizmet": "",
+      "yorum": "İşlerinde gayet profesyoneller. Gelen arkadaşlar hem güler yüzlü hem de kalabalık ekiple hızlı çalışıyorlar. Gözünüz arkada kalmaz. Tercih eden pişman olmaz. Gönül rahatlığıyla tercih edebilirsiniz."
+    },
+    {
+      "ad": "H. Semih Çakır",
+      "puan": 5,
+      "tarih": "2026-07-18",
       "hizmet": "Evden eve nakliyat",
-      "yorum": "Buraya gerçek müşteri yorumunuzu yazın. Ekibin kaçta geldiği, eşyanın nasıl paketlendiği ve montajın nasıl yapıldığı gibi ayrıntılar taşıyan yorumlar en çok okunanlardır."
+      "yorum": "2+1'in evin demontaj, boşaltma, nakliye, yeni eve yükleme, montaj işini 5 saatte temiz bir şekilde 5 kişilik bir ekip tamamladı. Gayet memnun kaldık."
     },
     {
-      "ad": "Örnek Müşteri 2",
-      "semt": "Çankaya",
+      "ad": "Mahmut Liva",
       "puan": 5,
-      "tarih": "2026-07-29",
-      "hizmet": "Asansörlü nakliyat",
-      "yorum": "Buraya gerçek müşteri yorumunuzu yazın. Asansörle taşıma yapılan işlerde müşteriler genelde hızdan ve eşyanın çizilmemesinden bahseder."
-    },
-    {
-      "ad": "Örnek Müşteri 3",
-      "semt": "Yenimahalle",
-      "puan": 5,
-      "tarih": "2026-07-11",
-      "hizmet": "Ofis taşıma",
-      "yorum": "Buraya gerçek müşteri yorumunuzu yazın. Ofis taşımalarında hafta sonu çalışma ve pazartesi sabahı kurulu ofis vurgusu iyi durur."
-    },
-    {
-      "ad": "Örnek Müşteri 4",
-      "semt": "Etimesgut",
-      "puan": 5,
-      "tarih": "2026-06-22",
+      "tarih": "2026-06-18",
       "hizmet": "Evden eve nakliyat",
-      "yorum": "Buraya gerçek müşteri yorumunuzu yazın. Fiyatın keşifte verilen fiyatla aynı kalması müşterilerin en çok yazdığı konudur."
+      "yorum": "Ev taşıma sürecinde yükümüzü hafifleten, her aradığımızda ilgilenen Cansızoğluları ekibine çok teşekkür ederiz. Her şeyi sapasağlam taşıyıp montajını yaptılar. Çok memnun kaldık."
+    },
+    {
+      "ad": "Yılmaz Altınparmak",
+      "puan": 5,
+      "tarih": "2026-04-18",
+      "hizmet": "Şehirler arası nakliyat",
+      "yorum": "Cansızoğlu Nakliyat ile şehirler arası taşınma sürecimi tamamladım ve sonuçtan çok memnun kaldım. Süreç başından sonuna kadar şahane ilerledi…"
+    },
+    {
+      "ad": "Ayfer Seçkin Çelebi",
+      "puan": 5,
+      "tarih": "2026-06-18",
+      "hizmet": "",
+      "yorum": "Çok hızlı, profesyonel çalıştılar. Memnun kaldık, ellerine sağlık hepsinin."
+    },
+    {
+      "ad": "İbrahim Aktaş",
+      "puan": 5,
+      "tarih": "2026-07-18",
+      "hizmet": "",
+      "yorum": "Bir iş bu kadar kaliteli yapılabilir gerçekten. Önce korkmuştum ancak gelen personelin o yorgunluğa rağmen güler yüzü…"
     }
   ]
 }
