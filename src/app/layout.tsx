@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import WhatsAppFloat from '@/components/WhatsAppFloat'
+import ContactBar from '@/components/ContactBar'
 import JsonLd from '@/components/JsonLd'
 import { localBusinessJsonLd } from '@/lib/seo'
 import { site } from '@/data/site'
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#1758dc',
+  themeColor: '#1b2d52',
   width: 'device-width',
   initialScale: 1,
 }
@@ -61,10 +61,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="tr" className={inter.variable}>
-      <body className="flex min-h-screen flex-col">
+      <body className="flex min-h-screen flex-col pb-[68px] lg:pb-0">
         <a
           href="#icerik"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-white"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-accent-600 focus:px-4 focus:py-2 focus:text-white"
         >
           İçeriğe geç
         </a>
@@ -73,7 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
-        <WhatsAppFloat />
+        <ContactBar />
         <JsonLd data={localBusinessJsonLd()} />
       </body>
     </html>
