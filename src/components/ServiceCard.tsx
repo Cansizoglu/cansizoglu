@@ -1,11 +1,10 @@
 import Link from 'next/link'
 import Icon from './Icon'
 import type { Service } from '@/data/services'
-import { urlHizmet } from '@/lib/urls'
 
 export default function ServiceCard({ service }: { service: Service }) {
   return (
-    <Link href={urlHizmet(service.slug)} className="card group flex flex-col">
+    <Link href={`/hizmetler/${service.slug}`} className="card group flex flex-col">
       {/* Mobilde ikon ve başlık yan yana durur, kart yarı yarıya kısalır */}
       <span className="flex items-center gap-3 sm:block">
         <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700 transition group-hover:bg-brand-700 group-hover:text-white sm:mb-4 sm:h-12 sm:w-12">

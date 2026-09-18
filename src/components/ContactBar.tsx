@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Icon from './Icon'
 import { site } from '@/data/site'
-import { sayfa } from '@/lib/urls'
 
 /**
  * Mobilde ekranın altında duran iletişim ve kısayol alanı:
@@ -16,9 +15,9 @@ import { sayfa } from '@/lib/urls'
  */
 const navItems = [
   { href: '/', label: 'Anasayfa', icon: 'home' },
-  { href: sayfa.teklif, label: 'Teklif Al', icon: 'doc' },
-  { href: sayfa.hizmetler, label: 'Hizmetler', icon: 'truck' },
-  { href: sayfa.hesaplama, label: 'Hesaplama', icon: 'calculator' },
+  { href: '/fiyat-teklifi', label: 'Teklif Al', icon: 'doc' },
+  { href: '/hizmetler', label: 'Hizmetler', icon: 'truck' },
+  { href: '/nakliyat-fiyat-hesaplama', label: 'Hesaplama', icon: 'calculator' },
 ]
 
 export default function ContactBar() {

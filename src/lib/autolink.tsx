@@ -4,7 +4,6 @@ import { services } from '@/data/services'
 import { districts } from '@/data/districts'
 import { posts } from '@/data/blog'
 import { routes } from '@/data/routes'
-import { sayfa, urlHizmet, urlIl, urlIlce, urlYazi } from '@/lib/urls'
 
 /**
  * Metin içi otomatik iç linkleme.
@@ -20,107 +19,107 @@ export type LinkTerm = { term: string; href: string }
 /** Elle tanımlanan kavramlar. Uzun ifadeler önce denenir. */
 const staticTerms: LinkTerm[] = [
   // Şehirler arası
-  { term: 'şehirler arası evden eve nakliyat', href: sayfa.sehirlerArasi },
-  { term: 'şehirler arası nakliyat', href: sayfa.sehirlerArasi },
-  { term: 'şehirler arası taşıma', href: sayfa.sehirlerArasi },
-  { term: 'şehirler arası', href: sayfa.sehirlerArasi },
+  { term: 'şehirler arası evden eve nakliyat', href: '/sehirler-arasi' },
+  { term: 'şehirler arası nakliyat', href: '/sehirler-arasi' },
+  { term: 'şehirler arası taşıma', href: '/sehirler-arasi' },
+  { term: 'şehirler arası', href: '/sehirler-arasi' },
   // Hesaplama ve teklif
-  { term: 'fiyat ve km hesaplama aracı', href: sayfa.hesaplama },
-  { term: 'fiyat ve km hesaplama', href: sayfa.hesaplama },
-  { term: 'fiyat hesaplama aracı', href: sayfa.hesaplama },
-  { term: 'nakliyat fiyat hesaplama', href: sayfa.hesaplama },
-  { term: 'km hesaplama', href: sayfa.hesaplama },
-  { term: 'fiyat listesi', href: sayfa.hesaplama },
-  { term: 'ücretsiz keşif', href: sayfa.teklif },
-  { term: 'keşif', href: sayfa.teklif },
-  { term: 'fiyat teklifi', href: sayfa.teklif },
-  { term: 'yazılı fiyat', href: sayfa.teklif },
+  { term: 'fiyat ve km hesaplama aracı', href: '/nakliyat-fiyat-hesaplama' },
+  { term: 'fiyat ve km hesaplama', href: '/nakliyat-fiyat-hesaplama' },
+  { term: 'fiyat hesaplama aracı', href: '/nakliyat-fiyat-hesaplama' },
+  { term: 'nakliyat fiyat hesaplama', href: '/nakliyat-fiyat-hesaplama' },
+  { term: 'km hesaplama', href: '/nakliyat-fiyat-hesaplama' },
+  { term: 'fiyat listesi', href: '/nakliyat-fiyat-hesaplama' },
+  { term: 'ücretsiz keşif', href: '/fiyat-teklifi' },
+  { term: 'keşif', href: '/fiyat-teklifi' },
+  { term: 'fiyat teklifi', href: '/fiyat-teklifi' },
+  { term: 'yazılı fiyat', href: '/fiyat-teklifi' },
 
   // Hizmet kavramları
-  { term: 'evden eve nakliyat', href: urlHizmet('ankara-evden-eve-nakliyat') },
-  { term: 'ev taşıma', href: urlHizmet('ankara-evden-eve-nakliyat') },
-  { term: 'asansörlü nakliyat', href: urlHizmet('ankara-asansorlu-nakliyat') },
-  { term: 'asansörlü taşıma', href: urlHizmet('ankara-asansorlu-nakliyat') },
-  { term: 'mobil taşıma asansörü', href: urlHizmet('ankara-asansorlu-nakliyat') },
-  { term: 'mobil asansör', href: urlHizmet('ankara-asansorlu-nakliyat') },
-  { term: 'taşıma asansörü', href: urlHizmet('ankara-asansorlu-nakliyat') },
-  { term: 'asansör kiralama', href: urlHizmet('ankara-asansor-kiralama') },
-  { term: 'ofis taşıma', href: urlHizmet('ankara-ofis-tasima') },
-  { term: 'iş yeri taşıma', href: urlHizmet('ankara-ofis-tasima') },
-  { term: 'şehir içi nakliyat', href: urlHizmet('ankara-sehir-ici-nakliyat') },
-  { term: 'eşya depolama', href: urlHizmet('esya-depolama') },
-  { term: 'depolama', href: urlHizmet('esya-depolama') },
-  { term: 'piyano taşıma', href: urlHizmet('piyano-tasima') },
-  { term: 'para kasası taşıma', href: urlHizmet('para-kasasi-tasima') },
-  { term: 'para kasası', href: urlHizmet('para-kasasi-tasima') },
-  { term: 'askılı tekstil taşıma', href: urlHizmet('askili-tekstil-tasima') },
-  { term: 'banka taşıma', href: urlHizmet('banka-tasima') },
-  { term: 'sigortalı taşıma', href: urlHizmet('sigortali-tasima') },
-  { term: 'taşıma sigortası', href: urlHizmet('sigortali-tasima') },
-  { term: 'ambalajlı taşıma', href: urlHizmet('ambalajli-tasima') },
-  { term: 'parça eşya taşıma', href: urlHizmet('parca-esya-tasima') },
-  { term: 'parça eşya', href: urlHizmet('parca-esya-tasima') },
+  { term: 'evden eve nakliyat', href: '/hizmetler/ankara-evden-eve-nakliyat' },
+  { term: 'ev taşıma', href: '/hizmetler/ankara-evden-eve-nakliyat' },
+  { term: 'asansörlü nakliyat', href: '/hizmetler/ankara-asansorlu-nakliyat' },
+  { term: 'asansörlü taşıma', href: '/hizmetler/ankara-asansorlu-nakliyat' },
+  { term: 'mobil taşıma asansörü', href: '/hizmetler/ankara-asansorlu-nakliyat' },
+  { term: 'mobil asansör', href: '/hizmetler/ankara-asansorlu-nakliyat' },
+  { term: 'taşıma asansörü', href: '/hizmetler/ankara-asansorlu-nakliyat' },
+  { term: 'asansör kiralama', href: '/hizmetler/ankara-asansor-kiralama' },
+  { term: 'ofis taşıma', href: '/hizmetler/ankara-ofis-tasima' },
+  { term: 'iş yeri taşıma', href: '/hizmetler/ankara-ofis-tasima' },
+  { term: 'şehir içi nakliyat', href: '/hizmetler/ankara-sehir-ici-nakliyat' },
+  { term: 'eşya depolama', href: '/hizmetler/esya-depolama' },
+  { term: 'depolama', href: '/hizmetler/esya-depolama' },
+  { term: 'piyano taşıma', href: '/hizmetler/piyano-tasima' },
+  { term: 'para kasası taşıma', href: '/hizmetler/para-kasasi-tasima' },
+  { term: 'para kasası', href: '/hizmetler/para-kasasi-tasima' },
+  { term: 'askılı tekstil taşıma', href: '/hizmetler/askili-tekstil-tasima' },
+  { term: 'banka taşıma', href: '/hizmetler/banka-tasima' },
+  { term: 'sigortalı taşıma', href: '/hizmetler/sigortali-tasima' },
+  { term: 'taşıma sigortası', href: '/hizmetler/sigortali-tasima' },
+  { term: 'ambalajlı taşıma', href: '/hizmetler/ambalajli-tasima' },
+  { term: 'parça eşya taşıma', href: '/hizmetler/parca-esya-tasima' },
+  { term: 'parça eşya', href: '/hizmetler/parca-esya-tasima' },
 
   // Blog kavramları
-  { term: 'nakliyat sigortası', href: urlYazi('nakliyat-sigortasi-nedir') },
-  { term: 'eşya paketleme', href: urlYazi('esya-paketleme-rehberi') },
-  { term: 'ambalaj malzemesi', href: urlYazi('esya-paketleme-rehberi') },
-  { term: 'ambalajlama', href: urlYazi('esya-paketleme-rehberi') },
-  { term: 'paketleme', href: urlYazi('esya-paketleme-rehberi') },
-  { term: 'beyaz eşya', href: urlYazi('beyaz-esya-tasima-rehberi') },
-  { term: 'buzdolabı', href: urlYazi('beyaz-esya-tasima-rehberi') },
-  { term: 'çamaşır makinesi', href: urlYazi('beyaz-esya-tasima-rehberi') },
-  { term: 'taşınma hazırlığı', href: urlYazi('tasinmadan-once-yapilacaklar-listesi') },
-  { term: 'taşınmadan önce', href: urlYazi('tasinmadan-once-yapilacaklar-listesi') },
-  { term: 'nakliyat firmaları', href: urlYazi('ankara-nakliyat-firmasi-secerken') },
-  { term: 'taşıma şirketleri', href: urlYazi('ankara-nakliyat-firmasi-secerken') },
+  { term: 'nakliyat sigortası', href: '/blog/nakliyat-sigortasi-nedir' },
+  { term: 'eşya paketleme', href: '/blog/esya-paketleme-rehberi' },
+  { term: 'ambalaj malzemesi', href: '/blog/esya-paketleme-rehberi' },
+  { term: 'ambalajlama', href: '/blog/esya-paketleme-rehberi' },
+  { term: 'paketleme', href: '/blog/esya-paketleme-rehberi' },
+  { term: 'beyaz eşya', href: '/blog/beyaz-esya-tasima-rehberi' },
+  { term: 'buzdolabı', href: '/blog/beyaz-esya-tasima-rehberi' },
+  { term: 'çamaşır makinesi', href: '/blog/beyaz-esya-tasima-rehberi' },
+  { term: 'taşınma hazırlığı', href: '/blog/tasinmadan-once-yapilacaklar-listesi' },
+  { term: 'taşınmadan önce', href: '/blog/tasinmadan-once-yapilacaklar-listesi' },
+  { term: 'nakliyat firmaları', href: '/blog/ankara-nakliyat-firmasi-secerken' },
+  { term: 'taşıma şirketleri', href: '/blog/ankara-nakliyat-firmasi-secerken' },
 
   // Metinde sık geçen doğal ifadeler
-  { term: 'ofis taşımacılığı', href: urlHizmet('ankara-ofis-tasima') },
-  { term: 'kurumsal taşıma', href: urlHizmet('ankara-ofis-tasima') },
-  { term: 'evden eve taşımacılık', href: urlHizmet('ankara-evden-eve-nakliyat') },
-  { term: 'söküm ve montaj', href: urlHizmet('ankara-evden-eve-nakliyat') },
-  { term: 'mobilya montajı', href: urlHizmet('ankara-evden-eve-nakliyat') },
-  { term: 'taşıma sözleşmesi', href: urlHizmet('sigortali-tasima') },
-  { term: 'sözleşme', href: urlHizmet('sigortali-tasima') },
-  { term: 'ambalaj', href: urlHizmet('ambalajli-tasima') },
-  { term: 'arşiv', href: urlYazi('ofis-tasima-rehberi') },
-  { term: 'yazlık', href: urlHizmet('esya-depolama') },
+  { term: 'ofis taşımacılığı', href: '/hizmetler/ankara-ofis-tasima' },
+  { term: 'kurumsal taşıma', href: '/hizmetler/ankara-ofis-tasima' },
+  { term: 'evden eve taşımacılık', href: '/hizmetler/ankara-evden-eve-nakliyat' },
+  { term: 'söküm ve montaj', href: '/hizmetler/ankara-evden-eve-nakliyat' },
+  { term: 'mobilya montajı', href: '/hizmetler/ankara-evden-eve-nakliyat' },
+  { term: 'taşıma sözleşmesi', href: '/hizmetler/sigortali-tasima' },
+  { term: 'sözleşme', href: '/hizmetler/sigortali-tasima' },
+  { term: 'ambalaj', href: '/hizmetler/ambalajli-tasima' },
+  { term: 'arşiv', href: '/blog/ofis-tasima-rehberi' },
+  { term: 'yazlık', href: '/hizmetler/esya-depolama' },
 
   // Kurumsal
-  { term: 'araç filomuz', href: sayfa.galeri },
-  { term: 'araç filosu', href: sayfa.galeri },
+  { term: 'araç filomuz', href: '/galeri' },
+  { term: 'araç filosu', href: '/galeri' },
   { term: 'aile şirketi', href: '/hakkimizda' },
-  { term: 'hizmet bölgelerimiz', href: sayfa.bolgeler },
-  { term: 'tüm hizmetlerimiz', href: sayfa.hizmetler },
+  { term: 'hizmet bölgelerimiz', href: '/bolgeler' },
+  { term: 'tüm hizmetlerimiz', href: '/hizmetler' },
 ]
 
 function buildTerms(): LinkTerm[] {
   const terms: LinkTerm[] = [...staticTerms]
 
   for (const service of services) {
-    terms.push({ term: service.title, href: urlHizmet(service.slug) })
+    terms.push({ term: service.title, href: `/hizmetler/${service.slug}` })
   }
   for (const district of districts) {
     // "Keçiören evden eve nakliyat" gibi uzun kalıp önce, sade ilçe adı sonra.
     terms.push({
       term: `${district.name} evden eve nakliyat`,
-      href: urlIlce(district.path),
+      href: `/bolgeler/${district.path}`,
     })
-    terms.push({ term: `${district.name} nakliyat`, href: urlIlce(district.path) })
+    terms.push({ term: `${district.name} nakliyat`, href: `/bolgeler/${district.path}` })
   }
   for (const post of posts) {
-    terms.push({ term: post.title, href: urlYazi(post.slug) })
+    terms.push({ term: post.title, href: `/blog/${post.slug}` })
   }
   // Şehirler arası rotalar: "Ankara İzmir evden eve nakliyat" gibi kalıplar
   for (const route of routes) {
     terms.push({
       term: `Ankara ${route.city} evden eve nakliyat`,
-      href: urlIl(route.slug),
+      href: `/sehirler-arasi/${route.slug}`,
     })
     terms.push({
       term: `Ankara ${route.city} nakliyat`,
-      href: urlIl(route.slug),
+      href: `/sehirler-arasi/${route.slug}`,
     })
   }
 

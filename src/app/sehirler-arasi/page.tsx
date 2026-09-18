@@ -9,13 +9,12 @@ import JsonLd from '@/components/JsonLd'
 import { routes, routesByRegion } from '@/data/routes'
 import { site } from '@/data/site'
 import { pageMeta } from '@/lib/seo'
-import { sayfa, urlIl } from '@/lib/urls'
 
 export const metadata: Metadata = pageMeta({
   title: 'Ankara Şehirler Arası Evden Eve Nakliyat',
   description:
     'Ankara’dan İstanbul, İzmir, Antalya, Gaziantep ve diğer illere şehirler arası evden eve nakliyat. Aktarmasız taşıma, ambalaj ve montaj dahil, ücretsiz keşif.',
-  path: sayfa.sehirlerArasi,
+  path: '/sehirler-arasi',
 })
 
 const faq = [
@@ -48,7 +47,7 @@ const faq = [
 export default function RoutesHubPage() {
   return (
     <>
-      <Breadcrumbs items={[{ name: 'Şehirler Arası Nakliyat', path: sayfa.sehirlerArasi }]} />
+      <Breadcrumbs items={[{ name: 'Şehirler Arası Nakliyat', path: '/sehirler-arasi' }]} />
 
       <section className="bg-brand-950 py-9 text-white sm:py-14">
         <div className="container-site max-w-3xl">
@@ -64,7 +63,7 @@ export default function RoutesHubPage() {
             Ambalaj, söküm, montaj ve sigorta fiyata dahildir.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link href={sayfa.teklif} className="btn-white">
+            <Link href="/fiyat-teklifi" className="btn-white">
               Fiyat Teklifi Al
               <Icon name="arrow" className="h-4 w-4" />
             </Link>
@@ -105,7 +104,7 @@ export default function RoutesHubPage() {
                     {group.routes.map((route) => (
                       <Link
                         key={route.slug}
-                        href={urlIl(route.slug)}
+                        href={`/sehirler-arasi/${route.slug}`}
                         prefetch={false}
                         className="group flex items-center justify-between gap-3 rounded-xl border border-brand-100 px-4 py-3.5 transition hover:border-accent-300 hover:bg-brand-50/60"
                       >
@@ -187,7 +186,7 @@ export default function RoutesHubPage() {
             { '@type': 'City', name: 'Ankara' },
             ...routes.map((r) => ({ '@type': 'City', name: r.city })),
           ],
-          url: `${site.url}${sayfa.sehirlerArasi}`,
+          url: `${site.url}/sehirler-arasi`,
         }}
       />
     </>

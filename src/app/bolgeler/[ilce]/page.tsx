@@ -1,25 +1,44 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import { notFound } from 'next/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Icon from '@/components/Icon'
 import Faq from '@/components/Faq'
 import CtaBand from '@/components/CtaBand'
 import JsonLd from '@/components/JsonLd'
 import DistrictSidebar from '@/components/DistrictSidebar'
-import RelatedLinks from '@/components/RelatedLinks'
-import type { District } from '@/data/districts'
+import { districts, districtByPath } from '@/data/districts'
+import { districtSections } from '@/lib/districtSections'
 import { services } from '@/data/services'
 import { site } from '@/data/site'
-import { districtSections } from '@/lib/districtSections'
 import { createLinker } from '@/lib/autolink'
+import RelatedLinks from '@/components/RelatedLinks'
 import { relatedForDistrict } from '@/lib/related'
-import { serviceJsonLd } from '@/lib/seo'
-import { sayfa, urlHizmet, urlIlce, urlSemt } from '@/lib/urls'
+import { pageMeta, serviceJsonLd } from '@/lib/seo'
 
-export default function DistrictView({ district }: { district: District }) {
-  const path = urlIlce(district.path)
+type Props = { params: { ilce: string } }
+
+export function generateStaticParams() {
+  return districts.map((district) => ({ ilce: district.path }))
+}
+
+export function generateMetadata({ params }: Props): Metadata {
+  const district = districtByPath(params.ilce)
+  if (!district) return {}
+  return pageMeta({
+    title: district.metaTitle,
+    description: district.metaDescription,
+    path: `/bolgeler/${district.path}`,
+  })
+}
+
+export default function DistrictPage({ params }: Props) {
+  const district = districtByPath(params.ilce)
+  if (!district) notFound()
+
   const sections = districtSections(district)
-  const linkify = createLinker(path, 12)
+  const linkify = createLinker(`/bolgeler/${district.path}`, 12)
   const related = relatedForDistrict(district)
 
   const districtFaq = [
@@ -41,8 +60,8 @@ export default function DistrictView({ district }: { district: District }) {
     <>
       <Breadcrumbs
         items={[
-          { name: 'Hizmet Bölgelerimiz', path: sayfa.bolgeler },
-          { name: `${district.name} Evden Eve Nakliyat`, path },
+          { name: 'Bölgeler', path: '/bolgeler' },
+          { name: `${district.name} Evden Eve Nakliyat`, path: `/bolgeler/${district.path}` },
         ]}
       />
 
@@ -60,7 +79,7 @@ export default function DistrictView({ district }: { district: District }) {
             Ücretsiz keşif, aynı gün kurulum.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link href={sayfa.teklif} className="btn-white">
+            <Link href="/fiyat-teklifi" className="btn-white">
               Fiyat Teklifi Al
               <Icon name="arrow" className="h-4 w-4" />
             </Link>
@@ -151,7 +170,7 @@ export default function DistrictView({ district }: { district: District }) {
                   ) : null}
                   {section.serviceSlug ? (
                     <Link
-                      href={urlHizmet(section.serviceSlug)}
+                      href={`/hizmetler/${section.serviceSlug}`}
                       className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700"
                     >
                       Hizmet detayını inceleyin
@@ -159,7 +178,7 @@ export default function DistrictView({ district }: { district: District }) {
                     </Link>
                   ) : (
                     <Link
-                      href={sayfa.teklif}
+                      href="/fiyat-teklifi"
                       className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700"
                     >
                       Ücretsiz fiyat teklifi alın
@@ -182,7 +201,7 @@ export default function DistrictView({ district }: { district: District }) {
               {district.neighborhoods.map((n) => (
                 <Link
                   key={n.slug}
-                  href={urlSemt(district.path, n.slug)} prefetch={false}
+                  href={`/bolgeler/${district.path}/${n.slug}`} prefetch={false}
                   className="group flex items-center justify-between gap-3 rounded-lg border border-brand-100 px-4 py-3 transition hover:border-brand-400 hover:bg-brand-50/60"
                 >
                   <span className="text-sm font-medium text-slate-800">
@@ -219,7 +238,7 @@ export default function DistrictView({ district }: { district: District }) {
                 .map((service) => (
                   <Link
                     key={service.slug}
-                    href={urlHizmet(service.slug)}
+                    href={`/hizmetler/${service.slug}`}
                     className="flex items-center gap-3 rounded-lg border border-brand-100 px-4 py-3 text-sm text-slate-700 transition hover:border-brand-400 hover:text-brand-800"
                   >
                     <Icon name={service.icon} className="h-5 w-5 shrink-0 text-brand-600" />
@@ -249,7 +268,7 @@ export default function DistrictView({ district }: { district: District }) {
         data={serviceJsonLd({
           name: `${district.name} Evden Eve Nakliyat`,
           description: district.metaDescription,
-          path,
+          path: `/bolgeler/${district.path}`,
         })}
       />
     </>

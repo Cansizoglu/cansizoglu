@@ -8,7 +8,6 @@ import CtaBand from '@/components/CtaBand'
 import Faq from '@/components/Faq'
 import { pageMeta } from '@/lib/seo'
 import { priceFactors, calculator, priceUpdatedAt } from '@/data/pricing'
-import { sayfa } from '@/lib/urls'
 
 const faq = [
   {
@@ -37,13 +36,13 @@ export const metadata: Metadata = pageMeta({
   title: 'Ankara Nakliyat Fiyat Hesaplama | Km ve Kat Hesabı',
   description:
     'Ankara evden eve nakliyat fiyat hesaplama aracı: ilçe, ev tipi, kat ve km bilgisine göre taşınma maliyetinizi saniyeler içinde hesaplayın.',
-  path: sayfa.hesaplama,
+  path: '/nakliyat-fiyat-hesaplama',
 })
 
 export default function CalculatorPage() {
   return (
     <>
-      <Breadcrumbs items={[{ name: 'Fiyat Hesaplama', path: sayfa.hesaplama }]} />
+      <Breadcrumbs items={[{ name: 'Fiyat Hesaplama', path: '/nakliyat-fiyat-hesaplama' }]} />
       <section className="py-12">
         <div className="container-site">
           <SectionTitle

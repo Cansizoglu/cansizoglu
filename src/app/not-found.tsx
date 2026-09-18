@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Icon from '@/components/Icon'
 import { services } from '@/data/services'
 import { districts } from '@/data/districts'
-import { sayfa, urlHizmet, urlIlce } from '@/lib/urls'
 
 export default function NotFound() {
   return (
@@ -18,7 +17,7 @@ export default function NotFound() {
           <Link href="/" className="btn-primary">
             Anasayfaya dön
           </Link>
-          <Link href={sayfa.teklif} className="btn-outline">
+          <Link href="/fiyat-teklifi" className="btn-outline">
             Fiyat teklifi al
             <Icon name="arrow" className="h-4 w-4" />
           </Link>
@@ -30,7 +29,7 @@ export default function NotFound() {
             <ul className="mt-3 space-y-2 text-sm">
               {services.slice(0, 5).map((s) => (
                 <li key={s.slug}>
-                  <Link href={urlHizmet(s.slug)} className="text-slate-700 hover:text-brand-700">
+                  <Link href={`/hizmetler/${s.slug}`} className="text-slate-700 hover:text-brand-700">
                     {s.title}
                   </Link>
                 </li>
@@ -42,7 +41,7 @@ export default function NotFound() {
             <ul className="mt-3 space-y-2 text-sm">
               {districts.slice(0, 5).map((d) => (
                 <li key={d.slug}>
-                  <Link href={urlIlce(d.path)} className="text-slate-700 hover:text-brand-700">
+                  <Link href={`/bolgeler/${d.path}`} className="text-slate-700 hover:text-brand-700">
                     {d.name} Evden Eve Nakliyat
                   </Link>
                 </li>

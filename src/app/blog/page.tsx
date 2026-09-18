@@ -7,13 +7,12 @@ import Icon from '@/components/Icon'
 import CtaBand from '@/components/CtaBand'
 import { posts } from '@/data/blog'
 import { pageMeta } from '@/lib/seo'
-import { sayfa, urlYazi } from '@/lib/urls'
 
 export const metadata: Metadata = pageMeta({
   title: 'Blog | Taşınma ve Nakliyat Rehberi',
   description:
     'Taşınma hazırlığı, eşya paketleme, asansörlü nakliyat ve taşınma maliyetleri hakkında pratik bilgiler.',
-  path: sayfa.blog,
+  path: '/blog',
 })
 
 const dateFormatter = new Intl.DateTimeFormat('tr-TR', {
@@ -25,7 +24,7 @@ const dateFormatter = new Intl.DateTimeFormat('tr-TR', {
 export default function BlogPage() {
   return (
     <>
-      <Breadcrumbs items={[{ name: 'Blog', path: sayfa.blog }]} />
+      <Breadcrumbs items={[{ name: 'Blog', path: '/blog' }]} />
       <section className="py-9 sm:py-14">
         <div className="container-site">
           <SectionTitle
@@ -37,7 +36,7 @@ export default function BlogPage() {
           <div className="grid gap-5 lg:grid-cols-3">
             {posts.map((post) => (
               <article key={post.slug} className="card flex flex-col overflow-hidden !p-0">
-                <Link href={urlYazi(post.slug)} className="block" tabIndex={-1} aria-hidden="true">
+                <Link href={`/blog/${post.slug}`} className="block" tabIndex={-1} aria-hidden="true">
                   <Image
                     src={post.image.src}
                     alt={post.image.alt}
@@ -55,13 +54,13 @@ export default function BlogPage() {
                   <span>{post.readingMinutes} dk okuma</span>
                 </div>
                 <h2 className="mt-3 text-lg">
-                  <Link href={urlYazi(post.slug)} className="hover:text-brand-700">
+                  <Link href={`/blog/${post.slug}`} className="hover:text-brand-700">
                     {post.title}
                   </Link>
                 </h2>
                 <p className="mt-2 flex-1 text-sm leading-6 text-slate-600">{post.excerpt}</p>
                 <Link
-                  href={urlYazi(post.slug)}
+                  href={`/blog/${post.slug}`}
                   className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700"
                 >
                   Yazıyı okuyun

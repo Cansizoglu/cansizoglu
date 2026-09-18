@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Icon from './Icon'
 import { site } from '@/data/site'
-import { sayfa } from '@/lib/urls'
 
 export default function CtaBand({
   title = 'Taşınma tarihinizi bugünden ayırtın',
@@ -18,7 +17,7 @@ export default function CtaBand({
           <p className="mt-2 leading-7 text-brand-100">{text}</p>
         </div>
         <div className="flex flex-wrap gap-3">
-          <Link href={sayfa.teklif} className="btn-white">
+          <Link href="/fiyat-teklifi" className="btn-white">
             Fiyat Teklifi Al
             <Icon name="arrow" className="h-4 w-4" />
           </Link>

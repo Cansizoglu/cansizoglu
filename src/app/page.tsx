@@ -21,7 +21,6 @@ import GalleryGrid from '@/components/GalleryGrid'
 import { galleryItems } from '@/data/gallery'
 import { priceFactors, priceUpdatedAt } from '@/data/pricing'
 import { pageMeta } from '@/lib/seo'
-import { sayfa, urlIlce, urlYazi } from '@/lib/urls'
 
 export const metadata: Metadata = pageMeta({
   title: 'Ankara Evden Eve Nakliyat | Sigortalı ve Asansörlü Taşıma',
@@ -108,7 +107,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-6 sm:mt-8">
-            <Link href={sayfa.hizmetler} className="btn-outline">
+            <Link href="/hizmetler" className="btn-outline">
               Tüm hizmetleri görün
               <Icon name="arrow" className="h-4 w-4" />
             </Link>
@@ -185,7 +184,7 @@ export default function HomePage() {
               ))}
             </ul>
             <Link
-              href={sayfa.hesaplama}
+              href="/nakliyat-fiyat-hesaplama"
               className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-600"
             >
               Fiyat ve km hesaplama aracıyla kendi fiyatınızı hesaplayın
@@ -278,7 +277,7 @@ export default function HomePage() {
             {districts.map((district) => (
               <Link
                 key={district.slug}
-                href={urlIlce(district.path)}
+                href={`/bolgeler/${district.path}`}
                 className="card group flex items-center justify-between gap-3"
               >
                 <span>
@@ -309,7 +308,7 @@ export default function HomePage() {
           />
           <GalleryGrid items={galleryItems.slice(0, 4)} />
           <div className="mt-8">
-            <Link href={sayfa.galeri} className="btn-outline">
+            <Link href="/galeri" className="btn-outline">
               Tüm galeriyi görün
               <Icon name="arrow" className="h-4 w-4" />
             </Link>
@@ -339,7 +338,7 @@ export default function HomePage() {
           />
           <div className="grid gap-5 lg:grid-cols-3">
             {posts.map((post) => (
-              <Link key={post.slug} href={urlYazi(post.slug)} className="card group flex flex-col">
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="card group flex flex-col">
                 <p className="text-xs font-semibold uppercase tracking-wider text-brand-600">
                   {post.readingMinutes} dakikalık okuma
                 </p>

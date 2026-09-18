@@ -1,23 +1,42 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import { notFound } from 'next/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Icon from '@/components/Icon'
 import Faq from '@/components/Faq'
 import CtaBand from '@/components/CtaBand'
 import JsonLd from '@/components/JsonLd'
 import RelatedLinks from '@/components/RelatedLinks'
-import type { Route } from '@/data/routes'
-import { routes } from '@/data/routes'
-import { site } from '@/data/site'
+import { routes, routeBySlug } from '@/data/routes'
 import { routeSections, routeFaq } from '@/lib/routeSections'
+import { site } from '@/data/site'
 import { createLinker } from '@/lib/autolink'
-import { sayfa, urlHizmet, urlIl } from '@/lib/urls'
+import { pageMeta } from '@/lib/seo'
 
-export default function RouteView({ route }: { route: Route }) {
-  const path = urlIl(route.slug)
+type Props = { params: { slug: string } }
+
+export function generateStaticParams() {
+  return routes.map((route) => ({ slug: route.slug }))
+}
+
+export function generateMetadata({ params }: Props): Metadata {
+  const route = routeBySlug(params.slug)
+  if (!route) return {}
+  return pageMeta({
+    title: `Ankara ${route.city} Evden Eve Nakliyat | ${route.km} km`,
+    description: `Ankara ${route.city} evden eve nakliyat: yaklaşık ${route.km} km, ${route.drive} yol. Ambalaj, söküm, montaj ve sigorta dahil, aktarmasız taşıma. Ücretsiz keşif.`,
+    path: `/sehirler-arasi/${route.slug}`,
+  })
+}
+
+export default function RoutePage({ params }: Props) {
+  const route = routeBySlug(params.slug)
+  if (!route) notFound()
+
   const sections = routeSections(route)
   const faq = routeFaq(route)
-  const linkify = createLinker(path, 10)
+  const linkify = createLinker(`/sehirler-arasi/${route.slug}`, 10)
 
   /* Aynı bölgedeki diğer iller; yoksa listeden ilk birkaçı */
   const sameRegion = routes.filter((r) => r.region === route.region && r.slug !== route.slug)
@@ -28,8 +47,11 @@ export default function RouteView({ route }: { route: Route }) {
     <>
       <Breadcrumbs
         items={[
-          { name: 'Şehirler Arası Nakliyat', path: sayfa.sehirlerArasi },
-          { name: `Ankara ${route.city} Evden Eve Nakliyat`, path },
+          { name: 'Şehirler Arası Nakliyat', path: '/sehirler-arasi' },
+          {
+            name: `Ankara ${route.city} Evden Eve Nakliyat`,
+            path: `/sehirler-arasi/${route.slug}`,
+          },
         ]}
       />
 
@@ -62,7 +84,7 @@ export default function RouteView({ route }: { route: Route }) {
           </dl>
 
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link href={sayfa.teklif} className="btn-white">
+            <Link href="/fiyat-teklifi" className="btn-white">
               Fiyat Teklifi Al
               <Icon name="arrow" className="h-4 w-4" />
             </Link>
@@ -186,22 +208,22 @@ export default function RouteView({ route }: { route: Route }) {
                 {
                   title: 'Nakliyat fiyat hesaplama',
                   text: 'Kat, oda ve mesafeye göre taşınma maliyetinizi hesaplayın.',
-                  href: sayfa.hesaplama,
+                  href: '/nakliyat-fiyat-hesaplama',
                 },
                 {
                   title: 'Ankara evden eve nakliyat',
                   text: 'Söküm, ambalaj, taşıma ve montajın tamamı tek ekiple.',
-                  href: urlHizmet('ankara-evden-eve-nakliyat'),
+                  href: '/hizmetler/ankara-evden-eve-nakliyat',
                 },
                 {
                   title: 'Parça eşya taşıma',
                   text: 'Tek eşya veya birkaç koli için küçük nakliye aracı.',
-                  href: urlHizmet('parca-esya-tasima'),
+                  href: '/hizmetler/parca-esya-tasima',
                 },
                 {
                   title: 'Eşya depolama',
                   text: 'Yeni ev hazır değilse eşyanız listelenerek depomuzda bekler.',
-                  href: urlHizmet('esya-depolama'),
+                  href: '/hizmetler/esya-depolama',
                 },
               ]}
               title="Bunlar da işinize yarar"
@@ -224,7 +246,7 @@ export default function RouteView({ route }: { route: Route }) {
                   </div>
                 ))}
               </dl>
-              <Link href={sayfa.teklif} className="btn-primary mt-5 w-full">
+              <Link href="/fiyat-teklifi" className="btn-primary mt-5 w-full">
                 Ücretsiz Keşif İsteyin
               </Link>
             </div>
@@ -235,7 +257,7 @@ export default function RouteView({ route }: { route: Route }) {
                 {others.map((r) => (
                   <li key={r.slug}>
                     <Link
-                      href={urlIl(r.slug)}
+                      href={`/sehirler-arasi/${r.slug}`}
                       prefetch={false}
                       className="flex gap-2 text-slate-700 hover:text-accent-600"
                     >
@@ -246,7 +268,7 @@ export default function RouteView({ route }: { route: Route }) {
                 ))}
               </ul>
               <Link
-                href={sayfa.sehirlerArasi}
+                href="/sehirler-arasi"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-700"
               >
                 Tüm iller
@@ -276,7 +298,7 @@ export default function RouteView({ route }: { route: Route }) {
             { '@type': 'City', name: 'Ankara' },
             { '@type': 'City', name: route.city },
           ],
-          url: `${site.url}${path}`,
+          url: `${site.url}/sehirler-arasi/${route.slug}`,
         }}
       />
     </>
