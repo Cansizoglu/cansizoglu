@@ -4,6 +4,7 @@ import { services } from '@/data/services'
 import { districts } from '@/data/districts'
 import { posts } from '@/data/blog'
 import { aboutPages } from '@/data/aboutPages'
+import { routes } from '@/data/routes'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
@@ -24,6 +25,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/galeri`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${site.url}/nakliyat-fiyat-hesaplama`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${site.url}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${site.url}/sehirler-arasi`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    ...routes.map((route) => ({
+      url: `${site.url}/sehirler-arasi/${route.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
   ]
 
   const servicePages: MetadataRoute.Sitemap = services.map((service) => ({

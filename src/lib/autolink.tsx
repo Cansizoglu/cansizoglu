@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import { services } from '@/data/services'
 import { districts } from '@/data/districts'
 import { posts } from '@/data/blog'
+import { routes } from '@/data/routes'
 
 /**
  * Metin içi otomatik iç linkleme.
@@ -17,6 +18,11 @@ export type LinkTerm = { term: string; href: string }
 
 /** Elle tanımlanan kavramlar. Uzun ifadeler önce denenir. */
 const staticTerms: LinkTerm[] = [
+  // Şehirler arası
+  { term: 'şehirler arası evden eve nakliyat', href: '/sehirler-arasi' },
+  { term: 'şehirler arası nakliyat', href: '/sehirler-arasi' },
+  { term: 'şehirler arası taşıma', href: '/sehirler-arasi' },
+  { term: 'şehirler arası', href: '/sehirler-arasi' },
   // Hesaplama ve teklif
   { term: 'fiyat ve km hesaplama aracı', href: '/nakliyat-fiyat-hesaplama' },
   { term: 'fiyat ve km hesaplama', href: '/nakliyat-fiyat-hesaplama' },
@@ -104,6 +110,17 @@ function buildTerms(): LinkTerm[] {
   }
   for (const post of posts) {
     terms.push({ term: post.title, href: `/blog/${post.slug}` })
+  }
+  // Şehirler arası rotalar: "Ankara İzmir evden eve nakliyat" gibi kalıplar
+  for (const route of routes) {
+    terms.push({
+      term: `Ankara ${route.city} evden eve nakliyat`,
+      href: `/sehirler-arasi/${route.slug}`,
+    })
+    terms.push({
+      term: `Ankara ${route.city} nakliyat`,
+      href: `/sehirler-arasi/${route.slug}`,
+    })
   }
 
   // Uzun ifadeler kısa olanların içinde kaybolmasın diye uzunluğa göre sırala.

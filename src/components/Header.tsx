@@ -9,11 +9,13 @@ import { site } from '@/data/site'
 import { services } from '@/data/services'
 import { districts } from '@/data/districts'
 import { aboutPages } from '@/data/aboutPages'
+import { routes } from '@/data/routes'
 
 const mainNav = [
   { href: '/', label: 'Anasayfa' },
   { href: '/hizmetler', label: 'Hizmetler', mega: 'services' as const },
   { href: '/bolgeler', label: 'Bölgeler', mega: 'districts' as const },
+  { href: '/sehirler-arasi', label: 'Şehirler Arası', mega: 'routes' as const },
   { href: '/nakliyat-fiyat-hesaplama', label: 'Fiyat Hesapla' },
   { href: '/galeri', label: 'Galeri' },
   { href: '/blog', label: 'Blog' },
@@ -58,12 +60,12 @@ export default function Header() {
           <Logo />
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Ana menü">
+        <nav className="hidden items-center gap-0.5 xl:flex 2xl:gap-1" aria-label="Ana menü">
           {mainNav.map((item) => (
             <div key={item.href} className="group relative">
               <Link
                 href={item.href}
-                className={`whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-semibold transition ${
+                className={`whitespace-nowrap rounded-md px-2 py-2 text-sm font-semibold transition 2xl:px-2.5 ${
                   isActive(item.href)
                     ? 'text-accent-600'
                     : 'text-slate-700 hover:text-accent-600'
@@ -89,6 +91,27 @@ export default function Header() {
                     className="mt-2 block border-t border-brand-100 px-3 pt-3 text-sm font-semibold text-brand-700"
                   >
                     Tüm hizmetler
+                  </Link>
+                </div>
+              ) : null}
+              {item.mega === 'routes' ? (
+                <div className="invisible absolute left-0 top-full w-[520px] rounded-xl border border-brand-100 bg-white p-4 opacity-0 shadow-xl transition group-hover:visible group-hover:opacity-100">
+                  <div className="grid grid-cols-2 gap-0.5">
+                    {routes.map((r) => (
+                      <Link
+                        key={r.slug}
+                        href={`/sehirler-arasi/${r.slug}`} prefetch={false}
+                        className="rounded-md px-2.5 py-1.5 text-sm text-slate-700 hover:bg-accent-50 hover:text-accent-700"
+                      >
+                        Ankara {r.city}
+                      </Link>
+                    ))}
+                  </div>
+                  <Link
+                    href="/sehirler-arasi"
+                    className="mt-2 block border-t border-brand-100 px-3 pt-3 text-sm font-semibold text-brand-700"
+                  >
+                    Tüm iller
                   </Link>
                 </div>
               ) : null}
@@ -141,13 +164,13 @@ export default function Header() {
             <Icon name="phone" className="h-4 w-4" />
             {site.phone.callCenter}
           </a>
-          <Link href="/fiyat-teklifi" className="btn-outline hidden whitespace-nowrap xl:inline-flex">
+          <Link href="/fiyat-teklifi" className="btn-outline hidden whitespace-nowrap 2xl:inline-flex">
             Fiyat Teklifi Al
           </Link>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="rounded-md border border-brand-200 p-2 text-brand-800 lg:hidden"
+            className="rounded-md border border-brand-200 p-2 text-brand-800 xl:hidden"
             aria-expanded={open}
             aria-label="Menüyü aç"
           >
@@ -157,7 +180,7 @@ export default function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-brand-100 bg-white lg:hidden">
+        <div className="border-t border-brand-100 bg-white xl:hidden">
           <nav className="container-site flex flex-col py-3" aria-label="Mobil menü">
             {mainNav.map((item) => (
               <div key={item.href} className="border-b border-slate-100">

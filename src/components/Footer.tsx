@@ -11,6 +11,7 @@ const corporate = [
   ...aboutPages.map((p) => ({ href: `/hakkimizda/${p.slug}`, label: p.navLabel })),
   { href: '/hizmetler', label: 'Hizmetlerimiz' },
   { href: '/bolgeler', label: 'Hizmet Bölgeleri' },
+  { href: '/sehirler-arasi', label: 'Şehirler Arası Nakliyat' },
   { href: '/nakliyat-fiyat-hesaplama', label: 'Fiyat Hesaplama' },
   { href: '/galeri', label: 'Galeri' },
   { href: '/blog', label: 'Blog' },
@@ -118,9 +119,10 @@ export default function Footer() {
                 {site.phone.gsm}
               </a>
             </li>
-            <li className="flex gap-2">
+            <li className="flex min-w-0 gap-2">
               <Icon name="mail" className="h-5 w-5 shrink-0 text-brand-400" />
-              <a href={`mailto:${site.email}`} className="hover:text-white">
+              {/* Uzun e-posta adresi dar sütunda taşıyordu; kırılmasına izin veriliyor */}
+              <a href={`mailto:${site.email}`} className="break-all hover:text-white">
                 {site.email}
               </a>
             </li>
@@ -133,11 +135,15 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-brand-900">
-        <div className="container-site flex flex-col items-center justify-between gap-3 py-5 text-xs text-brand-300 sm:flex-row">
-          <p>
+        <div className="container-site flex flex-col items-center justify-between gap-3 py-5 text-xs text-brand-300 sm:flex-row sm:items-start">
+          <p className="shrink-0">
             © {year} {site.name}. Tüm hakları saklıdır.
           </p>
-          <nav className="flex flex-wrap items-center gap-x-4 gap-y-2" aria-label="Alt menü">
+          {/* Bağlantı sayısı arttığı için daralan ekranda sarması gerekiyor */}
+          <nav
+            className="flex min-w-0 flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:justify-end"
+            aria-label="Alt menü"
+          >
             {corporate.map((c) => (
               <Link key={c.href} href={c.href} className="hover:text-white">
                 {c.label}
