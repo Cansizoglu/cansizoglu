@@ -4,14 +4,22 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ContactBar from '@/components/ContactBar'
+import ContentGuard from '@/components/ContentGuard'
 import JsonLd from '@/components/JsonLd'
 import { localBusinessJsonLd } from '@/lib/seo'
 import { site } from '@/data/site'
 
+/**
+ * Yazı tipi ön yüklenmiyor. Ön yüklendiğinde iki woff2 dosyası, LCP görseliyle
+ * aynı anda ve yüksek öncelikle iniyor ve yavaş mobil bağlantıda görseli
+ * geciktiriyordu. `adjustFontFallback` açık olduğu için yedek yazı tipinin
+ * ölçüleri Inter'e denk geliyor; geçiş sırasında sayfa oynamıyor.
+ */
 const inter = Inter({
   subsets: ['latin', 'latin-ext'],
   display: 'swap',
   variable: '--font-sans',
+  preload: false,
 })
 
 export const metadata: Metadata = {
@@ -99,6 +107,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <ContactBar />
+        <ContentGuard />
         <JsonLd data={localBusinessJsonLd()} />
       </body>
     </html>

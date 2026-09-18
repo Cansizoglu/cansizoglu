@@ -62,7 +62,9 @@ export default function Hero() {
   }, [])
 
   useEffect(() => {
-    const mount = window.setTimeout(() => setRest(true), 2000)
+    // Diğer slaytlar sayfa tamamen yüklendikten sonra iniyor; böylece dar
+    // mobil bağlantıda ilk görselin bant genişliğini paylaşmıyorlar.
+    const mount = window.setTimeout(() => setRest(true), 4000)
     const timer = setInterval(() => {
       if (!paused.current) {
         setRest(true)
@@ -98,7 +100,7 @@ export default function Hero() {
               priority={i === 0}
               fetchPriority={i === 0 ? 'high' : 'auto'}
               loading={i === 0 ? 'eager' : 'lazy'}
-              quality={i === 0 ? 70 : 72}
+              quality={i === 0 ? 68 : 58}
               sizes="100vw"
               className={`object-cover transition-opacity duration-1000 ease-out ${
                 i === index ? 'opacity-100' : 'opacity-0'

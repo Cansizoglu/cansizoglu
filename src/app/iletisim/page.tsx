@@ -46,7 +46,6 @@ const channels = [
 ]
 
 export default function ContactPage() {
-  const mapQuery = encodeURIComponent('Cansızoğlu Nakliyat Altındağ Ankara')
   return (
     <>
       <Breadcrumbs items={[{ name: 'İletişim', path: '/iletisim' }]} />
@@ -62,12 +61,13 @@ export default function ContactPage() {
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {channels.map((channel) => (
-              <a key={channel.title} href={channel.href} className="card block">
+              <a key={channel.title} href={channel.href} className="card block min-w-0">
                 <span className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
                   <Icon name={channel.icon} className="h-5 w-5" />
                 </span>
                 <h2 className="text-base">{channel.title}</h2>
-                <p className="mt-1 font-semibold text-brand-800">{channel.value}</p>
+                {/* Uzun e-posta adresi dar sütunda taşıyordu; kırılmasına izin veriliyor */}
+                <p className="mt-1 break-words font-semibold text-brand-800">{channel.value}</p>
                 <p className="mt-1 text-sm text-slate-600">{channel.note}</p>
               </a>
             ))}
@@ -75,29 +75,67 @@ export default function ContactPage() {
 
           <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_360px]">
             <div className="overflow-hidden rounded-xl border border-brand-100">
+              {/* Firmanın kendi Google İşletme kaydının gömme adresi */}
               <iframe
                 title="Cansızoğlu Nakliyat konumu"
-                src={`https://www.google.com/maps?q=${mapQuery}&output=embed`}
+                src={site.maps.embedSrc}
                 className="h-[380px] w-full border-0"
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
               />
             </div>
 
             <div className="space-y-6">
               <div className="rounded-xl border border-brand-100 p-6">
-                <h2 className="text-lg">Adres ve çalışma saatleri</h2>
+                <h2 className="text-lg">Adres, telefon ve çalışma saatleri</h2>
                 <ul className="mt-4 space-y-3 text-sm">
                   <li className="flex gap-2">
                     <Icon name="pin" className="h-5 w-5 shrink-0 text-brand-600" />
                     <span className="text-slate-700">{site.address.full}</span>
                   </li>
                   <li className="flex gap-2">
+                    <Icon name="phone" className="h-5 w-5 shrink-0 text-brand-600" />
+                    <span className="text-slate-700">
+                      Telefon:{' '}
+                      <a href={site.phone.callCenterHref} className="font-semibold text-brand-800 hover:text-accent-600">
+                        {site.phone.callCenter}
+                      </a>
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <Icon name="phone" className="h-5 w-5 shrink-0 text-brand-600" />
+                    <span className="text-slate-700">
+                      Tel:{' '}
+                      <a href={site.phone.landlineHref} className="font-semibold text-brand-800 hover:text-accent-600">
+                        {site.phone.landline}
+                      </a>
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <Icon name="whatsapp" className="h-5 w-5 shrink-0 text-brand-600" />
+                    <span className="text-slate-700">
+                      GSM:{' '}
+                      <a href={site.phone.gsmHref} className="font-semibold text-brand-800 hover:text-accent-600">
+                        {site.phone.gsm}
+                      </a>
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
                     <Icon name="clock" className="h-5 w-5 shrink-0 text-brand-600" />
                     <span className="text-slate-700">{site.hours}</span>
                   </li>
                 </ul>
-                <Link href="/fiyat-teklifi" className="btn-primary mt-5 w-full">
+                <a
+                  href={site.maps.placeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline mt-5 w-full"
+                >
+                  <Icon name="pin" className="h-4 w-4" />
+                  Yol tarifi al
+                </a>
+                <Link href="/fiyat-teklifi" className="btn-primary mt-3 w-full">
                   Fiyat Teklifi Formu
                   <Icon name="arrow" className="h-4 w-4" />
                 </Link>

@@ -118,6 +118,7 @@ export function localBusinessJsonLd() {
       latitude: site.geo.latitude,
       longitude: site.geo.longitude,
     },
+    hasMap: site.maps.placeUrl,
     areaServed: {
       '@type': 'City',
       name: 'Ankara',

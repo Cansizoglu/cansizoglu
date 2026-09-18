@@ -35,14 +35,15 @@ export default function ContactBar() {
       <div className="fixed inset-x-0 bottom-0 z-40 lg:hidden">
         {/* Görsel butonlar: aralarında ve altlarında boşluk var */}
         <div className="flex items-center justify-center gap-2 px-2 pb-2">
+          {/* Musa'nın isteğiyle hemen ara butonu cep telefonuna yönleniyor */}
           <a
-            href={site.phone.callCenterHref}
+            href={site.phone.gsmHref}
             className="block w-1/2 max-w-[230px]"
-            aria-label={`Telefonla arayın: ${site.phone.callCenter}`}
+            aria-label={`Telefonla arayın: ${site.phone.gsm}`}
           >
             <Image
               src="/img/btn-hemen-ara.webp"
-              alt={`Tıkla hemen telefonla ara: ${site.phone.callCenter}`}
+              alt={`Tıkla hemen telefonla ara: ${site.phone.gsm}`}
               width={527}
               height={175}
               sizes="50vw"

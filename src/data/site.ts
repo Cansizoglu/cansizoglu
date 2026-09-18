@@ -38,9 +38,15 @@ export const site = {
     youtubeId: 'HGVhNqzj4vU',
     title: 'Cansızoğlu Nakliyat tanıtım videosu',
   },
+  // Koordinatlar ve harita gömme adresi firmanın Google İşletme kaydından alındı
   geo: {
-    latitude: 39.9563,
-    longitude: 32.8783,
+    latitude: 39.9534894,
+    longitude: 32.8459337,
+  },
+  maps: {
+    embedSrc:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.4589991961166!2d32.84593367435052!3d39.95348938370621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f7c22a14a75%3A0x8c711654dc4de495!2zQ2Fuc8Sxem_En2x1IE5ha2xpeWF0!5e0!3m2!1str!2str!4v1789741667493!5m2!1str!2str',
+    placeUrl: 'https://www.google.com/maps?ftid=0x14d34f7c22a14a75:0x8c711654dc4de495',
   },
 } as const
 
