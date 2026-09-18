@@ -22,7 +22,7 @@ export default function GalleryPage() {
     <>
       <Breadcrumbs items={[{ name: 'Galeri', path: '/galeri' }]} />
 
-      <section className="py-14">
+      <section className="py-9 sm:py-14">
         <div className="container-site">
           <SectionTitle
             as="h1"

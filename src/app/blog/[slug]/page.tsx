@@ -53,7 +53,7 @@ export default function BlogPostPage({ params }: Props) {
         ]}
       />
 
-      <article className="py-14">
+      <article className="py-9 sm:py-14">
         <div className="container-site grid gap-10 lg:grid-cols-[1fr_320px]">
           <div>
             <header className="mb-8">

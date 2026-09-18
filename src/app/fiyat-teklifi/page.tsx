@@ -52,7 +52,7 @@ export default function QuotePage() {
     <>
       <Breadcrumbs items={[{ name: 'Fiyat Teklifi', path: '/fiyat-teklifi' }]} />
 
-      <section className="py-14">
+      <section className="py-9 sm:py-14">
         <div className="container-site">
           <SectionTitle
             as="h1"

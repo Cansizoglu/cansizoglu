@@ -48,7 +48,7 @@ export default function ServiceDetailPage({ params }: Props) {
         ]}
       />
 
-      <section className="bg-brand-950 py-14 text-white">
+      <section className="bg-brand-950 py-9 sm:py-14 text-white">
         <div className="container-site max-w-3xl">
           <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-white/10 text-white">
             <Icon name={service.icon} className="h-6 w-6" />
@@ -71,7 +71,7 @@ export default function ServiceDetailPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="py-14">
+      <section className="py-9 sm:py-14">
         <div className="container-site grid gap-10 lg:grid-cols-[1fr_320px]">
           <div>
             <div className="prose-tr max-w-none">

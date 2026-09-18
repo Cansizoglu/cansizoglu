@@ -18,27 +18,21 @@ const slides = [
   {
     image: '/img/slider-1.jpg',
     alt: 'Cansızoğlu Nakliyat kapalı kasa taşıma aracı ve mobil asansör Ankara’da çalışırken',
-    eyebrow: `${site.foundedYear}'den beri Ankara'da`,
-    title: 'Ankara Evden Eve Nakliyat',
-    highlight: 'Evden Eve Nakliyat',
+    caption: 'Evden eve nakliyat',
     short: 'Ücretsiz keşif, ambalajlı paketleme, asansörlü ve sigortalı taşıma.',
     text: 'Ücretsiz keşif, ambalajlı paketleme, asansörlü taşıma ve sigortalı nakliyat. Söküm, taşıma ve montaj tek fiyata dahil; eviniz aynı gün yeni adresinde kurulur.',
   },
   {
     image: '/img/slider-3.jpg',
     alt: 'Asansörlü nakliyat aracı Ankara’da bir sitenin önünde kurulu',
-    eyebrow: 'Kendi asansör ve araç filomuz',
-    title: 'Ankara Asansörlü Nakliyat',
-    highlight: 'Asansörlü Nakliyat',
+    caption: 'Asansörlü nakliyat',
     short: 'Asansörsüz binada yüksek kat sorun değil, mobil asansörümüz ekiple gelir.',
     text: 'Asansörsüz binada yüksek kat sorun değil. Mobil taşıma asansörümüz ekiple aynı saatte adreste olur, eşyanız merdivende zarar görmeden iner.',
   },
   {
     image: '/img/slider-2.jpg',
     alt: 'Cansızoğlu Nakliyat araç filosu Ankara’da taşıma sırasında',
-    eyebrow: 'Ankara’nın 25 ilçesinde',
-    title: 'Ankara Nakliyat Fiyatları',
-    highlight: 'Nakliyat Fiyatları',
+    caption: 'Nakliyat fiyatları',
     short: 'Keşifte verdiğimiz yazılı fiyat taşıma günü değişmez.',
     text: 'Keşifte verdiğimiz yazılı fiyat taşıma günü değişmez. Fiyat ve km hesaplama aracımızla taşınma maliyetinizi şimdiden görebilirsiniz.',
   },
@@ -54,6 +48,7 @@ const quickServices = [
 export default function Hero() {
   const [index, setIndex] = useState(0)
   const paused = useRef(false)
+  const active = slides[index]
 
   const go = useCallback((i: number) => setIndex((i + slides.length) % slides.length), [])
 
@@ -99,35 +94,24 @@ export default function Hero() {
         />
       </div>
 
-      <div className="container-site relative py-7 lg:py-28">
+      <div className="container-site relative py-6 lg:py-28">
         <div className="max-w-2xl">
-          {slides.map((slide, i) => {
-            const active = i === index
-            const Heading = i === 0 ? 'h1' : 'p'
-            return (
-              <div
-                key={slide.image}
-                className={
-                  active
-                    ? ''
-                    : 'pointer-events-none absolute inset-x-0 top-0 h-0 overflow-hidden opacity-0'
-                }
-              >
-                <p className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-accent-600 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white sm:text-xs">
-                  <Icon name="star-full" className="h-3 w-3" />
-                  {slide.eyebrow}
-                </p>
-                <Heading className="text-[26px] font-extrabold leading-tight text-white drop-shadow sm:text-4xl lg:text-5xl">
-                  {slide.title.replace(slide.highlight, '').trim()}{' '}
-                  <span className="text-accent-400">{slide.highlight}</span>
-                </Heading>
-                <p className="mt-3 max-w-xl text-[15px] leading-7 text-brand-100 sm:mt-5 sm:text-lg sm:leading-8">
-                  <span className="lg:hidden">{slide.short}</span>
-                  <span className="hidden lg:inline">{slide.text}</span>
-                </p>
-              </div>
-            )
-          })}
+          {/*
+            H1 sabittir ve her zaman görünür. Slayt değiştikçe yalnızca görsel
+            ve altındaki kısa cümle değişir; başlığın kaybolması hem okuyucuyu
+            şaşırtır hem de sayfanın ana başlığını zayıflatırdı.
+          */}
+          <p className="mb-2.5 inline-flex items-center gap-1.5 rounded-full bg-accent-600 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white sm:mb-3 sm:px-3 sm:text-xs">
+            <Icon name="star-full" className="h-3 w-3" />
+            {site.foundedYear}&apos;den beri Ankara&apos;da aile şirketi
+          </p>
+          <h1 className="text-[27px] font-extrabold leading-tight text-white drop-shadow sm:text-4xl lg:text-5xl">
+            Ankara <span className="text-accent-400">Evden Eve Nakliyat</span>
+          </h1>
+          <p className="mt-2.5 max-w-xl text-[15px] leading-7 text-brand-100 sm:mt-5 sm:text-lg sm:leading-8">
+            <span className="lg:hidden">{active.short}</span>
+            <span className="hidden lg:inline">{active.text}</span>
+          </p>
 
           <ul className="mt-6 hidden gap-2 sm:grid sm:grid-cols-2">
             {[
@@ -142,37 +126,36 @@ export default function Hero() {
               </li>
             ))}
           </ul>
-
         </div>
 
-        <div className="mt-6 flex items-center gap-4 lg:mt-8">
+        <div className="mt-4 flex items-center gap-3 lg:mt-8 lg:gap-4">
           <div className="flex gap-2">
             {slides.map((slide, i) => (
               <button
                 key={slide.image}
                 type="button"
                 onClick={() => go(i)}
-                aria-label={`${i + 1}. slayta geç: ${slide.title}`}
+                aria-label={`${i + 1}. görsele geç: ${slide.caption}`}
                 className={`h-1.5 rounded-full transition-all ${
-                  i === index ? 'w-10 bg-accent-500' : 'w-5 bg-white/40 hover:bg-white/70'
+                  i === index ? 'w-9 bg-accent-500' : 'w-5 bg-white/40 hover:bg-white/70'
                 }`}
               />
             ))}
           </div>
-          <div className="flex gap-2">
+          <div className="hidden gap-2 sm:flex">
             <button
               type="button"
               onClick={() => go(index - 1)}
-              aria-label="Önceki slayt"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/30 text-white transition hover:bg-white/15"
+              aria-label="Önceki görsel"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/30 text-white transition hover:bg-white/15 lg:h-9 lg:w-9"
             >
               <Icon name="arrow" className="h-4 w-4 rotate-180" />
             </button>
             <button
               type="button"
               onClick={() => go(index + 1)}
-              aria-label="Sonraki slayt"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/30 text-white transition hover:bg-white/15"
+              aria-label="Sonraki görsel"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/30 text-white transition hover:bg-white/15 lg:h-9 lg:w-9"
             >
               <Icon name="arrow" className="h-4 w-4" />
             </button>
@@ -181,17 +164,17 @@ export default function Hero() {
       </div>
 
       <div className="relative border-t border-white/10 bg-white">
-        <div className="container-site grid gap-3 py-6 sm:grid-cols-2 sm:gap-4 sm:py-8 lg:grid-cols-4">
+        <div className="container-site grid grid-cols-2 gap-2.5 py-5 sm:gap-4 sm:py-8 lg:grid-cols-4">
           {quickServices.map((service) => (
             <Link
               key={service.href}
               href={service.href}
-              className="group flex items-center gap-3 rounded-xl border border-brand-100 bg-white px-4 py-3.5 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-300 hover:shadow-md sm:px-5 sm:py-4"
+              className="group flex flex-col items-center gap-2 rounded-xl border border-brand-100 bg-white px-2.5 py-3 text-center shadow-sm transition hover:-translate-y-0.5 hover:border-accent-300 hover:shadow-md sm:flex-row sm:gap-3 sm:px-5 sm:py-4 sm:text-left"
             >
-              <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent-50 text-accent-600 transition group-hover:bg-accent-600 group-hover:text-white sm:h-11 sm:w-11">
+              <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent-50 text-accent-600 transition group-hover:bg-accent-600 group-hover:text-white sm:h-11 sm:w-11">
                 <Icon name={service.icon} className="h-5 w-5" />
               </span>
-              <span className="text-sm font-semibold text-brand-900">{service.label}</span>
+              <span className="text-[13px] font-semibold leading-snug text-brand-900 sm:text-sm">{service.label}</span>
             </Link>
           ))}
         </div>

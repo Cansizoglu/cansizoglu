@@ -52,7 +52,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="container-site flex h-[72px] items-center justify-between gap-4">
+      <div className="container-site flex h-16 items-center justify-between gap-3 lg:h-[72px] lg:gap-4">
         <Link href="/" aria-label={`${site.name} anasayfa`}>
           <Logo />
         </Link>

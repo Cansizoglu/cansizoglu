@@ -51,7 +51,7 @@ export default function AboutPage() {
     <>
       <Breadcrumbs items={[{ name: 'Hakkımızda', path: '/hakkimizda' }]} />
 
-      <section className="py-14">
+      <section className="py-9 sm:py-14">
         <div className="container-site grid items-center gap-10 lg:grid-cols-2">
           <div>
             <SectionTitle
@@ -86,7 +86,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-slate-50 py-14">
+      <section className="bg-slate-50 py-9 sm:py-14">
         <div className="container-site">
           <SectionTitle title="Tanıtım videomuz" center description="Sahada nasıl çalıştığımızı kısa videomuzda görebilirsiniz." />
           <div className="mx-auto max-w-[420px]">
@@ -117,7 +117,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-14">
+      <section className="py-9 sm:py-14">
         <div className="container-site">
           <SectionTitle title="Çalışma prensiplerimiz" center />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -134,7 +134,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-brand-50/60 py-14">
+      <section className="bg-brand-50/60 py-9 sm:py-14">
         <div className="container-site">
           <SectionTitle title="Kısaca yolculuğumuz" />
           <ol className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -148,7 +148,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-14">
+      <section className="py-9 sm:py-14">
         <div className="container-site grid gap-6 sm:grid-cols-3">
           <Image
             src="/img/arac-tir.webp"

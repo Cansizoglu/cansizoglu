@@ -70,7 +70,7 @@ export default function CalculatorPage() {
         </div>
       </section>
 
-      <section className="border-t border-slate-100 bg-slate-50/70 py-14">
+      <section className="border-t border-slate-100 bg-slate-50/70 py-9 sm:py-14">
         <div className="container-site">
           <h2 className="text-2xl sm:text-3xl">Ankara evden eve nakliyat fiyatları nasıl oluşuyor</h2>
           <p className="mt-3 max-w-3xl leading-7 text-slate-700">
@@ -92,7 +92,7 @@ export default function CalculatorPage() {
         </div>
       </section>
 
-      <section className="py-14">
+      <section className="py-9 sm:py-14">
         <div className="container-site">
           <h2 className="text-2xl sm:text-3xl">
             Ankara evden eve nakliyat fiyat listesi ({priceUpdatedAt})

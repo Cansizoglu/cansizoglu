@@ -20,7 +20,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
   return (
     <footer className="mt-20 bg-brand-950 text-brand-100">
-      <div className="container-site grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container-site grid gap-10 py-9 sm:py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <Logo variant="light" />
           <p className="mt-4 text-sm leading-6 text-brand-200">

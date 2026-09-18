@@ -14,7 +14,7 @@ export default function SectionTitle({
   as?: 'h1' | 'h2'
 }) {
   return (
-    <div className={`mb-8 max-w-3xl ${center ? 'mx-auto text-center' : ''}`}>
+    <div className={`mb-6 max-w-3xl sm:mb-8 ${center ? 'mx-auto text-center' : ''}`}>
       {eyebrow ? (
         <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent-600">
           {eyebrow}

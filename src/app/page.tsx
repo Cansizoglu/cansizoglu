@@ -91,19 +91,19 @@ export default function HomePage() {
       <Hero />
 
       {/* Hizmetler */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="container-site">
           <SectionTitle
             eyebrow="Hizmetlerimiz"
             title="Ankara’da ev ve iş yeri taşımacılığının tamamı"
             description="Evden eve nakliyattan ofis taşımaya, asansörlü taşımacılıktan depolamaya kadar taşınma sürecinizin her adımını tek elden yürütüyoruz."
           />
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
             {services.slice(0, 6).map((service) => (
               <ServiceCard key={service.slug} service={service} />
             ))}
           </div>
-          <div className="mt-8">
+          <div className="mt-6 sm:mt-8">
             <Link href="/hizmetler" className="btn-outline">
               Tüm hizmetleri görün
               <Icon name="arrow" className="h-4 w-4" />
@@ -113,7 +113,7 @@ export default function HomePage() {
       </section>
 
       {/* Taşıma süreci sekmeleri */}
-      <section className="bg-slate-50 py-16">
+      <section className="bg-slate-50 py-10 sm:py-16">
         <div className="container-site">
           <SectionTitle
             eyebrow="Nasıl çalışıyoruz"
@@ -154,7 +154,7 @@ export default function HomePage() {
       </section>
 
       {/* Fiyat listesi */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="container-site">
           <SectionTitle
             eyebrow="Fiyat listesi"
@@ -192,7 +192,7 @@ export default function HomePage() {
       </section>
 
       {/* Anahtar kelime makaleleri */}
-      <section className="bg-brand-50/50 py-16">
+      <section className="bg-brand-50/50 py-10 sm:py-16">
         <div className="container-site">
           <SectionTitle
             eyebrow="Bilgi bankası"
@@ -241,7 +241,7 @@ export default function HomePage() {
       </section>
 
       {/* Neden biz */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="container-site">
           <SectionTitle
             eyebrow="Neden Cansızoğlu Nakliyat"
@@ -263,7 +263,7 @@ export default function HomePage() {
       </section>
 
       {/* Bölgeler */}
-      <section className="bg-slate-50 py-16">
+      <section className="bg-slate-50 py-10 sm:py-16">
         <div className="container-site">
           <SectionTitle
             eyebrow="Hizmet bölgelerimiz"
@@ -296,7 +296,7 @@ export default function HomePage() {
       </section>
 
       {/* Galeri */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="container-site">
           <SectionTitle
             eyebrow="Galeri"
@@ -314,7 +314,7 @@ export default function HomePage() {
       </section>
 
       {/* Müşteri görüşleri */}
-      <section className="bg-brand-50/50 py-16">
+      <section className="bg-brand-50/50 py-10 sm:py-16">
         <div className="container-site">
           <SectionTitle
             eyebrow="Müşteri görüşleri"
@@ -326,7 +326,7 @@ export default function HomePage() {
       </section>
 
       {/* Blog */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="container-site">
           <SectionTitle
             eyebrow="Blog"

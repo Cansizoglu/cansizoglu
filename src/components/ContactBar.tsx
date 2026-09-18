@@ -1,16 +1,17 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Icon from './Icon'
 import { site } from '@/data/site'
 
 /**
- * Mobilde ekranın altına sabitlenen iki katlı çubuk:
- *   üst sıra  → Hemen Ara ve WhatsApp
- *   alt sıra  → Anasayfa, Teklif Al, Hizmetler, Hesaplama
+ * Mobilde ekranın altında duran iletişim ve kısayol alanı:
+ *   üstte  → aralarında ve altlarında boşluk bırakılmış iki görsel buton
+ *   altta  → Anasayfa, Teklif Al, Hizmetler, Hesaplama kısayolları
  * Masaüstünde yerini sağ alttaki WhatsApp balonu alır.
- * Çubuğun kapattığı alan layout'taki `pb-[124px] lg:pb-0` ile telafi edilir.
+ * Kapladığı alan layout'taki `pb-[150px] lg:pb-0` ile telafi edilir.
  */
 const navItems = [
   { href: '/', label: 'Anasayfa', icon: 'home' },
@@ -31,40 +32,46 @@ export default function ContactBar() {
 
   return (
     <>
-      <div className="fixed inset-x-0 bottom-0 z-40 pb-[env(safe-area-inset-bottom)] shadow-[0_-2px_14px_rgba(0,0,0,.2)] lg:hidden">
-        {/* Üst sıra: ara ve WhatsApp */}
-        <div className="grid grid-cols-2">
+      <div className="fixed inset-x-0 bottom-0 z-40 lg:hidden">
+        {/* Görsel butonlar: aralarında ve altlarında boşluk var */}
+        <div className="flex items-center justify-center gap-2 px-2 pb-2">
           <a
             href={site.phone.callCenterHref}
-            className="flex items-center justify-center gap-2.5 bg-brand-900 px-3 py-2.5 text-white"
+            className="block w-1/2 max-w-[230px]"
             aria-label={`Telefonla arayın: ${site.phone.callCenter}`}
           >
-            <Icon name="phone" className="h-5 w-5 shrink-0 text-accent-400" />
-            <span className="text-left leading-tight">
-              <span className="block text-[10px] font-medium uppercase tracking-wide text-brand-200">
-                Hemen Ara
-              </span>
-              <span className="block text-sm font-bold">{site.phone.callCenter}</span>
-            </span>
+            <Image
+              src="/img/btn-hemen-ara.webp"
+              alt={`Tıkla hemen telefonla ara: ${site.phone.callCenter}`}
+              width={527}
+              height={175}
+              sizes="50vw"
+              className="h-auto w-full drop-shadow-md"
+            />
           </a>
           <a
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2.5 bg-[#1f9c4d] px-3 py-2.5 text-white"
+            className="block w-1/2 max-w-[230px]"
+            aria-label="WhatsApp ile bilgi ve destek alın"
           >
-            <Icon name="whatsapp" className="h-5 w-5 shrink-0" />
-            <span className="text-left leading-tight">
-              <span className="block text-[10px] font-medium uppercase tracking-wide text-white/80">
-                WhatsApp
-              </span>
-              <span className="block text-sm font-bold">Bilgi &amp; Destek</span>
-            </span>
+            <Image
+              src="/img/btn-whatsapp.webp"
+              alt="WhatsApp bilgi ve destek hattı"
+              width={527}
+              height={175}
+              sizes="50vw"
+              className="h-auto w-full drop-shadow-md"
+            />
           </a>
         </div>
 
-        {/* Alt sıra: kısa yol menüsü */}
-        <nav aria-label="Hızlı menü" className="grid grid-cols-4 border-t border-white/10 bg-brand-950">
+        {/* Kısayol menüsü */}
+        <nav
+          aria-label="Hızlı menü"
+          className="grid grid-cols-4 bg-brand-950 pb-[env(safe-area-inset-bottom)] shadow-[0_-2px_14px_rgba(0,0,0,.2)]"
+        >
           {navItems.map((item) => {
             const active = isActive(item.href)
             return (

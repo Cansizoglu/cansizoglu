@@ -58,7 +58,7 @@ export default function DistrictsPage() {
   return (
     <>
       <Breadcrumbs items={[{ name: 'Bölgeler', path: '/bolgeler' }]} />
-      <section className="py-14">
+      <section className="py-9 sm:py-14">
         <div className="container-site">
           <SectionTitle
             as="h1"

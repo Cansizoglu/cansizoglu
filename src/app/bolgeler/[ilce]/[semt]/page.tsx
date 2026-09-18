@@ -71,7 +71,7 @@ export default function NeighborhoodPage({ params }: Props) {
         ]}
       />
 
-      <section className="bg-brand-950 py-14 text-white">
+      <section className="bg-brand-950 py-9 sm:py-14 text-white">
         <div className="container-site max-w-3xl">
           <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider ring-1 ring-white/20">
             <Icon name="pin" className="h-4 w-4" />
@@ -100,7 +100,7 @@ export default function NeighborhoodPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="py-14">
+      <section className="py-9 sm:py-14">
         <div className="container-site grid gap-10 lg:grid-cols-[1fr_320px]">
           <div>
             <div className="prose-tr max-w-none">
