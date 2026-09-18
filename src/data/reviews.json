@@ -1,0 +1,41 @@
+{
+  "_aciklama": "ÖRNEK yorumlardır. Gerçek Google yorumlarınızla değiştirin.",
+  "_yapisalVeri": "schemaAktif alanı false iken yorumlar Google'a yapısal veri olarak gönderilmez. Gerçek yorumları girdikten sonra true yapın; uydurma yorumu yapısal veriyle yayınlamak Google tarafından cezalandırılır.",
+  "schemaAktif": false,
+  "ortalamaPuan": 4.9,
+  "yorumSayisi": 0,
+  "yorumlar": [
+    {
+      "ad": "Örnek Müşteri 1",
+      "semt": "Keçiören",
+      "puan": 5,
+      "tarih": "2026-08-14",
+      "hizmet": "Evden eve nakliyat",
+      "yorum": "Buraya gerçek müşteri yorumunuzu yazın. Ekibin kaçta geldiği, eşyanın nasıl paketlendiği ve montajın nasıl yapıldığı gibi ayrıntılar taşıyan yorumlar en çok okunanlardır."
+    },
+    {
+      "ad": "Örnek Müşteri 2",
+      "semt": "Çankaya",
+      "puan": 5,
+      "tarih": "2026-07-29",
+      "hizmet": "Asansörlü nakliyat",
+      "yorum": "Buraya gerçek müşteri yorumunuzu yazın. Asansörle taşıma yapılan işlerde müşteriler genelde hızdan ve eşyanın çizilmemesinden bahseder."
+    },
+    {
+      "ad": "Örnek Müşteri 3",
+      "semt": "Yenimahalle",
+      "puan": 5,
+      "tarih": "2026-07-11",
+      "hizmet": "Ofis taşıma",
+      "yorum": "Buraya gerçek müşteri yorumunuzu yazın. Ofis taşımalarında hafta sonu çalışma ve pazartesi sabahı kurulu ofis vurgusu iyi durur."
+    },
+    {
+      "ad": "Örnek Müşteri 4",
+      "semt": "Etimesgut",
+      "puan": 5,
+      "tarih": "2026-06-22",
+      "hizmet": "Evden eve nakliyat",
+      "yorum": "Buraya gerçek müşteri yorumunuzu yazın. Fiyatın keşifte verilen fiyatla aynı kalması müşterilerin en çok yazdığı konudur."
+    }
+  ]
+}
