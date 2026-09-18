@@ -81,6 +81,50 @@ export function districtSections(district: District): DistrictSection[] {
       ],
     },
     {
+      id: 'parca-esya-tasima',
+      heading: `${d} Parça Eşya Taşıma`,
+      serviceSlug: 'parca-esya-tasima',
+      paragraphs: [
+        `Her taşınma bir ev dolusu eşya olmuyor. ${d} içinde tek koltuk, buzdolabı, çamaşır makinesi, birkaç koli ya da bir odalık eşya taşıtmak isteyenler için parça eşya taşıma yapıyoruz. Bu işler için kamyon yerine küçük nakliye aracı veya panelvan gönderiyoruz; ödediğiniz ücret de tam taşıma fiyatı değil, kapladığı hacim kadar oluyor.`,
+        `Öğrenci evi kurulumu, ikinci el mobilya teslimi, tek parça beyaz eşya nakliyesi ve depoya birkaç kutu kaldırma ${d}'de en çok gelen parça eşya taleplerimiz. Yüksek kata çıkacak tek bir eşya varsa mobil asansörümüzü aynı işe yönlendirebiliyoruz.`,
+      ],
+      points: [
+        'Tek eşya, birkaç koli veya bir odalık taşıma',
+        'Küçük nakliye aracı ve panelvan seçeneği',
+        'Hacme göre fiyat, tam taşıma ücreti değil',
+        `${d} içinde aynı gün sevkiyat`,
+      ],
+    },
+    {
+      id: 'esya-depolama',
+      heading: `${d} Eşya Depolama`,
+      serviceSlug: 'esya-depolama',
+      paragraphs: [
+        `Yeni ev hazır olmadığında ya da tadilat uzadığında eşyanın bekleyeceği bir yer gerekiyor. ${d}'deki taşımalarda eşyanızı depomuza alıyor, listeleyip etiketliyor ve siz hazır olduğunuzda aynı ekiple yeni adrese taşıyoruz. Depoya giren her parça listeye işlendiği için çıkarken eşya aranmıyor.`,
+        `Depolama süresi bir hafta da olabilir, bir yıl da. Kısa süreli depolamada eşya paletlenip ambalajlı bekler; uzun süreli depolamada mobilya ayrıca örtülür ve nem kontrolü yapılır. ${d} içindeki taşımalarda depoya giriş ve depodan çıkış nakliyesini tek sözleşmede birleştiriyoruz.`,
+      ],
+      points: [
+        'Kısa ve uzun süreli depolama',
+        'Her parça listelenir ve etiketlenir',
+        'Ambalajlı bekletme ve nem kontrolü',
+        'Depoya giriş ve çıkış taşıması tek sözleşmede',
+      ],
+    },
+    {
+      id: 'nakliyeci-secimi',
+      heading: `${d} Nakliyeci Seçerken Nelere Bakmalı`,
+      paragraphs: [
+        `${d} nakliyat firmaları arasından seçim yaparken bakılacak ilk şey, işi yapacak olanın firmanın kendi ekibi mi yoksa taşeron mu olduğudur. Telefonda fiyat verip taşımayı başkasına devreden bir nakliyeci, taşıma günü çıkan sorunun muhatabı olmaz. Kendi aracı, kendi asansörü ve kendi kadrosu olan bir firmada bu sorun yaşanmaz.`,
+        `İkinci bakılacak şey fiyatın neyi kapsadığıdır. Ambalaj malzemesi, paketleme işçiliği, söküm ve montaj ile sigorta ayrı kalem olarak eklenirse, ilk duyduğunuz düşük fiyat taşıma günü ikiye katlanabilir. Üçüncüsü de açık adres ve yazılı sözleşmedir: ${d}'de ve Ankara genelinde çalışan firmaların bir kısmı yalnızca cep telefonu numarasıyla iş alıyor.`,
+      ],
+      points: [
+        'Taşeron değil, firmanın kendi ekibi',
+        'Fiyata neyin dahil olduğu yazılı olsun',
+        'Açık adres, sözleşme ve sigorta poliçesi',
+        'Keşif yapmadan telefonda verilen kesin fiyata güvenmeyin',
+      ],
+    },
+    {
       id: 'nakliye-fiyatlari',
       heading: `${d} Nakliye Fiyatları`,
       paragraphs: [
@@ -136,6 +180,19 @@ export function neighborhoodSections(
         'Dar merdivende bile hasarsız taşıma',
         'Yükleme süresi belirgin şekilde kısalır',
         'Eğitimli operatör ve firmaya ait asansör',
+      ],
+    },
+    {
+      id: 'parca-esya-tasima',
+      heading: `${s} Parça Eşya Taşıma`,
+      serviceSlug: 'parca-esya-tasima',
+      paragraphs: [
+        `${s} içinde tek eşya, birkaç koli veya bir odalık taşımalar için küçük nakliye aracı gönderiyoruz. Buzdolabı, çamaşır makinesi, koltuk takımı ya da öğrenci evi eşyası gibi işlerde tam araç ücreti ödemenize gerek kalmıyor; fiyat eşyanın kapladığı hacme göre çıkıyor.`,
+      ],
+      points: [
+        'Tek eşya ve küçük hacimli taşıma',
+        'Hacme göre fiyat',
+        'Yüksek kat için asansör desteği',
       ],
     },
     {
