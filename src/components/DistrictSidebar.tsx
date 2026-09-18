@@ -30,7 +30,7 @@ export default function DistrictSidebar({
             return (
               <li key={n.slug}>
                 <Link
-                  href={`/bolgeler/${district.path}/${n.slug}`}
+                  href={`/bolgeler/${district.path}/${n.slug}`} prefetch={false}
                   aria-current={active ? 'page' : undefined}
                   className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm transition ${
                     active
@@ -93,7 +93,7 @@ export default function DistrictSidebar({
           {posts.slice(0, 5).map((post) => (
             <li key={post.slug}>
               <Link
-                href={`/blog/${post.slug}`}
+                href={`/blog/${post.slug}`} prefetch={false}
                 className="flex gap-2 text-slate-700 hover:text-accent-600"
               >
                 <Icon name="arrow" className="mt-0.5 h-4 w-4 shrink-0 text-accent-500" />
@@ -110,7 +110,7 @@ export default function DistrictSidebar({
           {otherDistricts.map((d) => (
             <li key={d.slug}>
               <Link
-                href={`/bolgeler/${d.path}`}
+                href={`/bolgeler/${d.path}`} prefetch={false}
                 title={`${d.name} evden eve nakliyat`}
                 className="inline-block rounded-full bg-brand-50 px-3 py-1 text-xs text-brand-800 transition hover:bg-accent-50 hover:text-accent-700"
               >

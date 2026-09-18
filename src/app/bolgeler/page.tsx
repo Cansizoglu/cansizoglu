@@ -24,7 +24,7 @@ function DistrictCard({ district }: { district: District }) {
   return (
     <div className="card">
       <h3 className="text-lg">
-        <Link href={`/bolgeler/${district.path}`} className="hover:text-accent-600">
+        <Link href={`/bolgeler/${district.path}`} prefetch={false} className="hover:text-accent-600">
           {district.name} Evden Eve Nakliyat
         </Link>
       </h3>
@@ -35,7 +35,7 @@ function DistrictCard({ district }: { district: District }) {
         {district.neighborhoods.slice(0, 5).map((n) => (
           <li key={n.slug}>
             <Link
-              href={`/bolgeler/${district.path}/${n.slug}`}
+              href={`/bolgeler/${district.path}/${n.slug}`} prefetch={false}
               className="rounded-full bg-brand-50 px-3 py-1 text-xs text-brand-800 hover:bg-accent-50 hover:text-accent-700"
             >
               {n.name}
@@ -44,7 +44,7 @@ function DistrictCard({ district }: { district: District }) {
         ))}
       </ul>
       <Link
-        href={`/bolgeler/${district.path}`}
+        href={`/bolgeler/${district.path}`} prefetch={false}
         className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-600"
       >
         {district.name} sayfasına gidin

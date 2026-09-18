@@ -12,6 +12,9 @@ import { districts, districtByPath, neighborhoodBySlug } from '@/data/districts'
 import { neighborhoodSections } from '@/lib/districtSections'
 import { services } from '@/data/services'
 import { site } from '@/data/site'
+import { createLinker } from '@/lib/autolink'
+import RelatedLinks from '@/components/RelatedLinks'
+import { relatedForNeighborhood } from '@/lib/related'
 import { pageMeta, serviceJsonLd } from '@/lib/seo'
 
 type Props = { params: { ilce: string; semt: string } }
@@ -40,6 +43,8 @@ export default function NeighborhoodPage({ params }: Props) {
 
   const path = `/bolgeler/${district.path}/${neighborhood.slug}`
   const sections = neighborhoodSections(district, neighborhood)
+  const linkify = createLinker(`/bolgeler/${district.path}/${neighborhood.slug}`, 10)
+  const related = relatedForNeighborhood(district, neighborhood.slug)
 
   const faq = [
     {
@@ -99,7 +104,7 @@ export default function NeighborhoodPage({ params }: Props) {
         <div className="container-site grid gap-10 lg:grid-cols-[1fr_320px]">
           <div>
             <div className="prose-tr max-w-none">
-              <p>{neighborhood.intro}</p>
+              <p>{linkify(neighborhood.intro)}</p>
               <p>
                 {neighborhood.name}, {district.name} ilçesine bağlı. Bu bölgedeki
                 taşımalarda ekibimiz {site.address.full} adresindeki merkezimizden yola
@@ -118,7 +123,7 @@ export default function NeighborhoodPage({ params }: Props) {
                   className="flex items-start gap-3 rounded-lg border border-brand-100 p-4"
                 >
                   <Icon name="check" className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
-                  <span className="text-sm leading-6 text-slate-700">{note}</span>
+                  <span className="text-sm leading-6 text-slate-700">{linkify(note)}</span>
                 </li>
               ))}
             </ul>
@@ -140,7 +145,7 @@ export default function NeighborhoodPage({ params }: Props) {
                   <div className="space-y-4">
                     {section.paragraphs.map((paragraph) => (
                       <p key={paragraph.slice(0, 24)} className="leading-8 text-slate-700">
-                        {paragraph}
+                        {linkify(paragraph)}
                       </p>
                     ))}
                   </div>
@@ -213,6 +218,12 @@ export default function NeighborhoodPage({ params }: Props) {
         </div>
       </section>
 
+      <div className="container-site">
+        <RelatedLinks
+          items={related}
+          title={`${neighborhood.name} çevresinde işinize yarayacak sayfalar`}
+        />
+      </div>
       <Faq items={faq} title={`${neighborhood.name} nakliyat hakkında sık sorulanlar`} />
       <CtaBand
         title={`${neighborhood.name} için ücretsiz keşif isteyin`}

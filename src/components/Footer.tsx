@@ -66,7 +66,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {services.slice(0, 8).map((s) => (
               <li key={s.slug}>
-                <Link href={`/hizmetler/${s.slug}`} className="hover:text-white">
+                <Link href={`/hizmetler/${s.slug}`} prefetch={false} className="hover:text-white">
                   {s.title}
                 </Link>
               </li>
@@ -81,7 +81,7 @@ export default function Footer() {
           <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
             {districts.map((d) => (
               <li key={d.slug}>
-                <Link href={`/bolgeler/${d.path}`} className="hover:text-white">
+                <Link href={`/bolgeler/${d.path}`} prefetch={false} className="hover:text-white">
                   {d.name} Nakliyat
                 </Link>
               </li>

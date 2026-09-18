@@ -10,6 +10,9 @@ import { services } from '@/data/services'
 import { centralDistricts } from '@/data/districts'
 import { site } from '@/data/site'
 import { pageMeta, articleJsonLd, breadcrumbJsonLd } from '@/lib/seo'
+import { createLinker } from '@/lib/autolink'
+import RelatedLinks from '@/components/RelatedLinks'
+import { relatedForPost } from '@/lib/related'
 
 type Props = { params: { slug: string } }
 
@@ -38,6 +41,8 @@ export default function BlogPostPage({ params }: Props) {
   if (!post) notFound()
 
   const others = posts.filter((p) => p.slug !== post.slug).slice(0, 6)
+  const linkify = createLinker(`/blog/${post.slug}`, 10)
+  const related = relatedForPost(post.slug)
 
   return (
     <>
@@ -70,14 +75,16 @@ export default function BlogPostPage({ params }: Props) {
                   return (
                     <ul key={i}>
                       {block.items.map((item) => (
-                        <li key={item}>{item}</li>
+                        <li key={item}>{linkify(item)}</li>
                       ))}
                     </ul>
                   )
                 }
-                return <p key={i}>{block.text}</p>
+                return <p key={i}>{linkify(block.text)}</p>
               })}
             </div>
+
+            <RelatedLinks items={related} title="Okumaya devam edin" />
 
             <div className="mt-10 rounded-xl bg-brand-50/70 p-6">
               <h2 className="text-lg">Ankara’da taşınacak mısınız?</h2>

@@ -76,7 +76,7 @@ export default function Header() {
                     {services.slice(0, 10).map((s) => (
                       <Link
                         key={s.slug}
-                        href={`/hizmetler/${s.slug}`}
+                        href={`/hizmetler/${s.slug}`} prefetch={false}
                         className="rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-800"
                       >
                         {s.title}
@@ -97,7 +97,7 @@ export default function Header() {
                     {districts.map((d) => (
                       <Link
                         key={d.slug}
-                        href={`/bolgeler/${d.path}`}
+                        href={`/bolgeler/${d.path}`} prefetch={false}
                         className="rounded-md px-2.5 py-1.5 text-sm text-slate-700 hover:bg-accent-50 hover:text-accent-700"
                       >
                         {d.name}

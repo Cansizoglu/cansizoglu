@@ -10,6 +10,9 @@ import JsonLd from '@/components/JsonLd'
 import { services, serviceBySlug } from '@/data/services'
 import { districts } from '@/data/districts'
 import { site } from '@/data/site'
+import { createLinker } from '@/lib/autolink'
+import RelatedLinks from '@/components/RelatedLinks'
+import { relatedForService } from '@/lib/related'
 import { pageMeta, serviceJsonLd } from '@/lib/seo'
 
 type Props = { params: { slug: string } }
@@ -31,6 +34,8 @@ export function generateMetadata({ params }: Props): Metadata {
 export default function ServiceDetailPage({ params }: Props) {
   const service = serviceBySlug(params.slug)
   if (!service) notFound()
+  const linkify = createLinker(`/hizmetler/${service.slug}`, 10)
+  const relatedPages = relatedForService(service.slug)
 
   const related = services.filter((s) => s.slug !== service.slug).slice(0, 4)
 
@@ -71,7 +76,7 @@ export default function ServiceDetailPage({ params }: Props) {
           <div>
             <div className="prose-tr max-w-none">
               {service.intro.map((paragraph) => (
-                <p key={paragraph.slice(0, 30)}>{paragraph}</p>
+                <p key={paragraph.slice(0, 30)}>{linkify(paragraph)}</p>
               ))}
             </div>
 
@@ -85,7 +90,9 @@ export default function ServiceDetailPage({ params }: Props) {
                     <Icon name="check" className="h-5 w-5" />
                   </span>
                   <h3 className="text-base">{feature.title}</h3>
-                  <p className="mt-1.5 text-sm leading-6 text-slate-600">{feature.text}</p>
+                  <p className="mt-1.5 text-sm leading-6 text-slate-600">
+                    {linkify(feature.text)}
+                  </p>
                 </div>
               ))}
             </div>
@@ -100,7 +107,9 @@ export default function ServiceDetailPage({ params }: Props) {
                         {i + 1}
                       </span>
                       <h3 className="text-base">{step.title}</h3>
-                      <p className="mt-1 text-sm leading-6 text-slate-600">{step.text}</p>
+                      <p className="mt-1 text-sm leading-6 text-slate-600">
+                        {linkify(step.text)}
+                      </p>
                     </li>
                   ))}
                 </ol>
@@ -126,7 +135,7 @@ export default function ServiceDetailPage({ params }: Props) {
               {districts.map((district) => (
                 <Link
                   key={district.slug}
-                  href={`/bolgeler/${district.path}`}
+                  href={`/bolgeler/${district.path}`} prefetch={false}
                   className="rounded-full border border-brand-200 px-4 py-2 text-sm text-brand-800 transition hover:border-brand-500 hover:bg-brand-50"
                 >
                   {district.name}
@@ -186,6 +195,9 @@ export default function ServiceDetailPage({ params }: Props) {
         </div>
       </section>
 
+      <div className="container-site">
+        <RelatedLinks items={relatedPages} />
+      </div>
       <Faq items={service.faq} title={`${service.title} hakkında sık sorulanlar`} />
       <CtaBand />
 

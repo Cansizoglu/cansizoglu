@@ -76,7 +76,7 @@ export default function Hero() {
         Görselin en boy oranı 16/5 olduğu için 16/6 kutuda neredeyse tamamı görünür.
         Masaüstünde: bölümün tamamını kaplayan zemin.
       */}
-      <div className="relative mx-auto mt-5 aspect-[16/6] w-[calc(100%-2rem)] max-w-site overflow-hidden rounded-xl sm:w-[calc(100%-3rem)] lg:absolute lg:inset-0 lg:mt-0 lg:aspect-auto lg:w-full lg:max-w-none lg:rounded-none">
+      <div className="relative aspect-[16/7] w-full overflow-hidden sm:aspect-[16/6] lg:absolute lg:inset-0 lg:aspect-auto">
         {slides.map((slide, i) => (
           <Image
             key={slide.image}
@@ -143,19 +143,9 @@ export default function Hero() {
             ))}
           </ul>
 
-          <div className="mt-5 flex flex-wrap gap-2.5 sm:mt-8 sm:gap-3">
-            <Link href="/fiyat-teklifi" className="btn-primary">
-              Ücretsiz Fiyat Teklifi Al
-              <Icon name="arrow" className="h-4 w-4" />
-            </Link>
-            <a href={site.phone.callCenterHref} className="btn-white">
-              <Icon name="phone" className="h-4 w-4" />
-              {site.phone.callCenter}
-            </a>
-          </div>
         </div>
 
-        <div className="mt-6 flex items-center gap-4 lg:mt-10">
+        <div className="mt-6 flex items-center gap-4 lg:mt-8">
           <div className="flex gap-2">
             {slides.map((slide, i) => (
               <button

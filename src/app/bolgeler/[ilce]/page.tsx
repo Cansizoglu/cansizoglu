@@ -12,6 +12,9 @@ import { districts, districtByPath } from '@/data/districts'
 import { districtSections } from '@/lib/districtSections'
 import { services } from '@/data/services'
 import { site } from '@/data/site'
+import { createLinker } from '@/lib/autolink'
+import RelatedLinks from '@/components/RelatedLinks'
+import { relatedForDistrict } from '@/lib/related'
 import { pageMeta, serviceJsonLd } from '@/lib/seo'
 
 type Props = { params: { ilce: string } }
@@ -35,6 +38,8 @@ export default function DistrictPage({ params }: Props) {
   if (!district) notFound()
 
   const sections = districtSections(district)
+  const linkify = createLinker(`/bolgeler/${district.path}`, 12)
+  const related = relatedForDistrict(district)
 
   const districtFaq = [
     {
@@ -94,7 +99,7 @@ export default function DistrictPage({ params }: Props) {
           <div>
             <div className="prose-tr max-w-none">
               {district.intro.map((paragraph) => (
-                <p key={paragraph.slice(0, 30)}>{paragraph}</p>
+                <p key={paragraph.slice(0, 30)}>{linkify(paragraph)}</p>
               ))}
             </div>
 
@@ -127,7 +132,7 @@ export default function DistrictPage({ params }: Props) {
                     <Icon name="check" className="h-5 w-5" />
                   </span>
                   <h3 className="text-base">{item.title}</h3>
-                  <p className="mt-1.5 text-sm leading-6 text-slate-600">{item.text}</p>
+                  <p className="mt-1.5 text-sm leading-6 text-slate-600">{linkify(item.text)}</p>
                 </div>
               ))}
             </div>
@@ -149,7 +154,7 @@ export default function DistrictPage({ params }: Props) {
                   <div className="space-y-4">
                     {section.paragraphs.map((paragraph) => (
                       <p key={paragraph.slice(0, 24)} className="leading-8 text-slate-700">
-                        {paragraph}
+                        {linkify(paragraph)}
                       </p>
                     ))}
                   </div>
@@ -196,7 +201,7 @@ export default function DistrictPage({ params }: Props) {
               {district.neighborhoods.map((n) => (
                 <Link
                   key={n.slug}
-                  href={`/bolgeler/${district.path}/${n.slug}`}
+                  href={`/bolgeler/${district.path}/${n.slug}`} prefetch={false}
                   className="group flex items-center justify-between gap-3 rounded-lg border border-brand-100 px-4 py-3 transition hover:border-brand-400 hover:bg-brand-50/60"
                 >
                   <span className="text-sm font-medium text-slate-800">
@@ -247,6 +252,12 @@ export default function DistrictPage({ params }: Props) {
         </div>
       </section>
 
+      <div className="container-site">
+        <RelatedLinks
+          items={related}
+          title={`${district.name} ve çevresinde işinize yarayacak sayfalar`}
+        />
+      </div>
       <Faq items={districtFaq} title={`${district.name} nakliyat hakkında sık sorulanlar`} />
       <CtaBand
         title={`${district.name} için taşınma tarihinizi ayırtın`}
