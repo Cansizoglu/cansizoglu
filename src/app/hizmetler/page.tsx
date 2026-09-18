@@ -5,18 +5,19 @@ import ServiceCard from '@/components/ServiceCard'
 import CtaBand from '@/components/CtaBand'
 import { services } from '@/data/services'
 import { pageMeta } from '@/lib/seo'
+import { sayfa } from '@/lib/urls'
 
 export const metadata: Metadata = pageMeta({
   title: 'Hizmetlerimiz | Ankara Nakliyat ve Taşımacılık Hizmetleri',
   description:
     'Ankara evden eve nakliyat, ofis taşıma, asansörlü nakliyat, asansör kiralama, piyano ve kasa taşıma, depolama hizmetlerimizin tamamı.',
-  path: '/hizmetler',
+  path: sayfa.hizmetler,
 })
 
 export default function ServicesPage() {
   return (
     <>
-      <Breadcrumbs items={[{ name: 'Hizmetler', path: '/hizmetler' }]} />
+      <Breadcrumbs items={[{ name: 'Hizmetler', path: sayfa.hizmetler }]} />
       <section className="py-9 sm:py-14">
         <div className="container-site">
           <SectionTitle

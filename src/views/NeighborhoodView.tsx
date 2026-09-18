@@ -1,51 +1,27 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { notFound } from 'next/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Icon from '@/components/Icon'
 import Faq from '@/components/Faq'
 import CtaBand from '@/components/CtaBand'
 import JsonLd from '@/components/JsonLd'
 import DistrictSidebar from '@/components/DistrictSidebar'
-import { districts, districtByPath, neighborhoodBySlug } from '@/data/districts'
-import { neighborhoodSections } from '@/lib/districtSections'
+import RelatedLinks from '@/components/RelatedLinks'
+import type { District, Neighborhood } from '@/data/districts'
 import { services } from '@/data/services'
 import { site } from '@/data/site'
+import { neighborhoodSections } from '@/lib/districtSections'
 import { createLinker } from '@/lib/autolink'
-import RelatedLinks from '@/components/RelatedLinks'
 import { relatedForNeighborhood } from '@/lib/related'
-import { pageMeta, serviceJsonLd } from '@/lib/seo'
+import { serviceJsonLd } from '@/lib/seo'
+import { sayfa, urlHizmet, urlIlce, urlSemt } from '@/lib/urls'
 
-type Props = { params: { ilce: string; semt: string } }
+type Props = { district: District; neighborhood: Neighborhood }
 
-export function generateStaticParams() {
-  return districts.flatMap((district) =>
-    district.neighborhoods.map((n) => ({ ilce: district.path, semt: n.slug })),
-  )
-}
-
-export function generateMetadata({ params }: Props): Metadata {
-  const district = districtByPath(params.ilce)
-  const neighborhood = district ? neighborhoodBySlug(district, params.semt) : undefined
-  if (!district || !neighborhood) return {}
-  // "Şereflikoçhisar Merkez | Şereflikoçhisar Ankara" gibi tekrarlarda ilçe adı atlanıyor.
-  const scope = neighborhood.name.startsWith(district.name) ? 'Ankara' : `${district.name} Ankara`
-  return pageMeta({
-    title: `${neighborhood.name} Evden Eve Nakliyat | ${scope}`,
-    description: `${neighborhood.name} evden eve nakliyat: ${scope} içinde asansörlü, ambalajlı ve sigortalı ev taşıma. Ücretsiz keşif, aynı gün söküm, taşıma ve kurulum.`,
-    path: `/bolgeler/${district.path}/${neighborhood.slug}`,
-  })
-}
-
-export default function NeighborhoodPage({ params }: Props) {
-  const district = districtByPath(params.ilce)
-  const neighborhood = district ? neighborhoodBySlug(district, params.semt) : undefined
-  if (!district || !neighborhood) notFound()
-
-  const path = `/bolgeler/${district.path}/${neighborhood.slug}`
+export default function NeighborhoodView({ district, neighborhood }: Props) {
+  const path = urlSemt(district.path, neighborhood.slug)
   const sections = neighborhoodSections(district, neighborhood)
-  const linkify = createLinker(`/bolgeler/${district.path}/${neighborhood.slug}`, 10)
+  const linkify = createLinker(path, 10)
   const related = relatedForNeighborhood(district, neighborhood.slug)
 
   const faq = [
@@ -67,8 +43,8 @@ export default function NeighborhoodPage({ params }: Props) {
     <>
       <Breadcrumbs
         items={[
-          { name: 'Bölgeler', path: '/bolgeler' },
-          { name: district.name, path: `/bolgeler/${district.path}` },
+          { name: 'Hizmet Bölgelerimiz', path: sayfa.bolgeler },
+          { name: district.name, path: urlIlce(district.path) },
           { name: `${neighborhood.name} Evden Eve Nakliyat`, path },
         ]}
       />
@@ -87,7 +63,7 @@ export default function NeighborhoodPage({ params }: Props) {
             ev taşıma hizmeti.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link href="/fiyat-teklifi" className="btn-white">
+            <Link href={sayfa.teklif} className="btn-white">
               Fiyat Teklifi Al
               <Icon name="arrow" className="h-4 w-4" />
             </Link>
@@ -163,7 +139,7 @@ export default function NeighborhoodPage({ params }: Props) {
                   ) : null}
                   {section.serviceSlug ? (
                     <Link
-                      href={`/hizmetler/${section.serviceSlug}`}
+                      href={urlHizmet(section.serviceSlug)}
                       className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700"
                     >
                       Hizmet detayını inceleyin
@@ -171,7 +147,7 @@ export default function NeighborhoodPage({ params }: Props) {
                     </Link>
                   ) : (
                     <Link
-                      href="/fiyat-teklifi"
+                      href={sayfa.teklif}
                       className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700"
                     >
                       Ücretsiz fiyat teklifi alın
@@ -189,7 +165,7 @@ export default function NeighborhoodPage({ params }: Props) {
               {services.slice(0, 6).map((service) => (
                 <Link
                   key={service.slug}
-                  href={`/hizmetler/${service.slug}`}
+                  href={urlHizmet(service.slug)}
                   className="flex items-center gap-3 rounded-lg border border-brand-100 px-4 py-3 text-sm text-slate-700 transition hover:border-brand-400 hover:text-brand-800"
                 >
                   <Icon name={service.icon} className="h-5 w-5 shrink-0 text-brand-600" />
@@ -206,7 +182,7 @@ export default function NeighborhoodPage({ params }: Props) {
                 {neighborhood.name} dışında {district.name} ilçesinin tüm mahallelerinde
                 taşıma yapıyoruz. İlçenin genel çalışma şartlarını{' '}
                 <Link
-                  href={`/bolgeler/${district.path}`}
+                  href={urlIlce(district.path)}
                   className="font-semibold text-brand-700 underline underline-offset-2"
                 >
                   {district.name} evden eve nakliyat

@@ -10,15 +10,16 @@ import { services } from '@/data/services'
 import { districts } from '@/data/districts'
 import { aboutPages } from '@/data/aboutPages'
 import { routes } from '@/data/routes'
+import { sayfa, urlHizmet, urlIl, urlIlce } from '@/lib/urls'
 
 const mainNav = [
   { href: '/', label: 'Anasayfa' },
-  { href: '/hizmetler', label: 'Hizmetler', mega: 'services' as const },
-  { href: '/bolgeler', label: 'Bölgeler', mega: 'districts' as const },
-  { href: '/sehirler-arasi', label: 'Şehirler Arası', mega: 'routes' as const },
-  { href: '/nakliyat-fiyat-hesaplama', label: 'Fiyat Hesapla' },
-  { href: '/galeri', label: 'Galeri' },
-  { href: '/blog', label: 'Blog' },
+  { href: sayfa.hizmetler, label: 'Hizmetler', mega: 'services' as const },
+  { href: sayfa.bolgeler, label: 'Bölgeler', mega: 'districts' as const },
+  { href: sayfa.sehirlerArasi, label: 'Şehirler Arası', mega: 'routes' as const },
+  { href: sayfa.hesaplama, label: 'Fiyat Hesapla' },
+  { href: sayfa.galeri, label: 'Galeri' },
+  { href: sayfa.blog, label: 'Blog' },
   { href: '/hakkimizda', label: 'Hakkımızda', mega: 'about' as const },
   { href: '/iletisim', label: 'İletişim' },
 ]
@@ -79,7 +80,7 @@ export default function Header() {
                     {services.slice(0, 10).map((s) => (
                       <Link
                         key={s.slug}
-                        href={`/hizmetler/${s.slug}`} prefetch={false}
+                        href={urlHizmet(s.slug)} prefetch={false}
                         className="rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-800"
                       >
                         {s.title}
@@ -87,7 +88,7 @@ export default function Header() {
                     ))}
                   </div>
                   <Link
-                    href="/hizmetler"
+                    href={sayfa.hizmetler}
                     className="mt-2 block border-t border-brand-100 px-3 pt-3 text-sm font-semibold text-brand-700"
                   >
                     Tüm hizmetler
@@ -100,7 +101,7 @@ export default function Header() {
                     {routes.map((r) => (
                       <Link
                         key={r.slug}
-                        href={`/sehirler-arasi/${r.slug}`} prefetch={false}
+                        href={urlIl(r.slug)} prefetch={false}
                         className="rounded-md px-2.5 py-1.5 text-sm text-slate-700 hover:bg-accent-50 hover:text-accent-700"
                       >
                         Ankara {r.city}
@@ -108,7 +109,7 @@ export default function Header() {
                     ))}
                   </div>
                   <Link
-                    href="/sehirler-arasi"
+                    href={sayfa.sehirlerArasi}
                     className="mt-2 block border-t border-brand-100 px-3 pt-3 text-sm font-semibold text-brand-700"
                   >
                     Tüm iller
@@ -140,7 +141,7 @@ export default function Header() {
                     {districts.map((d) => (
                       <Link
                         key={d.slug}
-                        href={`/bolgeler/${d.path}`} prefetch={false}
+                        href={urlIlce(d.path)} prefetch={false}
                         className="rounded-md px-2.5 py-1.5 text-sm text-slate-700 hover:bg-accent-50 hover:text-accent-700"
                       >
                         {d.name}
@@ -148,7 +149,7 @@ export default function Header() {
                     ))}
                   </div>
                   <Link
-                    href="/bolgeler"
+                    href={sayfa.bolgeler}
                     className="mt-2 block border-t border-brand-100 px-3 pt-3 text-sm font-semibold text-brand-700"
                   >
                     Tüm bölgeler
@@ -164,7 +165,7 @@ export default function Header() {
             <Icon name="phone" className="h-4 w-4" />
             {site.phone.callCenter}
           </a>
-          <Link href="/fiyat-teklifi" className="btn-outline hidden whitespace-nowrap 2xl:inline-flex">
+          <Link href={sayfa.teklif} className="btn-outline hidden whitespace-nowrap 2xl:inline-flex">
             Fiyat Teklifi Al
           </Link>
           <button
@@ -207,7 +208,7 @@ export default function Header() {
                 ) : null}
               </div>
             ))}
-            <Link href="/fiyat-teklifi" className="btn-primary mt-4">
+            <Link href={sayfa.teklif} className="btn-primary mt-4">
               Ücretsiz Fiyat Teklifi Al
             </Link>
             <a href={site.phone.gsmHref} className="btn-outline mt-2">

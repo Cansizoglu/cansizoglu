@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Icon from './Icon'
 import { priceRows, priceIncluded, priceUpdatedAt, formatTl } from '@/data/pricing'
+import { sayfa } from '@/lib/urls'
 
 export default function PriceTable() {
   return (
@@ -70,11 +71,11 @@ export default function PriceTable() {
             günü değişmez.
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
-            <Link href="/fiyat-teklifi" className="btn-primary">
+            <Link href={sayfa.teklif} className="btn-primary">
               Ücretsiz Teklif Al
               <Icon name="arrow" className="h-4 w-4" />
             </Link>
-            <Link href="/nakliyat-fiyat-hesaplama" className="btn-outline">
+            <Link href={sayfa.hesaplama} className="btn-outline">
               Fiyat hesaplama aracı
             </Link>
           </div>

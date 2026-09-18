@@ -12,19 +12,20 @@ import {
   type District,
 } from '@/data/districts'
 import { pageMeta } from '@/lib/seo'
+import { sayfa, urlIlce, urlSemt } from '@/lib/urls'
 
 export const metadata: Metadata = pageMeta({
   title: 'Ankara Evden Eve Nakliyat Bölgeleri | 25 İlçe, Tüm Semtler',
   description:
     'Ankara evden eve nakliyat hizmeti verdiğimiz 25 ilçe ve semtleri. Keçiören, Çankaya, Yenimahalle, Altındağ, Mamak, Etimesgut ve tüm çevre ilçeler.',
-  path: '/bolgeler',
+  path: sayfa.bolgeler,
 })
 
 function DistrictCard({ district }: { district: District }) {
   return (
     <div className="card">
       <h3 className="text-lg">
-        <Link href={`/bolgeler/${district.path}`} prefetch={false} className="hover:text-accent-600">
+        <Link href={urlIlce(district.path)} prefetch={false} className="hover:text-accent-600">
           {district.name} Evden Eve Nakliyat
         </Link>
       </h3>
@@ -35,7 +36,7 @@ function DistrictCard({ district }: { district: District }) {
         {district.neighborhoods.slice(0, 5).map((n) => (
           <li key={n.slug}>
             <Link
-              href={`/bolgeler/${district.path}/${n.slug}`} prefetch={false}
+              href={urlSemt(district.path, n.slug)} prefetch={false}
               className="rounded-full bg-brand-50 px-3 py-1 text-xs text-brand-800 hover:bg-accent-50 hover:text-accent-700"
             >
               {n.name}
@@ -44,7 +45,7 @@ function DistrictCard({ district }: { district: District }) {
         ))}
       </ul>
       <Link
-        href={`/bolgeler/${district.path}`} prefetch={false}
+        href={urlIlce(district.path)} prefetch={false}
         className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-600"
       >
         {district.name} sayfasına gidin
@@ -57,7 +58,7 @@ function DistrictCard({ district }: { district: District }) {
 export default function DistrictsPage() {
   return (
     <>
-      <Breadcrumbs items={[{ name: 'Bölgeler', path: '/bolgeler' }]} />
+      <Breadcrumbs items={[{ name: 'Bölgeler', path: sayfa.bolgeler }]} />
       <section className="py-9 sm:py-14">
         <div className="container-site">
           <SectionTitle
@@ -103,7 +104,7 @@ export default function DistrictsPage() {
               geçerli. Adresi telefonda söylemeniz yeterli, keşif için aynı gün
               geliyoruz.
             </p>
-            <Link href="/fiyat-teklifi" className="btn-primary mt-4 inline-flex">
+            <Link href={sayfa.teklif} className="btn-primary mt-4 inline-flex">
               Ücretsiz keşif ve fiyat teklifi
             </Link>
           </div>

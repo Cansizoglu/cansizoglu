@@ -3,6 +3,7 @@ import Icon from './Icon'
 import { site } from '@/data/site'
 import { districts, type District } from '@/data/districts'
 import { posts } from '@/data/blog'
+import { sayfa, urlIlce, urlSemt, urlYazi } from '@/lib/urls'
 
 /**
  * İlçe ve semt sayfalarının sidebar'ı.
@@ -30,7 +31,7 @@ export default function DistrictSidebar({
             return (
               <li key={n.slug}>
                 <Link
-                  href={`/bolgeler/${district.path}/${n.slug}`} prefetch={false}
+                  href={urlSemt(district.path, n.slug)} prefetch={false}
                   aria-current={active ? 'page' : undefined}
                   className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm transition ${
                     active
@@ -72,11 +73,11 @@ export default function DistrictSidebar({
             </a>
           </li>
         </ul>
-        <Link href="/fiyat-teklifi" className="btn-primary mt-5 w-full justify-center">
+        <Link href={sayfa.teklif} className="btn-primary mt-5 w-full justify-center">
           Ücretsiz Teklif Al
         </Link>
         <Link
-          href="/nakliyat-fiyat-hesaplama"
+          href={sayfa.hesaplama}
           className="mt-3 inline-flex w-full items-center justify-center gap-1.5 text-sm font-semibold text-accent-600"
         >
           Fiyat ve km hesaplama aracı
@@ -93,7 +94,7 @@ export default function DistrictSidebar({
           {posts.slice(0, 5).map((post) => (
             <li key={post.slug}>
               <Link
-                href={`/blog/${post.slug}`} prefetch={false}
+                href={urlYazi(post.slug)} prefetch={false}
                 className="flex gap-2 text-slate-700 hover:text-accent-600"
               >
                 <Icon name="arrow" className="mt-0.5 h-4 w-4 shrink-0 text-accent-500" />
@@ -110,7 +111,7 @@ export default function DistrictSidebar({
           {otherDistricts.map((d) => (
             <li key={d.slug}>
               <Link
-                href={`/bolgeler/${d.path}`} prefetch={false}
+                href={urlIlce(d.path)} prefetch={false}
                 title={`${d.name} evden eve nakliyat`}
                 className="inline-block rounded-full bg-brand-50 px-3 py-1 text-xs text-brand-800 transition hover:bg-accent-50 hover:text-accent-700"
               >
@@ -120,7 +121,7 @@ export default function DistrictSidebar({
           ))}
         </ul>
         <Link
-          href="/bolgeler"
+          href={sayfa.bolgeler}
           className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-600"
         >
           Tüm hizmet bölgelerimiz

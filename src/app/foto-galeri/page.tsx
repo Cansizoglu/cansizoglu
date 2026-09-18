@@ -8,18 +8,19 @@ import GalleryGrid from '@/components/GalleryGrid'
 import { galleryItems } from '@/data/gallery'
 import { site } from '@/data/site'
 import { pageMeta } from '@/lib/seo'
+import { sayfa } from '@/lib/urls'
 
 export const metadata: Metadata = pageMeta({
   title: 'Galeri | Cansızoğlu Nakliyat Araç Filosu ve Çalışmalarımız',
   description:
     'Cansızoğlu Nakliyat araç filosu, taşıma asansörü, ambalaj malzemeleri ve sahadaki çalışmalarımızdan fotoğraflar.',
-  path: '/galeri',
+  path: sayfa.galeri,
 })
 
 export default function GalleryPage() {
   return (
     <>
-      <Breadcrumbs items={[{ name: 'Galeri', path: '/galeri' }]} />
+      <Breadcrumbs items={[{ name: 'Galeri', path: sayfa.galeri }]} />
 
       <section className="py-9 sm:py-14">
         <div className="container-site">

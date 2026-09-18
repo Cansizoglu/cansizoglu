@@ -6,6 +6,7 @@ import Icon from '@/components/Icon'
 import CtaBand from '@/components/CtaBand'
 import { site } from '@/data/site'
 import { pageMeta } from '@/lib/seo'
+import { sayfa } from '@/lib/urls'
 
 export const metadata: Metadata = pageMeta({
   title: 'İletişim | Cansızoğlu Nakliyat Ankara',
@@ -135,7 +136,7 @@ export default function ContactPage() {
                   <Icon name="pin" className="h-4 w-4" />
                   Yol tarifi al
                 </a>
-                <Link href="/fiyat-teklifi" className="btn-primary mt-3 w-full">
+                <Link href={sayfa.teklif} className="btn-primary mt-3 w-full">
                   Fiyat Teklifi Formu
                   <Icon name="arrow" className="h-4 w-4" />
                 </Link>

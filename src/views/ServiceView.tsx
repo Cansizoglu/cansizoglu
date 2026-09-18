@@ -1,50 +1,32 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { notFound } from 'next/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Icon from '@/components/Icon'
 import Faq from '@/components/Faq'
 import CtaBand from '@/components/CtaBand'
 import JsonLd from '@/components/JsonLd'
-import { services, serviceBySlug } from '@/data/services'
+import RelatedLinks from '@/components/RelatedLinks'
+import type { Service } from '@/data/services'
+import { services } from '@/data/services'
 import { districts } from '@/data/districts'
 import { site } from '@/data/site'
 import { createLinker } from '@/lib/autolink'
-import RelatedLinks from '@/components/RelatedLinks'
 import { relatedForService } from '@/lib/related'
-import { pageMeta, serviceJsonLd } from '@/lib/seo'
+import { serviceJsonLd } from '@/lib/seo'
+import { sayfa, urlHizmet, urlIlce } from '@/lib/urls'
 
-type Props = { params: { slug: string } }
-
-export function generateStaticParams() {
-  return services.map((service) => ({ slug: service.slug }))
-}
-
-export function generateMetadata({ params }: Props): Metadata {
-  const service = serviceBySlug(params.slug)
-  if (!service) return {}
-  return pageMeta({
-    title: service.metaTitle,
-    description: service.metaDescription,
-    path: `/hizmetler/${service.slug}`,
-  })
-}
-
-export default function ServiceDetailPage({ params }: Props) {
-  const service = serviceBySlug(params.slug)
-  if (!service) notFound()
-  const linkify = createLinker(`/hizmetler/${service.slug}`, 10)
+export default function ServiceView({ service }: { service: Service }) {
+  const path = urlHizmet(service.slug)
+  const linkify = createLinker(path, 10)
   const relatedPages = relatedForService(service.slug)
-
   const related = services.filter((s) => s.slug !== service.slug).slice(0, 4)
 
   return (
     <>
       <Breadcrumbs
         items={[
-          { name: 'Hizmetler', path: '/hizmetler' },
-          { name: service.title, path: `/hizmetler/${service.slug}` },
+          { name: 'Hizmetler', path: sayfa.hizmetler },
+          { name: service.title, path },
         ]}
       />
 
@@ -56,7 +38,7 @@ export default function ServiceDetailPage({ params }: Props) {
           <h1 className="text-3xl sm:text-4xl text-white">{service.h1}</h1>
           <p className="mt-4 text-lg leading-8 text-brand-100">{service.short}</p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link href="/fiyat-teklifi" className="btn-white">
+            <Link href={sayfa.teklif} className="btn-white">
               Fiyat Teklifi Al
               <Icon name="arrow" className="h-4 w-4" />
             </Link>
@@ -135,7 +117,7 @@ export default function ServiceDetailPage({ params }: Props) {
               {districts.map((district) => (
                 <Link
                   key={district.slug}
-                  href={`/bolgeler/${district.path}`} prefetch={false}
+                  href={urlIlce(district.path)} prefetch={false}
                   className="rounded-full border border-brand-200 px-4 py-2 text-sm text-brand-800 transition hover:border-brand-500 hover:bg-brand-50"
                 >
                   {district.name}
@@ -170,7 +152,7 @@ export default function ServiceDetailPage({ params }: Props) {
                   </a>
                 </li>
               </ul>
-              <Link href="/fiyat-teklifi" className="btn-primary mt-5 w-full">
+              <Link href={sayfa.teklif} className="btn-primary mt-5 w-full">
                 Ücretsiz Teklif Al
               </Link>
             </div>
@@ -181,7 +163,7 @@ export default function ServiceDetailPage({ params }: Props) {
                 {related.map((item) => (
                   <li key={item.slug}>
                     <Link
-                      href={`/hizmetler/${item.slug}`}
+                      href={urlHizmet(item.slug)}
                       className="flex items-center gap-2 text-slate-700 hover:text-brand-700"
                     >
                       <Icon name="arrow" className="h-4 w-4 text-brand-500" />
@@ -205,7 +187,7 @@ export default function ServiceDetailPage({ params }: Props) {
         data={serviceJsonLd({
           name: service.title,
           description: service.metaDescription,
-          path: `/hizmetler/${service.slug}`,
+          path,
         })}
       />
     </>

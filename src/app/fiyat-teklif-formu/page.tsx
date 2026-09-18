@@ -6,12 +6,13 @@ import Icon from '@/components/Icon'
 import Faq from '@/components/Faq'
 import { site } from '@/data/site'
 import { pageMeta } from '@/lib/seo'
+import { sayfa } from '@/lib/urls'
 
 export const metadata: Metadata = pageMeta({
   title: 'Fiyat Teklifi Al | Ankara Evden Eve Nakliyat Fiyatları',
   description:
     'Ankara evden eve nakliyat fiyat teklifi alın. Nereden nereye, kat, oda sayısı ve tarih bilgisini paylaşın; en kısa sürede size dönelim.',
-  path: '/fiyat-teklifi',
+  path: sayfa.teklif,
 })
 
 const info = [
@@ -50,7 +51,7 @@ const quoteFaq = [
 export default function QuotePage() {
   return (
     <>
-      <Breadcrumbs items={[{ name: 'Fiyat Teklifi', path: '/fiyat-teklifi' }]} />
+      <Breadcrumbs items={[{ name: 'Fiyat Teklifi', path: sayfa.teklif }]} />
 
       <section className="py-9 sm:py-14">
         <div className="container-site">

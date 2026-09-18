@@ -1,21 +1,19 @@
-import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { notFound } from 'next/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Icon from '@/components/Icon'
 import CtaBand from '@/components/CtaBand'
 import JsonLd from '@/components/JsonLd'
-import { posts, postBySlug } from '@/data/blog'
+import RelatedLinks from '@/components/RelatedLinks'
+import type { BlogPost } from '@/data/blog'
+import { posts } from '@/data/blog'
 import { services } from '@/data/services'
 import { centralDistricts } from '@/data/districts'
 import { site } from '@/data/site'
-import { pageMeta, articleJsonLd } from '@/lib/seo'
+import { articleJsonLd } from '@/lib/seo'
 import { createLinker } from '@/lib/autolink'
-import RelatedLinks from '@/components/RelatedLinks'
 import { relatedForPost } from '@/lib/related'
-
-type Props = { params: { slug: string } }
+import { sayfa, urlHizmet, urlIlce, urlYazi } from '@/lib/urls'
 
 const dateFormatter = new Intl.DateTimeFormat('tr-TR', {
   day: 'numeric',
@@ -23,35 +21,18 @@ const dateFormatter = new Intl.DateTimeFormat('tr-TR', {
   year: 'numeric',
 })
 
-export function generateStaticParams() {
-  return posts.map((post) => ({ slug: post.slug }))
-}
-
-export function generateMetadata({ params }: Props): Metadata {
-  const post = postBySlug(params.slug)
-  if (!post) return {}
-  return pageMeta({
-    title: post.metaTitle,
-    description: post.metaDescription,
-    path: `/blog/${post.slug}`,
-    images: [post.image],
-  })
-}
-
-export default function BlogPostPage({ params }: Props) {
-  const post = postBySlug(params.slug)
-  if (!post) notFound()
-
+export default function PostView({ post }: { post: BlogPost }) {
+  const path = urlYazi(post.slug)
   const others = posts.filter((p) => p.slug !== post.slug).slice(0, 6)
-  const linkify = createLinker(`/blog/${post.slug}`, 10)
+  const linkify = createLinker(path, 10)
   const related = relatedForPost(post.slug)
 
   return (
     <>
       <Breadcrumbs
         items={[
-          { name: 'Blog', path: '/blog' },
-          { name: post.title, path: `/blog/${post.slug}` },
+          { name: 'Blog', path: sayfa.blog },
+          { name: post.title, path },
         ]}
       />
 
@@ -115,7 +96,7 @@ export default function BlogPostPage({ params }: Props) {
                 formu doldurabilir veya {site.phone.callCenter} numaralı çağrı hattımızdan
                 bize ulaşabilirsiniz.
               </p>
-              <Link href="/fiyat-teklifi" className="btn-primary mt-4">
+              <Link href={sayfa.teklif} className="btn-primary mt-4">
                 Fiyat Teklifi Al
                 <Icon name="arrow" className="h-4 w-4" />
               </Link>
@@ -129,7 +110,7 @@ export default function BlogPostPage({ params }: Props) {
                 {others.map((item) => (
                   <li key={item.slug}>
                     <Link
-                      href={`/blog/${item.slug}`}
+                      href={urlYazi(item.slug)}
                       className="flex gap-2 text-slate-700 hover:text-brand-700"
                     >
                       <Icon name="arrow" className="mt-0.5 h-4 w-4 shrink-0 text-brand-500" />
@@ -146,7 +127,7 @@ export default function BlogPostPage({ params }: Props) {
                 {services.slice(0, 5).map((service) => (
                   <li key={service.slug}>
                     <Link
-                      href={`/hizmetler/${service.slug}`}
+                      href={urlHizmet(service.slug)}
                       className="flex items-center gap-2 text-slate-700 hover:text-brand-700"
                     >
                       <Icon name={service.icon} className="h-4 w-4 shrink-0 text-brand-500" />
@@ -163,7 +144,7 @@ export default function BlogPostPage({ params }: Props) {
                 {centralDistricts.map((district) => (
                   <li key={district.slug}>
                     <Link
-                      href={`/bolgeler/${district.path}`}
+                      href={urlIlce(district.path)}
                       className="inline-block rounded-full bg-brand-50 px-3 py-1 text-xs text-brand-800 hover:bg-accent-50 hover:text-accent-700"
                     >
                       {district.name}
@@ -172,7 +153,7 @@ export default function BlogPostPage({ params }: Props) {
                 ))}
               </ul>
               <Link
-                href="/bolgeler"
+                href={sayfa.bolgeler}
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-600"
               >
                 Ankara’nın 25 ilçesi
@@ -185,7 +166,7 @@ export default function BlogPostPage({ params }: Props) {
               <p className="mt-2 text-sm leading-6 text-brand-100">
                 İlçe, ev tipi ve kat bilgisiyle saniyeler içinde bir fiyat aralığı alın.
               </p>
-              <Link href="/nakliyat-fiyat-hesaplama" className="btn-primary mt-4 w-full justify-center">
+              <Link href={sayfa.hesaplama} className="btn-primary mt-4 w-full justify-center">
                 Fiyat hesaplama aracı
               </Link>
             </nav>
@@ -200,7 +181,7 @@ export default function BlogPostPage({ params }: Props) {
           articleJsonLd({
             title: post.title,
             description: post.metaDescription,
-            path: `/blog/${post.slug}`,
+            path,
             date: post.date,
             image: post.image,
           }),

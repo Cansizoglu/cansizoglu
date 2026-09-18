@@ -1,3 +1,4 @@
+import { sayfa, urlHizmet, urlYazi } from '@/lib/urls'
 /**
  * Anasayfadaki sekmeli makale bölümü.
  * Her sekme, hedeflenen bir anahtar kelimeye yazılmış özgün metindir.
@@ -27,7 +28,7 @@ export const homeArticles: HomeArticle[] = [
       { title: 'Söküm ve montaj', text: 'Kendi marangoz ekibimiz söküp yeniden kuruyor.' },
       { title: 'Sigortalı taşıma', text: 'Her taşıma sözleşmeli ve sigorta kapsamındadır.' },
     ],
-    link: { href: '/hizmetler/ankara-evden-eve-nakliyat', label: 'Evden eve nakliyat hizmetimiz' },
+    link: { href: urlHizmet('ankara-evden-eve-nakliyat'), label: 'Evden eve nakliyat hizmetimiz' },
   },
   {
     id: 'ankara-nakliyat',
@@ -44,7 +45,7 @@ export const homeArticles: HomeArticle[] = [
       { title: 'Depolama', text: 'Kameralı depolarda kısa ve uzun süreli saklama.' },
       { title: 'Asansör', text: 'Saatlik ve günlük operatörlü asansör kiralama.' },
     ],
-    link: { href: '/hizmetler', label: 'Tüm hizmetlerimiz' },
+    link: { href: sayfa.hizmetler, label: 'Tüm hizmetlerimiz' },
   },
   {
     id: 'ankara-ev-tasima',
@@ -61,7 +62,7 @@ export const homeArticles: HomeArticle[] = [
       { title: '1 gün önce', text: 'Buzdolabı kapatılır, değerli evrak ayrılır.' },
       { title: 'Taşıma günü', text: 'Söküm, ambalaj, taşıma ve montaj tamamlanır.' },
     ],
-    link: { href: '/blog/tasinmadan-once-yapilacaklar-listesi', label: 'Taşınma hazırlık listesi' },
+    link: { href: urlYazi('tasinmadan-once-yapilacaklar-listesi'), label: 'Taşınma hazırlık listesi' },
   },
   {
     id: 'ankara-evden-eve-nakliyat-fiyatlari',
@@ -78,7 +79,7 @@ export const homeArticles: HomeArticle[] = [
       { title: 'Mesafe', text: 'Şehir içi ve şehirler arası fiyatı değiştirir.' },
       { title: 'Ek hizmet', text: 'Depolama ve özel eşya taşıma ayrı hesaplanır.' },
     ],
-    link: { href: '/fiyat-teklifi', label: 'Ücretsiz fiyat teklifi alın' },
+    link: { href: sayfa.teklif, label: 'Ücretsiz fiyat teklifi alın' },
   },
   {
     id: 'ankara-nakliye',
@@ -95,7 +96,7 @@ export const homeArticles: HomeArticle[] = [
       { title: 'Sigorta dahil', text: 'Standart taşıma sigortası fiyata dahildir.' },
       { title: 'Kurumsal fatura', text: 'İş yeri taşımalarında faturalı çalışma.' },
     ],
-    link: { href: '/hizmetler/sigortali-tasima', label: 'Sigortalı taşıma hizmetimiz' },
+    link: { href: urlHizmet('sigortali-tasima'), label: 'Sigortalı taşıma hizmetimiz' },
   },
   {
     id: 'ankara-tasima-sirketleri',
@@ -129,7 +130,7 @@ export const homeArticles: HomeArticle[] = [
       { title: 'Hasar riski düşer', text: 'Eşya merdivende duvara çarpmadan iner.' },
       { title: 'Süre yarıya iner', text: 'Merdivende geçen saatler ortadan kalkar.' },
     ],
-    link: { href: '/hizmetler/ankara-asansorlu-nakliyat', label: 'Asansörlü nakliyat hizmetimiz' },
+    link: { href: urlHizmet('ankara-asansorlu-nakliyat'), label: 'Asansörlü nakliyat hizmetimiz' },
   },
   {
     id: 'ankara-ofis-tasima',
@@ -146,7 +147,7 @@ export const homeArticles: HomeArticle[] = [
       { title: 'Arşiv düzeni', text: 'Klasörler raf sırası bozulmadan taşınır.' },
       { title: 'Kurumsal fatura', text: 'İş yeri taşımalarında faturalı ve sözleşmeli çalışma.' },
     ],
-    link: { href: '/hizmetler/ankara-ofis-tasima', label: 'Ofis taşıma hizmetimiz' },
+    link: { href: urlHizmet('ankara-ofis-tasima'), label: 'Ofis taşıma hizmetimiz' },
   },
   {
     id: 'ankara-parca-esya-tasima',
@@ -163,6 +164,6 @@ export const homeArticles: HomeArticle[] = [
       { title: 'Aynı ambalaj', text: 'Tek parça da olsa streç ve köşe koruması yapılır.' },
       { title: 'Asansör dahil', text: 'Gerekirse mobil asansör bu işlerde de kurulur.' },
     ],
-    link: { href: '/nakliyat-fiyat-hesaplama', label: 'Parça eşya fiyatını hesaplayın' },
+    link: { href: sayfa.hesaplama, label: 'Parça eşya fiyatını hesaplayın' },
   },
 ]

@@ -2,6 +2,7 @@ import type { RelatedLink } from '@/components/RelatedLinks'
 import { services } from '@/data/services'
 import { posts } from '@/data/blog'
 import { districts, type District } from '@/data/districts'
+import { sayfa, urlHizmet, urlIlce, urlSemt, urlYazi } from '@/lib/urls'
 
 /** Her hizmet için konuyla gerçekten ilgili blog yazısı eşleşmesi. */
 const serviceToPost: Record<string, string> = {
@@ -19,23 +20,23 @@ const serviceToPost: Record<string, string> = {
 const postLink = (slug: string): RelatedLink | null => {
   const post = posts.find((p) => p.slug === slug)
   if (!post) return null
-  return { href: `/blog/${post.slug}`, title: post.title, text: post.excerpt.slice(0, 95) + '…' }
+  return { href: urlYazi(post.slug), title: post.title, text: post.excerpt.slice(0, 95) + '…' }
 }
 
 const serviceLink = (slug: string): RelatedLink | null => {
   const service = services.find((s) => s.slug === slug)
   if (!service) return null
-  return { href: `/hizmetler/${service.slug}`, title: service.title, text: service.short }
+  return { href: urlHizmet(service.slug), title: service.title, text: service.short }
 }
 
 const calculatorLink: RelatedLink = {
-  href: '/nakliyat-fiyat-hesaplama',
+  href: sayfa.hesaplama,
   title: 'Fiyat ve km hesaplama aracı',
   text: 'İlçe, ev tipi ve kat bilgisiyle taşınma maliyetinizi hesaplayın.',
 }
 
 const quoteLink: RelatedLink = {
-  href: '/fiyat-teklifi',
+  href: sayfa.teklif,
   title: 'Ücretsiz keşif ve fiyat teklifi',
   text: 'Eşyanızı yerinde görüp yazılı fiyat veriyoruz, taşıma günü değişmez.',
 }
@@ -54,7 +55,7 @@ export function relatedForService(slug: string): RelatedLink[] {
   return compact(
     [...neighbours, postLink(serviceToPost[slug] ?? 'ankara-evden-eve-nakliyat-fiyatlari'), calculatorLink, quoteLink],
     4,
-    `/hizmetler/${slug}`,
+    urlHizmet(slug),
   )
 }
 
@@ -64,7 +65,7 @@ export function relatedForDistrict(district: District): RelatedLink[] {
     .filter((d) => d.slug !== district.slug && d.zone === district.zone)
     .slice(0, 2)
     .map<RelatedLink>((d) => ({
-      href: `/bolgeler/${d.path}`,
+      href: urlIlce(d.path),
       title: `${d.name} Evden Eve Nakliyat`,
       text: d.intro[0].slice(0, 95) + '…',
     }))
@@ -72,7 +73,7 @@ export function relatedForDistrict(district: District): RelatedLink[] {
   return compact(
     [...others, serviceLink('ankara-asansorlu-nakliyat'), calculatorLink],
     4,
-    `/bolgeler/${district.path}`,
+    urlIlce(district.path),
   )
 }
 
@@ -81,13 +82,13 @@ export function relatedForNeighborhood(district: District, slug: string): Relate
   const sibling = district.neighborhoods.find((n) => n.slug !== slug)
   const items: (RelatedLink | null)[] = [
     {
-      href: `/bolgeler/${district.path}`,
+      href: urlIlce(district.path),
       title: `${district.name} Evden Eve Nakliyat`,
       text: `${district.name} genelinde nasıl çalıştığımızı ve tüm semtleri görün.`,
     },
     sibling
       ? {
-          href: `/bolgeler/${district.path}/${sibling.slug}`,
+          href: urlSemt(district.path, sibling.slug),
           title: `${sibling.name} Evden Eve Nakliyat`,
           text: sibling.intro.slice(0, 95) + '…',
         }
@@ -95,7 +96,7 @@ export function relatedForNeighborhood(district: District, slug: string): Relate
     calculatorLink,
     quoteLink,
   ]
-  return compact(items, 4, `/bolgeler/${district.path}/${slug}`)
+  return compact(items, 4, urlSemt(district.path, slug))
 }
 
 /** Blog yazısı için: iki komşu yazı, konuyla ilgili hizmet, hesaplama aracı. */
@@ -110,6 +111,6 @@ export function relatedForPost(slug: string): RelatedLink[] {
   return compact(
     [...neighbours, service ? serviceLink(service[0]) : serviceLink('ankara-evden-eve-nakliyat'), calculatorLink],
     4,
-    `/blog/${slug}`,
+    urlYazi(slug),
   )
 }

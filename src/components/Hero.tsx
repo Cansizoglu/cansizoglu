@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { site } from '@/data/site'
 import Icon from './Icon'
+import { sayfa, urlHizmet } from '@/lib/urls'
 
 /**
  * Tanıtım slaytı. Ağır bir slider kütüphanesi kullanılmaz; geçişler sadece
@@ -39,10 +40,10 @@ const slides = [
 ]
 
 const quickServices = [
-  { icon: 'home', label: 'Evden Eve Nakliyat', href: '/hizmetler/ankara-evden-eve-nakliyat' },
-  { icon: 'office', label: 'Ofis Taşıma', href: '/hizmetler/ankara-ofis-tasima' },
-  { icon: 'lift', label: 'Asansörlü Nakliyat', href: '/hizmetler/ankara-asansorlu-nakliyat' },
-  { icon: 'warehouse', label: 'Eşya Depolama', href: '/hizmetler/esya-depolama' },
+  { icon: 'home', label: 'Evden Eve Nakliyat', href: urlHizmet('ankara-evden-eve-nakliyat') },
+  { icon: 'office', label: 'Ofis Taşıma', href: urlHizmet('ankara-ofis-tasima') },
+  { icon: 'lift', label: 'Asansörlü Nakliyat', href: urlHizmet('ankara-asansorlu-nakliyat') },
+  { icon: 'warehouse', label: 'Eşya Depolama', href: urlHizmet('esya-depolama') },
 ]
 
 export default function Hero() {

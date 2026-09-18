@@ -5,17 +5,18 @@ import { site } from '@/data/site'
 import { services } from '@/data/services'
 import { districts } from '@/data/districts'
 import { aboutPages } from '@/data/aboutPages'
+import { sayfa, urlHizmet, urlIlce } from '@/lib/urls'
 
 const corporate = [
   { href: '/hakkimizda', label: 'Hakkımızda' },
   ...aboutPages.map((p) => ({ href: `/hakkimizda/${p.slug}`, label: p.navLabel })),
-  { href: '/hizmetler', label: 'Hizmetlerimiz' },
-  { href: '/bolgeler', label: 'Hizmet Bölgeleri' },
-  { href: '/sehirler-arasi', label: 'Şehirler Arası Nakliyat' },
-  { href: '/nakliyat-fiyat-hesaplama', label: 'Fiyat Hesaplama' },
-  { href: '/galeri', label: 'Galeri' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/fiyat-teklifi', label: 'Fiyat Teklifi' },
+  { href: sayfa.hizmetler, label: 'Hizmetlerimiz' },
+  { href: sayfa.bolgeler, label: 'Hizmet Bölgeleri' },
+  { href: sayfa.sehirlerArasi, label: 'Şehirler Arası Nakliyat' },
+  { href: sayfa.hesaplama, label: 'Fiyat Hesaplama' },
+  { href: sayfa.galeri, label: 'Galeri' },
+  { href: sayfa.blog, label: 'Blog' },
+  { href: sayfa.teklif, label: 'Fiyat Teklifi' },
   { href: '/iletisim', label: 'İletişim' },
 ]
 
@@ -69,7 +70,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {services.slice(0, 8).map((s) => (
               <li key={s.slug}>
-                <Link href={`/hizmetler/${s.slug}`} prefetch={false} className="hover:text-white">
+                <Link href={urlHizmet(s.slug)} prefetch={false} className="hover:text-white">
                   {s.title}
                 </Link>
               </li>
@@ -84,7 +85,7 @@ export default function Footer() {
           <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
             {districts.map((d) => (
               <li key={d.slug}>
-                <Link href={`/bolgeler/${d.path}`} prefetch={false} className="hover:text-white">
+                <Link href={urlIlce(d.path)} prefetch={false} className="hover:text-white">
                   {d.name} Nakliyat
                 </Link>
               </li>

@@ -6,6 +6,7 @@ import Icon from './Icon'
 import { calculator, homeTypes, formatTl } from '@/data/pricing'
 import { districts } from '@/data/districts'
 import { site } from '@/data/site'
+import { sayfa } from '@/lib/urls'
 
 /** İki koordinat arası kuş uçuşu mesafe (km). */
 function haversineKm(aLat: number, aLon: number, bLat: number, bLon: number) {
@@ -229,7 +230,7 @@ export default function PriceCalculator() {
               <Icon name="whatsapp" className="h-4 w-4" />
               Bu hesapla teklif iste
             </a>
-            <Link href="/fiyat-teklifi" className="btn-white mt-2 w-full justify-center">
+            <Link href={sayfa.teklif} className="btn-white mt-2 w-full justify-center">
               Ücretsiz keşif formu
             </Link>
             <p className="mt-4 text-xs leading-5 text-brand-200">
