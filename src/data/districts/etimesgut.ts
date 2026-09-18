@@ -41,6 +41,18 @@ export const etimesgut: District = {
       ],
     },
     {
+      slug: 'yapracik',
+      name: 'Yapracık',
+      intro:
+        'Yapracık yeni yapılaşan bir bölge; siteler geniş ve çoğu asansörlü. Buradaki taşımalarda asıl konu site yönetiminin taşınma saatine izin verip vermediği oluyor.',
+      notes: [
+        'Site yönetimlerinin çoğu taşınma için önceden randevu istiyor.',
+        'Yük asansörü olan binalarda iş belirgin hızlanıyor.',
+        'Geniş otopark sayesinde araç kapıya yanaşabiliyor.',
+      ],
+      streets: ['Yapracık Bulvarı'],
+    },
+    {
       slug: 'elvankent',
       name: 'Elvankent',
       intro:

@@ -93,6 +93,30 @@ export const cankaya: District = {
       ],
     },
     {
+      slug: 'esat',
+      name: 'Esat',
+      intro:
+        'Esat’ta binaların çoğu eski ve asansörsüz, sokaklar ise gün boyu park dolu. Bu iki sebepten taşımalarda mobil asansör ve erken saat neredeyse standart.',
+      notes: [
+        'Cadde üzerinde park yeri bulmak zor, araç için sabah saati tercih ediliyor.',
+        'Asansörsüz binalarda mobil asansör kuruluyor.',
+        'Dar merdivenlerde mobilya sökülerek indiriliyor.',
+      ],
+      streets: ['Esat Caddesi', 'Hoşdere Caddesi'],
+    },
+    {
+      slug: 'bilkent',
+      name: 'Bilkent',
+      intro:
+        'Bilkent’te taşımaların önemli kısmı üniversite dönemlerine denk geliyor ve çoğu tek oda eşyası oluyor. Site ve kampüs girişlerinde araç kaydı gerekiyor.',
+      notes: [
+        'Kampüs ve site girişlerinde araç ve personel kaydı önceden yapılıyor.',
+        'Öğrenci taşımalarında kamyon yerine küçük araç kullanılıyor.',
+        'Binaların çoğu asansörlü, iş hızlı ilerliyor.',
+      ],
+      streets: ['Bilkent Bulvarı', 'Üniversiteler Mahallesi'],
+    },
+    {
       slug: 'umitkoy',
       name: 'Ümitköy',
       intro:

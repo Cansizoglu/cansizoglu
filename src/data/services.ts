@@ -399,6 +399,112 @@ export const services: Service[] = [
       },
     ],
   },
+  {
+    slug: 'ankara-okul-tasima',
+    title: 'Ankara Okul ve Yurt Taşıma',
+    h1: 'Ankara Okul, Yurt ve Kreş Taşıma',
+    short:
+      'Okul, yurt, kreş ve dershanelerin sıra, dolap, laboratuvar ve arşiv taşımasını tatil günlerinde tek ekiple yapıyoruz.',
+    metaTitle: 'Ankara Okul Taşıma | Yurt, Kreş ve Dershane Nakliyat',
+    metaDescription:
+      'Ankara okul taşıma hizmeti: sıra, dolap, laboratuvar malzemesi, kütüphane ve arşiv taşıma. Tatil ve hafta sonu çalışma, sigortalı ve sözleşmeli nakliyat.',
+    icon: 'box',
+    intro: [
+      'Okul taşıma, ev taşımaktan iki noktada ayrılıyor: işin belli bir tarihe kadar bitmesi zorunlu ve eşyanın büyük kısmı seri parçalardan oluşuyor. Sıra, dolap, tahta, laboratuvar tezgâhı ve kütüphane rafı tek tek değil, sayıyla taşınıyor. Bu yüzden planı parça sayısı üzerinden kuruyoruz.',
+      'Çalışmayı eğitim aksamasın diye hafta sonuna, yarıyıl tatiline veya yaz tatiline alıyoruz. Keşifte sınıf sınıf sayım yapıyor, hangi malzemenin hangi araca ve hangi sıraya gireceğini önceden belirliyoruz. Böylece yeni binada malzeme aranmıyor, her sınıfın eşyası kendi sınıfına gidiyor.',
+    ],
+    features: [
+      {
+        title: 'Sınıf sınıf numaralı taşıma',
+        text: 'Her sınıfın eşyası kendi numarasıyla etiketlenir ve yeni binada aynı numaralı sınıfa teslim edilir.',
+      },
+      {
+        title: 'Tatil gününde çalışma',
+        text: 'Taşımayı hafta sonu, yarıyıl veya yaz tatilinde yapıyoruz; eğitim aksamıyor.',
+      },
+      {
+        title: 'Laboratuvar ve kütüphane',
+        text: 'Cam malzeme, mikroskop ve deney seti ayrı kutulanır; kitaplar raf sırası bozulmadan taşınır.',
+      },
+      {
+        title: 'Söküm ve montaj',
+        text: 'Sıra, dolap, raf ve akıllı tahta marangoz ekibimizce sökülür ve yeni binada kurulur.',
+      },
+    ],
+    steps: [
+      { title: 'Sayım', text: 'Sınıf ve oda bazında malzeme sayımı yapılır.' },
+      { title: 'Etiketleme', text: 'Her parça gideceği odanın numarasıyla etiketlenir.' },
+      { title: 'Taşıma', text: 'Tatil gününde, kapalı kasa araçlarla taşınır.' },
+      { title: 'Kurulum', text: 'Malzeme kendi odasına kurulur, sayım birlikte kontrol edilir.' },
+    ],
+    faq: [
+      {
+        q: 'Okul taşıma ne kadar sürer?',
+        a: 'Süreyi derslik sayısı ve iki binanın kat durumu belirler. Orta büyüklükte bir okul genelde bir hafta sonunda taşınıp kurulur. Keşifte sayım yaptıktan sonra size gün üzerinden net bir plan veriyoruz.',
+      },
+      {
+        q: 'Laboratuvar malzemesi taşınıyor mu?',
+        a: 'Taşınıyor. Cam malzeme, mikroskop, deney seti ve kimyasal dolabı ayrı kutulara alınıp köşe koruyucuyla sabitleniyor. Kimyasal içeren malzemenin listesini önceden alıp taşıma kurallarına uygun şekilde planlıyoruz.',
+      },
+      {
+        q: 'Taşıma eğitim dönemi içinde yapılabilir mi?',
+        a: 'Yapılabilir ama önermiyoruz. Yine de gerekiyorsa çalışmayı hafta sonuna ve akşam saatlerine bölerek, bir seferde bir kat taşıyarak yürütüyoruz; okul bu süre boyunca açık kalabiliyor.',
+      },
+    ],
+  },
+  {
+    slug: 'ankara-kurumsal-tasimacilik',
+    title: 'Ankara Kurumsal Taşımacılık',
+    h1: 'Ankara Kurumsal Taşımacılık',
+    short:
+      'Kurumlar için sözleşmeli, faturalı ve planlı taşıma: şube, depo, arşiv ve personel taşınmaları tek muhatapla yürür.',
+    metaTitle: 'Ankara Kurumsal Taşımacılık | Sözleşmeli Firma Nakliyat',
+    metaDescription:
+      'Ankara kurumsal taşımacılık: şube, depo, arşiv ve personel taşınması. Sözleşmeli, faturalı, sigortalı ve mesai dışı çalışma. Kurumlara özel keşif.',
+    icon: 'office',
+    intro: [
+      'Kurumsal taşımacılık, tek seferlik bir ev taşımasından farklı yürüyor. Kurumun muhatabı tek olmak zorunda, tarih ve saat kesin olmak zorunda, çalışma çoğu zaman mesai dışına denk gelmek zorunda. Cansızoğlu Nakliyat olarak kurumlara bu üç şartı karşılayan bir düzen kuruyoruz.',
+      'Her iş için tek bir sorumlu veriyoruz; kurum tarafındaki idari işler biriminin muhatabı o oluyor. Fiyat sözleşmeye yazılıyor, fatura kesiliyor, taşıma sigortalı yapılıyor. Şube açılışı, depo değişikliği, arşiv nakli veya personel taşınması gibi tekrar eden işler için yıllık anlaşma da yapıyoruz.',
+    ],
+    features: [
+      {
+        title: 'Tek muhatap',
+        text: 'İşin başından sonuna aynı sorumlu ilgilenir; kurum içinde kimse farklı kişilerle uğraşmaz.',
+      },
+      {
+        title: 'Sözleşme ve fatura',
+        text: 'Fiyat sözleşmeye yazılır, taşıma faturalı ve sigortalı yapılır.',
+      },
+      {
+        title: 'Mesai dışı çalışma',
+        text: 'Taşıma akşam, gece veya hafta sonu yapılabilir; kurumun işi durmaz.',
+      },
+      {
+        title: 'Tekrar eden işler için anlaşma',
+        text: 'Şube, depo ve personel taşınması düzenli olan kurumlarla yıllık fiyat anlaşması yapıyoruz.',
+      },
+    ],
+    steps: [
+      { title: 'Keşif', text: 'Yetkiliyle birlikte iki adres görülür, iş planı çıkarılır.' },
+      { title: 'Sözleşme', text: 'Fiyat, tarih ve kapsam yazılı hale getirilir.' },
+      { title: 'Taşıma', text: 'Belirlenen saatte, numaralı kutu düzeniyle taşınır.' },
+      { title: 'Teslim', text: 'Liste üzerinden kontrol yapılır, kurulum tamamlanır.' },
+    ],
+    faq: [
+      {
+        q: 'Kurumsal taşımada fatura ve sözleşme veriliyor mu?',
+        a: 'Veriliyor. Her kurumsal işte taşıma sözleşmesi imzalanıyor, taşıma sigortalı yapılıyor ve fatura kesiliyor. Sözleşmede fiyat, tarih, kapsam ve sorumluluklar yazılı oluyor.',
+      },
+      {
+        q: 'Taşıma mesai saatleri dışında yapılabilir mi?',
+        a: 'Yapılabilir. Kurumsal işlerin çoğunu akşam, gece veya hafta sonu yapıyoruz ki kurumun işleyişi durmasın. Çalışma saatini keşifte birlikte belirliyoruz.',
+      },
+      {
+        q: 'Düzenli taşıma ihtiyacı olan kurumlarla anlaşma yapıyor musunuz?',
+        a: 'Yapıyoruz. Şube, depo veya personel taşınması düzenli olan kurumlarla yıllık fiyat anlaşması yapıyor, her iş için ayrı pazarlık gerekmeden sabit koşullarla çalışıyoruz.',
+      },
+    ],
+  },
 ]
 
 export const serviceBySlug = (slug: string) => services.find((s) => s.slug === slug)
