@@ -144,6 +144,14 @@ export function articleJsonLd(input: {
   description: string
   path: string
   date: string
+  image?: {
+    src: string
+    width: number
+    height: number
+    alt: string
+    caption: string
+    description: string
+  }
 }) {
   return {
     '@context': 'https://schema.org',
@@ -155,5 +163,18 @@ export function articleJsonLd(input: {
     mainEntityOfPage: `${site.url}${input.path}`,
     author: { '@type': 'Organization', name: site.name },
     publisher: { '@id': `${site.url}/#kurulus` },
+    ...(input.image
+      ? {
+          image: {
+            '@type': 'ImageObject',
+            url: `${site.url}${input.image.src}`,
+            width: input.image.width,
+            height: input.image.height,
+            name: input.image.alt,
+            caption: input.image.caption,
+            description: input.image.description,
+          },
+        }
+      : {}),
   }
 }

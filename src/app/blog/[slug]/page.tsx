@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
@@ -33,6 +34,7 @@ export function generateMetadata({ params }: Props): Metadata {
     title: post.metaTitle,
     description: post.metaDescription,
     path: `/blog/${post.slug}`,
+    images: [post.image.src],
   })
 }
 
@@ -65,6 +67,26 @@ export default function BlogPostPage({ params }: Props) {
               <h1 className="mt-3 text-3xl sm:text-4xl">{post.title}</h1>
               <p className="mt-4 text-lg leading-8 text-slate-600">{post.excerpt}</p>
             </header>
+
+            {/*
+              Kapak görseli. alt etiketi ekran okuyucu ve Google Görseller için,
+              title fare üstüne gelince, figcaption ise okuyucu için.
+            */}
+            <figure className="mb-8">
+              <Image
+                src={post.image.src}
+                alt={post.image.alt}
+                title={post.image.title}
+                width={post.image.width}
+                height={post.image.height}
+                sizes="(max-width: 1024px) 100vw, 720px"
+                priority
+                className="aspect-[16/8] w-full rounded-xl object-cover"
+              />
+              <figcaption className="mt-2 text-sm leading-6 text-slate-600">
+                {post.image.caption}
+              </figcaption>
+            </figure>
 
             <div className="prose-tr max-w-none">
               {post.body.map((block, i) => {
@@ -180,6 +202,7 @@ export default function BlogPostPage({ params }: Props) {
             description: post.metaDescription,
             path: `/blog/${post.slug}`,
             date: post.date,
+            image: post.image,
           }),
         ]}
       />

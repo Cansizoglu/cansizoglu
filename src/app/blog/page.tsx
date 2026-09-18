@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import SectionTitle from '@/components/SectionTitle'
@@ -34,7 +35,19 @@ export default function BlogPage() {
           />
           <div className="grid gap-5 lg:grid-cols-3">
             {posts.map((post) => (
-              <article key={post.slug} className="card flex flex-col">
+              <article key={post.slug} className="card flex flex-col overflow-hidden !p-0">
+                <Link href={`/blog/${post.slug}`} className="block" tabIndex={-1} aria-hidden="true">
+                  <Image
+                    src={post.image.src}
+                    alt={post.image.alt}
+                    title={post.image.title}
+                    width={post.image.width}
+                    height={post.image.height}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+                    className="aspect-[16/9] w-full object-cover"
+                  />
+                </Link>
+                <div className="flex flex-1 flex-col p-4 sm:p-6">
                 <div className="flex items-center gap-3 text-xs text-slate-600">
                   <time dateTime={post.date}>{dateFormatter.format(new Date(post.date))}</time>
                   <span aria-hidden="true">·</span>
@@ -53,6 +66,7 @@ export default function BlogPage() {
                   Yazıyı okuyun
                   <Icon name="arrow" className="h-4 w-4" />
                 </Link>
+                </div>
               </article>
             ))}
           </div>

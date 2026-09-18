@@ -6,6 +6,21 @@ export type BlogPost = {
   excerpt: string
   date: string
   readingMinutes: number
+  /**
+   * Yazının kapak görseli. Alanlar Rank Math'in görsel SEO kutularının
+   * karşılığı: dosya adı (ana isim), alt etiketi, title özniteliği,
+   * görselin altında görünen kısa açıklama ve yapısal veriye giden
+   * uzun açıklama.
+   */
+  image: {
+    src: string
+    width: number
+    height: number
+    alt: string
+    title: string
+    caption: string
+    description: string
+  }
   /** Basit blok yapısı: paragraf, ara başlık, liste */
   body: (
     | { type: 'p'; text: string }
@@ -25,6 +40,15 @@ export const posts: BlogPost[] = [
       'Taşınmanın zor kısmı taşıma günü değil, öncesindeki hazırlıktır. İki haftaya yayılmış bir plan, taşınma gününü çok daha sakin geçirmenizi sağlar.',
     date: '2026-09-10',
     readingMinutes: 6,
+    image: {
+      src: '/img/tasima-kasalari.jpg',
+      width: 848,
+      height: 480,
+      alt: 'Cansızoğlu Nakliyat logolu iki sarı taşıma kasası, asansör platformunun üzerinde',
+      title: 'Taşımaya hazırlanmış sarı taşıma kasaları',
+      caption: 'Hazırlığa erken başlayınca taşıma günü sadece yükleme gününe dönüşüyor.',
+      description: 'Cansızoğlu Nakliyat’ın evden eve taşımalarda kullandığı, firma logosu ve çağrı hattı yazılı sarı plastik taşıma kasaları, mobil asansörün platformuna yerleştirilmiş halde.',
+    },
     body: [
       {
         type: 'p',
@@ -81,6 +105,15 @@ export const posts: BlogPost[] = [
       'Her taşımada asansör gerekmez. Ancak dar merdiven, yüksek kat ve büyük mobilya bir aradaysa asansör hem daha güvenli hem de daha ekonomiktir.',
     date: '2026-09-05',
     readingMinutes: 5,
+    image: {
+      src: '/img/slider-3.jpg',
+      width: 1920,
+      height: 600,
+      alt: 'Apartmanın yanına kurulmuş mobil taşıma asansörü ve yanındaki Cansızoğlu kapalı kasa kamyonu',
+      title: 'Apartmana kurulmuş mobil taşıma asansörü',
+      caption: 'Asansörsüz binada eşya merdivene hiç girmiyor, pencereden iniyor.',
+      description: 'Ankara’da çok katlı bir binanın önüne kurulmuş Cansızoğlu Nakliyat mobil taşıma asansörü ve yükleme için bekleyen kapalı kasa taşıma kamyonu.',
+    },
     body: [
       {
         type: 'p',
@@ -123,6 +156,15 @@ export const posts: BlogPost[] = [
       'Taşımada oluşan hasarların çoğu yolda değil, yetersiz ambalaj yüzünden yükleme sırasında olur. Her eşyanın kendi ambalaj yöntemi vardır.',
     date: '2026-08-28',
     readingMinutes: 7,
+    image: {
+      src: '/img/tasima-kasalari.jpg',
+      width: 848,
+      height: 480,
+      alt: 'Kapaklı sarı plastik taşıma kasaları, üzerinde Cansızoğlu Nakliyat etiketi',
+      title: 'Kapaklı plastik taşıma kasaları',
+      caption: 'Kapaklı plastik kasa, karton koliden daha dayanıklı ve istiflemesi kolay.',
+      description: 'Eşya paketlemede kullanılan kapaklı sarı plastik taşıma kasaları; karton koliye göre daha dayanıklı oldukları için kırılacak eşya ve mutfak malzemesinde tercih ediliyor.',
+    },
     body: [
       {
         type: 'p',
@@ -174,6 +216,15 @@ export const posts: BlogPost[] = [
       'Ankara evden eve nakliyat fiyatları tek bir rakamla anlatılamaz. Aynı daire, kat ve sokak şartlarına göre çok farklı maliyetlerle taşınır. Fiyatı belirleyen kalemleri tek tek açtık.',
     date: '2026-09-16',
     readingMinutes: 8,
+    image: {
+      src: '/img/slider-2.jpg',
+      width: 1920,
+      height: 600,
+      alt: 'Cansızoğlu Nakliyat’ın kamyon, kamyonet ve panelvanı bir sitenin önünde yan yana',
+      title: 'Farklı boyutlardaki Cansızoğlu Nakliyat araçları',
+      caption: 'Fiyatı belirleyen ilk iki şey araç boyu ve mesafe.',
+      description: 'Cansızoğlu Nakliyat’ın farklı boyutlardaki taşıma araçları: büyük kapalı kasa kamyon, orta boy kamyonet ve parça eşya taşımada kullanılan panelvan.',
+    },
     body: [
       {
         type: 'p',
@@ -227,6 +278,15 @@ export const posts: BlogPost[] = [
       'Ankara nakliyat firmaları arasında fiyat farkı büyük olabiliyor. Ucuz teklifin altında ne olduğunu ve güvenilir firmayı nasıl ayırt edeceğinizi anlattık.',
     date: '2026-09-14',
     readingMinutes: 7,
+    image: {
+      src: '/img/ofis.webp',
+      width: 1242,
+      height: 699,
+      alt: 'Cansızoğlu Nakliyat’ın Ankara Altındağ’daki ofisinin tabelalı cephesi',
+      title: 'Cansızoğlu Nakliyat ofis cephesi',
+      caption: 'Açık adresi ve tabelası olan firma, iş bittiğinde ortadan kaybolmuyor.',
+      description: 'Cansızoğlu Nakliyat’ın Ankara Altındağ’daki ofisinin dış cephesi; firma adı ve çağrı hattı numarası yazılı tabela.',
+    },
     body: [
       {
         type: 'p',
@@ -275,6 +335,15 @@ export const posts: BlogPost[] = [
       'Sigortalı taşıma denince akla gelen ilk soru, hasar çıkarsa ne olacağıdır. Nakliyat sigortasının kapsamını ve hasar sürecini sade bir dille anlattık.',
     date: '2026-09-12',
     readingMinutes: 5,
+    image: {
+      src: '/img/slider-1.jpg',
+      width: 1920,
+      height: 600,
+      alt: 'Yolda ilerleyen Cansızoğlu Nakliyat kapalı kasa kamyonu ve arkasındaki asansörlü araç',
+      title: 'Yol üzerindeki Cansızoğlu Nakliyat aracı',
+      caption: 'Sigorta, yazılı sözleşme olmadan hüküm ifade etmiyor.',
+      description: 'Ankara’da sigortalı taşıma yapan Cansızoğlu Nakliyat kapalı kasa kamyonu ve arkasından gelen mobil asansör aracı.',
+    },
     body: [
       {
         type: 'p',
@@ -317,6 +386,15 @@ export const posts: BlogPost[] = [
       'Taşınmada en sık zarar gören eşyalar beyaz eşyalardır ve hasarların çoğu taşımadan değil, yanlış hazırlıktan çıkar. Doğru hazırlığı adım adım yazdık.',
     date: '2026-09-08',
     readingMinutes: 6,
+    image: {
+      src: '/img/slider-1.jpg',
+      width: 1920,
+      height: 600,
+      alt: 'Beyaz eşya taşımaya uygun, kapalı kasalı Cansızoğlu Nakliyat kamyonu',
+      title: 'Kapalı kasa taşıma kamyonu',
+      caption: 'Buzdolabı dik taşınır, indirildikten sonra en az altı saat çalıştırılmaz.',
+      description: 'Beyaz eşyanın dik ve sabitlenmiş şekilde taşınabildiği kapalı kasa Cansızoğlu Nakliyat kamyonu; kasa kapalı olduğu için eşya yol boyunca hava şartlarından etkilenmiyor.',
+    },
     body: [
       {
         type: 'p',
@@ -359,6 +437,15 @@ export const posts: BlogPost[] = [
       'Ofis taşımada asıl maliyet eşya değil, kapalı geçen iş günüdür. Taşımayı iş kaybı olmadan bitirmenin yolunu adım adım anlattık.',
     date: '2026-09-06',
     readingMinutes: 7,
+    image: {
+      src: '/img/arac-sari-kamyon.jpg',
+      width: 848,
+      height: 480,
+      alt: 'Üzerinde “Ev & Ofis Taşıma” yazan sarı kasalı Cansızoğlu Nakliyat kamyonu',
+      title: 'Ev ve ofis taşımada kullanılan kamyon',
+      caption: 'Ofis taşımasını hafta sonuna almak, iş kaybını neredeyse sıfırlıyor.',
+      description: 'Cansızoğlu Nakliyat’ın ev ve ofis taşımalarında kullandığı, asansörlü taşımacılık ibaresi ve çağrı hattı yazılı sarı kasalı kamyonu.',
+    },
     body: [
       {
         type: 'p',
@@ -401,6 +488,15 @@ export const posts: BlogPost[] = [
       'Yeni eve giriş tarihi ileriye kaydığında eşyanın bir yerde beklemesi gerekir. Depolamada eşyanın zarar görmemesi için bilinmesi gerekenleri yazdık.',
     date: '2026-09-04',
     readingMinutes: 5,
+    image: {
+      src: '/img/tasima-kasalari.jpg',
+      width: 848,
+      height: 480,
+      alt: 'Depolamaya hazır, kapağı kapatılmış sarı taşıma kasaları',
+      title: 'Depolamaya hazırlanan taşıma kasaları',
+      caption: 'Depoya giren her kasa listelenmezse, çıkarken aranan eşya bulunmuyor.',
+      description: 'Kısa ve uzun süreli eşya depolamada kullanılan, kapağı kapatılmış ve istiflemeye hazır Cansızoğlu Nakliyat taşıma kasaları.',
+    },
     body: [
       {
         type: 'p',
@@ -444,6 +540,15 @@ export const posts: BlogPost[] = [
       'Taşınma gününü planlarken en çok sorulan soru bu. Ev tipine ve kat durumuna göre gerçekçi süreleri ve süreyi uzatan şeyleri yazdık.',
     date: '2026-09-02',
     readingMinutes: 5,
+    image: {
+      src: '/img/slider-3.jpg',
+      width: 1920,
+      height: 600,
+      alt: 'Taşıma asansörü kurulmuş, yükleme bekleyen Cansızoğlu Nakliyat kamyonu',
+      title: 'Yüklemeye hazır araç ve kurulu asansör',
+      caption: 'Asansör kurulumu 20 dakika sürüyor, gerisini kat ve mesafe belirliyor.',
+      description: 'Taşıma süresini belirleyen kat, asansör ve araç mesafesi etkenlerinin göründüğü an: kurulmuş mobil taşıma asansörü ve yükleme bekleyen Cansızoğlu Nakliyat kamyonu.',
+    },
     body: [
       {
         type: 'p',
