@@ -582,6 +582,126 @@ export const posts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'abonelik-ve-adres-nakli-rehberi',
+    title: 'Taşınırken Abonelik Nakli: Elektrik, Su, Doğalgaz ve İnternet',
+    metaTitle: 'Taşınırken Abonelik ve Adres Nakli',
+    metaDescription:
+      'Taşınırken elektrik, su, doğalgaz ve internet aboneliği nasıl nakledilir, adres değişikliği nereden yapılır? Sırasıyla ne zaman ne yapılacağını yazdık.',
+    excerpt:
+      'Taşınmanın eşyayla hiç ilgisi olmayan bir tarafı var: abonelikler ve resmi adres. Sırası karışınca yeni evde elektrik kesik, eski evin faturası hâlâ üstünüzde kalıyor.',
+    date: '2026-09-22',
+    readingMinutes: 8,
+    image: {
+      src: '/img/paketli-esyalar-oda.webp',
+      width: 1200,
+      height: 600,
+      alt: 'Boş odada balonlu naylonla paketlenmiş, yüklemeyi bekleyen mobilyalar',
+      title: 'Taşınmaya hazır, paketlenmiş ev eşyası',
+      caption: 'Eşya hazır olduğunda aboneliklerin de hazır olması gerekiyor; ikisi ayrı takvim.',
+      description: 'Boşaltılmış bir odada balonlu naylonla sarılıp streçlenmiş koltuk, yatak ve dolap parçaları; yükleme sırasını bekliyor.',
+    },
+    body: [
+      {
+        type: 'p',
+        text: 'Taşınmanın eşyayla hiç ilgisi olmayan bir tarafı var: abonelikler ve resmi adres. Bunlar taşıma gününde değil, öncesinde ve sonrasında halledilen işler. Sırası karışınca yeni eve girdiğiniz gün elektrik kesik oluyor, eski evin faturası aylarca üstünüze işlemeye devam ediyor. Ankara’da evden eve nakliyat yaptığımız ailelere anlattığımız sırayı burada topladık.',
+      },
+      { type: 'h2', text: 'Nakil mi, kapatıp yeniden açtırmak mı?' },
+      {
+        type: 'p',
+        text: 'İki yol var. Aboneliği yeni adrese nakletmek, sözleşmeyi taşımak demek; güvence bedeliniz genellikle sizde kalır ve işlem daha hızlı yürür. Kapatma ve yeni abonelik ise eski adresle bağınızı tamamen keser, yeni adreste sıfırdan sözleşme açılır. Eski evi devrettiyseniz ya da arkanızdan hemen başka biri oturacaksa kapatma daha temiz sonuç verir.',
+      },
+      {
+        type: 'p',
+        text: 'Hangisini seçerseniz seçin, eski adresteki sayaç okumasının taşındığınız güne göre yapılması önemli. O tarihten sonra tüketilen hiçbir şey sizin faturanıza girmemeli.',
+      },
+      { type: 'h2', text: 'Elektrik aboneliği nasıl nakledilir?' },
+      {
+        type: 'p',
+        text: 'Elektrik genellikle en hızlı halledilen kalem. Bölgenizdeki perakende satış şirketine başvurup nakil ya da kapama talebi açıyorsunuz. Yeni adres için sözleşme açarken kimlik, adres bilgisi ve çoğu zaman tapu veya kira sözleşmesi isteniyor. Yeni evde sayaç kapalıysa açılması için ayrı bir talep gerekebiliyor; bu yüzden başvuruyu taşınma gününe bırakmayın.',
+      },
+      {
+        type: 'p',
+        text: 'Eski evden çıkarken sayaç değerini fotoğraflayın. Tarihli bir fotoğraf, sonradan çıkan bir tüketim itirazında elinizdeki tek somut kayıt oluyor.',
+      },
+      { type: 'h2', text: 'Su aboneliği ve DASK' },
+      {
+        type: 'p',
+        text: 'Su aboneliği belediyenin su idaresine bağlı; Ankara’da işlem ASKİ üzerinden yürüyor. Burada da eski adreste kapama, yeni adreste açma diye iki ayrı iş var. Su aboneliği açılırken kimlik, tapu ya da kira sözleşmesi ve çoğu binada DASK poliçesi isteniyor. Poliçeniz yoksa ya da süresi geçtiyse işlem takılır, bu yüzden yeni eve geçmeden önce kontrol edin.',
+      },
+      {
+        type: 'p',
+        text: 'Kapama işlemini taşındıktan sonraya bırakmayın. Eski adreste su açık kaldığı sürece, orada kim oturursa otursun tüketim sizin aboneliğinize işlemeye devam eder.',
+      },
+      { type: 'h2', text: 'Doğalgaz en çok zaman isteyen kalem' },
+      {
+        type: 'p',
+        text: 'Doğalgazda işin içinde randevu olduğu için süre uzuyor. Eski adreste aboneliği kapatmak ve yeni adreste açtırmak için başvuru yapılıyor, ardından sayaç açma ve gaz verme için teknik ekip randevusu veriliyor. Yoğun dönemlerde bu randevu birkaç gün ileriye düşebiliyor. Kışın taşınıyorsanız gaz randevusunu ilk halledeceğiniz iş olarak planlayın; yoksa yeni evde birkaç gün ısıtmasız kalırsınız.',
+      },
+      {
+        type: 'p',
+        text: 'Kombi sökümü ve montajı ayrı bir konu. Kombi nakliyat firmasının değil, markanın yetkili servisinin işidir. Biz kombiyi paketleyip taşırız ama söküp takmayız; servis randevusunu taşımadan önceye ayarlamanız gerekiyor. Aynı şey split klimalar için de geçerli, çünkü sökümden önce gazın toplanması lazım.',
+      },
+      { type: 'h2', text: 'İnternet ve telefon nakli' },
+      {
+        type: 'p',
+        text: 'İnternet nakli çoğu operatörde çevrim içi yapılabiliyor ve genellikle bir kurulum randevusu içeriyor. Yeni adreste altyapının durumu değişebildiği için başvuruyu taşınma tarihinden bir iki hafta önce yapmak en doğrusu. Altyapı uygun değilse operatör değiştirmek gerekebiliyor ve bu iş tek başına bir haftayı bulabiliyor.',
+      },
+      {
+        type: 'p',
+        text: 'Modemi, kablolarını ve varsa uydu alıcısını kendi yanınızda bir çantada taşıyın. Modem koliye girdiğinde yeni evde ilk aranan şey oluyor ve bulunması saat alıyor.',
+      },
+      { type: 'h2', text: 'Resmi adres değişikliği' },
+      {
+        type: 'p',
+        text: 'Adres değişikliği e-Devlet üzerinden yapılabiliyor, çoğu durumda nüfus müdürlüğüne gitmeye gerek kalmıyor. Adresinizi güncellemediğiniz sürece bankadan, vergi dairesinden, okuldan ve sağlık kurumlarından gelen yazışmalar eski adrese gitmeye devam eder. Taşındıktan sonraki ilk hafta içinde halletmekte fayda var.',
+      },
+      {
+        type: 'p',
+        text: 'Adres güncellemesini yaptıktan sonra haber vermeniz gereken yerler de var:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Banka ve kredi kartı şirketleri',
+          'Sigorta şirketiniz ve DASK poliçeniz',
+          'Çocuğun okulu ve servis şirketi',
+          'Aile hekimi kaydı',
+          'Kargo ve e-ticaret hesaplarındaki kayıtlı adresler',
+          'İş yerinizin insan kaynakları birimi',
+        ],
+      },
+      { type: 'h2', text: 'Gözden kaçan abonelikler' },
+      {
+        type: 'ul',
+        items: [
+          'Apartman aidatı ve yönetim kaydı; eski binada kaydınızın kapandığından emin olun.',
+          'Dijital yayın, uydu ve spor salonu üyelikleri.',
+          'Ayrı kiraladığınız otopark ya da depo varsa sözleşmeleri.',
+          'Eski adrese tanımlı otomatik ödeme talimatları; iptal etmezseniz başkasının faturasını ödemeye devam edebilirsiniz.',
+        ],
+      },
+      { type: 'h2', text: 'Hangi işi ne zaman yapmalı?' },
+      {
+        type: 'ul',
+        items: [
+          'Taşınmaya iki hafta kala: internet nakil başvurusu, doğalgaz randevusu, elektrik ve su için nakil ya da kapama talebi.',
+          'Taşınmaya bir hafta kala: kombi ve klima için yetkili servis randevusu, DASK poliçesinin kontrolü.',
+          'Taşınma günü: eski adreste elektrik, su ve gaz sayaçlarının tarihli fotoğrafı.',
+          'İlk hafta içinde: e-Devlet’ten adres değişikliği, banka ve sigorta bildirimleri, otomatik ödeme talimatlarının güncellenmesi.',
+        ],
+      },
+      { type: 'h2', text: 'Eşya tarafını biz üstleniyoruz' },
+      {
+        type: 'p',
+        text: 'Abonelikler sizin takip etmeniz gereken kısım; ambalaj, söküm, yükleme, taşıma ve yeni adreste montaj bizim işimiz. Taşıma günü sizden tek istediğimiz, hangi eşyanın nereye gideceğini söylemeniz.',
+      },
+      {
+        type: 'p',
+        text: 'Ankara içinde ya da şehirler arası taşınacaksanız ücretsiz keşif için bize ulaşabilirsiniz. Taşınmadan önce yapılacakların tamamını da ayrı bir yazıda iki haftalık liste hâlinde topladık.',
+      },
+    ],
+  },
 ]
 
 export const postBySlug = (slug: string) => posts.find((p) => p.slug === slug)
