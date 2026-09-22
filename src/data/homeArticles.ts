@@ -17,7 +17,7 @@ export const homeArticles: HomeArticle[] = [
     label: 'Ankara Evden Eve Nakliyat',
     heading: 'Ankara Evden Eve Nakliyat Nasıl Yapılır?',
     paragraphs: [
-      'Ankara evden eve nakliyat, eşyanın bir adresten diğerine götürülmesinden çok daha fazlasıdır. İşin tamamı; keşif, söküm, ambalajlama, yükleme, taşıma, indirme ve montaj olmak üzere yedi ayrı aşamadan oluşur. Bu aşamalardan biri atlandığında hasar riski doğrudan artar. Cansızoğlu Nakliyat olarak bu yedi aşamanın tamamını kendi ekibimizle, taşeron kullanmadan yürütüyoruz.',
+      'Ankara evden eve nakliyat, eşyanın bir adresten diğerine götürülmesinden çok daha fazlasıdır. İşin tamamı; keşif, söküm, ambalajlama, yükleme, taşıma, indirme ve montaj olmak üzere yedi ayrı aşamadan oluşur. Bu aşamalardan biri atlandığında hasar riski doğrudan artar. Ankara Taşıma olarak bu yedi aşamanın tamamını kendi ekibimizle, taşeron kullanmadan yürütüyoruz.',
       'Taşımaya her zaman ücretsiz keşifle başlıyoruz. Keşifte eşya listesi çıkarılır, binanın kat durumu ve asansör ihtiyacı yerinde görülür, aracın yanaşacağı alan belirlenir. Ardından fiyat yazılı olarak verilir ve sözleşmeye geçirilir. Bu yüzden taşıma günü fiyatı değişen, eşyayı araca yükleyip pazarlık açan firmalarla aramızdaki fark ilk günden bellidir.',
       'Ankara’nın her ilçesinde farklı zorluklar var: Keçiören’de dar merdivenler, Çankaya’da park sorunu, Etimesgut’ta site kuralları. Yirmi yılı aşan saha tecrübemiz sayesinde hangi adreste neyle karşılaşacağımızı önceden biliyor, taşıma planını buna göre kuruyoruz.',
     ],
@@ -34,7 +34,7 @@ export const homeArticles: HomeArticle[] = [
     label: 'Ankara Nakliyat',
     heading: 'Ankara Nakliyat Hizmetlerimizin Kapsamı',
     paragraphs: [
-      'Ankara nakliyat denince akla yalnızca ev taşımak gelir; oysa bir nakliyat firmasının işi çok daha geniştir. Cansızoğlu Nakliyat olarak ev taşımanın yanında ofis ve iş yeri taşıma, banka şubesi taşıma, piyano ve para kasası gibi özel eşya nakliyesi, askılı tekstil taşıma, asansör kiralama ve eşya depolama hizmetleri veriyoruz.',
+      'Ankara nakliyat denince akla yalnızca ev taşımak gelir; oysa bir nakliyat firmasının işi çok daha geniştir. Ankara Taşıma olarak ev taşımanın yanında ofis ve iş yeri taşıma, banka şubesi taşıma, piyano ve para kasası gibi özel eşya nakliyesi, askılı tekstil taşıma, asansör kiralama ve eşya depolama hizmetleri veriyoruz.',
       'Bu hizmetlerin tamamını tek çatı altında toplamamızın sebebi basit: taşınma sırasında ihtiyaçlar iç içe geçer. Eviniz hazır değilse eşyanız depoya girmeli, piyanonuz varsa ayrı ekip gelmelidir, iş yeriniz taşınacaksa mesai dışı çalışılmalıdır. Hepsini aynı firmadan almak hem koordinasyonu kolaylaştırır hem de sorumluluğu tek yere bağlar.',
       'Araçlarımız, taşıma asansörlerimiz ve personelimiz bize aittir. Taşıma gününde adresinize kimin geleceğini ve nasıl çalışacağını biz biliyoruz; bu, aracını ve ekibini her iş için dışarıdan bulan firmalarla aramızdaki en temel farktır.',
     ],
@@ -102,9 +102,9 @@ export const homeArticles: HomeArticle[] = [
     label: 'Ankara Taşıma Şirketleri',
     heading: 'Ankara Taşıma Şirketleri Arasından Doğru Firmayı Seçmek',
     paragraphs: [
-      'Ankara taşıma şirketleri arasında seçim yaparken bakılması gereken ilk şey, firmanın kendi aracı ve ekibi olup olmadığıdır. İşi aldıktan sonra araç ve eleman arayan firmalarda taşıma günü kimin geleceği belli olmaz. Cansızoğlu Nakliyat olarak araç, taşıma asansörü ve personelin tamamı bize aittir.',
+      'Ankara taşıma şirketleri arasında seçim yaparken bakılması gereken ilk şey, firmanın kendi aracı ve ekibi olup olmadığıdır. İşi aldıktan sonra araç ve eleman arayan firmalarda taşıma günü kimin geleceği belli olmaz. Ankara Taşıma olarak araç, taşıma asansörü ve personelin tamamı bize aittir.',
       'İkinci bakılacak şey keşif ve sözleşmedir. Adrese gelip eşyayı görmeden fiyat veren, sözleşme imzalamaktan kaçınan bir firmayla çalışmak risklidir. Üçüncüsü ise referanstır: firmanın gerçek müşteri yorumları, sosyal medya hesapları ve sahadaki araçları görünür olmalıdır.',
-      'Ankara’da 1998’den bu yana çalışan bir aile şirketiyiz. Bu süre boyunca aynı işi, aynı isimle ve aynı adreste yaptık. Taşınma gibi insanın bütün evini bir güne emanet ettiği bir işte en büyük teminat, firmanın arkasında duracağı bir geçmişinin olmasıdır.',
+      'Ankara Taşıma’nın açık adresi ve sabit telefon hattı var; ofisimiz Çankaya Çayyolu’nda. Taşınma gibi insanın bütün evini bir güne emanet ettiği bir işte en büyük teminat, taşıma bittikten sonra da ulaşabileceğiniz, işinin arkasında duran bir firmayla çalışmaktır.',
     ],
     bullets: [
       { title: 'Kendi filosu', text: 'Araç, asansör ve ekip firmaya ait olmalı.' },

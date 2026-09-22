@@ -89,7 +89,6 @@ const staticTerms: LinkTerm[] = [
   // Kurumsal
   { term: 'araç filomuz', href: '/galeri' },
   { term: 'araç filosu', href: '/galeri' },
-  { term: 'aile şirketi', href: '/hakkimizda' },
   { term: 'hizmet bölgelerimiz', href: '/bolgeler' },
   { term: 'tüm hizmetlerimiz', href: '/hizmetler' },
 ]

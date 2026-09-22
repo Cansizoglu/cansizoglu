@@ -37,13 +37,13 @@ export default function ContactBar() {
         <div className="flex items-center justify-center gap-2 px-2 pb-2">
           {/* Musa'nın isteğiyle hemen ara butonu cep telefonuna yönleniyor */}
           <a
-            href={site.phone.gsmHref}
+            href={site.phone.href}
             className="block w-1/2 max-w-[230px]"
-            aria-label={`Telefonla arayın: ${site.phone.gsm}`}
+            aria-label={`Telefonla arayın: ${site.phone.display}`}
           >
             <Image
               src="/img/btn-hemen-ara.webp"
-              alt={`Tıkla hemen telefonla ara: ${site.phone.gsm}`}
+              alt={`Tıkla hemen telefonla ara: ${site.phone.display}`}
               width={527}
               height={175}
               sizes="50vw"

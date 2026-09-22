@@ -21,10 +21,10 @@ type PageMetaInput = {
  * (1920x600) yerine bu oran için ayrıca hazırlanmış kapak kullanılıyor.
  */
 const DEFAULT_SHARE_IMAGE: ShareImage = {
-  src: '/img/og-cansizoglu-nakliyat.jpg',
+  src: '/img/og-ankara-tasima.jpg',
   width: 1200,
   height: 630,
-  alt: 'Cansızoğlu Nakliyat taşıma aracı ve mobil asansörü, çağrı hattı 444 0 510',
+  alt: 'Ankara Taşıma evden eve nakliyat aracı ve ekibi, telefon 0312 341 53 40',
 }
 
 const MIME: Record<string, string> = {
@@ -43,7 +43,7 @@ const MIME: Record<string, string> = {
 const TITLE_MAX = 62
 
 export function composeTitle(title: string) {
-  for (const suffix of [` | ${site.name}`, ' | Cansızoğlu', '']) {
+  for (const suffix of [` | ${site.name}`, '']) {
     if (title.length + suffix.length <= TITLE_MAX) return title + suffix
   }
   return title
@@ -100,10 +100,9 @@ export function localBusinessJsonLd() {
     legalName: site.legalName,
     description: site.description,
     url: site.url,
-    telephone: site.phone.gsm,
+    telephone: site.phone.display,
     email: site.email,
-    foundingDate: String(site.foundedYear),
-    image: `${site.url}/img/slider-1.jpg`,
+    image: `${site.url}/img/ankara-tasima-banner-1.webp`,
     priceRange: '₺₺',
     address: {
       '@type': 'PostalAddress',
@@ -138,7 +137,6 @@ export function localBusinessJsonLd() {
         closes: '20:00',
       },
     ],
-    sameAs: [site.social.instagram, site.social.facebook, site.social.youtube],
   }
 }
 

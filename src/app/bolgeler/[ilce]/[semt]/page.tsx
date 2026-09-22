@@ -92,11 +92,11 @@ export default function NeighborhoodPage({ params }: Props) {
               <Icon name="arrow" className="h-4 w-4" />
             </Link>
             <a
-              href={site.phone.gsmHref}
+              href={site.phone.href}
               className="btn-outline border-white text-white hover:bg-white/10"
             >
               <Icon name="phone" className="h-4 w-4" />
-              {site.phone.gsm}
+              {site.phone.display}
             </a>
           </div>
         </div>
@@ -132,10 +132,11 @@ export default function NeighborhoodPage({ params }: Props) {
 
             <div className="mt-10 overflow-hidden rounded-xl">
               <Image
-                src="/img/slider-2.jpg"
-                alt={`${neighborhood.name} bölgesinde taşıma yapan Cansızoğlu Nakliyat araçları`}
-                width={1920}
-                height={600}
+                src="/img/koltuk-takimi-ambalaj.webp"
+                alt={`${neighborhood.name} taşıması öncesi ambalajlanmış koltuk takımı`}
+                width={1600}
+                height={1200}
+                sizes="(max-width: 1024px) 100vw, 720px"
                 className="h-52 w-full object-cover sm:h-64"
               />
             </div>

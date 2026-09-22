@@ -27,39 +27,9 @@ export default function Footer() {
         <div>
           <Logo variant="light" />
           <p className="mt-4 text-sm leading-6 text-brand-200">
-            {site.foundedYear} yılından bu yana Ankara’da faaliyet gösteren bir aile
-            şirketiyiz. Evden eve nakliyat, ofis taşıma, asansörlü taşımacılık ve
+            Ankara’nın tüm ilçelerinde çalışan bir nakliyat firmasıyız. Evden eve nakliyat, ofis taşıma, asansörlü taşımacılık ve
             depolama hizmeti veriyoruz.
           </p>
-          <div className="mt-5 flex gap-3">
-            <a
-              href={site.social.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="rounded-md border border-brand-800 p-2 hover:bg-brand-800"
-            >
-              <Icon name="instagram" className="h-5 w-5" />
-            </a>
-            <a
-              href={site.social.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="rounded-md border border-brand-800 p-2 hover:bg-brand-800"
-            >
-              <Icon name="facebook" className="h-5 w-5" />
-            </a>
-            <a
-              href={site.social.youtube}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-              className="rounded-md border border-brand-800 p-2 hover:bg-brand-800"
-            >
-              <Icon name="youtube" className="h-5 w-5" />
-            </a>
-          </div>
         </div>
 
         <div>
@@ -103,20 +73,14 @@ export default function Footer() {
             </li>
             <li className="flex gap-2">
               <Icon name="phone" className="h-5 w-5 shrink-0 text-brand-400" />
-              <a href={site.phone.callCenterHref} className="hover:text-white">
-                {site.phone.callCenter}
-              </a>
-            </li>
-            <li className="flex gap-2">
-              <Icon name="phone" className="h-5 w-5 shrink-0 text-brand-400" />
-              <a href={site.phone.landlineHref} className="hover:text-white">
-                {site.phone.landline}
+              <a href={site.phone.href} className="hover:text-white">
+                {site.phone.display}
               </a>
             </li>
             <li className="flex gap-2">
               <Icon name="whatsapp" className="h-5 w-5 shrink-0 text-brand-400" />
-              <a href={site.phone.gsmHref} className="hover:text-white">
-                {site.phone.gsm}
+              <a href={site.phone.whatsappHref} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                WhatsApp ile yazın
               </a>
             </li>
             <li className="flex min-w-0 gap-2">

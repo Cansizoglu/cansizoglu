@@ -6,13 +6,12 @@ import Icon from '@/components/Icon'
 import CtaBand from '@/components/CtaBand'
 import GalleryGrid from '@/components/GalleryGrid'
 import { galleryItems } from '@/data/gallery'
-import { site } from '@/data/site'
 import { pageMeta } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
-  title: 'Galeri | Cansızoğlu Nakliyat Araç Filosu ve Çalışmalarımız',
+  title: 'Galeri | Ankara Taşıma Sahadan Fotoğraflar',
   description:
-    'Cansızoğlu Nakliyat araç filosu, taşıma asansörü, ambalaj malzemeleri ve sahadaki çalışmalarımızdan fotoğraflar.',
+    'Ankara Taşıma ekibinin ambalajlama, yükleme ve taşıma sırasında çektiği saha fotoğrafları.',
   path: '/galeri',
 })
 
@@ -26,8 +25,8 @@ export default function GalleryPage() {
           <SectionTitle
             as="h1"
             eyebrow="Galeri"
-            title="Araç filomuz ve sahadan kareler"
-            description="Taşıma araçlarımız, mobil asansörümüz, ambalaj malzemelerimiz ve merkez ofisimiz. Araç ve ekipmanın tamamı firmamıza aittir. Görsele tıklayarak büyütebilir, ok tuşlarıyla galeride gezebilirsiniz."
+            title="Sahadan kareler"
+            description="Ambalajlama, yükleme ve taşıma sırasında çektiğimiz fotoğraflar. Görsele tıklayarak büyütebilir, ok tuşlarıyla galeride gezebilirsiniz."
           />
 
           <GalleryGrid items={galleryItems} />
@@ -36,33 +35,24 @@ export default function GalleryPage() {
             <div>
               <h2 className="text-xl">Ekipmanın tamamı bize ait</h2>
               <p className="mt-3 leading-8 text-slate-600">
-                Kapalı kasa taşıma araçlarımız, mobil taşıma asansörlerimiz, kilitli
-                taşıma kasalarımız ve ambalaj malzemelerimiz firmamıza aittir. Bu yüzden
+                Kapalı kasa taşıma araçlarımız, mobil taşıma asansörlerimiz ve ambalaj
+                malzemelerimiz firmamıza aittir. Bu yüzden
                 taşıma gününde araç veya asansör bekleme sorunu yaşanmaz, adresinize
                 hangi ekibin geleceğini önceden biliriz.
               </p>
             </div>
             <div>
-              <h2 className="text-xl">Videolarımız</h2>
+              <h2 className="text-xl">Her eşyaya kendi ambalajı</h2>
               <p className="mt-3 leading-8 text-slate-600">
-                Sahadaki çalışmalarımızı YouTube ve Instagram hesaplarımızda
-                paylaşıyoruz. Tanıtım videomuzu hakkımızda sayfasında da
-                izleyebilirsiniz.
+                Koltuklar balonlu naylon ve streç filmle, dolaplar köşe koruyucuyla, kırılacak
+                eşyalar tek tek sarılır. Fotoğraflardaki ambalaj malzemesinin tamamı taşıma
+                fiyatına dahildir.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
-                <Link href="/hakkimizda" className="btn-outline">
-                  Tanıtım videomuz
+                <Link href="/fiyat-teklifi" className="btn-outline">
+                  Ücretsiz teklif alın
                   <Icon name="arrow" className="h-4 w-4" />
                 </Link>
-                <a
-                  href={site.social.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-outline"
-                >
-                  <Icon name="instagram" className="h-4 w-4" />
-                  Instagram
-                </a>
               </div>
             </div>
           </div>

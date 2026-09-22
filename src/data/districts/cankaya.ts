@@ -24,6 +24,10 @@ export const cankaya: District = {
       text: 'Yüksek katlı binalarda yük asansörü rezervasyonu ve yönetim iznini biz takip ediyoruz.',
     },
     {
+      title: 'Ofisimiz Çayyolu’nda',
+      text: 'Çayyolu, Ümitköy ve çevresindeki taşımalara ekibimiz en kısa sürede ulaşıyor.',
+    },
+    {
       title: 'Ofis taşımada güçlüyüz',
       text: 'Çankaya’daki iş merkezlerinde mesai dışı ofis taşıma yapıyoruz.',
     },

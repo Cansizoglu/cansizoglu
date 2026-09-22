@@ -22,13 +22,13 @@ export const aboutPages: AboutPage[] = [
     title: 'Misyonumuz',
     metaTitle: 'Misyonumuz',
     metaDescription:
-      'Cansızoğlu Nakliyat’ın misyonu: taşınmayı sürprizsiz bir güne indirmek. Yazılı fiyat, kendi ekibimiz ve sözleşmeli taşıma ilkelerimiz.',
+      'Ankara Taşıma’nın misyonu: taşınmayı sürprizsiz bir güne indirmek. Yazılı fiyat, kendi ekibimiz ve sözleşmeli taşıma ilkelerimiz.',
     intro:
       'Taşınma, çoğu insanın hayatında birkaç kez yaşadığı ve her seferinde tedirgin olduğu bir gündür. Bizim işimiz o günü sürprizsiz hale getirmek.',
     body: [
       {
         type: 'p',
-        text: `${site.name} olarak ${site.foundedYear} yılından bu yana Ankara’da evden eve nakliyat yapıyoruz. Bu süre içinde şunu gördük: müşterinin asıl endişesi eşyasının taşınıp taşınmayacağı değil, taşıma günü karşısına ne çıkacağını bilmemesidir. Fiyatın değişmesi, ekibin geç gelmesi, asansörün bulunamaması, montajın ertesi güne kalması. Misyonumuz bu belirsizliği ortadan kaldırmaktır.`,
+        text: `${site.name} olarak Ankara’nın her ilçesinde evden eve nakliyat yapıyoruz. Sahada şunu gördük: müşterinin asıl endişesi eşyasının taşınıp taşınmayacağı değil, taşıma günü karşısına ne çıkacağını bilmemesidir. Fiyatın değişmesi, ekibin geç gelmesi, asansörün bulunamaması, montajın ertesi güne kalması. Misyonumuz bu belirsizliği ortadan kaldırmaktır.`,
       },
       { type: 'h2', text: 'Verdiğimiz sözü yazılı veriyoruz' },
       {
@@ -50,10 +50,10 @@ export const aboutPages: AboutPage[] = [
           'Her taşıma sözleşmeli ve sigorta kapsamındadır.',
         ],
       },
-      { type: 'h2', text: 'Aile şirketi olmanın anlamı' },
+      { type: 'h2', text: 'Açık adresi olan bir firma' },
       {
         type: 'p',
-        text: `Cansızoğlu Nakliyat bir aile şirketidir. Ankara’da açık adresi, tabelası ve sabit hattı olan bir işletmeyiz. Bu bizim için bir reklam cümlesi değil, sorumluluk anlamına geliyor: bu şehirde kalıcıyız ve her taşımanın hesabını verecek durumdayız. Adresimiz ${site.address.full}.`,
+        text: `Ankara Taşıma, Ankara’da açık adresi ve sabit hattı olan bir işletmedir. Bu bizim için bir reklam cümlesi değil, sorumluluk anlamına geliyor: bu şehirde kalıcıyız ve her taşımanın hesabını verecek durumdayız. Adresimiz ${site.address.full}.`,
       },
     ],
   },
@@ -63,7 +63,7 @@ export const aboutPages: AboutPage[] = [
     title: 'Vizyonumuz',
     metaTitle: 'Vizyonumuz',
     metaDescription:
-      'Cansızoğlu Nakliyat’ın vizyonu: Ankara’da nakliyatın standardını yükseltmek. Şeffaf fiyat, kendi filomuz ve sürekli gelişen ekipmanla hedeflerimiz.',
+      'Ankara Taşıma’nın vizyonu: Ankara’da nakliyatın standardını yükseltmek. Şeffaf fiyat, kendi filomuz ve sürekli gelişen ekipmanla hedeflerimiz.',
     intro:
       'Ankara’da nakliyat denince akla gelen ilk firma olmak değil hedefimiz. Hedefimiz, nakliyattan beklenen standardı yükseltmek.',
     body: [
@@ -104,14 +104,14 @@ export const aboutPages: AboutPage[] = [
     title: 'KVKK Aydınlatma Metni',
     metaTitle: 'KVKK Aydınlatma Metni',
     metaDescription:
-      'Cansızoğlu Nakliyat kişisel verilerin korunması aydınlatma metni: işlenen veriler, işleme amacı, hukuki sebep, saklama süresi ve KVKK 11. madde haklarınız.',
+      'Ankara Taşıma kişisel verilerin korunması aydınlatma metni: işlenen veriler, işleme amacı, hukuki sebep, saklama süresi ve KVKK 11. madde haklarınız.',
     intro:
       '6698 sayılı Kişisel Verilerin Korunması Kanunu’nun 10. maddesi uyarınca, kişisel verilerinizin hangi amaçla işlendiği konusunda sizi bilgilendirmek isteriz.',
     body: [
       { type: 'h2', text: 'Veri sorumlusu' },
       {
         type: 'p',
-        text: `Bu aydınlatma metni kapsamında veri sorumlusu ${site.legalName} (“${site.name}”, “Şirket”) olup, adresi ${site.address.full}’dir. Bize ${site.phone.landline} numaralı sabit hattan, ${site.phone.gsm} numaralı telefondan veya ${site.email} adresinden ulaşabilirsiniz.`,
+        text: `Bu aydınlatma metni kapsamında veri sorumlusu ${site.legalName} (“${site.name}”, “Şirket”) olup, adresi ${site.address.full}’dir. Bize ${site.phone.display} numaralı telefondan veya ${site.email} adresinden ulaşabilirsiniz.`,
       },
       { type: 'h2', text: 'İşlenen kişisel veriler' },
       {

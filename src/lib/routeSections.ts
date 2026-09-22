@@ -92,7 +92,7 @@ export function routeSections(route: Route): DistrictSection[] {
       id: 'nakliyeciler',
       heading: `Ankara ${c} Arası Nakliyeciler Arasından Seçim Yaparken`,
       paragraphs: [
-        `Ankara ${c} arası nakliyeciler arasında seçim yaparken bakılacak ilk şey, işi yapacak olanın firmanın kendi ekibi mi yoksa taşeron mu olduğudur. Şehirler arası taşımada bu fark şehir içine göre çok daha önemli: eşyanız ${route.km} kilometre yol gidiyor ve bir sorun çıktığında muhatabın belli olması gerekiyor. Cansızoğlu Nakliyat’ta araç, asansör ve personel firmamıza aittir.`,
+        `Ankara ${c} arası nakliyeciler arasında seçim yaparken bakılacak ilk şey, işi yapacak olanın firmanın kendi ekibi mi yoksa taşeron mu olduğudur. Şehirler arası taşımada bu fark şehir içine göre çok daha önemli: eşyanız ${route.km} kilometre yol gidiyor ve bir sorun çıktığında muhatabın belli olması gerekiyor. Ankara Taşıma’da araç, asansör ve personel firmamıza aittir.`,
         `İkinci mesele eşyanın başka müşterilerin yüküyle birleştirilip birleştirilmediğidir. Ucuz görünen bazı tekliflerde eşya bir depoda toplanıp aktarma yapılarak gönderiliyor; hasar ve gecikme riski bu noktada çıkıyor. Biz aktarma yapmıyoruz, araç sizin evinizle çıkıyor ve sizin adresinizde boşalıyor.`,
         `Üçüncüsü yazılı sözleşme ve sigorta. Uzun mesafede sigortanın kapsamını taşımadan önce görmeniz gerekiyor. Sözleşmeyi ve poliçeyi keşiften sonra size gösteriyoruz.`,
       ],

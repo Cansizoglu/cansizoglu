@@ -84,11 +84,11 @@ export default function DistrictPage({ params }: Props) {
               <Icon name="arrow" className="h-4 w-4" />
             </Link>
             <a
-              href={site.phone.callCenterHref}
+              href={site.phone.href}
               className="btn-outline border-white text-white hover:bg-white/10"
             >
               <Icon name="phone" className="h-4 w-4" />
-              {site.phone.callCenter}
+              {site.phone.display}
             </a>
           </div>
         </div>
@@ -139,10 +139,11 @@ export default function DistrictPage({ params }: Props) {
 
             <div className="mt-10 overflow-hidden rounded-xl">
               <Image
-                src="/img/slider-1.jpg"
-                alt={`${district.name} bölgesinde Cansızoğlu Nakliyat taşıma aracı`}
-                width={1920}
-                height={600}
+                src="/img/ankara-tasima-banner-1.webp"
+                alt={`${district.name} evden eve nakliyatta Ankara Taşıma ekibi eşyaları araçtan indiriyor`}
+                width={2048}
+                height={768}
+                sizes="(max-width: 1024px) 100vw, 720px"
                 className="h-56 w-full object-cover sm:h-72"
               />
             </div>

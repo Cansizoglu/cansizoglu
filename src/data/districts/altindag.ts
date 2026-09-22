@@ -9,15 +9,15 @@ export const altindag: District = {
   lon: 32.87,
   metaTitle: 'Altındağ Evden Eve Nakliyat | Ulus ve Siteler Taşıma',
   metaDescription:
-    'Altındağ evden eve nakliyat: Ulus, Siteler, Hacettepe, Aydınlıkevler ve çevresinde asansörlü, ambalajlı ve sigortalı taşıma. Merkez ofisimiz Altındağ’da.',
+    'Altındağ evden eve nakliyat: Ulus, Siteler, Hacettepe, Aydınlıkevler ve çevresinde asansörlü, ambalajlı ve sigortalı taşıma.',
   intro: [
-    'Altındağ evden eve nakliyat bizim için en yakın iş alanı; merkez ofisimiz bu ilçede. Ulus ve Siteler çevresindeki taşımalara ekibimiz en kısa sürede ulaşıyor.',
+    'Altındağ evden eve nakliyat, Ankara’nın en eski yerleşim bölgelerinde çalışmak demektir. Ulus ve Siteler çevresindeki taşımaları trafiğin sakin olduğu saatlere göre planlıyoruz.',
     'İlçede eski yapı stoğu yoğun; merdivenler dar, sokaklar sıkışık. Bu yüzden Altındağ taşımalarında asansör ve küçük araç aktarması sık kullanılıyor. Siteler’de ise mobilya imalatçılarından alınan yeni ürünlerin adrese teslim ve montajını yapıyoruz.',
   ],
   highlights: [
     {
-      title: 'Merkez ofis burada',
-      text: 'Altındağ taşımalarında ekip en kısa sürede adreste oluyor.',
+      title: 'Dar sokak planlaması',
+      text: 'Aracın yanaşamadığı sokaklarda küçük araç aktarmasını önceden planlıyoruz.',
     },
     {
       title: 'Siteler mobilya tecrübesi',

@@ -33,7 +33,7 @@ export const posts: BlogPost[] = [
   {
     slug: 'tasinmadan-once-yapilacaklar-listesi',
     title: 'Taşınmadan Önce Yapılacaklar: 2 Haftalık Hazırlık Listesi',
-    metaTitle: 'Taşınmadan Önce Yapılacaklar Listesi | Cansızoğlu Nakliyat',
+    metaTitle: 'Taşınmadan Önce Yapılacaklar Listesi | Ankara Taşıma',
     metaDescription:
       'Taşınmadan önce iki hafta içinde yapmanız gerekenler: abonelik işlemleri, paketleme sırası, adres değişikliği ve taşıma günü hazırlığı.',
     excerpt:
@@ -41,13 +41,13 @@ export const posts: BlogPost[] = [
     date: '2026-09-10',
     readingMinutes: 6,
     image: {
-      src: '/img/tasima-kasalari.jpg',
-      width: 848,
-      height: 480,
-      alt: 'Cansızoğlu Nakliyat logolu iki sarı taşıma kasası, asansör platformunun üzerinde',
-      title: 'Taşımaya hazırlanmış sarı taşıma kasaları',
+      src: '/img/tasima-oncesi-salon.webp',
+      width: 1600,
+      height: 1200,
+      alt: 'Taşınma öncesi salonda sarılıp paketlenmiş mobilyalar ve koliler',
+      title: 'Taşımaya hazırlanmış salon',
       caption: 'Hazırlığa erken başlayınca taşıma günü sadece yükleme gününe dönüşüyor.',
-      description: 'Cansızoğlu Nakliyat’ın evden eve taşımalarda kullandığı, firma logosu ve çağrı hattı yazılı sarı plastik taşıma kasaları, mobil asansörün platformuna yerleştirilmiş halde.',
+      description: 'Taşınma gününden önce paketlenmiş mobilyalar, televizyon kutusu ve kolilerle hazırlanmış bir salon. Eşyalar yükleme sırasına göre bir araya toplanmış.',
     },
     body: [
       {
@@ -98,7 +98,7 @@ export const posts: BlogPost[] = [
   {
     slug: 'asansorlu-nakliyat-ne-zaman-gerekir',
     title: 'Asansörlü Nakliyat Ne Zaman Gerekir?',
-    metaTitle: 'Asansörlü Nakliyat Ne Zaman Gerekir? | Cansızoğlu Nakliyat',
+    metaTitle: 'Asansörlü Nakliyat Ne Zaman Gerekir? | Ankara Taşıma',
     metaDescription:
       'Asansörlü nakliyat hangi durumlarda gerekir, maliyeti neye göre değişir ve merdivenle taşımaya göre avantajları nelerdir?',
     excerpt:
@@ -106,13 +106,13 @@ export const posts: BlogPost[] = [
     date: '2026-09-05',
     readingMinutes: 5,
     image: {
-      src: '/img/slider-3.jpg',
-      width: 1920,
-      height: 600,
-      alt: 'Apartmanın yanına kurulmuş mobil taşıma asansörü ve yanındaki Cansızoğlu kapalı kasa kamyonu',
-      title: 'Apartmana kurulmuş mobil taşıma asansörü',
+      src: '/img/ankara-tasima-banner-1.webp',
+      width: 2048,
+      height: 768,
+      alt: 'Ankara Taşıma ekibi paketlenmiş koltukları kapalı kasa kamyondan indiriyor',
+      title: 'Ambalajlı eşyanın araçtan indirilmesi',
       caption: 'Asansörsüz binada eşya merdivene hiç girmiyor, pencereden iniyor.',
-      description: 'Ankara’da çok katlı bir binanın önüne kurulmuş Cansızoğlu Nakliyat mobil taşıma asansörü ve yükleme için bekleyen kapalı kasa taşıma kamyonu.',
+      description: 'Ankara Taşıma ekibinin streç filmle sarılmış koltuk ve mobilyaları kapalı kasa kamyondan indirdiği an.',
     },
     body: [
       {
@@ -157,13 +157,13 @@ export const posts: BlogPost[] = [
     date: '2026-08-28',
     readingMinutes: 7,
     image: {
-      src: '/img/tasima-kasalari.jpg',
-      width: 848,
-      height: 480,
-      alt: 'Kapaklı sarı plastik taşıma kasaları, üzerinde Cansızoğlu Nakliyat etiketi',
-      title: 'Kapaklı plastik taşıma kasaları',
-      caption: 'Kapaklı plastik kasa, karton koliden daha dayanıklı ve istiflemesi kolay.',
-      description: 'Eşya paketlemede kullanılan kapaklı sarı plastik taşıma kasaları; karton koliye göre daha dayanıklı oldukları için kırılacak eşya ve mutfak malzemesinde tercih ediliyor.',
+      src: '/img/koltuk-takimi-ambalaj.webp',
+      width: 1600,
+      height: 1200,
+      alt: 'Balonlu naylon ve streç filmle sarılmış koltuk takımı',
+      title: 'Ambalajlanmış koltuk takımı',
+      caption: 'Koltuklar balonlu naylon ve streç filmle sarılınca taşımada çizilmiyor.',
+      description: 'Salonda taşınmaya hazır, her parçası balonlu naylon ve streç filmle ayrı ayrı sarılmış koltuk takımı ve orta sehpa.',
     },
     body: [
       {
@@ -217,13 +217,13 @@ export const posts: BlogPost[] = [
     date: '2026-09-16',
     readingMinutes: 8,
     image: {
-      src: '/img/slider-2.jpg',
-      width: 1920,
-      height: 600,
-      alt: 'Cansızoğlu Nakliyat’ın kamyon, kamyonet ve panelvanı bir sitenin önünde yan yana',
-      title: 'Farklı boyutlardaki Cansızoğlu Nakliyat araçları',
+      src: '/img/ankara-tasima-banner-2.webp',
+      width: 2048,
+      height: 768,
+      alt: 'Ankara Taşıma kapalı kasa kamyonu şehir içi yolda',
+      title: 'Ankara Taşıma kapalı kasa kamyonu',
       caption: 'Fiyatı belirleyen ilk iki şey araç boyu ve mesafe.',
-      description: 'Cansızoğlu Nakliyat’ın farklı boyutlardaki taşıma araçları: büyük kapalı kasa kamyon, orta boy kamyonet ve parça eşya taşımada kullanılan panelvan.',
+      description: 'Ankara Taşıma’nın evden eve nakliyatta kullandığı kapalı kasa kamyon. Fiyatı belirleyen ilk iki şey araç boyu ve mesafe.',
     },
     body: [
       {
@@ -279,13 +279,13 @@ export const posts: BlogPost[] = [
     date: '2026-09-14',
     readingMinutes: 7,
     image: {
-      src: '/img/ofis.webp',
-      width: 1242,
-      height: 699,
-      alt: 'Cansızoğlu Nakliyat’ın Ankara Altındağ’daki ofisinin tabelalı cephesi',
-      title: 'Cansızoğlu Nakliyat ofis cephesi',
-      caption: 'Açık adresi ve tabelası olan firma, iş bittiğinde ortadan kaybolmuyor.',
-      description: 'Cansızoğlu Nakliyat’ın Ankara Altındağ’daki ofisinin dış cephesi; firma adı ve çağrı hattı numarası yazılı tabela.',
+      src: '/img/paketlenmis-mobilyalar.webp',
+      width: 1047,
+      height: 1119,
+      alt: 'Streç film ve balonlu naylonla paketlenmiş koltuk, sandalye ve sehpalar',
+      title: 'Taşımaya hazır paketlenmiş mobilyalar',
+      caption: 'Eşyayı özenle paketleyen ekip, taşıma gününde de aynı özeni gösteriyor.',
+      description: 'Taşıma öncesi kırmızı ve mavi balonlu naylonla sarılmış, köşeleri bantlanmış koltuk, sandalye ve sehpalar.',
     },
     body: [
       {
@@ -336,13 +336,13 @@ export const posts: BlogPost[] = [
     date: '2026-09-12',
     readingMinutes: 5,
     image: {
-      src: '/img/slider-1.jpg',
-      width: 1920,
-      height: 600,
-      alt: 'Yolda ilerleyen Cansızoğlu Nakliyat kapalı kasa kamyonu ve arkasındaki asansörlü araç',
-      title: 'Yol üzerindeki Cansızoğlu Nakliyat aracı',
+      src: '/img/kamyon-ici-yukleme.webp',
+      width: 1536,
+      height: 2048,
+      alt: 'Kamyon kasasında iple sabitlenmiş, balonlu naylonla sarılı dolaplar',
+      title: 'Kasada sabitlenmiş eşyalar',
       caption: 'Sigorta, yazılı sözleşme olmadan hüküm ifade etmiyor.',
-      description: 'Ankara’da sigortalı taşıma yapan Cansızoğlu Nakliyat kapalı kasa kamyonu ve arkasından gelen mobil asansör aracı.',
+      description: 'Kapalı kasa kamyonun içinde balonlu naylon ve streç filmle sarılmış, yol boyunca kaymaması için iple sabitlenmiş dolaplar.',
     },
     body: [
       {
@@ -387,13 +387,13 @@ export const posts: BlogPost[] = [
     date: '2026-09-08',
     readingMinutes: 6,
     image: {
-      src: '/img/slider-1.jpg',
-      width: 1920,
-      height: 600,
-      alt: 'Beyaz eşya taşımaya uygun, kapalı kasalı Cansızoğlu Nakliyat kamyonu',
-      title: 'Kapalı kasa taşıma kamyonu',
+      src: '/img/ambalajli-dolaplar.webp',
+      width: 1600,
+      height: 901,
+      alt: 'Taşımaya hazır, balonlu naylonla sarılmış iki büyük dolap',
+      title: 'Ambalajlanmış büyük eşyalar',
       caption: 'Buzdolabı dik taşınır, indirildikten sonra en az altı saat çalıştırılmaz.',
-      description: 'Beyaz eşyanın dik ve sabitlenmiş şekilde taşınabildiği kapalı kasa Cansızoğlu Nakliyat kamyonu; kasa kapalı olduğu için eşya yol boyunca hava şartlarından etkilenmiyor.',
+      description: 'Taşıma öncesi balonlu naylon ve streç filmle sarılıp dik durumda bekletilen iki büyük dolap.',
     },
     body: [
       {
@@ -438,13 +438,13 @@ export const posts: BlogPost[] = [
     date: '2026-09-06',
     readingMinutes: 7,
     image: {
-      src: '/img/arac-sari-kamyon.jpg',
-      width: 848,
-      height: 480,
-      alt: 'Üzerinde “Ev & Ofis Taşıma” yazan sarı kasalı Cansızoğlu Nakliyat kamyonu',
-      title: 'Ev ve ofis taşımada kullanılan kamyon',
+      src: '/img/paketli-esyalar-oda.webp',
+      width: 1200,
+      height: 600,
+      alt: 'Boş odada paketlenmiş halde yüklemeyi bekleyen mobilyalar',
+      title: 'Yüklemeyi bekleyen paketli eşyalar',
       caption: 'Ofis taşımasını hafta sonuna almak, iş kaybını neredeyse sıfırlıyor.',
-      description: 'Cansızoğlu Nakliyat’ın ev ve ofis taşımalarında kullandığı, asansörlü taşımacılık ibaresi ve çağrı hattı yazılı sarı kasalı kamyonu.',
+      description: 'Boşaltılmış bir odada balonlu naylonla paketlenmiş, yükleme sırasını bekleyen mobilya ve parçalar.',
     },
     body: [
       {
@@ -489,13 +489,13 @@ export const posts: BlogPost[] = [
     date: '2026-09-04',
     readingMinutes: 5,
     image: {
-      src: '/img/tasima-kasalari.jpg',
-      width: 848,
-      height: 480,
-      alt: 'Depolamaya hazır, kapağı kapatılmış sarı taşıma kasaları',
-      title: 'Depolamaya hazırlanan taşıma kasaları',
+      src: '/img/ambalajli-kanepe.webp',
+      width: 901,
+      height: 1600,
+      alt: 'Streç film ve balonlu naylonla sarılıp dik bekletilen kanepe',
+      title: 'Depolamaya hazır ambalajlı kanepe',
       caption: 'Depoya giren her kasa listelenmezse, çıkarken aranan eşya bulunmuyor.',
-      description: 'Kısa ve uzun süreli eşya depolamada kullanılan, kapağı kapatılmış ve istiflemeye hazır Cansızoğlu Nakliyat taşıma kasaları.',
+      description: 'Depolama veya taşıma için balonlu naylon ve streç filmle tamamen sarılmış, dik konumda bekletilen kanepe.',
     },
     body: [
       {
@@ -541,13 +541,13 @@ export const posts: BlogPost[] = [
     date: '2026-09-02',
     readingMinutes: 5,
     image: {
-      src: '/img/slider-3.jpg',
-      width: 1920,
-      height: 600,
-      alt: 'Taşıma asansörü kurulmuş, yükleme bekleyen Cansızoğlu Nakliyat kamyonu',
-      title: 'Yüklemeye hazır araç ve kurulu asansör',
+      src: '/img/ankara-tasima-kare.webp',
+      width: 1254,
+      height: 1254,
+      alt: 'Ankara Taşıma ekibi paketlenmiş eşyaları kamyona yüklüyor',
+      title: 'Yükleme sırasında Ankara Taşıma ekibi',
       caption: 'Asansör kurulumu 20 dakika sürüyor, gerisini kat ve mesafe belirliyor.',
-      description: 'Taşıma süresini belirleyen kat, asansör ve araç mesafesi etkenlerinin göründüğü an: kurulmuş mobil taşıma asansörü ve yükleme bekleyen Cansızoğlu Nakliyat kamyonu.',
+      description: 'Ankara Taşıma ekibinin ambalajlı koltukları ve odası yazılı kolileri kapalı kasa kamyona yüklediği an.',
     },
     body: [
       {

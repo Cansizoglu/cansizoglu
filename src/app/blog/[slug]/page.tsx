@@ -112,7 +112,7 @@ export default function BlogPostPage({ params }: Props) {
               <h2 className="text-lg">Ankara’da taşınacak mısınız?</h2>
               <p className="mt-2 leading-7 text-slate-700">
                 Ücretsiz keşif yapıyor, yazılı ve değişmeyen fiyat veriyoruz. Teklif için
-                formu doldurabilir veya {site.phone.callCenter} numaralı çağrı hattımızdan
+                formu doldurabilir veya {site.phone.display} numaralı çağrı hattımızdan
                 bize ulaşabilirsiniz.
               </p>
               <Link href="/fiyat-teklifi" className="btn-primary mt-4">

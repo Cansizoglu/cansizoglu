@@ -25,7 +25,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'Ankara Evden Eve Nakliyat | Cansızoğlu Nakliyat',
+    default: 'Ankara Evden Eve Nakliyat | Ankara Taşıma',
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -64,23 +64,23 @@ export const metadata: Metadata = {
     locale: 'tr_TR',
     url: site.url,
     siteName: site.name,
-    title: 'Ankara Evden Eve Nakliyat | Cansızoğlu Nakliyat',
+    title: 'Ankara Evden Eve Nakliyat | Ankara Taşıma',
     description: site.description,
     images: [
       {
-        url: `${site.url}/img/og-cansizoglu-nakliyat.jpg`,
+        url: `${site.url}/img/og-ankara-tasima.jpg`,
         width: 1200,
         height: 630,
         type: 'image/jpeg',
-        alt: 'Cansızoğlu Nakliyat taşıma aracı ve mobil asansörü, çağrı hattı 444 0 510',
+        alt: 'Ankara Taşıma evden eve nakliyat aracı ve ekibi, telefon 0312 341 53 40',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ankara Evden Eve Nakliyat | Cansızoğlu Nakliyat',
+    title: 'Ankara Evden Eve Nakliyat | Ankara Taşıma',
     description: site.description,
-    images: [`${site.url}/img/og-cansizoglu-nakliyat.jpg`],
+    images: [`${site.url}/img/og-ankara-tasima.jpg`],
   },
   formatDetection: { telephone: true },
 }

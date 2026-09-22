@@ -25,7 +25,7 @@ export const services: Service[] = [
       'Ankara evden eve nakliyat hizmeti: ücretsiz keşif, ambalajlı paketleme, asansörlü taşıma ve sigortalı nakliye. Ankara genelinde aynı gün randevu.',
     icon: 'home',
     intro: [
-      'Ev taşımak sadece eşyayı bir adresten diğerine götürmek değildir. Mobilyanın doğru sökülmesi, kırılacak eşyanın doğru ambalajlanması, yükleme sırasının doğru kurulması ve yeni adreste her şeyin yerli yerine monte edilmesi gerekir. Cansızoğlu Nakliyat olarak Ankara genelinde bu işin tamamını tek ekiple yürütüyoruz.',
+      'Ev taşımak sadece eşyayı bir adresten diğerine götürmek değildir. Mobilyanın doğru sökülmesi, kırılacak eşyanın doğru ambalajlanması, yükleme sırasının doğru kurulması ve yeni adreste her şeyin yerli yerine monte edilmesi gerekir. Ankara Taşıma olarak Ankara genelinde bu işin tamamını tek ekiple yürütüyoruz.',
       'Taşınma öncesi ücretsiz keşif yapıyor, eşya listesini çıkarıyor ve size net bir fiyat veriyoruz. Keşif sırasında binanın kat durumu, asansör ihtiyacı, sokak genişliği ve park imkânı gibi işin süresini belirleyen ayrıntıları da not ediyoruz. Böylece taşıma günü sürpriz çıkmıyor.',
     ],
     features: [
@@ -463,7 +463,7 @@ export const services: Service[] = [
       'Ankara kurumsal taşımacılık: şube, depo, arşiv ve personel taşınması. Sözleşmeli, faturalı, sigortalı ve mesai dışı çalışma. Kurumlara özel keşif.',
     icon: 'office',
     intro: [
-      'Kurumsal taşımacılık, tek seferlik bir ev taşımasından farklı yürüyor. Kurumun muhatabı tek olmak zorunda, tarih ve saat kesin olmak zorunda, çalışma çoğu zaman mesai dışına denk gelmek zorunda. Cansızoğlu Nakliyat olarak kurumlara bu üç şartı karşılayan bir düzen kuruyoruz.',
+      'Kurumsal taşımacılık, tek seferlik bir ev taşımasından farklı yürüyor. Kurumun muhatabı tek olmak zorunda, tarih ve saat kesin olmak zorunda, çalışma çoğu zaman mesai dışına denk gelmek zorunda. Ankara Taşıma olarak kurumlara bu üç şartı karşılayan bir düzen kuruyoruz.',
       'Her iş için tek bir sorumlu veriyoruz; kurum tarafındaki idari işler biriminin muhatabı o oluyor. Fiyat sözleşmeye yazılıyor, fatura kesiliyor, taşıma sigortalı yapılıyor. Şube açılışı, depo değişikliği, arşiv nakli veya personel taşınması gibi tekrar eden işler için yıllık anlaşma da yapıyoruz.',
     ],
     features: [

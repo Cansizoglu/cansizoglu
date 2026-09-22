@@ -21,8 +21,8 @@ export const processTabs: ProcessTab[] = [
       'Fiyat sözleşmeye yazılır, taşıma günü değişmez',
       'Keşif için ücret alınmaz',
     ],
-    image: '/img/ofis.webp',
-    imageAlt: 'Cansızoğlu Nakliyat ekibinin keşif yaptığı merkez ofis',
+    image: '/img/tasima-oncesi-salon.webp',
+    imageAlt: 'Keşif sonrası taşımaya hazırlanan salon',
   },
   {
     id: 'ambalajlama',
@@ -35,8 +35,8 @@ export const processTabs: ProcessTab[] = [
       'Kırılacak eşya tek tek sarılır, kutu boşlukları doldurulur',
       'Gardırop içeriği askıdan çıkarılmadan taşınabilir',
     ],
-    image: '/img/tasima-kasalari.jpg',
-    imageAlt: 'Ambalajlı taşımada kullanılan kilitli plastik taşıma kasaları',
+    image: '/img/koltuk-takimi-ambalaj.webp',
+    imageAlt: 'Balonlu naylon ve streç filmle ambalajlanmış koltuk takımı',
   },
   {
     id: 'montaj',
@@ -49,8 +49,8 @@ export const processTabs: ProcessTab[] = [
       'Buzdolabı dik taşınır, bağlantıları yeni adreste yapılır',
       'Montaj taşıma fiyatına dahildir',
     ],
-    image: '/img/arac-sari-kamyon.jpg',
-    imageAlt: 'Cansızoğlu Nakliyat ev ve ofis taşıma aracı',
+    image: '/img/ambalajli-dolaplar.webp',
+    imageAlt: 'Sökülüp ambalajlanmış, taşımaya hazır dolaplar',
   },
   {
     id: 'asansorlu-tasima',
@@ -63,8 +63,8 @@ export const processTabs: ProcessTab[] = [
       'Asansörü yalnızca eğitimli operatörlerimiz kullanır',
       'Saatlik asansör kiralama da yapılır',
     ],
-    image: '/img/arac-filo.webp',
-    imageAlt: 'Asansörlü nakliyat aracı ve taşıma kamyonu',
+    image: '/img/ankara-tasima-kare.webp',
+    imageAlt: 'Ankara Taşıma ekibi eşyaları kamyona yüklüyor',
   },
   {
     id: 'tasima-teslim',
@@ -77,7 +77,7 @@ export const processTabs: ProcessTab[] = [
       'Yerleşim ve montaj aynı gün tamamlanır',
       'Teslim eşya listesiyle karşılıklı kontrol edilir',
     ],
-    image: '/img/slider-1.jpg',
-    imageAlt: 'Cansızoğlu Nakliyat kapalı kasa taşıma aracı ve asansör aracı',
+    image: '/img/kamyon-ici-yukleme.webp',
+    imageAlt: 'Kapalı kasa kamyonda sabitlenmiş ambalajlı eşyalar',
   },
 ]

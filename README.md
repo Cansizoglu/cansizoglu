@@ -1,4 +1,4 @@
-# Cansızoğlu Nakliyat - Ankara Evden Eve Nakliyat Sitesi
+# Ankara Taşıma - Ankara Evden Eve Nakliyat Sitesi
 
 Next.js 14 (App Router) + TypeScript + Tailwind CSS ile hazırlanmış, admin panelsiz
 statik içerikli kurumsal nakliyat sitesi. Tüm içerik `src/data` klasöründeki dosyalarda
@@ -21,14 +21,14 @@ npm start
 ## Klasör yapısı
 
 ```
-public/img/              Görseller (slider, araç, ofis fotoğrafları)
+public/img/              Görseller (Ankara Taşıma bannerları, saha fotoğrafları)
 src/app/                 Sayfalar (App Router)
   page.tsx               Anasayfa
   hizmetler/             Hizmet listesi ve hizmet detay sayfaları
   bolgeler/              İlçe ve semt sayfaları
   blog/                  Blog listesi ve yazı sayfaları
   galeri/                Galeri
-  hakkimizda/            Hakkımızda (tanıtım videosu gömülü)
+  hakkimizda/            Hakkımızda
   iletisim/              İletişim ve harita
   fiyat-teklifi/         Teklif formu
   nakliyat-fiyat-hesaplama/  Fiyat ve km hesaplama aracı
@@ -36,7 +36,7 @@ src/app/                 Sayfalar (App Router)
   icon.svg               Favicon
 src/components/          Header, Footer, slider, form, sidebar vb.
 src/data/                TÜM İÇERİK BURADA
-  site.ts                Telefon, adres, sosyal medya, domain, video
+  site.ts                Firma adı, tek telefon, adres, harita, domain
   services.ts            Hizmetler
   districts/             Ankara'nın 25 ilçesi ve semtleri (ilçe başına dosya)
     index.ts             Tüm ilçeleri birleştirir, yardımcı fonksiyonlar
@@ -53,7 +53,7 @@ src/lib/seo.ts           Metadata ve yapısal veri (JSON-LD) yardımcıları
 
 Panel olmadığı için içerikler doğrudan `src/data` dosyalarından düzenlenir.
 
-- **Telefon, adres, sosyal medya, domain:** `src/data/site.ts`
+- **Firma adı, telefon, adres, harita, domain:** `src/data/site.ts`
 - **Hizmet eklemek:** `src/data/services.ts` içindeki diziye yeni bir nesne ekleyin.
   Sayfa, sitemap ve menü otomatik oluşur.
 - **İlçe eklemek:** `src/data/districts/` altına yeni bir dosya açın (ya da mevcut
@@ -143,8 +143,8 @@ alttaki küçük görseller ve Esc tuşu ile gezilir. Ek bir kütüphane kullan�
 
 ## Önemli: değiştirilmesi gereken dosya
 
-**`src/data/reviews.json`** içindeki yorumlar ÖRNEKTİR. Gerçek Google yorumlarınızla
-değiştirin. Dosyadaki `schemaAktif` alanı `false` durduğu sürece yorumlar Google'a
+**`src/data/reviews.json`** şu an boş; liste boşken anasayfada yorum bölümü görünmez.
+Ankara Taşıma'ya ait gerçek yorumları buraya girin. Dosyadaki `schemaAktif` alanı `false` durduğu sürece yorumlar Google'a
 yapısal veri olarak gönderilmez. Gerçek yorumları girdikten sonra `true` yapın;
 uydurma yorumu yapısal veriyle yayınlamak Google tarafından cezalandırılır.
 

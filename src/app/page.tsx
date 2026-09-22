@@ -10,6 +10,7 @@ import CtaBand from '@/components/CtaBand'
 import Tabs from '@/components/Tabs'
 import PriceTable from '@/components/PriceTable'
 import Reviews from '@/components/Reviews'
+import reviewData from '@/data/reviews.json'
 import { createLinker } from '@/lib/autolink'
 import { services } from '@/data/services'
 import { districts } from '@/data/districts'
@@ -30,8 +31,11 @@ export const metadata: Metadata = pageMeta({
 })
 
 const stats = [
-  { value: `${new Date().getFullYear() - site.foundedYear}+`, label: 'yıllık saha tecrübesi' },
   { value: '25', label: 'Ankara ilçesinde hizmet' },
+  {
+    value: String(districts.reduce((total, district) => total + district.neighborhoods.length, 0)),
+    label: 'semtte taşıma deneyimi',
+  },
   { value: '13', label: 'farklı taşımacılık hizmeti' },
   { value: '%100', label: 'sigortalı ve sözleşmeli' },
 ]
@@ -247,9 +251,9 @@ export default function HomePage() {
       <section className="py-10 sm:py-16">
         <div className="container-site">
           <SectionTitle
-            eyebrow="Neden Cansızoğlu Nakliyat"
+            eyebrow="Neden Ankara Taşıma"
             title="Taşınma işini sürprizsiz yapıyoruz"
-            description={`${site.foundedYear} yılından bu yana Ankara’da aynı işi yapan bir aile şirketiyiz. Araç, taşıma asansörü ve personelimiz bize ait; taşeron firmalarla çalışmıyoruz.`}
+            description="Ankara’nın her noktasına güvenli taşımacılık yapıyoruz. Araç, taşıma asansörü ve personelimiz bize ait; taşeron firmalarla çalışmıyoruz."
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {reasons.map((reason) => (
@@ -304,9 +308,9 @@ export default function HomePage() {
           <SectionTitle
             eyebrow="Galeri"
             title="Sahadan fotoğraflar"
-            description="Araç filomuz, taşıma asansörümüz ve ekibimiz iş başında. Görsele tıklayınca büyüyerek açılır."
+            description="Ekibimizin paketleyip taşıdığı evlerden kareler. Görsele tıklayınca büyüyerek açılır."
           />
-          <GalleryGrid items={galleryItems.slice(0, 4)} />
+          <GalleryGrid items={galleryItems.slice(3, 7)} />
           <div className="mt-8">
             <Link href="/galeri" className="btn-outline">
               Tüm galeriyi görün
@@ -316,17 +320,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Müşteri görüşleri */}
-      <section className="bg-brand-50/50 py-10 sm:py-16">
-        <div className="container-site">
-          <SectionTitle
-            eyebrow="Müşteri görüşleri"
-            title="Taşıdığımız ailelerin yorumları"
-            description="Taşınma, insanın bütün evini bir güne emanet ettiği bir iştir. Müşterilerimizin bu süreci nasıl anlattığı bizim için en önemli referans."
-          />
-          <Reviews />
-        </div>
-      </section>
+      {/* Müşteri görüşleri: liste boşken bölüm hiç basılmaz */}
+      {reviewData.yorumlar.length > 0 ? (
+        <section className="bg-brand-50/50 py-10 sm:py-16">
+          <div className="container-site">
+            <SectionTitle
+              eyebrow="Müşteri görüşleri"
+              title="Taşıdığımız ailelerin yorumları"
+              description="Taşınma, insanın bütün evini bir güne emanet ettiği bir iştir. Müşterilerimizin bu süreci nasıl anlattığı bizim için en önemli referans."
+            />
+            <Reviews />
+          </div>
+        </section>
+      ) : null}
 
       {/* Blog */}
       <section className="py-10 sm:py-16">

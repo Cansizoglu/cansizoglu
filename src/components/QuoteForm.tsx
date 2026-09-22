@@ -138,9 +138,9 @@ export default function QuoteForm() {
             <Icon name="whatsapp" className="h-4 w-4" />
             WhatsApp ile gönder
           </a>
-          <a href={site.phone.callCenterHref} className="btn-outline">
+          <a href={site.phone.href} className="btn-outline">
             <Icon name="phone" className="h-4 w-4" />
-            {site.phone.callCenter}
+            {site.phone.display}
           </a>
           <button type="button" className="btn-outline" onClick={() => setStatus('idle')}>
             Yeni talep oluştur
@@ -354,9 +354,9 @@ export default function QuoteForm() {
           Teklif Talebini Gönder
           <Icon name="arrow" className="h-4 w-4" />
         </button>
-        <a href={site.phone.gsmHref} className="btn-outline">
+        <a href={site.phone.href} className="btn-outline">
           <Icon name="phone" className="h-4 w-4" />
-          Telefonla bildir: {site.phone.gsm}
+          Telefonla bildir: {site.phone.display}
         </a>
       </div>
       <p className="mt-4 text-xs leading-5 text-slate-600">

@@ -1,52 +1,40 @@
 export const site = {
-  name: 'Cansızoğlu Nakliyat',
-  legalName: 'Cansızoğlu Nakliyat Depolama Lojistik',
-  familyBusiness: true,
-  shortName: 'Cansızoğlu',
+  name: 'Ankara Taşıma',
+  legalName: 'Ankara Taşıma Evden Eve Nakliyat',
+  shortName: 'Ankara Taşıma',
   tagline: 'Ankara Evden Eve Nakliyat',
-  foundedYear: 1998,
   url: 'https://www.ankaraevdenevenakliye.net.tr',
   description:
     'Ankara evden eve nakliyat, ofis taşıma, asansörlü nakliyat ve depolama hizmetleri. Sigortalı, ambalajlı ve zamanında taşımacılık.',
+  // Sitede tek telefon var. WhatsApp bağlantıları da aynı hatta gidiyor.
   phone: {
-    callCenter: '444 0 510',
-    callCenterHref: 'tel:+904440510',
-    landline: '0312 384 45 70',
-    landlineHref: 'tel:+903123844570',
-    gsm: '0532 620 94 30',
-    gsmHref: 'tel:+905326209430',
-    whatsapp: '905326209430',
+    display: '0312 341 53 40',
+    href: 'tel:+903123415340',
+    whatsapp: '903123415340',
+    whatsappHref: 'https://wa.me/903123415340',
   },
   email: 'info@ankaraevdenevenakliye.net.tr',
   address: {
-    street: 'Zübeyde Hanım Mah. Aslanbey Cad. No: 44/C',
-    postalCode: '06070',
-    district: 'Altındağ',
+    street: 'Prof. Dr. Ahmet Taner Kışlalı Mah. Alacaatlı Cad. No: 20',
+    postalCode: '06810',
+    neighborhood: 'Çayyolu',
+    district: 'Çankaya',
     city: 'Ankara',
     country: 'TR',
-    full: 'Zübeyde Hanım Mah. Aslanbey Cad. No: 44/C, 06070 Altındağ / Ankara',
-    short: 'Altındağ / Ankara',
+    full: 'Prof. Dr. Ahmet Taner Kışlalı Mah. Alacaatlı Cad. No: 20, 06810 Çayyolu, Çankaya / Ankara',
+    short: 'Çayyolu, Çankaya / Ankara',
   },
   hours: 'Pazartesi - Cumartesi 08:00 - 20:00, Pazar randevu ile',
-  social: {
-    instagram: 'https://www.instagram.com/cansizoglunakliyat/',
-    facebook: 'https://www.facebook.com/www.cansizoglunakliyat.com.tr/',
-    youtube: 'https://www.youtube.com/@cansizoglunakliyat',
-  },
-  video: {
-    // Hakkımızda sayfasındaki tanıtım videosu (YouTube Shorts)
-    youtubeId: 'HGVhNqzj4vU',
-    title: 'Cansızoğlu Nakliyat tanıtım videosu',
-  },
-  // Koordinatlar ve harita gömme adresi firmanın Google İşletme kaydından alındı
+  // Yaklaşık Çayyolu merkezi. Google İşletme kaydı açılınca oradaki değerlerle değiştirilmeli.
   geo: {
-    latitude: 39.9534894,
-    longitude: 32.8459337,
+    latitude: 39.8847,
+    longitude: 32.6912,
   },
   maps: {
     embedSrc:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.4589991961166!2d32.84593367435052!3d39.95348938370621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f7c22a14a75%3A0x8c711654dc4de495!2zQ2Fuc8Sxem_En2x1IE5ha2xpeWF0!5e0!3m2!1str!2str!4v1789741667493!5m2!1str!2str',
-    placeUrl: 'https://www.google.com/maps?ftid=0x14d34f7c22a14a75:0x8c711654dc4de495',
+      'https://maps.google.com/maps?q=Prof.%20Dr.%20Ahmet%20Taner%20K%C4%B1%C5%9Flal%C4%B1%20Mahallesi%2C%20Alacaatl%C4%B1%20Caddesi%2C%20%C3%87ankaya%2C%20Ankara&z=15&output=embed',
+    placeUrl:
+      'https://www.google.com/maps/search/?api=1&query=Prof.+Dr.+Ahmet+Taner+K%C4%B1%C5%9Flal%C4%B1+Mahallesi+Alacaatl%C4%B1+Caddesi+%C3%87ankaya+Ankara',
   },
 } as const
 

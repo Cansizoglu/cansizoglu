@@ -22,11 +22,11 @@ export default function CtaBand({
             <Icon name="arrow" className="h-4 w-4" />
           </Link>
           <a
-            href={site.phone.callCenterHref}
+            href={site.phone.href}
             className="btn-outline border-white text-white hover:bg-white/10"
           >
             <Icon name="phone" className="h-4 w-4" />
-            {site.phone.callCenter}
+            {site.phone.display}
           </a>
         </div>
       </div>

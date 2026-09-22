@@ -9,16 +9,16 @@ import { site } from '@/data/site'
 import { pageMeta } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
-  title: 'Hakkımızda | Cansızoğlu Nakliyat Ankara',
+  title: 'Hakkımızda | Ankara Taşıma Evden Eve Nakliyat',
   description:
-    'Cansızoğlu Nakliyat 1998’den bu yana Ankara’da çalışan bir aile şirketi. Evden eve nakliyat, ofis taşıma, asansörlü taşımacılık ve depolama hizmeti veriyoruz.',
+    'Ankara Taşıma, Ankara’nın her ilçesinde evden eve nakliyat, ofis taşıma, asansörlü taşımacılık ve depolama hizmeti veren nakliyat firmasıdır.',
   path: '/hakkimizda',
   images: [
     {
-      src: '/img/ofis.webp',
-      width: 1242,
-      height: 699,
-      alt: 'Cansızoğlu Nakliyat’ın Ankara Altındağ’daki ofisinin tabelalı cephesi',
+      src: '/img/ankara-tasima-kare.webp',
+      width: 1254,
+      height: 1254,
+      alt: 'Ankara Taşıma ekibi paketlenmiş eşyaları kapalı kasa kamyona yüklüyor',
     },
   ],
 })
@@ -41,16 +41,9 @@ const values = [
   },
   {
     icon: 'star',
-    title: 'Aile şirketi',
-    text: 'Yirmi yılı aşkın sürede Ankara’nın her ilçesinde taşıma yaptık.',
+    title: 'Ankara’nın her noktası',
+    text: 'Çayyolu’ndaki ofisimizden Ankara’nın 25 ilçesine ve şehirler arası taşımaya çıkıyoruz.',
   },
-]
-
-const milestones = [
-  { year: '1998', text: 'Cansızoğlu Nakliyat Ankara’da bir aile işletmesi olarak kuruldu.' },
-  { year: '2000’ler', text: 'Araç filosu büyütüldü, kapalı kasa araçlarla şehirler arası taşımaya başlandı.' },
-  { year: '2010’lar', text: 'Kendi mobil asansör araçlarımız filoya katıldı, asansörlü nakliyat standart hale geldi.' },
-  { year: 'Bugün', text: 'Ev, ofis, banka ve depolama hizmetleriyle Ankara genelinde çalışıyoruz.' },
 ]
 
 export default function AboutPage() {
@@ -64,12 +57,12 @@ export default function AboutPage() {
             <SectionTitle
               as="h1"
               eyebrow="Hakkımızda"
-              title="1998’den bu yana Ankara’da bir aile şirketi"
-              description="Cansızoğlu Nakliyat, Ankara’da kurulduğu günden beri aynı işi yapıyor: insanların evini ve iş yerini taşımak. Aile şirketi olmanın getirdiği en önemli fark, her işin arkasında ismini koyan birinin olmasıdır."
+              title="Ankara’nın her noktasına güvenli taşımacılık"
+              description="Ankara Taşıma’nın işi insanların evini ve iş yerini taşımak. Eşyanızı paketlemekten yeni adreste kurmaya kadar her aşamayı aynı ekip yürütür; taşıma günü kimin geleceğini ve işin nasıl yapılacağını baştan bilirsiniz."
             />
             <div className="prose-tr">
               <p>
-                Merkez ofisimiz {site.address.full} adresinde. Ekiplerimiz buradan Ankara’nın
+                Ofisimiz {site.address.full} adresinde. Ekiplerimiz buradan Ankara’nın
                 tüm ilçelerine çıkıyor. Araçlarımız, taşıma asansörlerimiz ve personelimiz
                 bize ait; taşeron firmalarla çalışmıyoruz. Bu yüzden taşıma günü kimin
                 geleceğini ve nasıl çalışacağını biz biliyoruz.
@@ -83,43 +76,13 @@ export default function AboutPage() {
           </div>
           <div>
             <Image
-              src="/img/ofis.webp"
-              alt="Cansızoğlu Nakliyat Ankara merkez ofisi"
-              width={1242}
-              height={699}
+              src="/img/ankara-tasima-kare.webp"
+              alt="Ankara Taşıma ekibi paketlenmiş eşyaları kapalı kasa kamyona yüklüyor"
+              width={1254}
+              height={1254}
+              sizes="(max-width: 1024px) 100vw, 600px"
               className="w-full rounded-xl object-cover"
             />
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-slate-50 py-9 sm:py-14">
-        <div className="container-site">
-          <SectionTitle title="Tanıtım videomuz" center description="Sahada nasıl çalıştığımızı kısa videomuzda görebilirsiniz." />
-          <div className="mx-auto max-w-[420px]">
-            <div className="relative w-full overflow-hidden rounded-2xl bg-black shadow-lg" style={{ aspectRatio: '9 / 16' }}>
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${site.video.youtubeId}`}
-                title={site.video.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                loading="lazy"
-                className="absolute inset-0 h-full w-full border-0"
-              />
-            </div>
-            <p className="mt-3 text-center text-sm text-slate-600">
-              Videoyu{' '}
-              <a
-                href={site.social.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-brand-700 underline underline-offset-2"
-              >
-                YouTube kanalımızda
-              </a>{' '}
-              da izleyebilirsiniz.
-            </p>
           </div>
         </div>
       </section>
@@ -141,41 +104,30 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-brand-50/60 py-9 sm:py-14">
-        <div className="container-site">
-          <SectionTitle title="Kısaca yolculuğumuz" />
-          <ol className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {milestones.map((m) => (
-              <li key={m.year} className="rounded-xl bg-white p-6 shadow-sm">
-                <p className="text-lg font-extrabold text-brand-700">{m.year}</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{m.text}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
       <section className="py-9 sm:py-14">
         <div className="container-site grid gap-6 sm:grid-cols-3">
           <Image
-            src="/img/arac-tir.webp"
-            alt="Cansızoğlu Nakliyat kapalı kasa taşıma aracı"
-            width={300}
-            height={170}
+            src="/img/koltuk-takimi-ambalaj.webp"
+            alt="Balonlu naylon ve streç filmle sarılmış koltuk takımı"
+            width={1600}
+            height={1200}
+            sizes="(max-width: 640px) 100vw, 33vw"
             className="h-48 w-full rounded-xl object-cover"
           />
           <Image
-            src="/img/arac-filo.webp"
-            alt="Asansörlü nakliyat aracı ve taşıma kamyonu"
-            width={300}
-            height={170}
+            src="/img/kamyon-ici-yukleme.webp"
+            alt="Kamyon kasasında iple sabitlenmiş, ambalajlı dolaplar"
+            width={1536}
+            height={2048}
+            sizes="(max-width: 640px) 100vw, 33vw"
             className="h-48 w-full rounded-xl object-cover"
           />
           <Image
-            src="/img/tasima-kasalari.jpg"
-            alt="Taşımada kullanılan kilitli plastik taşıma kasaları"
-            width={848}
-            height={480}
+            src="/img/paketlenmis-mobilyalar.webp"
+            alt="Streç film ve balonlu naylonla paketlenmiş mobilyalar"
+            width={1047}
+            height={1119}
+            sizes="(max-width: 640px) 100vw, 33vw"
             className="h-48 w-full rounded-xl object-cover"
           />
         </div>

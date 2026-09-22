@@ -71,22 +71,16 @@ export default function QuotePage() {
                   <li>
                     <a
                       className="flex items-center gap-2 font-semibold text-brand-800"
-                      href={site.phone.callCenterHref}
+                      href={site.phone.href}
                     >
                       <Icon name="phone" className="h-4 w-4" />
-                      {site.phone.callCenter}
+                      {site.phone.display}
                     </a>
                   </li>
                   <li>
-                    <a className="flex items-center gap-2 text-slate-700" href={site.phone.landlineHref}>
-                      <Icon name="phone" className="h-4 w-4 text-brand-600" />
-                      {site.phone.landline}
-                    </a>
-                  </li>
-                  <li>
-                    <a className="flex items-center gap-2 text-slate-700" href={site.phone.gsmHref}>
+                    <a className="flex items-center gap-2 text-slate-700" href={site.phone.whatsappHref} target="_blank" rel="noopener noreferrer">
                       <Icon name="whatsapp" className="h-4 w-4 text-brand-600" />
-                      {site.phone.gsm}
+                      WhatsApp ile yazın
                     </a>
                   </li>
                 </ul>

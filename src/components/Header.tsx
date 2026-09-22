@@ -43,13 +43,9 @@ export default function Header() {
             {site.address.short} · {site.hours}
           </p>
           <div className="flex items-center gap-5">
-            <a className="flex items-center gap-1.5 hover:text-brand-200" href={site.phone.landlineHref}>
+            <a className="flex items-center gap-1.5 hover:text-brand-200" href={site.phone.href}>
               <Icon name="phone" className="h-4 w-4" />
-              {site.phone.landline}
-            </a>
-            <a className="flex items-center gap-1.5 hover:text-brand-200" href={site.phone.gsmHref}>
-              <Icon name="phone" className="h-4 w-4" />
-              {site.phone.gsm}
+              {site.phone.display}
             </a>
           </div>
         </div>
@@ -160,9 +156,9 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a href={site.phone.callCenterHref} className="btn-primary hidden whitespace-nowrap sm:inline-flex">
+          <a href={site.phone.href} className="btn-primary hidden whitespace-nowrap sm:inline-flex">
             <Icon name="phone" className="h-4 w-4" />
-            {site.phone.callCenter}
+            {site.phone.display}
           </a>
           <Link href="/fiyat-teklifi" className="btn-outline hidden whitespace-nowrap 2xl:inline-flex">
             Fiyat Teklifi Al
@@ -210,9 +206,9 @@ export default function Header() {
             <Link href="/fiyat-teklifi" className="btn-primary mt-4">
               Ücretsiz Fiyat Teklifi Al
             </Link>
-            <a href={site.phone.gsmHref} className="btn-outline mt-2">
+            <a href={site.phone.href} className="btn-outline mt-2">
               <Icon name="phone" className="h-4 w-4" />
-              {site.phone.gsm}
+              {site.phone.display}
             </a>
           </nav>
         </div>

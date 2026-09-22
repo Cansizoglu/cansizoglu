@@ -8,32 +8,25 @@ import { site } from '@/data/site'
 import { pageMeta } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
-  title: 'İletişim | Cansızoğlu Nakliyat Ankara',
+  title: 'İletişim | Ankara Taşıma Evden Eve Nakliyat',
   description:
-    'Ankara evden eve nakliyat için bize ulaşın. Çağrı hattı 444 0 510, 0312 384 45 70, WhatsApp 0532 620 94 30. Altındağ / Ankara.',
+    'Ankara evden eve nakliyat için bize ulaşın. Telefon ve WhatsApp 0312 341 53 40. Adres: Çayyolu, Çankaya / Ankara.',
   path: '/iletisim',
 })
 
 const channels = [
   {
     icon: 'phone',
-    title: 'Çağrı hattı',
-    value: site.phone.callCenter,
-    href: site.phone.callCenterHref,
+    title: 'Telefon',
+    value: site.phone.display,
+    href: site.phone.href,
     note: 'En hızlı ulaşım yolu',
   },
   {
-    icon: 'phone',
-    title: 'Sabit hat',
-    value: site.phone.landline,
-    href: site.phone.landlineHref,
-    note: 'Ofis hattımız',
-  },
-  {
     icon: 'whatsapp',
-    title: 'WhatsApp / GSM',
-    value: site.phone.gsm,
-    href: site.phone.gsmHref,
+    title: 'WhatsApp',
+    value: 'WhatsApp ile yazın',
+    href: site.phone.whatsappHref,
     note: 'Fotoğraf göndererek de fiyat alabilirsiniz',
   },
   {
@@ -59,7 +52,7 @@ export default function ContactPage() {
             description="Taşınma tarihinizi ve adres bilgilerinizi paylaşın; ücretsiz keşif için size en uygun saati birlikte belirleyelim."
           />
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-3">
             {channels.map((channel) => (
               <a key={channel.title} href={channel.href} className="card block min-w-0">
                 <span className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
@@ -75,9 +68,9 @@ export default function ContactPage() {
 
           <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_360px]">
             <div className="overflow-hidden rounded-xl border border-brand-100">
-              {/* Firmanın kendi Google İşletme kaydının gömme adresi */}
+              {/* Adres araması üzerinden harita. Google İşletme kaydı açılınca onun gömme adresi kullanılmalı */}
               <iframe
-                title="Cansızoğlu Nakliyat konumu"
+                title="Ankara Taşıma konumu"
                 src={site.maps.embedSrc}
                 className="h-[380px] w-full border-0"
                 loading="lazy"
@@ -98,26 +91,17 @@ export default function ContactPage() {
                     <Icon name="phone" className="h-5 w-5 shrink-0 text-brand-600" />
                     <span className="text-slate-700">
                       Telefon:{' '}
-                      <a href={site.phone.callCenterHref} className="font-semibold text-brand-800 hover:text-accent-600">
-                        {site.phone.callCenter}
-                      </a>
-                    </span>
-                  </li>
-                  <li className="flex gap-2">
-                    <Icon name="phone" className="h-5 w-5 shrink-0 text-brand-600" />
-                    <span className="text-slate-700">
-                      Tel:{' '}
-                      <a href={site.phone.landlineHref} className="font-semibold text-brand-800 hover:text-accent-600">
-                        {site.phone.landline}
+                      <a href={site.phone.href} className="font-semibold text-brand-800 hover:text-accent-600">
+                        {site.phone.display}
                       </a>
                     </span>
                   </li>
                   <li className="flex gap-2">
                     <Icon name="whatsapp" className="h-5 w-5 shrink-0 text-brand-600" />
                     <span className="text-slate-700">
-                      GSM:{' '}
-                      <a href={site.phone.gsmHref} className="font-semibold text-brand-800 hover:text-accent-600">
-                        {site.phone.gsm}
+                      WhatsApp:{' '}
+                      <a href={site.phone.whatsappHref} target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-800 hover:text-accent-600">
+                        {site.phone.display}
                       </a>
                     </span>
                   </li>
@@ -139,39 +123,6 @@ export default function ContactPage() {
                   Fiyat Teklifi Formu
                   <Icon name="arrow" className="h-4 w-4" />
                 </Link>
-              </div>
-
-              <div className="rounded-xl border border-brand-100 p-6">
-                <h2 className="text-lg">Sosyal medya</h2>
-                <div className="mt-4 flex gap-3">
-                  <a
-                    href={site.social.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className="rounded-md border border-brand-200 p-2.5 text-brand-700 hover:bg-brand-50"
-                  >
-                    <Icon name="instagram" className="h-5 w-5" />
-                  </a>
-                  <a
-                    href={site.social.facebook}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className="rounded-md border border-brand-200 p-2.5 text-brand-700 hover:bg-brand-50"
-                  >
-                    <Icon name="facebook" className="h-5 w-5" />
-                  </a>
-                  <a
-                    href={site.social.youtube}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="YouTube"
-                    className="rounded-md border border-brand-200 p-2.5 text-brand-700 hover:bg-brand-50"
-                  >
-                    <Icon name="youtube" className="h-5 w-5" />
-                  </a>
-                </div>
               </div>
             </div>
           </div>

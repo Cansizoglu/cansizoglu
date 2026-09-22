@@ -89,11 +89,11 @@ export default function RoutePage({ params }: Props) {
               <Icon name="arrow" className="h-4 w-4" />
             </Link>
             <a
-              href={site.phone.callCenterHref}
+              href={site.phone.href}
               className="btn-outline border-white text-white hover:bg-white/10"
             >
               <Icon name="phone" className="h-4 w-4" />
-              {site.phone.callCenter}
+              {site.phone.display}
             </a>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function RoutePage({ params }: Props) {
             <div className="prose-tr max-w-none">
               <p>
                 {linkify(
-                  `Ankara ${route.city} evden eve nakliyat, şehir içi bir taşımadan üç noktada ayrılıyor: eşya uzun süre yolda kalıyor, ambalajın daha dayanıklı olması gerekiyor ve işin iki ucunda iki ayrı şehir var. Cansızoğlu Nakliyat olarak bu üç noktayı da kendi ekibimiz ve kendi aracımızla yönetiyoruz; eşyanızı başka bir müşterinin yüküyle birleştirip aktarma yapmıyoruz.`,
+                  `Ankara ${route.city} evden eve nakliyat, şehir içi bir taşımadan üç noktada ayrılıyor: eşya uzun süre yolda kalıyor, ambalajın daha dayanıklı olması gerekiyor ve işin iki ucunda iki ayrı şehir var. Ankara Taşıma olarak bu üç noktayı da kendi ekibimiz ve kendi aracımızla yönetiyoruz; eşyanızı başka bir müşterinin yüküyle birleştirip aktarma yapmıyoruz.`,
                 )}
               </p>
               <p>
@@ -136,11 +136,11 @@ export default function RoutePage({ params }: Props) {
 
             <div className="mt-10 overflow-hidden rounded-xl">
               <Image
-                src="/img/slider-1.jpg"
-                alt={`Ankara ${route.city} arası taşıma yapan Cansızoğlu Nakliyat kapalı kasa aracı`}
+                src="/img/ankara-tasima-banner-2.webp"
+                alt={`Ankara ${route.city} arası taşıma yapan Ankara Taşıma kapalı kasa kamyonu`}
                 title={`Ankara ${route.city} evden eve nakliyat aracı`}
-                width={1920}
-                height={600}
+                width={2048}
+                height={768}
                 sizes="(max-width: 1024px) 100vw, 720px"
                 className="h-52 w-full object-cover sm:h-72"
               />
