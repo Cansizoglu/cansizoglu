@@ -702,6 +702,120 @@ export const posts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'kisin-tasinmak-rehberi',
+    title: 'Kışın Taşınmak: Soğukta ve Karda Ev Taşıma Rehberi',
+    metaTitle: 'Kışın Taşınmak: Soğukta Ev Taşıma Rehberi',
+    metaDescription:
+      'Kışın taşınırken kar, buz ve soğuk taşımayı nasıl etkiler? Hangi eşya dondan zarar görür, araç nereye yanaşır, gün nasıl planlanır? Saha notlarımız.',
+    excerpt:
+      'Kışın taşınmak sanıldığı kadar zor değil, ama yazdan farklı planlanıyor. Kar, buz ve kısa gün taşımanın üç ayrı yerine dokunuyor.',
+    date: '2026-09-29',
+    readingMinutes: 8,
+    image: {
+      src: '/img/ambalajli-dolaplar.webp',
+      width: 1600,
+      height: 901,
+      alt: 'Balonlu naylon ve streç filmle sarılıp odada yüklemeyi bekleyen iki uzun dolap',
+      title: 'Naylonla sarılmış dolaplar',
+      caption: 'Kışın ambalaj sadece çiziğe karşı değil, kar ve yağmur suyuna karşı da çalışıyor.',
+      description: 'Boşaltılmış bir odada mavi balonlu naylonla kaplanıp streç filmle sarılmış, yüklemeyi bekleyen iki uzun dolap.',
+    },
+    body: [
+      {
+        type: 'p',
+        text: 'Ankara’da kış taşımaları yazdan daha sakin geçer, çünkü yoğunluk düşüktür ve istediğiniz tarihi bulmak kolaydır. Ama plan aynı plan değildir. Kar, buz ve günün erken kararması taşımanın üç ayrı yerine dokunur: aracın nereye yanaşacağına, eşyanın nasıl ambalajlanacağına ve işin kaçta başlaması gerektiğine. Aşağıdakiler sahada öğrendiklerimiz.',
+      },
+      { type: 'h2', text: 'Kışın taşınmanın iyi tarafı' },
+      {
+        type: 'p',
+        text: 'Ev taşıma trafiği yaz aylarında ve ay sonlarında yoğunlaşır. Kışın tarih bulmak çok daha rahattır, ekip ve araç aynı gün içinde tek işe ayrılabilir. Asansör aracı da benzer şekilde daha müsait olur. Taşınma tarihiniz esnekse kış, iş kalitesi açısından dezavantajlı bir dönem değil.',
+      },
+      { type: 'h2', text: 'Hava durumunu tarihten önce takip edin' },
+      {
+        type: 'p',
+        text: 'Taşımadan birkaç gün önce hava tahminine bakın ve kar beklenen bir güne denk geliyorsa bizimle konuşun. Tarihi bir gün öne ya da arkaya almak çoğu zaman mümkün olur ve bütün günü kolaylaştırır. Kar yağışının kendisinden çok, gece donup sabah buz tutan yollar sorun çıkarır.',
+      },
+      { type: 'h2', text: 'Araç nereye yanaşacak?' },
+      {
+        type: 'p',
+        text: 'Kışın en sık yaşanan aksaklık, aracın binaya yanaşamamasıdır. Kar küreme sonrası yol kenarına yığılan kar, park yerlerini kapatır; eğimli sokaklarda buz varsa büyük araç rampayı çıkamaz. Keşif sırasında bunları konuşuyoruz, ama taşımadan bir gün önce sizin de bakmanız iyi olur:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Bina önünde aracın duracağı yeri boş tutun, gerekiyorsa apartman yönetimiyle konuşun.',
+          'Kaldırım ve giriş yolundaki karı bir gün önceden temizletin.',
+          'Buz varsa girişe ve merdivenlere tuz ya da kum atın.',
+          'Sokak dar ve eğimliyse bunu bize önceden söyleyin, aracı ona göre seçelim.',
+        ],
+      },
+      { type: 'h2', text: 'Kapı önü ve zemin koruması' },
+      {
+        type: 'p',
+        text: 'Kışın eşyadan çok ev zarar görür. Islak ayakkabılar, kar suyu ve çamur parkeyi ve halıyı lekeler. Biz iki adreste de giriş yoluna ve koridorlara koruyucu örtü seriyoruz, ama siz de eski bir halıyı kapı önüne koyarsanız iş daha temiz biter. Yeni eve ilk giren kolilerin dibi ıslanmasın diye kolileri doğrudan zemine değil, palet ya da örtü üstüne koyuyoruz.',
+      },
+      { type: 'h2', text: 'Soğuktan etkilenen eşyalar' },
+      {
+        type: 'p',
+        text: 'Kapalı kasa araçta eşya kar ve yağmurdan korunur, ancak kasa ısıtmalı değildir. Yolda geçen sürede içerisi dışarıyla aynı sıcaklığa iner. Bunun etkilediği birkaç eşya var:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Televizyon ve monitör: soğuktan gelen ekranda yoğuşma olur. Yeni evde hemen fişe takmayın, birkaç saat oda sıcaklığında beklesin.',
+          'Ahşap mobilya ve piyano: ani sıcaklık ve nem değişimi cilada çatlama yapabilir. Ambalajı yeni evde hemen açmayın, eşya ortama alışsın.',
+          'Sıvılar: temizlik malzemesi, içecek ve boya donarak kabını patlatabilir. Bunları kendi aracınızda taşıyın.',
+          'Bitkiler: birkaç dakikalık soğuk bile hassas bitkiyi yakar. Saksıları en son yükleyip en önce indiriyoruz, siz de yanınızda götürebilirsiniz.',
+          'İlaç ve kozmetik: donmaması gereken ürünleri el çantanızda tutun.',
+        ],
+      },
+      { type: 'h2', text: 'Beyaz eşyada donma riski' },
+      {
+        type: 'p',
+        text: 'Çamaşır ve bulaşık makinesinin pompasında, hortumunda ve filtresinde her zaman bir miktar su kalır. Bu su eksi derecede donar ve plastik parçaları çatlatır. Taşımadan önce makineyi boşaltın: filtreyi açıp suyunu alın, giriş ve tahliye hortumlarını söküp ters çevirin. Çamaşır makinesinin nakliye cıvatalarını takmayı da unutmayın, bu her mevsim geçerli.',
+      },
+      {
+        type: 'p',
+        text: 'Buzdolabını ise taşımadan en az birkaç saat önce kapatıp suyunu boşaltın ve yeni adreste fişe takmadan önce dik bekletin. Beyaz eşyanın tamamının nasıl paketlendiğini ayrı bir yazıda anlattık.',
+      },
+      { type: 'h2', text: 'Yeni evde ısınma hazır olsun' },
+      {
+        type: 'p',
+        text: 'Kışın en can sıkıcı durum, eşya yerleştikten sonra evin soğuk olmasıdır. Doğalgaz açma randevusunu ve kombi montajını taşıma gününden önceye alın. Elektrik aboneliği de aynı şekilde taşınmadan önce açılmış olsun; kısa günde ışıksız ev, montajı da yavaşlatır.',
+      },
+      { type: 'h2', text: 'Gün kısa, iş erken başlar' },
+      {
+        type: 'p',
+        text: 'Kışın hava erken kararır ve karanlıkta yükleme hem yavaşlar hem risklidir. Bu yüzden kış taşımalarında sabah erken başlıyoruz. Paketleme bir gün önceden bitmişse, ekip geldiğinde doğrudan yüklemeye geçilir ve iş gün ışığında biter.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Paketlemeyi taşıma sabahına bırakmayın.',
+          'Taşıma gününde ilk ihtiyaç kutusuna termos, sıcak içecek ve ekstra kıyafet koyun.',
+          'İki adreste de ışıkların çalıştığından emin olun.',
+          'Kapılar uzun süre açık kalacağı için evdeki çocuk ve evcil hayvan için ayrı bir oda ayırın.',
+        ],
+      },
+      { type: 'h2', text: 'Kışa özel kısa liste' },
+      {
+        type: 'ul',
+        items: [
+          'Hava tahminini takip edin, gerekirse tarihi bir gün kaydırın.',
+          'Araç yanaşma yerini ve giriş yolunu bir gün önceden karsız ve buzsuz hâle getirin.',
+          'Makinelerin içindeki suyu boşaltın.',
+          'Sıvıları, bitkileri ve ekranları ayrı planlayın.',
+          'Yeni evde gaz ve elektrik açık olsun.',
+          'Sabah erken başlayın.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Kış taşımalarında ambalajı daha kalın kullanıyor, iki adreste de zemin koruması yapıyor ve günü gün ışığına göre planlıyoruz. Ankara içinde ya da şehirler arası taşınacaksanız ücretsiz keşif için bize ulaşabilirsiniz; tarihi önceden ayırtmak kışın çok daha kolay.',
+      },
+    ],
+  },
 ]
 
 export const postBySlug = (slug: string) => posts.find((p) => p.slug === slug)
