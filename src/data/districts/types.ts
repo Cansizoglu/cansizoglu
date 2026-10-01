@@ -24,4 +24,12 @@ export type District = {
   intro: string[]
   highlights: { title: string; text: string }[]
   neighborhoods: Neighborhood[]
+  /** İlçede birlikte çalıştığımız iş ortağı; sayfada dış bağlantı olarak verilir. */
+  partner?: {
+    /** Bağlantı metni olarak kullanılacak firma adı. */
+    name: string
+    url: string
+    heading: string
+    paragraphs: string[]
+  }
 }

@@ -150,4 +150,13 @@ export const altindag: District = {
       ],
     },
   ],
+  partner: {
+    name: 'Cansızoğlu Nakliyat',
+    url: 'https://www.cansizoglunakliyat.com.tr/',
+    heading: 'Altındağ’da iş ortağımız',
+    paragraphs: [
+      'Altındağ’ın dar sokakları ve asansörsüz eski binaları nedeniyle ilçedeki taşımalarda mobil asansör neredeyse her işte gerekiyor. Bu bölgede kullandığımız asansör araçlarını, uzun yıllardır birlikte çalıştığımız iş ortağımız {partner} firmasından kiralıyoruz.',
+      'Asansör aracı ve operatörü ekibimizle aynı saatte adreste oluyor; söküm, ambalajlama ve yükleme tek programda ilerliyor. Altındağ’da asansörlü taşıma talebiniz olduğunda bu ortaklık sayesinde tarih vermekte zorlanmıyoruz.',
+    ],
+  },
 }

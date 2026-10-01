@@ -137,6 +137,35 @@ export default function DistrictPage({ params }: Props) {
               ))}
             </div>
 
+            {district.partner ? (
+              <section className="mt-10 rounded-xl border border-brand-100 bg-brand-50/60 p-6">
+                <h2 className="text-2xl">{district.partner.heading}</h2>
+                <div className="mt-3 space-y-4">
+                  {district.partner.paragraphs.map((paragraph) => {
+                    const [before, after] = paragraph.split('{partner}')
+                    return (
+                      <p key={paragraph.slice(0, 24)} className="leading-8 text-slate-700">
+                        {before}
+                        {after === undefined ? null : (
+                          <>
+                            <a
+                              href={district.partner!.url}
+                              target="_blank"
+                              rel="noopener"
+                              className="font-semibold text-brand-700 underline underline-offset-2"
+                            >
+                              {district.partner!.name}
+                            </a>
+                            {after}
+                          </>
+                        )}
+                      </p>
+                    )
+                  })}
+                </div>
+              </section>
+            ) : null}
+
             <div className="mt-10 overflow-hidden rounded-xl">
               <Image
                 src="/img/ankara-tasima-banner-1.webp"
