@@ -7,6 +7,12 @@ export type Neighborhood = {
   notes: string[]
   /** Semtte geçen ana cadde ve bölgeler; metin içinde kullanılır. */
   streets?: string[]
+  /**
+   * Semte özgü, hizmet odaklı uzun metin (2-3 paragraf): bu semtte taşıma
+   * nasıl planlanıyor, hangi hizmet öne çıkıyor, taşınacak kişiye pratik
+   * öneriler. Saha notlarına dayanır; coğrafi tanıtım yazısı değildir.
+   */
+  body?: string[]
 }
 
 export type District = {

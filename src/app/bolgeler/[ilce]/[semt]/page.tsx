@@ -115,6 +115,19 @@ export default function NeighborhoodPage({ params }: Props) {
               </p>
             </div>
 
+            {neighborhood.body?.length ? (
+              <>
+                <h2 className="mb-4 mt-10 text-2xl">
+                  {neighborhood.name}&apos;de taşınma nasıl planlanıyor?
+                </h2>
+                <div className="prose-tr max-w-none">
+                  {neighborhood.body.map((paragraph) => (
+                    <p key={paragraph.slice(0, 24)}>{linkify(paragraph)}</p>
+                  ))}
+                </div>
+              </>
+            ) : null}
+
             <h2 className="mb-5 mt-10 text-2xl">
               {neighborhood.name}&apos;de taşımada nelere dikkat ediyoruz?
             </h2>
