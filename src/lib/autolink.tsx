@@ -36,8 +36,8 @@ const staticTerms: LinkTerm[] = [
   { term: 'yazılı fiyat', href: '/fiyat-teklifi' },
 
   // Hizmet kavramları
-  { term: 'evden eve nakliyat', href: '/hizmetler/ankara-evden-eve-nakliyat' },
-  { term: 'ev taşıma', href: '/hizmetler/ankara-evden-eve-nakliyat' },
+  { term: 'evden eve nakliyat', href: '/' },
+  { term: 'ev taşıma', href: '/' },
   { term: 'asansörlü nakliyat', href: '/hizmetler/ankara-asansorlu-nakliyat' },
   { term: 'asansörlü taşıma', href: '/hizmetler/ankara-asansorlu-nakliyat' },
   { term: 'mobil taşıma asansörü', href: '/hizmetler/ankara-asansorlu-nakliyat' },
@@ -77,9 +77,9 @@ const staticTerms: LinkTerm[] = [
   // Metinde sık geçen doğal ifadeler
   { term: 'ofis taşımacılığı', href: '/hizmetler/ankara-ofis-tasima' },
   { term: 'kurumsal taşıma', href: '/hizmetler/ankara-ofis-tasima' },
-  { term: 'evden eve taşımacılık', href: '/hizmetler/ankara-evden-eve-nakliyat' },
-  { term: 'söküm ve montaj', href: '/hizmetler/ankara-evden-eve-nakliyat' },
-  { term: 'mobilya montajı', href: '/hizmetler/ankara-evden-eve-nakliyat' },
+  { term: 'evden eve taşımacılık', href: '/' },
+  { term: 'söküm ve montaj', href: '/' },
+  { term: 'mobilya montajı', href: '/' },
   { term: 'taşıma sözleşmesi', href: '/hizmetler/sigortali-tasima' },
   { term: 'sözleşme', href: '/hizmetler/sigortali-tasima' },
   { term: 'ambalaj', href: '/hizmetler/ambalajli-tasima' },

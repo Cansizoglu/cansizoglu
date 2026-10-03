@@ -21,6 +21,13 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        // Ayrı "Ankara evden eve nakliyat" hizmet sayfası kaldırıldı; aynı
+        // kelimeyi anasayfa hedefliyor, iki sayfa birbiriyle yarışıyordu.
+        source: '/hizmetler/ankara-evden-eve-nakliyat',
+        destination: '/',
+        statusCode: 301,
+      },
+      {
         // non-www → www (Vercel alan adı yönlendirmesi kapalı kalsa bile)
         source: '/:path*',
         has: [{ type: 'host', value: 'ankaraevdenevenakliye.net.tr' }],

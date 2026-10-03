@@ -15,60 +15,6 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: 'ankara-evden-eve-nakliyat',
-    title: 'Ankara Evden Eve Nakliyat',
-    h1: 'Ankara Evden Eve Nakliyat',
-    short:
-      'Evinizin tüm eşyasını söküm, ambalaj, taşıma ve kurulum dahil tek ekiple taşıyoruz.',
-    metaTitle: 'Ankara Evden Eve Nakliyat | Sigortalı ve Ambalajlı Taşıma',
-    metaDescription:
-      'Ankara evden eve nakliyat hizmeti: ücretsiz keşif, ambalajlı paketleme, asansörlü taşıma ve sigortalı nakliye. Ankara genelinde aynı gün randevu.',
-    icon: 'home',
-    intro: [
-      'Ev taşımak sadece eşyayı bir adresten diğerine götürmek değildir. Mobilyanın doğru sökülmesi, kırılacak eşyanın doğru ambalajlanması, yükleme sırasının doğru kurulması ve yeni adreste her şeyin yerli yerine monte edilmesi gerekir. Ankara Taşıma olarak Ankara genelinde bu işin tamamını tek ekiple yürütüyoruz.',
-      'Taşınma öncesi ücretsiz keşif yapıyor, eşya listesini çıkarıyor ve size net bir fiyat veriyoruz. Keşif sırasında binanın kat durumu, asansör ihtiyacı, sokak genişliği ve park imkânı gibi işin süresini belirleyen ayrıntıları da not ediyoruz. Böylece taşıma günü sürpriz çıkmıyor.',
-    ],
-    features: [
-      {
-        title: 'Ücretsiz keşif ve net fiyat',
-        text: 'Ekibimiz adresinize gelir, eşyanızı yerinde görür ve yazılı fiyat verir. Verilen fiyat taşıma günü değişmez.',
-      },
-      {
-        title: 'Profesyonel ambalajlama',
-        text: 'Balonlu naylon, streç film, kraft kâğıt, çok katlı koli ve köşe koruyucu ile her eşya kendi cinsine uygun ambalajlanır.',
-      },
-      {
-        title: 'Söküm ve montaj',
-        text: 'Gardırop, yatak, mutfak masası ve beyaz eşya marangoz ekibimizce sökülür, yeni adreste aynı özenle kurulur.',
-      },
-      {
-        title: 'Sigortalı taşıma',
-        text: 'Taşınan eşyanız sigorta kapsamındadır. Sözleşmeniz taşımadan önce imzalanır.',
-      },
-    ],
-    steps: [
-      { title: 'Keşif', text: 'Adrese gelir, eşyayı görür, fiyatı netleştiririz.' },
-      { title: 'Ambalaj', text: 'Taşıma günü sabahı paketleme ve söküm yapılır.' },
-      { title: 'Taşıma', text: 'Kapalı kasa araçla, gerekirse asansörle yükleme yapılır.' },
-      { title: 'Kurulum', text: 'Yeni adreste montaj ve yerleşim tamamlanır.' },
-    ],
-    faq: [
-      {
-        q: 'Ankara evden eve nakliyat fiyatları neye göre belirlenir?',
-        a: 'Eşya miktarı, çıkış ve varış adresinin katı, asansör ihtiyacı, mesafe ve ek hizmetler (ambalaj, depolama, montaj) fiyatı belirler. Net fiyat için ücretsiz keşif yapıyoruz.',
-      },
-      {
-        q: 'Eşyalarımı kendim paketlemem gerekir mi?',
-        a: 'Gerekmez. Ambalaj malzemesi ve paketleme işçiliği hizmetimize dahildir. İsterseniz kişisel eşyanızı kendiniz de hazırlayabilirsiniz.',
-      },
-      {
-        q: 'Taşıma bir günde biter mi?',
-        a: 'Standart bir 3+1 daire, asansör kullanıldığında genellikle aynı gün içinde taşınır ve kurulur. Eşya çok ise ekip sayısını artırırız.',
-      },
-    ],
-    featured: true,
-  },
-  {
     slug: 'ankara-ofis-tasima',
     title: 'Ankara Ofis Taşıma',
     h1: 'Ankara Ofis ve İş Yeri Taşıma',

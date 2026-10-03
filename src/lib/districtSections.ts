@@ -50,7 +50,6 @@ export function districtSections(district: District): DistrictSection[] {
     {
       id: 'evden-eve-nakliyat',
       heading: `${d} Evden Eve Nakliyat`,
-      serviceSlug: 'ankara-evden-eve-nakliyat',
       paragraphs: [
         `${d} evden eve nakliyat hizmetimiz, eşyanıza ilk dokunulduğu andan yeni evinizde son vida sıkılana kadar tek ekiple yürür. Taşımadan önce adresinize gelip ücretsiz keşif yapıyor, eşya listesini çıkarıyor ve fiyatı yazılı olarak veriyoruz. Keşifte binanın kat durumu, merdiven genişliği ve aracın yanaşacağı alan yerinde görülür; böylece taşıma gününde plan dışı bir durumla karşılaşılmaz.`,
         `Taşıma günü mobilyalar marangoz ekibimizce sökülür, kırılacak eşya balonlu naylonla, mobilya streç filmle ambalajlanır. Yükleme kapalı kasa araçlara yapılır ve eşya araç içinde sabitlenir. Yeni adreste montaj ve yerleşim aynı gün tamamlanır. ${ilkUc} başta olmak üzere ${d}'nin ${semtSayisi} semtinde bu hizmeti veriyoruz.`,
@@ -209,7 +208,6 @@ export function neighborhoodSections(
     {
       id: 'evden-eve-nakliyat',
       heading: `${s} Evden Eve Nakliyat`,
-      serviceSlug: 'ankara-evden-eve-nakliyat',
       paragraphs: [
         `${s} evden eve nakliyat işlerimizde ekibimiz sabah erken saatte adreste olur. Mobilyalar sökülür, kırılacak eşya balonlu naylonla ve mobilya streç filmle ambalajlanır, yükleme kapalı kasa araca yapılır. Yeni adreste montaj ve yerleşim aynı gün tamamlanır; ertesi güne iş bırakmıyoruz.`,
         `${ilkNot} Bu yüzden ${s} taşımalarında araç yerleşimini ve yükleme saatini keşif sırasında netleştiriyoruz. ${d} ilçesinde uzun süredir çalıştığımız için bölgenin sokak ve bina yapısını önceden biliyoruz.${caddeler}`,

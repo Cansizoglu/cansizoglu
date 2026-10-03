@@ -221,7 +221,7 @@ export default function RoutePage({ params }: Props) {
                 {
                   title: 'Ankara evden eve nakliyat',
                   text: 'Söküm, ambalaj, taşıma ve montajın tamamı tek ekiple.',
-                  href: '/hizmetler/ankara-evden-eve-nakliyat',
+                  href: '/',
                 },
                 {
                   title: 'Parça eşya taşıma',

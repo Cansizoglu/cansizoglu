@@ -5,7 +5,6 @@ import { districts, type District } from '@/data/districts'
 
 /** Her hizmet için konuyla gerçekten ilgili blog yazısı eşleşmesi. */
 const serviceToPost: Record<string, string> = {
-  'ankara-evden-eve-nakliyat': 'evden-eve-nakliyat-ne-kadar-surer',
   'ankara-ofis-tasima': 'ofis-tasima-rehberi',
   'ankara-asansorlu-nakliyat': 'asansorlu-nakliyat-ne-zaman-gerekir',
   'ankara-asansor-kiralama': 'asansorlu-nakliyat-ne-zaman-gerekir',
@@ -108,7 +107,7 @@ export function relatedForPost(slug: string): RelatedLink[] {
 
   const service = Object.entries(serviceToPost).find(([, postSlug]) => postSlug === slug)
   return compact(
-    [...neighbours, service ? serviceLink(service[0]) : serviceLink('ankara-evden-eve-nakliyat'), calculatorLink],
+    [...neighbours, service ? serviceLink(service[0]) : serviceLink('ankara-sehir-ici-nakliyat'), calculatorLink],
     4,
     `/blog/${slug}`,
   )

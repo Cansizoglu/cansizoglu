@@ -27,7 +27,7 @@ export const homeArticles: HomeArticle[] = [
       { title: 'Söküm ve montaj', text: 'Kendi marangoz ekibimiz söküp yeniden kuruyor.' },
       { title: 'Sigortalı taşıma', text: 'Her taşıma sözleşmeli ve sigorta kapsamındadır.' },
     ],
-    link: { href: '/hizmetler/ankara-evden-eve-nakliyat', label: 'Evden eve nakliyat hizmetimiz' },
+    link: { href: '/fiyat-teklifi', label: 'Ücretsiz keşif ve fiyat teklifi' },
   },
   {
     id: 'ankara-nakliyat',

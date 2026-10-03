@@ -156,7 +156,7 @@ export const aboutPages: AboutPage[] = [
       },
       {
         type: 'p',
-        text: 'Hakkımızda sayfamızda yer alan tanıtım videosu YouTube üzerinden gösterilmektedir. Videoyu izlemeniz hâlinde YouTube’un kendi çerez ve gizlilik politikaları geçerli olur.',
+        text: 'İletişim sayfamızdaki harita Google Haritalar üzerinden gösterilmektedir. Haritayı kullanmanız hâlinde Google’ın kendi çerez ve gizlilik politikaları geçerli olur.',
       },
       { type: 'h2', text: 'Kişisel verilerin aktarılması' },
       {

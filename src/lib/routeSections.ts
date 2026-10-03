@@ -31,7 +31,6 @@ export function routeSections(route: Route): DistrictSection[] {
     {
       id: 'evden-eve-nakliyat',
       heading: `Ankara ${c} Evden Eve Nakliyat Nasıl Yapılır`,
-      serviceSlug: 'ankara-evden-eve-nakliyat',
       paragraphs: [
         `Ankara ${c} evden eve nakliyat işini baştan sona kendi ekibimizle yürütüyoruz. Taşımadan önce Ankara’daki adrese gelip ücretsiz keşif yapıyor, eşya listesini çıkarıyor ve fiyatı yazılı olarak veriyoruz. Şehirler arası taşımada fiyatın sonradan değişmesi en sık yaşanan sorun; biz sözleşmeye yazdığımız rakamı taşıma günü değiştirmiyoruz.`,
         `Taşıma günü mobilyalar marangoz ekibimizce sökülür, kırılacak eşya balonlu naylonla, mobilya streç filmle ambalajlanır. ${route.km} kilometrelik bir yolculuk söz konusu olduğu için ambalaj şehir içi taşımaya göre daha kalın yapılır ve yük araç içinde kuşaklarla sabitlenir. ${c}’de ${ilkUc} başta olmak üzere il genelinde teslim yapıyoruz.`,

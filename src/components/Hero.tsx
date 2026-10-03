@@ -34,7 +34,7 @@ const BANNER = { width: 2048, height: 768 }
 const MOBILE = { src: '/img/ankara-tasima-kare.webp', width: 1254, height: 1254 }
 
 const quickServices = [
-  { icon: 'home', label: 'Evden Eve Nakliyat', href: '/hizmetler/ankara-evden-eve-nakliyat' },
+  { icon: 'home', label: 'Şehir İçi Nakliyat', href: '/hizmetler/ankara-sehir-ici-nakliyat' },
   { icon: 'office', label: 'Ofis Taşıma', href: '/hizmetler/ankara-ofis-tasima' },
   { icon: 'lift', label: 'Asansörlü Nakliyat', href: '/hizmetler/ankara-asansorlu-nakliyat' },
   { icon: 'warehouse', label: 'Eşya Depolama', href: '/hizmetler/esya-depolama' },
