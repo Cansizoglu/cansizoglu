@@ -45,6 +45,10 @@ export const beypazari: District = {
         'Tarihi konaklarda merdivenler dar; hassas eşya elle, tek tek indiriliyor.',
         'Cumartesi pazar kurulan bölgelerde taşıma hafta içine alınıyor.',
       ],
+      body: [
+        'Çarşının temposu, Beypazarı merkezde taşıma saatini belirleyen ilk ölçüdür. Park alanı sınırlı olduğundan aracı esnaf açılmadan yerleştirebilmek için Ankara’dan sabah çok erken çıkıyoruz. Cumartesi pazar kurulan sokaklardaki adresler için taşımayı hafta içine almayı öneriyor, tarihi bu doğrultuda birlikte seçiyoruz. Bu sayede araç uzun süre yolu kapatmadan yükleme tamamlanır ve öğleden sonra yeni adreste kuruluma geçilebilir.',
+        'Tarihi konaklarda merdivenler dar olduğu için aynalı dolap, camlı vitrin ya da eski parçalar tek tek ve elle indirilir. Her biri ayrı ambalajlanır, kapalı kasa araçta sabitlenir. Keşifte konağın içini ekibe gezdirmeniz, sökülmesi gereken mobilyaları ve aracın yanaşabileceği noktayı netleştirir. Aktarma gerekiyorsa bu da yazılı fiyata baştan eklenir, taşıma günü sürpriz çıkmaz. Ambalaj, söküm, montaj ve sigorta fiyata dahildir; Beypazarı merkez evden eve nakliyat için keşif ücretsizdir.',
+      ],
       streets: ['Cumhuriyet Caddesi', 'İnözü Caddesi'],
     },
     {
@@ -56,6 +60,10 @@ export const beypazari: District = {
         'Bina önü alan yeterli, mobil asansör doğrudan kurulabiliyor.',
         'Üst katlarda asansörlü taşıma süreyi yarıya indiriyor.',
       ],
+      body: [
+        'Yeni apartmanların ağırlıkta olduğu Kurtuluş, Beypazarı’nda taşımanın en akıcı ilerlediği adreslerden biridir. Bina önlerinde yeterli alan bulunduğu için firmaya ait mobil asansör doğrudan kurulur, araç ise hemen yanında bekler. Ekip Ankara’dan asansör aracıyla birlikte geldiği için ayrıca bir randevu ayarlamanıza gerek kalmaz. Bina yönetimine taşıma saatini önceden bildirmek de bina önünde yer açılmasını kolaylaştırır.',
+        'Üst kat dairelerde asansörlü taşıma süreyi belirgin biçimde kısaltır; uzun yol öncesinde kazanılan zaman, kurulumun da aynı gün bitmesini sağlar. Taşınmadan önce kullanılmayan eşyayı ayıklamak hem hacmi hem araçtaki yükü hafifletir. Kurtuluş evden eve nakliyat işlerinde ambalaj, söküm, montaj ve sigorta yazılı fiyata dahildir; keşif ise ücretsizdir. Uzun yol için kırılabilir parçalar sıkı ambalajlanır, mobilya kapalı kasa araçta kuşakla sabitlenir. Kutuları oda adıyla etiketlemeniz, yeni evde yerleşmeyi de hızlandırır.',
+      ],
     },
     {
       slug: 'zafer',
@@ -65,6 +73,10 @@ export const beypazari: District = {
       notes: [
         'Eğimli sokaklarda asansör için düz zemin seçimi keşifte yapılıyor.',
         'Kış aylarında taşıma saati buzlanma nedeniyle gün ortasına alınıyor.',
+      ],
+      body: [
+        'Eğimli bir yerleşimde mobil asansörün güvenle çalışması, aracın dengeli kurulmasına bağlıdır. Zafer mahallesinde bu yüzden keşfin en önemli parçası, bina çevresinde düz bir zemin bulmaktır. Uygun nokta belirlendikten sonra taşıma günü ekip vakit kaybetmeden kuruluma geçer ve eşya doğrudan araca iner. Bina önü uygun değilse asansör aracı yakındaki düz bir alana kurulur ve ekip sayısı buna göre ayarlanır.',
+        'Kış aylarında sabahları yollar buzlanabildiği için taşımayı gün ortasına alıyoruz; Ankara’dan çıkış saatini de buna göre ayarlıyoruz. Bu mahallede taşınacaksanız tarihi esnek tutmanız, hava koşullarına göre en güvenli günü seçmemize yardımcı olur. Kırılacak eşyaların uzun yol ambalajıyla korunması ve araç içinde sabitlenmesi standarttır. Keşif ücretsizdir, fiyat yazılı verilir ve taşıma günü değişmez. Ambalaj, söküm, montaj ve sigorta da bu fiyata dahildir. Zafer evden eve nakliyat için uygun tarihi keşifte birlikte seçebiliriz.',
       ],
     },
   ],
@@ -108,6 +120,10 @@ export const nallihan: District = {
         'Mobil asansör Ankara’dan getiriliyor, adreste ekiple aynı anda oluyor.',
         'Merkez sokaklarda araç yanaşması çoğu adreste mümkün.',
       ],
+      body: [
+        'Üç ve dört katlı apartmanların yaygın olduğu Nallıhan merkezde, taşımanın kilit noktası asansör aracının ekiple aynı anda adreste olmasıdır. Mobil asansörü Ankara’dan birlikte getiriyoruz; böylece yükleme beklemeden başlar ve uzun yolculuk öncesinde zaman kaybedilmez. Mobil asansör, üst kat dairelerdeki eşyayı merdivene girmeden indirerek hem süreyi hem hasar riskini azaltır. Bina yönetimine taşıma saatini önceden bildirmeniz de yardımcı olur.',
+        'Merkez sokakların çoğunda araç bina önüne yanaşabildiği için yükleme mesafesi kısadır. Yine de taşıma gününden önce bina önünde yer ayrılması işleri hızlandırır. Uzun yolda en çok zarar gören beyaz eşya ve mobilya kuşakla sabitlenir, kırılabilir parçalar çift kat ambalajlanır. Nallıhan nakliyat işlerinde keşif ücretsizdir; yol ve mesafe yazılı fiyata baştan dahil edilir. Kurulumun aynı gün bitmesi için kutularınızı kapatılmış ve etiketlenmiş halde hazır tutmanız yeterlidir.',
+      ],
     },
     {
       slug: 'cayirhan',
@@ -117,6 +133,10 @@ export const nallihan: District = {
       notes: [
         'Lojman girişlerinde araç kaydı gerekiyor, bir gün önceden hallediyoruz.',
         'Blok aralarında geniş alan var, asansör kurulumu rahat yapılıyor.',
+      ],
+      body: [
+        'Lojman ve site tipi yapıların çoğunlukta olduğu Çayırhan’da taşıma, kapıdaki izinle başlar. Girişlerde araç kaydı istendiği için araç ve ekip bilgilerini taşıma gününden bir gün önce ilgili birime iletiyoruz. Bu hazırlık yapılmadığında araç kapıda bekleyebilir; uzun yoldan gelen bir ekip için bu, günün tamamını etkiler. Siz de lojman yönetimine taşıma gününü önceden bildirerek bu süreci hızlandırabilirsiniz.',
+        'Blok aralarındaki geniş alanlar mobil asansörün rahatça kurulmasına imkân tanır. Lojmandan çıkış yapıyorsanız teslim gününü taşıma planıyla uyumlu seçmeniz önemlidir. Çayırhan evden eve nakliyat işlerinde eşyalar kapalı kasa araçta, kuşakla sabitlenerek taşınır. Ambalaj, söküm, montaj ve sigorta fiyata dahildir; keşifte verilen yazılı fiyat taşıma günü değişmez. Kutuları oda oda etiketlemeniz ve kullanmadığınız eşyayı taşınmadan önce ayıklamanız, yeni adreste yerleşmeyi kolaylaştırır. Mesafe ve yol yazılı fiyata baştan dahil edilir.',
       ],
     },
   ],
@@ -160,6 +180,10 @@ export const ayas: District = {
         'Dar sokaklarda büyük araç yerine küçük araçla aktarma yapılıyor.',
         'Yeni apartmanlarda asansörlü taşıma tercih ediliyor.',
       ],
+      body: [
+        'Eski taş evlerle yeni apartmanların yan yana durduğu Ayaş merkezde, tek bir taşıma planı her adrese uymaz. Keşifte önce bina tipini ve sokağın genişliğini görüyor, ardından aracın nereye kadar gelebileceğini belirliyoruz. Dar sokaklarda büyük araç yerine küçük araçla aktarma yapılır; bu aktarma da yazılı fiyata baştan eklenir. Bu sayede taşıma günü adreste karar vermek gerekmez, ekip doğrudan işe başlar.',
+        'Yeni apartmanlarda asansörlü taşıma tercih edilir; mobil asansör sayesinde üst katlardaki eşya merdivene girmeden indirilir. Taş evlerde ise kapı ve merdivenler dar olabildiği için büyük mobilyaların sökülmesi gerekebilir; söküm ve montaj fiyata dahildir. Taşınacağınız yeni adresin anahtarını önceden almanız, kurulumun aynı gün bitmesini kolaylaştırır. Ambalaj ve sigorta da fiyata dahildir, eşya kapalı kasa araçta taşınır. Ayaş merkez evden eve nakliyat için keşif ücretsizdir ve yazılı fiyat taşıma günü değişmez.',
+      ],
     },
     {
       slug: 'sinanli',
@@ -169,6 +193,10 @@ export const ayas: District = {
       notes: [
         'Bahçe eşyası ayrı paketlenip araca en son yükleniyor.',
         'Yol güzergahı taşıma öncesi kontrol ediliyor.',
+      ],
+      body: [
+        'Sinanlı’da taşınan evlerin çoğu bahçelidir ve bu, eşya listesinin şehirdeki bir daireden daha uzun olması demektir. Bahçe mobilyası, saksılar ve tarım aletleri için ayrı bir ambalaj planı yapıyor, bunları ev eşyasıyla karıştırmadan paketliyoruz. Bu eşya araca en son yüklenir, yeni adreste de ilk indirilir. Böylece bahçe eşyası yolculuk boyunca ev eşyasına zarar vermez.',
+        'Taşıma öncesinde yol güzergahını kontrol ediyor, aracın adrese kadar sorunsuz gelip gelemeyeceğini netleştiriyoruz. Bahçe kapısı ile araç arasındaki mesafe uzunsa ekip sayısını buna göre belirliyoruz. Siz de taşınmadan önce artık kullanmadığınız aletleri ayıklarsanız hacim küçülür. Sinanlı nakliyat için keşif ücretsizdir; fiyat yazılı verilir ve sonradan değişmez. Ev eşyası için ambalaj, söküm ve montaj aynı ekip tarafından yapılır, sigorta da yazılı fiyata dahildir. Kutuları oda adıyla etiketlemeniz, yeni evde yerleşmeyi hızlandırır.',
       ],
     },
   ],
@@ -212,6 +240,10 @@ export const bala: District = {
         'Düşük katlı binalarda asansör gerekmeyebiliyor, bu maliyeti düşürüyor.',
         'Araç park alanı bol, yükleme rahat yapılıyor.',
       ],
+      body: [
+        'Düşük katlı binaların yaygın olduğu Balâ merkezde, taşımaların önemli bir bölümü asansör kurmaya gerek kalmadan, ekibin elle taşımasıyla tamamlanır. Bu durum keşifte netleşir ve maliyete doğrudan yansır: asansör gerekmiyorsa fiyata da eklenmez. Ağır beyaz eşya ya da büyük mobilya varsa mobil asansörü yine de getirebiliyoruz. Keşifte kat sayısını, merdiven genişliğini ve büyük parçaları görerek hangi yöntemin uygun olduğunu birlikte belirliyoruz.',
+        'Park alanı bol olduğu için araç kapıya yakın durur, yükleme rahat ilerler. Asıl dikkat edilmesi gereken mevsimdir: kışın taşımayı gün ortasına, yazın sabah erken saatlere almanızı öneririz. Balâ evden eve nakliyat işlerinde eşya kapalı kasa araçta, sigorta kapsamında taşınır; ambalaj, söküm ve montaj yazılı fiyata dahildir. Keşif ücretsizdir ve fiyat taşıma günü değişmez. Taşınmadan önce kullanmadığınız eşyayı ayıklamanız, tek seferde taşımayı kolaylaştırır.',
+      ],
     },
     {
       slug: 'kesikkopru',
@@ -221,6 +253,10 @@ export const bala: District = {
       notes: [
         'Ek yol mesafesi taşıma süresine baştan yansıtılıyor.',
         'Tek seferde taşıma için araç hacmi önceden hesaplanıyor.',
+      ],
+      body: [
+        'Kesikköprü beldesine yapılan taşımalarda ilçe merkezine göre ek bir yol mesafesi vardır ve bu mesafe planın en başında hesaba katılır. Ekip Ankara’dan çıkış saatini buna göre belirler; böylece yükleme, yolculuk ve kurulum aynı güne sığar. Yükleme saatini de bu plana göre sizinle birlikte seçiyoruz; kış aylarında yol koşullarına göre gün ortası tercih edilir.',
+        'Bu uzaklıkta ikinci sefer hem zaman hem maliyet kaybıdır. Bu yüzden keşifte eşya hacmini dikkatle ölçüp tek seferde taşıyabilecek aracı seçiyoruz. Taşınmadan önce eşyalarınızı ayıklamanız, araç hacmini ve süreyi küçültür. Ek yol mesafesi yazılı fiyata baştan dahil edildiği için taşıma günü fark çıkmaz. Kırılabilir parçalar çift kat ambalajlanır, mobilya araç içinde kuşakla sabitlenir ve eşya sigortalı taşınır. Keşif ücretsizdir; söküm ve montaj da aynı ekip tarafından yapılır.',
       ],
     },
   ],
@@ -264,6 +300,10 @@ export const sereflikochisar: District = {
         'Asansör aracı Ankara’dan geliyor, adreste ekiple aynı saatte oluyor.',
         'Merkez caddelerde yükleme için kısa süreli park izni alınıyor.',
       ],
+      body: [
+        'Uzun bir yolculuğun ardından kurulumu akşam olmadan bitirmek, Şereflikoçhisar merkezde taşımanın temel hedefidir. Apartman taşımalarının yaygın olduğu bu bölgede mobil asansörü Ankara’dan ekiple birlikte getiriyoruz; asansör aracı ve taşıma aracı adrese aynı saatte vardığı için yükleme beklemeden başlar. Kurulumun gün bitmeden tamamlanması için ekip sabah erken yola çıkar.',
+        'Merkez caddelerdeki binalarda yükleme için kısa süreli park izni gerekir; bu izni taşıma gününden önce alıyoruz. Siz de bina yönetimini ve komşularınızı bilgilendirerek araç için yer açılmasına yardımcı olabilirsiniz. Şereflikoçhisar evden eve nakliyat işlerinde yol, yakıt ve mesafe yazılı fiyata dahildir. Uzun yol boyunca eşya kuşakla sabitlenir, mobilya köşeleri ve beyaz eşya ayrıca korunur. Keşif ücretsizdir; ambalaj, söküm, montaj ve sigorta fiyata dahildir. Kutuları oda oda etiketlemeniz, yeni evde yerleşmeyi hızlandırır.',
+      ],
     },
     {
       slug: 'sekerciler',
@@ -273,6 +313,10 @@ export const sereflikochisar: District = {
       notes: [
         'Kapı ile araç arası mesafe uzunsa ekip sayısı artırılıyor.',
         'Bahçe ve depo eşyası ayrı ambalajlanıyor.',
+      ],
+      body: [
+        'Bahçeli ev ve müstakil yapıların ağırlıkta olduğu Şekerciler’de yükleme mesafesi, ekip planını doğrudan belirler. Kapı ile araç arasındaki yol uzunsa ekip sayısını artırıyoruz; böylece yükleme uzamaz ve uzun yolculuk için gereken zaman korunur. Bu planlama keşifte yapılır ve yazılı fiyata baştan yansıtılır.',
+        'Müstakil evlerde bahçe ve depo eşyası çoğu zaman ev eşyası kadar yer kaplar. Bu parçaları ayrı ambalajlıyor, yeni adreste karışmaması için ayrıca etiketliyoruz. Taşınmadan önce depoda biriken eşyayı gözden geçirip gerçekten götüreceklerinizi ayırmanız, tek seferde taşımayı kolaylaştırır. Keşifte ekibe bahçeyi ve depoyu da göstermeniz, araç hacminin doğru hesaplanması için önemlidir. Fiyat yazılı verilir ve sonradan değişmez. Ambalaj, söküm, montaj ve sigorta fiyata dahildir. Uzun yol boyunca mobilya kuşakla sabitlenir, kırılabilir parçalar çift kat ambalajlanır.',
       ],
     },
   ],
@@ -316,6 +360,10 @@ export const haymana: District = {
         'Eğim nedeniyle asansör konumu önceden planlanıyor.',
         'Merkez caddede yükleme saati esnaf yoğunluğuna göre seçiliyor.',
       ],
+      body: [
+        'Haymana merkezdeki eğimli sokaklar, mobil asansörün nereye kurulacağını keşfin ilk sorusu haline getirir. Aracın dengeli durabileceği düz alanı önceden belirliyoruz; taşıma günü ekip doğrudan bu noktaya yerleşir ve kurulum kısa sürede tamamlanır. Bina önü uygun değilse asansör aracı yakındaki düz bir noktaya kurulur ve ekip planını buna göre yapar.',
+        'Merkez caddede yükleme saatini esnafın yoğunluğuna göre seçiyoruz; dükkânlar açılmadan ya da gün içindeki sakin saatlerde çalışmak hem trafiği hem komşuları rahatlatır. Haymana evden eve nakliyat işlerinde kutuları oda oda etiketlemenizi öneriyoruz; yeni evde her kutu doğrudan ait olduğu odaya çıkar. Söküm ve montaj aynı ekip tarafından yapılır, ambalaj ve sigorta yazılı fiyata dahildir. Keşif ücretsizdir ve yazılı fiyat taşıma günü değişmez. Kullanmadığınız eşyayı taşınmadan önce ayıklamanız, araç hacmini ve süreyi küçültür.',
+      ],
     },
     {
       slug: 'kaplicalar',
@@ -325,6 +373,10 @@ export const haymana: District = {
       notes: [
         'Pansiyon taşımalarında eşya sayımı ve listesi taşıma öncesi yapılıyor.',
         'Sezon dışı dönemde taşıma daha hızlı tamamlanıyor.',
+      ],
+      body: [
+        'Pansiyon, apart ya da yazlık taşıması, sıradan bir daire taşımasından daha fazla sayım ister. Kaplıcalar Bölgesi’nde işe eşya listesini çıkararak başlıyoruz: hangi odadan kaç yatak, kaç dolap ve kaç koli çıkacağı taşıma öncesinde netleşir. Bu liste hem yüklemede hem yeni adreste teslimde kontrol aracı olarak kullanılır.',
+        'Sezon dışında yapılan taşımalar daha hızlı tamamlanır; çevrede trafik ve misafir hareketi azaldığı için aracın yerleşimi kolaylaşır. Bir işletmeyi taşıyorsanız tarihi buna göre seçmenizi öneririz. Çok sayıda benzer eşya olduğundan oda numarasına göre etiketleme yapıyoruz. Yeni yer hazır değilse eşyayı depolama hizmetiyle bir süre bekletmek de mümkündür. Ambalaj, söküm, montaj ve sigorta yazılı fiyata dahildir; keşif ücretsizdir. Haymana kaplıcalar nakliyat işlerinde uygun tarihi keşifte birlikte belirleyebiliriz.',
       ],
     },
   ],
@@ -368,6 +420,10 @@ export const kizilcahamam: District = {
         'Asansörlü taşıma merkezdeki üst kat dairelerde standart.',
         'Termal tesis çevresinde sezon yoğunluğuna göre saat seçiliyor.',
       ],
+      body: [
+        'Kızılcahamam merkezde taşıma işlerinin büyük kısmı apartman dairelerinden oluşur ve üst katlarda asansörlü taşıma standart uygulamadır. Mobil asansörü Ankara’dan ekiple birlikte getiriyor, adrese aynı saatte ulaşacak şekilde planlıyoruz. Böylece uzun yolun ardından yükleme beklemeden başlar. Bina önünde asansör aracı için yer ayrılması, kurulumu hızlandırır; yönetime taşıma saatini önceden bildirmenizi öneririz.',
+        'Termal tesislerin çevresindeki adreslerde sezon yoğunluğu, aracın park edebileceği alanı ve yolları etkiler. Bu bölgede taşınacaksanız yoğun dönemin dışında bir tarih ya da sabah erken bir saat seçmenizi öneririz. Kızılcahamam evden eve nakliyat işlerinde ambalaj, söküm, montaj ve sigorta fiyata dahildir; keşifte verilen yazılı fiyat taşıma günü değişmez. Kutuları oda oda etiketlemeniz ve kullanmadığınız eşyayı ayıklamanız, hem yüklemeyi hem yeni evde yerleşmeyi kolaylaştırır.',
+      ],
     },
     {
       slug: 'soguksu',
@@ -378,6 +434,10 @@ export const kizilcahamam: District = {
         'Orman içi yollarda büyük araç yerine uygun hacimli araç tercih ediliyor.',
         'Villa taşımalarında iki günlük plan yapılabiliyor.',
       ],
+      body: [
+        'Villa ve dağ evlerinin bulunduğu Soğuksu çevresinde taşıma, şehirdeki bir daireye göre hem hacim hem mesafe açısından daha büyük bir iştir. Evden araca kadar olan yükleme yolu uzun olduğu için ekip sayısını artırıyoruz; orman içi yollarda büyük araç yerine yola uygun hacimli araç seçiyoruz. Bu seçim keşifte yolu yerinde görerek yapılır.',
+        'Eşya hacmi çok büyükse taşımayı iki güne yayan bir plan yapabiliyoruz; örneğin ilk gün ambalaj ve söküm, ikinci gün yükleme ve kurulum. Bahçe ve depo eşyası ev eşyasından ayrı paketlenir. Keşifte ekibe evin tamamını, bahçeyi ve depoyu göstermeniz, doğru araç ve ekip seçimi için şarttır. Kar döneminde güzergah taşıma sabahı yeniden kontrol edilir. Ambalaj, söküm, montaj ve sigorta yazılı fiyata dahildir; fiyat taşıma günü değişmez.',
+      ],
     },
     {
       slug: 'guvem',
@@ -387,6 +447,10 @@ export const kizilcahamam: District = {
       notes: [
         'Ek yol mesafesi süreye dahil ediliyor, taşıma aynı gün bitiyor.',
         'Kış aylarında güzergah sabah kontrol ediliyor.',
+      ],
+      body: [
+        'Müstakil evlerin yaygın olduğu Güvem beldesinde, ilçe merkezinin ötesindeki yol mesafesi taşıma planına baştan eklenir. Bu hesap yapıldığında yükleme, yolculuk ve kurulum aynı gün içinde tamamlanır; ekibin Ankara’dan çıkış saati de bu plana göre belirlenir. Bu sayede taşıma ertesi güne sarkmaz.',
+        'Kış aylarında güzergahı taşıma sabahı yeniden kontrol ediyor, gerekirse tarihi sizinle birlikte değiştiriyoruz. Müstakil evlerde kiler, depo ve bahçe eşyası da taşınacağı için keşifte bu alanları göstermeniz araç hacminin doğru seçilmesini sağlar. Güvem nakliyat işlerinde ek yol mesafesi yazılı fiyata dahildir; ambalaj, söküm, montaj ve sigorta için ayrıca ücret çıkmaz. Kırılabilir parçalar uzun yol için sıkı ambalajlanır, mobilya kapalı kasa araçta kuşakla sabitlenir. Taşınmadan önce kullanmadığınız eşyayı ayıklamanız tek seferde taşımayı kolaylaştırır.',
       ],
     },
   ],
@@ -430,6 +494,10 @@ export const gudul: District = {
         'Dar sokaklarda küçük araçla aktarma yapılıyor.',
         'Asansör kurulumu için düz zemin önceden seçiliyor.',
       ],
+      body: [
+        'Güdül merkezde taşıma planı, aracın sokağın neresine kadar çıkabileceği sorusuyla başlar. Dar ve eğimli sokaklarda büyük araç adrese ulaşamadığında eşyayı küçük araçla ana caddedeki araca aktarıyoruz. Aracın yanaşabileceği en yakın noktayı keşifte yerinde görüp belirliyoruz; aktarma gerekiyorsa yazılı fiyata baştan eklenir. Böylece taşıma günü sürpriz bir ücret çıkmaz.',
+        'Mobil asansör kullanılacaksa aracın kurulacağı düz zemin de aynı keşifte seçilir. Eğimli bir sokakta bu nokta bina önünden biraz uzakta olabilir; ekip planını buna göre yapar. Taşınmadan önce büyük mobilyaların ölçüsünü yeni evin kapılarıyla karşılaştırmanız, sökülmesi gereken parçaları baştan belirler. Söküm ve montaj fiyata dahildir. Ambalaj ve sigorta da yazılı fiyata dahildir. Güdül merkez evden eve nakliyat için keşif ücretsizdir; ekip eşyayı yerinde görmeden fiyat vermez. Kutuları oda adıyla etiketlemeniz, yeni evde yerleşmeyi kolaylaştırır.',
+      ],
     },
     {
       slug: 'sorgun',
@@ -439,6 +507,10 @@ export const gudul: District = {
       notes: [
         'Bahçe ve depo eşyası ayrı paketlenip en son yükleniyor.',
         'Yükleme mesafesi uzunsa ekip sayısı artırılıyor.',
+      ],
+      body: [
+        'Sorgun’daki bahçeli evlerden yapılan taşımalarda bahçe ve depo eşyası, ev eşyasından ayrı bir iş kalemi olarak planlanır. Bu parçaları ayrı paketliyor ve araca en son yüklüyoruz; böylece yolculuk boyunca ev eşyasına zarar vermezler ve yeni adreste ilk inen grup olurlar. Bu sıralama keşifte birlikte belirlenir.',
+        'Bahçe kapısıyla araç arasındaki mesafe uzunsa ekip sayısını artırarak yükleme süresini kısa tutuyoruz. Sorgun evden eve nakliyat için keşifte evi, bahçeyi ve depoyu birlikte görmemiz gerekir; araç hacmi ancak böyle doğru hesaplanır. Taşınmadan önce kullanmadığınız aletleri ve eski eşyaları ayıklamanız, tek seferde taşımayı kolaylaştırır. Fiyat yazılıdır ve taşıma günü değişmez. Ambalaj, söküm, montaj ve sigorta da fiyata dahildir; eşya kapalı kasa araçta taşınır. Yol mesafesi de plana baştan eklenir.',
       ],
     },
   ],
@@ -482,6 +554,10 @@ export const camlidere: District = {
         'Düşük katlı binalarda asansör gerekmeyebiliyor, maliyet düşüyor.',
         'Merkez sokaklarda araç yanaşması çoğu adreste mümkün.',
       ],
+      body: [
+        'Düşük katlı binaların yaygın olduğu Çamlıdere merkezde, taşımaların bir bölümü asansör kurmadan, ekibin elle taşımasıyla tamamlanabilir. Asansör gerekmediğinde bu maliyet fiyata yansımaz; keşifte bina katını ve merdiven genişliğini görerek hangi yöntemin uygun olduğunu belirliyoruz. Ağır beyaz eşya ya da büyük mobilya varsa mobil asansörü Ankara’dan ekiple birlikte getirebiliyoruz.',
+        'Merkez sokakların çoğunda araç bina önüne yanaşabildiği için yükleme kısa sürer. Dağ evi ya da yazlıktan merkeze taşınıyorsanız soba, odunluk ve bahçe mobilyası gibi parçaları keşifte belirtmenizi öneririz; bunlar ayrı paketlenir. Çamlıdere nakliyat işlerinde kış aylarında taşıma tarihi yol durumuna göre birlikte seçilir; yazılı fiyat ise tarih değişse de aynı kalır. Keşif ücretsizdir; ambalaj, söküm, montaj ve sigorta da fiyata dahildir. Kullanmadığınız eşyayı ayıklamanız araç hacmini küçültür.',
+      ],
     },
     {
       slug: 'peclin',
@@ -491,6 +567,10 @@ export const camlidere: District = {
       notes: [
         'Orman içi yollarda uygun hacimli araç seçiliyor.',
         'Yaz sezonunda taşıma talebi arttığı için tarih önceden alınıyor.',
+      ],
+      body: [
+        'Peçenek çevresindeki yazlık ve bahçeli evlerde taşıma talebi yaz sezonunda belirgin şekilde artar. Bu dönemde taşınmayı düşünüyorsanız tarihi önceden almanızı öneririz; böylece araç ve ekip istediğiniz güne ayrılır. Yol mesafesi taşıma planına baştan eklenir, Ankara’dan çıkış saati buna göre belirlenir. Ekip sayısı da evden araca olan mesafeye göre belirlenir.',
+        'Orman içi yollarda büyük araç yerine yola uygun hacimli araç seçiyoruz. Yazlık eşyası çoğu zaman mevsimlik olduğundan, taşınacakları ve kalacakları önceden ayırmak hacmi küçültür. Bahçe mobilyası ve dış mekân eşyası ayrı ambalajlanır, araca en son yüklenir. Peçenek evden eve nakliyat için keşif ücretsizdir; ambalaj, söküm, montaj ve sigorta yazılı fiyata dahildir. Kutuları oda adıyla etiketlemeniz, yeni adreste yerleşmeyi kolaylaştırır. Fiyat taşıma günü değişmez.',
       ],
     },
   ],
@@ -534,6 +614,10 @@ export const kalecik: District = {
         'Dar ve eğimli sokaklarda aktarmalı yükleme uygulanıyor.',
         'Yeni yerleşim bölgesinde araç kapıya kadar yanaşabiliyor.',
       ],
+      body: [
+        'Kale eteğindeki sokaklarla yeni yerleşim bölgesi arasında, Kalecik merkezde taşıma yöntemi tamamen değişir. Dar ve eğimli sokaklarda eşyayı küçük araçla ana yola aktarıyoruz; yeni bölgede ise araç kapıya kadar yanaşır ve yükleme doğrudan yapılır. Adresinizin hangi gruba girdiğini keşifte yerinde görüyoruz. Bu ayrım taşıma günü ekip sayısını ve süreyi de belirler.',
+        'Aktarmalı yükleme gerekiyorsa bu, yazılı fiyata baştan eklenir ve taşıma günü ek ücret çıkmaz. Eski mahallelerde taşınıyorsanız komşularınızı önceden bilgilendirmeniz, aktarma aracının sokakta rahat çalışmasını sağlar. Kalecik evden eve nakliyat işlerinde söküm ve montaj aynı ekip tarafından yapılır; ambalaj ve sigorta da fiyata dahildir. Keşif ücretsizdir ve yazılı fiyat taşıma günü değişmez. Kutuları oda adıyla etiketlemeniz, yeni evde yerleşmeyi hızlandırır; kullanmadığınız eşyayı ayıklamanız da araç hacmini küçültür.',
+      ],
     },
     {
       slug: 'tavsan',
@@ -543,6 +627,10 @@ export const kalecik: District = {
       notes: [
         'Bahçe eşyası ayrı paketleniyor.',
         'Yol mesafesi taşıma süresine baştan ekleniyor.',
+      ],
+      body: [
+        'Tavşancıl çevresindeki bahçeli evlerde taşıma süresini en çok yükleme mesafesi etkiler. Evden araca kadar yürünecek yolu keşifte görüp ekip sayısını ona göre belirliyoruz; böylece uzun mesafe, günün planını bozmaz. Bahçe kapısının genişliği ve evden araca giden yol da bu sırada not edilir.',
+        'Yol mesafesi de taşıma süresine baştan eklenir; ekip Ankara’dan çıkış saatini buna göre ayarlar ve kurulum aynı gün tamamlanır. Bahçe eşyası ayrı paketlenir, ev eşyasıyla karışmaz. Taşınmadan önce bahçe aletlerini temizleyip bir araya toplamanız ve artık kullanmadıklarınızı ayıklamanız hacmi küçültür. Tavşancıl nakliyat işlerinde keşif ücretsizdir, fiyat yazılıdır; sigorta, ambalaj, söküm ve montaj da buna dahildir. Eşya kapalı kasa araçta, kuşakla sabitlenerek taşınır; böylece uzun yolda kayma ve çizilme olmaz. Uygun tarihi keşifte birlikte seçebiliriz.',
       ],
     },
   ],
@@ -585,6 +673,10 @@ export const evren: District = {
       notes: [
         'Geniş sokaklar sayesinde yükleme hızlı tamamlanıyor.',
         'Gerektiğinde mobil asansör Ankara’dan getiriliyor.',
+      ],
+      body: [
+        'Geniş sokaklar ve düşük katlı binalar, Evren merkezde yüklemenin hızlı ilerlemesini sağlar; araç çoğu adreste kapıya kadar yanaşır. Ancak bu kolaylık, uzun yolun getirdiği planlama ihtiyacını ortadan kaldırmaz. Taşımanın tek seferde bitmesi şart olduğu için keşifte eşya hacmini geniş hesaplıyor, aracı buna göre seçiyoruz. Bu sayede ikinci sefere gerek kalmaz.',
+        'Üst katta oturuyorsanız ya da ağır eşyanız varsa mobil asansörü Ankara’dan ekiple birlikte getirebiliyoruz. Taşınmadan önce eşyanızı ayıklamanız, uzun yolda taşınacak hacmi küçültür. Evren evden eve nakliyat işlerinde kırılabilir parçalar çift kat ambalajlanır, mobilya kuşakla sabitlenir ve taşıma sigorta kapsamında yapılır. Yol ve mesafe yazılı fiyata baştan dahildir. Keşif ücretsizdir; ambalaj, söküm ve montaj da yazılı fiyata dahildir. Kutuları oda adıyla etiketlemeniz, yeni evde yerleşmeyi hızlandırır.',
       ],
     },
   ],
