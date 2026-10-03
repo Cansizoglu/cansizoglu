@@ -1,7 +1,13 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Icon from '@/components/Icon'
 import { services } from '@/data/services'
 import { districts } from '@/data/districts'
+
+export const metadata: Metadata = {
+  title: { absolute: 'Sayfa bulunamadı | Ankara Taşıma' },
+  robots: { index: false, follow: true },
+}
 
 export default function NotFound() {
   return (

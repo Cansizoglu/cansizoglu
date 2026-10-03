@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
+import JsonLd from '@/components/JsonLd'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import SectionTitle from '@/components/SectionTitle'
 import Icon from '@/components/Icon'
 import CtaBand from '@/components/CtaBand'
 import { site } from '@/data/site'
-import { pageMeta } from '@/lib/seo'
+import { pageMeta, localBusinessJsonLd } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
   title: 'İletişim | Ankara Taşıma Evden Eve Nakliyat',
@@ -41,6 +42,7 @@ const channels = [
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={localBusinessJsonLd()} />
       <Breadcrumbs items={[{ name: 'İletişim', path: '/iletisim' }]} />
 
       <section className="py-9 sm:py-14">

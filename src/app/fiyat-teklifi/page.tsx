@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import SectionTitle from '@/components/SectionTitle'
 import QuoteForm from '@/components/QuoteForm'
+import { districts } from '@/data/districts'
 import Icon from '@/components/Icon'
 import Faq from '@/components/Faq'
 import { site } from '@/data/site'
@@ -62,7 +63,7 @@ export default function QuotePage() {
           />
 
           <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
-            <QuoteForm />
+            <QuoteForm districtNames={districts.map((d) => d.name)} />
 
             <aside className="space-y-6">
               <div className="rounded-xl border border-brand-100 bg-brand-50/60 p-6">

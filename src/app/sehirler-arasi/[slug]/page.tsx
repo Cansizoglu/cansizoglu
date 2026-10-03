@@ -38,9 +38,17 @@ export default function RoutePage({ params }: Props) {
   const faq = routeFaq(route)
   const linkify = createLinker(`/sehirler-arasi/${route.slug}`, 10)
 
-  /* Aynı bölgedeki diğer iller; yoksa listeden ilk birkaçı */
-  const sameRegion = routes.filter((r) => r.region === route.region && r.slug !== route.slug)
-  const others = (sameRegion.length >= 3 ? sameRegion : routes.filter((r) => r.slug !== route.slug))
+  /*
+    Aynı bölgedeki diğer iller. Liste, bu ilden sonra gelenlerden başlayarak
+    dairesel seçiliyor; her zaman bölgenin ilk altı ili alındığında listenin
+    sonundaki iller hiçbir rota sayfasından bağlantı almıyordu.
+  */
+  const region = routes.filter((r) => r.region === route.region)
+  const pool = region.length > 3 ? region : routes
+  const start = pool.findIndex((r) => r.slug === route.slug)
+  const others = pool
+    .map((_, i) => pool[(start + 1 + i) % pool.length])
+    .filter((r) => r.slug !== route.slug)
     .slice(0, 6)
 
   return (

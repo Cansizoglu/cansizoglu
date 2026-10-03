@@ -13,6 +13,8 @@ type PageMetaInput = {
   description: string
   path: string
   images?: (string | ShareImage)[]
+  /** Blog yazıları için Open Graph article bilgisi */
+  article?: { publishedTime: string; modifiedTime?: string }
 }
 
 /**
@@ -49,8 +51,9 @@ export function composeTitle(title: string) {
   return title
 }
 
-export function pageMeta({ title, description, path, images }: PageMetaInput): Metadata {
-  const url = `${site.url}${path}`
+export function pageMeta({ title, description, path, images, article }: PageMetaInput): Metadata {
+  // Anasayfa kanonik adresi sondaki eğik çizgi olmadan: https://www.…net.tr
+  const url = path === '/' ? site.url : `${site.url}${path}`
   const fullTitle = composeTitle(title)
   /*
     Görselin gerçek ölçüsü bildirilmezse tarayıcı ve sosyal medya tarafı
@@ -74,7 +77,14 @@ export function pageMeta({ title, description, path, images }: PageMetaInput): M
     description,
     alternates: { canonical: url },
     openGraph: {
-      type: 'website',
+      ...(article
+        ? {
+            type: 'article' as const,
+            publishedTime: article.publishedTime,
+            modifiedTime: article.modifiedTime ?? article.publishedTime,
+            authors: [site.name],
+          }
+        : { type: 'website' as const }),
       locale: 'tr_TR',
       url,
       title: fullTitle,
@@ -140,6 +150,22 @@ export function localBusinessJsonLd() {
   }
 }
 
+/**
+ * Firma bilgisinin tamamı (MovingCompany) yalnızca anasayfa, iletişim ve
+ * hakkımızda sayfasında basılıyor. Hizmet ve yazı sayfalarında sağlayıcı /
+ * yayıncı bu kısa referansla veriliyor; @id aynı olduğu için Google ikisini
+ * aynı kuruluş olarak eşliyor.
+ */
+function organizationRef() {
+  return {
+    '@type': 'MovingCompany',
+    '@id': `${site.url}/#kurulus`,
+    name: site.name,
+    url: site.url,
+    telephone: site.phone.display,
+  }
+}
+
 export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
   return {
     '@context': 'https://schema.org',
@@ -173,7 +199,7 @@ export function serviceJsonLd(input: { name: string; description: string; path: 
     description: input.description,
     url: `${site.url}${input.path}`,
     serviceType: input.name,
-    provider: { '@id': `${site.url}/#kurulus` },
+    provider: organizationRef(),
     areaServed: { '@type': 'City', name: 'Ankara' },
   }
 }
@@ -200,8 +226,14 @@ export function articleJsonLd(input: {
     datePublished: input.date,
     dateModified: input.date,
     mainEntityOfPage: `${site.url}${input.path}`,
-    author: { '@type': 'Organization', name: site.name },
-    publisher: { '@id': `${site.url}/#kurulus` },
+    author: { '@type': 'Organization', name: site.name, url: site.url },
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${site.url}/#kurulus`,
+      name: site.name,
+      url: site.url,
+      logo: { '@type': 'ImageObject', url: `${site.url}/icon.svg` },
+    },
     ...(input.image
       ? {
           image: {

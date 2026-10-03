@@ -4,7 +4,6 @@ import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import Icon from './Icon'
 import { calculator, homeTypes, formatTl } from '@/data/pricing'
-import { districts } from '@/data/districts'
 import { site } from '@/data/site'
 
 /** İki koordinat arası kuş uçuşu mesafe (km). */
@@ -33,7 +32,10 @@ function floorValue(label: string) {
   return Number(label)
 }
 
-export default function PriceCalculator() {
+/** Hesaplama için gereken ilçe bilgisi; tam veri istemci paketine girmesin diye sayfadan geçiriliyor. */
+export type CalculatorDistrict = { slug: string; name: string; lat: number; lon: number }
+
+export default function PriceCalculator({ districts }: { districts: CalculatorDistrict[] }) {
   const [fromSlug, setFromSlug] = useState('kecioren')
   const [toSlug, setToSlug] = useState('cankaya')
   const [homeType, setHomeType] = useState<string>('2+1')

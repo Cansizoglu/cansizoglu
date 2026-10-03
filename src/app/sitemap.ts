@@ -6,29 +6,33 @@ import { posts } from '@/data/blog'
 import { aboutPages } from '@/data/aboutPages'
 import { routes } from '@/data/routes'
 
+/**
+ * Yalnızca indexlenmesi gereken kanonik adresler. `lastModified` sadece gerçek
+ * tarihi bilinen blog yazılarında veriliyor; her build'de değişen bir tarih
+ * Google'ın lastmod sinyaline güvenmemesine yol açar.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
 
   const staticPages: MetadataRoute.Sitemap = [
-    { url: `${site.url}/`, lastModified: now, changeFrequency: 'weekly', priority: 1 },
-    { url: `${site.url}/hizmetler`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${site.url}/bolgeler`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${site.url}/fiyat-teklifi`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${site.url}/hakkimizda`, lastModified: now, changeFrequency: 'yearly', priority: 0.6 },
+    { url: site.url, changeFrequency: 'weekly', priority: 1 },
+    { url: `${site.url}/hizmetler`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${site.url}/bolgeler`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${site.url}/fiyat-teklifi`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${site.url}/hakkimizda`, changeFrequency: 'yearly', priority: 0.6 },
     ...aboutPages.map((page) => ({
       url: `${site.url}/hakkimizda/${page.slug}`,
-      lastModified: now,
+     
       changeFrequency: 'yearly' as const,
       priority: 0.4,
     })),
-    { url: `${site.url}/iletisim`, lastModified: now, changeFrequency: 'yearly', priority: 0.7 },
-    { url: `${site.url}/galeri`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${site.url}/nakliyat-fiyat-hesaplama`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${site.url}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${site.url}/sehirler-arasi`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${site.url}/iletisim`, changeFrequency: 'yearly', priority: 0.7 },
+    { url: `${site.url}/galeri`, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${site.url}/nakliyat-fiyat-hesaplama`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${site.url}/blog`, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${site.url}/sehirler-arasi`, changeFrequency: 'monthly', priority: 0.9 },
     ...routes.map((route) => ({
       url: `${site.url}/sehirler-arasi/${route.slug}`,
-      lastModified: now,
+     
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     })),
@@ -36,14 +40,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
     url: `${site.url}/hizmetler/${service.slug}`,
-    lastModified: now,
+   
     changeFrequency: 'monthly',
     priority: 0.8,
   }))
 
   const districtPages: MetadataRoute.Sitemap = districts.map((district) => ({
     url: `${site.url}/bolgeler/${district.path}`,
-    lastModified: now,
+   
     changeFrequency: 'monthly',
     priority: 0.8,
   }))
@@ -51,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const neighborhoodPages: MetadataRoute.Sitemap = districts.flatMap((district) =>
     district.neighborhoods.map((n) => ({
       url: `${site.url}/bolgeler/${district.path}/${n.slug}`,
-      lastModified: now,
+     
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),

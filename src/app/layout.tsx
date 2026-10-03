@@ -5,8 +5,6 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ContactBar from '@/components/ContactBar'
 import ContentGuard from '@/components/ContentGuard'
-import JsonLd from '@/components/JsonLd'
-import { localBusinessJsonLd } from '@/lib/seo'
 import { site } from '@/data/site'
 
 /**
@@ -53,7 +51,6 @@ export const metadata: Metadata = {
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
   publisher: site.name,
-  alternates: { canonical: '/' },
   robots: {
     index: true,
     follow: true,
@@ -62,7 +59,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
-    url: site.url,
     siteName: site.name,
     title: 'Ankara Evden Eve Nakliyat | Ankara Taşıma',
     description: site.description,
@@ -108,7 +104,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <ContactBar />
         <ContentGuard />
-        <JsonLd data={localBusinessJsonLd()} />
       </body>
     </html>
   )

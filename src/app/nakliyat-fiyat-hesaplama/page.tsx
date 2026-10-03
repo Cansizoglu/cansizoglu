@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import SectionTitle from '@/components/SectionTitle'
 import PriceCalculator from '@/components/PriceCalculator'
+import { districts } from '@/data/districts'
 import PriceTable from '@/components/PriceTable'
 import CtaBand from '@/components/CtaBand'
 import Faq from '@/components/Faq'
@@ -55,7 +56,9 @@ export default function CalculatorPage() {
             }
             description="Nereden nereye taşınacağınızı, ev tipinizi ve kat durumunuzu seçin; araç iki adres arasındaki yolu km olarak hesaplayıp size gerçekçi bir fiyat aralığı versin. Rakamlar aşağıdaki güncel fiyat listemizden beslenir, uydurma bir tahmin değildir."
           />
-          <PriceCalculator />
+          <PriceCalculator
+            districts={districts.map(({ slug, name, lat, lon }) => ({ slug, name, lat, lon }))}
+          />
         </div>
       </section>
 

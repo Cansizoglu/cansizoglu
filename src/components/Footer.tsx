@@ -52,13 +52,21 @@ export default function Footer() {
             Hizmet Bölgeleri
           </h3>
           <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-            {districts.map((d) => (
-              <li key={d.slug}>
-                <Link href={`/bolgeler/${d.path}`} prefetch={false} className="hover:text-white">
-                  {d.name} Nakliyat
-                </Link>
-              </li>
-            ))}
+            {/* Yalnızca merkez ilçeler; 25 ilçenin tamamı menüde ve Bölgeler sayfasında. */}
+            {districts
+              .filter((d) => d.zone === 'merkez')
+              .map((d) => (
+                <li key={d.slug}>
+                  <Link href={`/bolgeler/${d.path}`} prefetch={false} className="hover:text-white">
+                    {d.name} Nakliyat
+                  </Link>
+                </li>
+              ))}
+            <li className="col-span-2">
+              <Link href="/bolgeler" prefetch={false} className="font-semibold hover:text-white">
+                Tüm ilçeler ve semtler
+              </Link>
+            </li>
           </ul>
         </div>
 

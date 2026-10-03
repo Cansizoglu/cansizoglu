@@ -1,9 +1,8 @@
 'use client'
 
-import { useEffect, useMemo, useState, type FormEvent } from 'react'
+import { useEffect, useState, type FormEvent } from 'react'
 import Icon from './Icon'
 import { site } from '@/data/site'
-import { districts } from '@/data/districts'
 
 const floors = [
   'Giriş / Bahçe katı',
@@ -39,7 +38,8 @@ function newCaptcha() {
   return { a, b }
 }
 
-export default function QuoteForm() {
+/** İlçe adları sayfadan geçiriliyor; semt verisi istemci paketine girmiyor. */
+export default function QuoteForm({ districtNames }: { districtNames: string[] }) {
   // Captcha yalnızca tarayıcıda üretilir; sunucu ve istemci çıktısı
   // farklı olmasın diye ilk render'da boş bırakılır.
   const [captcha, setCaptcha] = useState<{ a: number; b: number } | null>(null)
@@ -47,8 +47,6 @@ export default function QuoteForm() {
   const [errorText, setErrorText] = useState('')
   const [whatsappUrl, setWhatsappUrl] = useState('')
   const [selectedExtras, setSelectedExtras] = useState<string[]>([])
-
-  const districtNames = useMemo(() => districts.map((d) => d.name), [])
 
   useEffect(() => {
     setCaptcha(newCaptcha())

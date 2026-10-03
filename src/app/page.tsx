@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
+import JsonLd from '@/components/JsonLd'
 import Hero from '@/components/Hero'
 import SectionTitle from '@/components/SectionTitle'
 import ServiceCard from '@/components/ServiceCard'
@@ -21,7 +22,7 @@ import { homeArticles } from '@/data/homeArticles'
 import GalleryGrid from '@/components/GalleryGrid'
 import { galleryItems } from '@/data/gallery'
 import { priceFactors, priceUpdatedAt } from '@/data/pricing'
-import { pageMeta } from '@/lib/seo'
+import { pageMeta, localBusinessJsonLd } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
   title: 'Ankara Evden Eve Nakliyat | Sigortalı ve Asansörlü Taşıma',
@@ -95,6 +96,7 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd data={localBusinessJsonLd()} />
       <Hero />
 
       {/* Hizmetler */}
