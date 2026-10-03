@@ -68,11 +68,12 @@ export default function ContactPage() {
 
           <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_360px]">
             <div className="overflow-hidden rounded-xl border border-brand-100">
-              {/* Adres araması üzerinden harita. Google İşletme kaydı açılınca onun gömme adresi kullanılmalı */}
+              {/* Google İşletme kaydının gömme haritası. Yükseklik telefonda kısalıyor,
+                  iframe blok olarak veriliyor ki altında boşluk kalmasın. */}
               <iframe
                 title="Ankara Taşıma konumu"
                 src={site.maps.embedSrc}
-                className="h-[380px] w-full border-0"
+                className="block h-[280px] w-full border-0 sm:h-[380px] lg:h-[440px]"
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="strict-origin-when-cross-origin"

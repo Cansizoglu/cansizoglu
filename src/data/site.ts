@@ -31,10 +31,11 @@ export const site = {
     longitude: 32.6912,
   },
   maps: {
+    // Google İşletme kaydının ("Ankara Taşıma") kendi gömme adresi.
     embedSrc:
-      'https://maps.google.com/maps?q=Prof.%20Dr.%20Ahmet%20Taner%20K%C4%B1%C5%9Flal%C4%B1%20Mahallesi%2C%20Alacaatl%C4%B1%20Caddesi%2C%20%C3%87ankaya%2C%20Ankara&z=15&output=embed',
-    placeUrl:
-      'https://www.google.com/maps/search/?api=1&query=Prof.+Dr.+Ahmet+Taner+K%C4%B1%C5%9Flal%C4%B1+Mahallesi+Alacaatl%C4%B1+Caddesi+%C3%87ankaya+Ankara',
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48987.993201827696!2d32.61309622167969!3d39.87984699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d339d3a54b5c3f%3A0x1bf7d42e17204a06!2zQW5rYXJhIFRhxZ_EsW1h!5e0!3m2!1str!2str!4v1791018911175!5m2!1str!2str',
+    // Yol tarifi ve JSON-LD hasMap: işletme kaydının kalıcı bağlantısı (cid).
+    placeUrl: 'https://www.google.com/maps?cid=2015312652693162502',
   },
 } as const
 
