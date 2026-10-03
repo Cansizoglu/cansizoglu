@@ -98,7 +98,7 @@ export function districtSections(district: District): DistrictSection[] {
       heading: `${d} Asansör Kiralama`,
       serviceSlug: 'ankara-asansor-kiralama',
       paragraphs: [
-        `Taşımayı kendiniz yapıyor, yalnızca birkaç büyük parçayı kata çıkarmanız gerekiyorsa ${d} içinde operatörlü mobil asansörümüzü saatlik olarak kiralayabilirsiniz. Mobilya ve beyaz eşyanın yanı sıra tadilat ve inşaat malzemesi taşımak için de kullanılabilir.`,
+        `${d} içinde yalnızca asansöre ihtiyacınız varsa, örneğin yeni aldığınız bir dolabı kata çıkaracak ya da tadilat malzemesini balkondan alacaksanız, mobil asansörümüz operatörüyle birlikte saat ücretiyle gelir. Mobilya ve beyaz eşyanın yanı sıra tadilat ve inşaat malzemesi taşımak için de kullanılabilir.`,
         `Asansör her zaman kendi operatörümüzle gönderilir; güvenlik gereği operatörsüz kiralama yapmıyoruz. Aracın yanaşabileceği düz bir alan ve eşyanın geçebileceği bir balkon veya geniş pencere yeterlidir.`,
       ],
       points: [

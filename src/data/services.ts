@@ -127,7 +127,7 @@ export const services: Service[] = [
       'Ankara asansör kiralama: operatörlü ev taşıma asansörü, saatlik ve günlük kiralama. Mobilya, beyaz eşya ve inşaat malzemesi taşımak için uygun.',
     icon: 'lift',
     intro: [
-      'Taşımayı kendiniz yapıyorsanız veya sadece birkaç büyük parçayı kata çıkarmanız gerekiyorsa, operatörlü asansörümüzü saatlik olarak kiralayabilirsiniz.',
+      'Bazen bütün bir ev taşınmaz; yeni alınan bir koltuk takımı ya da tadilat için gelen alçı torbaları dar merdivenden çıkmaz. Böyle işlerde ekibi değil yalnızca asansörü istersiniz: aracımız operatörüyle gelir, saat başı ücretlendirilir ve iş bitince ayrılır.',
       'Asansör kiralama; mobilya, beyaz eşya, inşaat ve tadilat malzemesi taşımak için de kullanılabilir.',
     ],
     features: [

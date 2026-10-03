@@ -13,6 +13,8 @@ const corporate = [
   { href: '/bolgeler', label: 'Hizmet Bölgeleri' },
   { href: '/sehirler-arasi', label: 'Şehirler Arası Nakliyat' },
   { href: '/nakliyat-fiyat-hesaplama', label: 'Fiyat Hesaplama' },
+  { href: '/esya-hacmi-hesaplama', label: 'Eşya Hacmi Hesaplama' },
+  { href: '/tasinma-kontrol-listesi', label: 'Taşınma Kontrol Listesi' },
   { href: '/galeri', label: 'Galeri' },
   { href: '/blog', label: 'Blog' },
   { href: '/fiyat-teklifi', label: 'Fiyat Teklifi' },

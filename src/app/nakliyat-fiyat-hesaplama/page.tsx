@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import SectionTitle from '@/components/SectionTitle'
 import PriceCalculator from '@/components/PriceCalculator'
+import VolumeCalculator from '@/components/VolumeCalculator'
 import { districts } from '@/data/districts'
 import PriceTable from '@/components/PriceTable'
 import CtaBand from '@/components/CtaBand'
@@ -44,7 +45,7 @@ export default function CalculatorPage() {
   return (
     <>
       <Breadcrumbs items={[{ name: 'Fiyat Hesaplama', path: '/nakliyat-fiyat-hesaplama' }]} />
-      <section className="py-12">
+      <section id="hesapla" className="scroll-mt-28 py-12">
         <div className="container-site">
           <SectionTitle
             as="h1"
@@ -59,6 +60,32 @@ export default function CalculatorPage() {
           <PriceCalculator
             districts={districts.map(({ slug, name, lat, lon }) => ({ slug, name, lat, lon }))}
           />
+        </div>
+      </section>
+
+      <section id="esya-listesi" className="border-t border-slate-100 py-9 sm:py-14">
+        <div className="container-site">
+          <SectionTitle
+            eyebrow="Ev tipinden emin değil misiniz?"
+            title={
+              <>
+                Eşyalarınızı sayın, <span className="hl">fiyat ona göre</span> hesaplansın
+              </>
+            }
+            description="Aşağıdan taşınacak eşyalarınızın adedini girin. Toplam hacme göre araç ve ekip önerisi çıkar; “Bu hacimle fiyat hesapla” butonuna bastığınızda yukarıdaki hesaplama size uygun ev tipiyle yeniden yapılır."
+          />
+          <VolumeCalculator />
+          <p className="mt-6 text-sm text-slate-600">
+            Hacme göre araç tablosu ve koli sayısı tahmini için{' '}
+            <Link href="/esya-hacmi-hesaplama" className="font-semibold text-brand-700 underline underline-offset-2">
+              eşya hacmi hesaplama
+            </Link>{' '}
+            sayfasına, tarihli hazırlık listesi için{' '}
+            <Link href="/tasinma-kontrol-listesi" className="font-semibold text-brand-700 underline underline-offset-2">
+              taşınma kontrol listesine
+            </Link>{' '}
+            bakabilirsiniz.
+          </p>
         </div>
       </section>
 

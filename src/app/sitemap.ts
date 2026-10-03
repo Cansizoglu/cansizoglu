@@ -28,6 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/iletisim`, changeFrequency: 'yearly', priority: 0.7 },
     { url: `${site.url}/galeri`, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${site.url}/nakliyat-fiyat-hesaplama`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${site.url}/esya-hacmi-hesaplama`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${site.url}/tasinma-kontrol-listesi`, changeFrequency: 'yearly', priority: 0.7 },
     { url: `${site.url}/blog`, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${site.url}/sehirler-arasi`, changeFrequency: 'monthly', priority: 0.9 },
     ...routes.map((route) => ({

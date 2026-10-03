@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import Icon from './Icon'
 import { calculator, homeTypes, formatTl } from '@/data/pricing'
@@ -32,6 +32,24 @@ function floorValue(label: string) {
   return Number(label)
 }
 
+/**
+ * Seçilen tarihin yoğun döneme denk gelip gelmediğini söyler. Fiyata
+ * eklenmez; ziyaretçiye sakin günleri önermek için kullanılır.
+ */
+function busyNote(value: string) {
+  if (!value) return null
+  const d = new Date(`${value}T12:00:00`)
+  const reasons: string[] = []
+  const day = d.getDate()
+  const last = new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate()
+  if (day <= 3 || day >= last - 2) reasons.push('ay başı / ay sonu')
+  if (d.getDay() === 0 || d.getDay() === 6) reasons.push('hafta sonu')
+  if (d.getMonth() >= 5 && d.getMonth() <= 8) reasons.push('yaz sezonu')
+  return reasons.length
+    ? `Seçtiğiniz gün yoğun döneme denk geliyor (${reasons.join(', ')}). Tarihinizi en az bir hafta önceden ayırtmanızı öneririz; esnekseniz ayın ortasındaki hafta içi günler daha rahattır.`
+    : 'Seçtiğiniz gün sakin bir döneme denk geliyor; istediğiniz saati almanız kolay olur.'
+}
+
 /** Hesaplama için gereken ilçe bilgisi; tam veri istemci paketine girmesin diye sayfadan geçiriliyor. */
 export type CalculatorDistrict = { slug: string; name: string; lat: number; lon: number }
 
@@ -44,6 +62,20 @@ export default function PriceCalculator({ districts }: { districts: CalculatorDi
   const [lift, setLift] = useState(true)
   const [packing, setPacking] = useState(true)
   const [storage, setStorage] = useState(false)
+  const [moveDate, setMoveDate] = useState('')
+
+  // Eşya hacmi aracından gelen ev tipi (?ev=2+1) seçili gelir.
+  useEffect(() => {
+    const ev = new URLSearchParams(window.location.search).get('ev')
+    if (ev && homeTypes.some((t) => t.id === ev)) setHomeType(ev)
+    // Aynı sayfadaki eşya hacmi aracı ev tipini olayla gönderir.
+    const onVolume = (e: Event) => {
+      const id = (e as CustomEvent<string>).detail
+      if (homeTypes.some((t) => t.id === id)) setHomeType(id)
+    }
+    window.addEventListener('hacim-ev-tipi', onVolume)
+    return () => window.removeEventListener('hacim-ev-tipi', onVolume)
+  }, [])
 
   const result = useMemo(() => {
     const from = districts.find((d) => d.slug === fromSlug)
@@ -92,7 +124,7 @@ export default function PriceCalculator({ districts }: { districts: CalculatorDi
           districts.find((d) => d.slug === fromSlug)?.name
         } (${fromFloor}. kat) adresinden ${
           districts.find((d) => d.slug === toSlug)?.name
-        } (${toFloor}. kat) adresine ${homeType} taşınacağım. Yaklaşık ${formatTl(
+        } (${toFloor}. kat) adresine ${homeType} taşınacağım${moveDate ? `, tarih ${moveDate}` : ''}. Yaklaşık ${formatTl(
           result.min,
         )} - ${formatTl(result.max)} ₺ çıktı, kesin fiyat için keşif istiyorum.`,
       )}`
@@ -177,6 +209,21 @@ export default function PriceCalculator({ districts }: { districts: CalculatorDi
           </label>
         </div>
 
+        <label className="mt-4 block text-sm font-medium text-brand-900">
+          Taşınma tarihi (isteğe bağlı)
+          <input
+            type="date"
+            className={selectClass}
+            value={moveDate}
+            onChange={(e) => setMoveDate(e.target.value)}
+          />
+        </label>
+        {busyNote(moveDate) ? (
+          <p className="mt-2 rounded-lg bg-brand-50 px-3 py-2 text-sm leading-6 text-brand-900">
+            {busyNote(moveDate)}
+          </p>
+        ) : null}
+
         <fieldset className="mt-5">
           <legend className="text-sm font-medium text-brand-900">Ek hizmetler</legend>
           <div className="mt-2 flex flex-wrap gap-2">
@@ -204,6 +251,13 @@ export default function PriceCalculator({ districts }: { districts: CalculatorDi
             ))}
           </div>
         </fieldset>
+        <p className="mt-5 text-sm text-slate-600">
+          Ev tipinden emin değil misiniz?{' '}
+          <a href="#esya-listesi" className="font-semibold text-brand-700 underline underline-offset-2">
+            Eşyalarınızı sayıp hacmi hesaplayın
+          </a>
+          , araç size uygun ev tipini seçsin.
+        </p>
       </div>
 
       <div className="lg:col-span-2 rounded-2xl bg-brand-900 p-5 text-white sm:p-6">
