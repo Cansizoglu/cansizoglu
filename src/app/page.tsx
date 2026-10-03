@@ -377,7 +377,7 @@ export default function HomePage() {
           <div className="prose-tr max-w-3xl">
             <p>
               {linkifyHome(
-                'Kimi müşterimiz bize evden eve nakliyat diye ulaşıyor, kimi evden eve taşıma, kimi de kısaca nakliye diyor. Bir kısmı taşıma şirketi veya taşıma firması arıyor, bir kısmı nakliyeci. Ankara nakliyat firmaları arasında arama yaparken kullandığınız kelime ne olursa olsun anlatılan iş aynı: eşyanızın sökülmesi, ambalajlanması, taşınması ve yeni adreste kurulması.',
+                'Kimi müşterimiz bize evden eve nakliyat diye ulaşıyor, kimi evden eve taşıma, kimi de kısaca nakliye diyor. Bir kısmı taşıma şirketi veya taşıma firması arıyor, bir kısmı nakliyeci. Ankara nakliyat firmaları, Ankara nakliye firmaları ya da Ankara taşımacılık firmaları diye arama yaparken kullandığınız kelime ne olursa olsun anlatılan iş aynı: eşyanızın sökülmesi, ambalajlanması, taşınması ve yeni adreste kurulması.',
               )}
             </p>
             <p>
@@ -387,7 +387,7 @@ export default function HomePage() {
             </p>
             <p>
               {linkifyHome(
-                'Ankara nakliyat fiyatları konusunda da durum aynı: ister ev taşıma fiyatı deyin ister nakliye fiyatı, rakamı belirleyen şey eşya miktarı, kat, asansör ihtiyacı ve mesafedir. Fiyatı keşifte yazılı veriyoruz ve taşıma günü değiştirmiyoruz.',
+                'Ankara nakliyat fiyatları konusunda da durum aynı: ister Ankara ev taşıma fiyatları deyin, ister nakliye fiyatı ya da Ankara içi eşya taşıma ücretleri, rakamı belirleyen şey eşya miktarı, kat, asansör ihtiyacı ve mesafedir. Fiyatı keşifte yazılı veriyoruz ve taşıma günü değiştirmiyoruz.',
               )}
             </p>
           </div>

@@ -51,7 +51,7 @@ export const homeArticles: HomeArticle[] = [
     label: 'Ankara Ev Taşıma',
     heading: 'Ankara Ev Taşıma Sürecinde Nelere Dikkat Etmeli?',
     paragraphs: [
-      'Ankara ev taşıma sürecinde en çok yapılan hata, her şeyin son iki güne bırakılmasıdır. Oysa iyi bir taşınma iki hafta önce başlar: taşınma tarihi netleşir, keşif yapılır, kullanılmayan eşyalar ayrılır ve abonelik nakilleri başlatılır. Bu hazırlık yapıldığında taşıma günü yalnızca eşyanın araca yüklendiği bir güne dönüşür.',
+      'Ankara ev taşıma sürecinde en çok yapılan hata, her şeyin son iki güne bırakılmasıdır. Oysa iyi bir taşınma iki hafta önce başlar: taşınma tarihi netleşir, keşif yapılır, kullanılmayan eşyalar ayrılır ve abonelik nakilleri başlatılır. Bu hazırlık yapıldığında taşıma günü yalnızca eşyanın araca yüklendiği bir güne dönüşür. Ev taşıma kolisi, streç film ve balonlu naylonu keşiften sonra biz getiriyoruz; ayrıca malzeme almanıza gerek kalmıyor.',
       'İkinci sık hata, telefonda verilen düşük fiyata güvenmektir. Eşya görülmeden verilen fiyat, taşıma günü eşya araca yüklendikten sonra yükselme eğilimindedir. Biz bu yüzden hiçbir işe keşif yapmadan fiyat vermiyoruz; verdiğimiz fiyatı da sözleşmeye yazıyoruz.',
       'Üçüncü konu zamanlamadır. Ay başı, ay sonu ve yaz ayları Ankara’da nakliyatın en yoğun olduğu dönemlerdir. Taşınma tarihinizi en az bir hafta önceden ayırtmanız, hem istediğiniz saati almanızı hem de ekibin işi acele etmeden yapmasını sağlar.',
     ],
@@ -70,7 +70,7 @@ export const homeArticles: HomeArticle[] = [
     paragraphs: [
       'Nakliyatta herkes için geçerli tek bir fiyat yoktur. Ankara evden eve nakliyat fiyatları; eşya miktarı, çıkış ve varış katı, asansör ihtiyacı, iki adres arası mesafe ve istenen ek hizmetlere göre belirlenir. Aynı büyüklükteki iki evin fiyatı, biri asansörlü binada diğeri dördüncü katta asansörsüz binadaysa birbirinden belirgin şekilde farklı çıkar.',
       'Fiyat karşılaştırırken dikkat edilmesi gereken şey, fiyatın neyi kapsadığıdır. Ambalaj malzemesi dahil mi, montaj var mı, sigorta yapılıyor mu, asansör ücreti ayrı mı? Bizde ambalaj malzemesi, paketleme işçiliği, söküm ve montaj ile sigorta verilen fiyatın içindedir; sonradan ek kalem çıkmaz.',
-      'Aşağıdaki tabloda ortalama fiyat aralıklarımızı paylaşıyoruz. Net fiyat için ücretsiz keşif yapıyor ve fiyatı yazılı olarak veriyoruz.',
+      'Aşağıdaki tabloda 2026 yılı için ortalama Ankara nakliyat ücretlerini ve ev taşıma fiyatlarını daire tipine göre paylaşıyoruz. Net fiyat için ücretsiz keşif yapıyor ve fiyatı yazılı olarak veriyoruz.',
     ],
     bullets: [
       { title: 'Eşya hacmi', text: 'Kaç parça eşya taşınacağı ana etkendir.' },
@@ -102,7 +102,7 @@ export const homeArticles: HomeArticle[] = [
     label: 'Ankara Taşıma Şirketleri',
     heading: 'Ankara Taşıma Şirketleri Arasından Doğru Firmayı Seçmek',
     paragraphs: [
-      'Ankara taşıma şirketleri arasında seçim yaparken bakılması gereken ilk şey, firmanın kendi aracı ve ekibi olup olmadığıdır. İşi aldıktan sonra araç ve eleman arayan firmalarda taşıma günü kimin geleceği belli olmaz. Ankara Taşıma olarak araç, taşıma asansörü ve personelin tamamı bize aittir.',
+      'Ankara nakliyat firmaları ve taşıma şirketleri arasında seçim yaparken, ya da çevrenizden nakliyat tavsiyesi isterken bakılması gereken ilk şey, firmanın kendi aracı ve ekibi olup olmadığıdır. İşi aldıktan sonra araç ve eleman arayan firmalarda taşıma günü kimin geleceği belli olmaz. Ankara Taşıma olarak araç, taşıma asansörü ve personelin tamamı bize aittir.',
       'İkinci bakılacak şey keşif ve sözleşmedir. Adrese gelip eşyayı görmeden fiyat veren, sözleşme imzalamaktan kaçınan bir firmayla çalışmak risklidir. Üçüncüsü ise referanstır: firmanın gerçek müşteri yorumları, sosyal medya hesapları ve sahadaki araçları görünür olmalıdır.',
       'Ankara Taşıma’nın açık adresi ve sabit telefon hattı var; ofisimiz Çankaya Çayyolu’nda. Taşınma gibi insanın bütün evini bir güne emanet ettiği bir işte en büyük teminat, taşıma bittikten sonra da ulaşabileceğiniz, işinin arkasında duran bir firmayla çalışmaktır.',
     ],
@@ -120,7 +120,7 @@ export const homeArticles: HomeArticle[] = [
     heading: 'Ankara Asansörlü Nakliyat Ne Zaman Gerekir?',
     paragraphs: [
       'Ankara asansörlü nakliyat, ilçelerin büyük bölümündeki bina stoğu yüzünden istisna değil, kural hâline gelmiş bir hizmettir. Keçiören, Altındağ ve Mamak gibi ilçelerde apartmanların çoğu asansörsüzdür ve merdiven boşlukları koltuk, dolap, buzdolabı gibi büyük parçaların geçmesine izin vermez. Mobil taşıma asansörü bu noktada eşyayı pencereden indirerek hem süreyi hem hasar riskini düşürür.',
-      'Asansörün asıl faydası, çoğu kişinin düşündüğünün aksine sadece kolaylık değil maliyettir. Asansörsüz 4. kattan yapılan bir taşımada merdivende geçen saatler işçiliğe yansır; aynı iş asansörle üç dört saat kısalır. Bu yüzden 3. kat ve üzerindeki taşımalarda asansör, toplam fiyatı çoğu zaman aşağı çeker.',
+      'Asansörün asıl faydası, çoğu kişinin düşündüğünün aksine sadece kolaylık değil maliyettir. Asansörsüz 4. kattan yapılan bir taşımada merdivende geçen saatler işçiliğe yansır; aynı iş asansörle üç dört saat kısalır. Bu yüzden 3. kat ve üzerindeki taşımalarda asansör, toplam fiyatı çoğu zaman aşağı çeker. Ankara asansörlü nakliyat fiyatlarını ayrı bir kalem olarak değil, taşıma fiyatının içinde veriyoruz; şehir içi asansörlü nakliyatta ek asansör ücreti çıkmaz.',
       'Mobil asansörlerimiz firmamıza aittir ve taşıma ekibiyle aynı saatte adreste olur. Asansörün kurulacağı alan keşif sırasında belirlenir; sokak eğimliyse ya da park doluysa aracın konumlanacağı yer önceden ayarlanır. Böylece taşıma günü asansör bekleme gibi bir sorun yaşanmaz.',
     ],
     bullets: [
@@ -151,9 +151,9 @@ export const homeArticles: HomeArticle[] = [
   {
     id: 'ankara-parca-esya-tasima',
     label: 'Ankara Parça Eşya Taşıma',
-    heading: 'Ankara Parça Eşya Taşıma ve Tek Eşya Nakliyesi',
+    heading: 'Ankara Parça Eşya ve Küçük Eşya Taşıma',
     paragraphs: [
-      'Ankara parça eşya taşıma, tüm evi değil yalnızca birkaç parçayı taşımanız gereken durumlar için verdiğimiz hizmettir. Yeni aldığınız bir koltuk takımı, ikinci el bir beyaz eşya, öğrenci evinden alınan birkaç mobilya ya da depoya kaldırılacak eşyalar bu kapsama girer. Tam ev taşıma fiyatı ödemenize gerek kalmaz.',
+      'Ankara parça eşya taşıma, tüm evi değil yalnızca birkaç parçayı taşımanız gereken durumlar için verdiğimiz hizmettir. Yeni aldığınız bir koltuk takımı, ikinci el bir beyaz eşya, öğrenci evinden alınan birkaç mobilya ya da depoya kaldırılacak eşyalar bu kapsama girer. Tam ev taşıma fiyatı ödemenize gerek kalmaz; eşya taşıma ücretleri eşyanın kapladığı hacme ve kat durumuna göre hesaplanır.',
       'Bu işlerde en sık yapılan hata, eşyayı ambalajsız taşımaktır. Tek parça bile olsa koltuk streçlenmeden, dolap köşeleri korunmadan araca yüklendiğinde çizik ve ezik kaçınılmazdır. Parça eşya taşımalarında da aynı ambalaj standardını uyguluyoruz.',
       'Parça eşya taşımaları genellikle 1-2 saatte tamamlanır ve çoğu zaman aynı gün içinde randevu verilebilir. Asansör gerekiyorsa mobil asansörümüz bu işler için de aynı şekilde kurulur.',
     ],

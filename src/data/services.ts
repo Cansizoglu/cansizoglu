@@ -64,9 +64,9 @@ export const services: Service[] = [
     h1: 'Ankara Asansörlü Nakliyat',
     short:
       'Dar merdiven ve yüksek katlarda eşyayı pencereden güvenle indirip çıkarıyoruz.',
-    metaTitle: 'Ankara Asansörlü Nakliyat | Mobil Taşıma Asansörü',
+    metaTitle: 'Ankara Asansörlü Nakliyat ve Asansörlü Eşya Taşıma',
     metaDescription:
-      'Ankara asansörlü nakliyat: 1. kattan 12. kata kadar mobil asansörle hızlı, çizilmeden ve güvenli taşıma. Aynı gün asansörlü taşıma randevusu.',
+      'Ankara asansörlü nakliyat: şehir içi asansörlü ev ve eşya taşıma, 12. kata kadar mobil asansör. Asansörlü nakliyat fiyatları keşifte yazılı verilir.',
     icon: 'lift',
     intro: [
       'Dar merdivenli binalarda eşyayı merdivenden indirmek hem riskli hem de yavaştır. Mobil taşıma asansörü, eşyayı balkondan veya pencereden doğrudan araca indirir; duvar, korkuluk ve mobilya zarar görmez.',
@@ -95,9 +95,9 @@ export const services: Service[] = [
     title: 'Ankara Şehir İçi Nakliyat',
     h1: 'Ankara Şehir İçi Nakliyat',
     short: 'Ankara içinde ilçeden ilçeye aynı gün taşıma ve parça eşya nakliyesi.',
-    metaTitle: 'Ankara Şehir İçi Nakliyat | Aynı Gün Taşıma',
+    metaTitle: 'Ankara Şehir İçi Nakliyat | Ankara İçi Ev Taşıma',
     metaDescription:
-      'Ankara şehir içi nakliyat: ilçeden ilçeye aynı gün ev ve parça eşya taşıma. Kapalı kasa araç, sigortalı ve ambalajlı taşımacılık.',
+      'Ankara şehir içi nakliyat ve Ankara içi ev taşıma: ilçeden ilçeye aynı gün ev ve eşya taşımacılığı. Kapalı kasa araç, sigortalı ve ambalajlı taşıma.',
     icon: 'truck',
     intro: [
       'Ankara içinde ilçeden ilçeye yapılan taşımalarda önemli olan planlamadır. Trafik yoğunluğu, sokak genişliği ve otopark durumu taşıma süresini doğrudan etkiler.',
@@ -122,9 +122,9 @@ export const services: Service[] = [
     title: 'Ankara Asansör Kiralama',
     h1: 'Ankara Asansör Kiralama',
     short: 'Saatlik ve günlük mobil taşıma asansörü kiralama, operatör dahil.',
-    metaTitle: 'Ankara Asansör Kiralama | Saatlik Mobil Taşıma Asansörü',
+    metaTitle: 'Ankara Asansör Kiralama | Ev Taşıma Asansörü',
     metaDescription:
-      'Ankara asansör kiralama: operatörlü mobil taşıma asansörü, saatlik ve günlük kiralama. Mobilya, beyaz eşya ve inşaat malzemesi taşımak için uygun.',
+      'Ankara asansör kiralama: operatörlü ev taşıma asansörü, saatlik ve günlük kiralama. Mobilya, beyaz eşya ve inşaat malzemesi taşımak için uygun.',
     icon: 'lift',
     intro: [
       'Taşımayı kendiniz yapıyorsanız veya sadece birkaç büyük parçayı kata çıkarmanız gerekiyorsa, operatörlü asansörümüzü saatlik olarak kiralayabilirsiniz.',
@@ -248,7 +248,7 @@ export const services: Service[] = [
     title: 'Ambalajlı Taşıma',
     h1: 'Ambalajlı Taşıma ve Paketleme',
     short: 'Her eşya cinsine uygun profesyonel ambalaj malzemesiyle paketlenir.',
-    metaTitle: 'Ambalajlı Taşıma Ankara | Profesyonel Paketleme Hizmeti',
+    metaTitle: 'Ambalajlı Taşıma Ankara | Paketleme ve Taşıma Kolisi',
     metaDescription:
       'Ankara ambalajlı taşıma: balonlu naylon, streç film, kraft kâğıt ve çok katlı koli ile profesyonel paketleme hizmeti.',
     icon: 'box',
@@ -325,9 +325,9 @@ export const services: Service[] = [
     title: 'Parça Eşya Taşıma',
     h1: 'Ankara Parça Eşya Taşıma',
     short: 'Tek koltuk, beyaz eşya veya birkaç koli için uygun fiyatlı taşıma.',
-    metaTitle: 'Ankara Parça Eşya Taşıma | Tek Eşya Nakliyesi',
+    metaTitle: 'Ankara Parça Eşya Taşıma | Küçük Eşya Nakliyesi',
     metaDescription:
-      'Ankara parça eşya taşıma: tek koltuk, buzdolabı, çamaşır makinesi veya birkaç koli için uygun fiyatlı, aynı gün taşıma hizmeti.',
+      'Ankara parça ve küçük eşya taşıma: tek koltuk, buzdolabı, çamaşır makinesi veya birkaç koli. Eşya taşıma ücretleri hacme göre, aynı gün randevu.',
     icon: 'package',
     intro: [
       'Bütün evi taşımanız gerekmiyorsa tam kapasite araç kiralamak gereksiz masraftır.',

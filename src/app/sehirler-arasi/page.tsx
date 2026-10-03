@@ -13,7 +13,7 @@ import { pageMeta } from '@/lib/seo'
 export const metadata: Metadata = pageMeta({
   title: 'Ankara Şehirler Arası Evden Eve Nakliyat',
   description:
-    'Ankara’dan İstanbul, İzmir, Antalya, Gaziantep ve diğer illere şehirler arası evden eve nakliyat. Aktarmasız taşıma, ambalaj ve montaj dahil, ücretsiz keşif.',
+    'Ankara şehirlerarası nakliyat ve ev taşıma: İstanbul, İzmir, Antalya, Gaziantep ve diğer illere aktarmasız evden eve nakliyat. Ambalaj ve montaj dahil.',
   path: '/sehirler-arasi',
 })
 
