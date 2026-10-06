@@ -816,6 +816,112 @@ export const posts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'mobilya-sokum-ve-montaj-rehberi',
+    title: 'Mobilya Söküm ve Montaj: Taşınmada Nelere Dikkat Ediyoruz',
+    metaTitle: 'Mobilya Söküm ve Montaj Rehberi',
+    metaDescription:
+      'Mobilya söküm ve montajda hangi parça sökülür, vidalar nasıl saklanır, suntada neye dikkat edilir? Ankara’da sahada uyguladığımız yöntemi anlattık.',
+    excerpt:
+      'Taşınmada hasarın çoğu söküm ve montaj sırasında çıkar. Hangi mobilya sökülür, vidalar nerede durur, montaj yeni eve göre nasıl yapılır?',
+    date: '2026-10-06',
+    readingMinutes: 7,
+    image: {
+      src: '/img/paketlenmis-mobilyalar.webp',
+      width: 1047,
+      height: 1119,
+      alt: 'Parçalarına ayrılıp kırmızı ve mavi nakliye örtüleriyle sarılmış koltuk takımı ve yataklar',
+      title: 'Ambalajlanmış koltuk takımı parçaları',
+      caption: 'Sökülen parçalar ayrı ayrı sarılıp yüklemeden önce aynı odada toplanıyor.',
+      description: 'Boşaltılmış bir odada, kırmızı ve mavi nakliye örtüleriyle kaplanıp streç filmle sarılmış koltuk, berjer, puf ve yatak parçaları yan yana bekliyor.',
+    },
+    body: [
+      {
+        type: 'p',
+        text: 'Taşınmada hasarın çoğu kırılan bir bardaktan değil, yanlış sökülen bir mobilyadan çıkar. İş görünüşte basittir, bir tornavida bulan herkes başlayabilir. Ama mobilyanın hangi sırayla açılacağını, hangi parçanın ikinci montaja dayanmayacağını ve yeni evde neyin değişeceğini bilmek gerekir. Aşağıda Ankara’da her hafta yaptığımız söküm ve montaj işinde nelere dikkat ettiğimizi anlattık.',
+      },
+      { type: 'h2', text: 'Hangi mobilya sökülür, hangisi sökülmeden taşınır?' },
+      {
+        type: 'p',
+        text: 'Her mobilyayı sökmek gerekmiyor. Söküm, parçayı küçültüp kapıdan, merdivenden ya da asansörden geçirmek için yapılan bir iştir. Eşya olduğu gibi çıkabiliyorsa ya da binada mobil asansör kurulabiliyorsa sökmeden taşımayı tercih ediyoruz, çünkü her söküm mobilyanın birleşim noktalarını bir kez daha yorar. Genel ayrımımız şöyle:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Genelde sökülenler: gardırop, karyola ve baza, yemek masası ayakları, büyük televizyon ünitesi, raflı kitaplık, köşe koltuk modülleri.',
+          'Genelde sökülmeyenler: tek parça koltuk ve berjer, komodin, şifonyer, küçük sehpa, beyaz eşya.',
+          'Sökmesi riskli olanlar: çok eski masif dolaplar, cam kapaklı vitrinler, marangoz işi özel mobilyalar. Bunları zorunlu kalmadıkça açmıyoruz.',
+        ],
+      },
+      { type: 'h2', text: 'Sökülmeyen mobilya kapıdan çıkmazsa' },
+      {
+        type: 'p',
+        text: 'Bazı mobilyalar ya hiç sökülmez ya da sökülmesi mobilyayı bitirir. Tek parça masif yemek masası, büyük cam vitrin ve bazı köşe koltuklar böyledir. Kapıdan, sahanlıktan ve asansör kabininden geçmiyorsa iki yolumuz kalır: balkondan ya da pencereden asansörle almak, veya o mobilyayı taşımamaya karar vermek. Keşifte kapı genişliğini, merdiven sahanlığını ve balkon korkuluğunu ölçmemizin sebebi bu. Ölçüyü taşıma sabahı değil, tarih verirken bilmek istiyoruz.',
+      },
+      { type: 'h2', text: 'Söküme başlamadan fotoğraf çekiyoruz' },
+      {
+        type: 'p',
+        text: 'Montajda en çok vakit, parçanın hangi yöne baktığını hatırlamaya çalışırken gider. Bu yüzden söküme başlamadan mobilyanın birkaç açıdan fotoğrafını alıyoruz. Arkalığın yönü, rafların sırası, menteşenin tarafı ve kapak hizası fotoğraftan çok hızlı anlaşılıyor. Siz de kendi telefonunuzdan birkaç kare çekerseniz, yeni evde kapak hizasını tartışmak zorunda kalmazsınız.',
+      },
+      { type: 'h2', text: 'Vidalar nereye gidiyor?' },
+      {
+        type: 'p',
+        text: 'Kaybolan bir vida, montajı saatlerce uzatabilen tek şeydir. Bütün vidaları aynı kutuda toplamak pratik görünür, ama yeni evde hangi vidanın nereye ait olduğunu ayırmak uzun sürer. Bizim yöntemimiz basit:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Her mobilyanın vidası, dübeli ve küçük parçası kendi kilitli poşetine girer.',
+          'Poşetin üstüne mobilyanın adı yazılır.',
+          'Poşet, ait olduğu parçanın üstüne bantlanır.',
+          'Sökülen menteşe, kulp ve mobilyadan çıkan montaj anahtarı da aynı poşette durur.',
+        ],
+      },
+      { type: 'h2', text: 'Suntada tek şansınız vardır' },
+      {
+        type: 'p',
+        text: 'Masif ahşap mobilya sökülüp yeniden toplanmaya nispeten dayanıklıdır. Sunta ve MDF ise öyle değil. Vida bir kez söküldüğünde yuvası genişler, ikinci montajda aynı sıkılığı vermez. Bu yüzden sunta mobilyada gereksiz söküm yapmıyor, zorunlu olduğunda da vidayı aşırı sıkmadan çalışıyoruz. Yuvası boşalmış bir vida için yeni evde dübel ya da tutkal gerekiyorsa bunu o anda size söylüyoruz, sonradan sallanan bir dolapla karşılaşmayın.',
+      },
+      {
+        type: 'p',
+        text: 'Mobilyanın dış yüzeyi de en az birleşim yerleri kadar hassas. Söktüğümüz her parçayı ayrı sarıyor, kapakları ve cam rafları kendi başına ambalajlıyoruz. Hangi malzemenin nerede kullanıldığını eşya paketleme yazımızda ayrıntılı anlattık.',
+      },
+      { type: 'h2', text: 'Gardırop, karyola ve yatak odası' },
+      {
+        type: 'p',
+        text: 'Yatak odası, sökümün en çok işe yaradığı yer. Gardıropta önce kapaklar çıkar, sonra raflar alınır, en son gövde yan panellere ayrılır. Aynalı kapaklar ayrı sarılır ve yatay istiflenmez, ayakta taşınır. Karyolada baza ile başlık ayrılır, baza sandıklıysa kapağı taşıma boyunca sabitlenir. Yatağı katlamıyoruz; yatak kılıfına geçirip düz taşıyoruz, çünkü katlanan yaylı yatak eski hâline dönmüyor.',
+      },
+      { type: 'h2', text: 'Mutfak, ankastre ve duvara sabit parçalar' },
+      {
+        type: 'p',
+        text: 'Mutfak dolapları çoğu taşımada yerinde kalır, ama ankastre fırın, ocak ve davlumbaz sökülür. Gaz bağlantısı olan cihazlarda sökümü yetkili servise bırakmanızı öneriyoruz, biz gaz hattına müdahale etmiyoruz. Duvara monte televizyon askısı, raf ve perde kornişlerini biz söküyoruz, bunların vidaları da kendi poşetine giriyor. Kombi ve klima de servis işi, randevusunu taşıma gününden ayrı bir güne almak en rahatı.',
+      },
+      { type: 'h2', text: 'Yeni evde montaj neye göre yapılıyor?' },
+      {
+        type: 'p',
+        text: 'Montaj, sökümün aynen tersi değildir; yeni evin şartlarına göre yapılır. Vardığımızda üç şeye bakıyoruz: zeminin düzlüğü, duvarın cinsi ve prizlerin yeri. Zemin düzgün değilse gardırop kapakları hizalanmaz, ayak altına takoz koymak gerekir. Duvar alçıpan ya da gazbetonsa normal dübel tutmaz, o duvara uygun dübel kullanılır. Prizi arkasında kalacak bir ünite varsa, mobilyayı duvara dayamadan önce kabloyu geçiriyoruz.',
+      },
+      {
+        type: 'p',
+        text: 'Montajı aynı gün bitiriyoruz. Eşya yerleştikten sonra kapak hizalarını, çekmece raylarını ve dolap ayaklarını birlikte kontrol ediyoruz. O sırada fark edilen bir aksaklık biz oradayken birkaç dakikada çözülür, ertesi güne kalırsa iş büyür.',
+      },
+      { type: 'h2', text: 'Sizden beklediğimiz birkaç şey' },
+      {
+        type: 'ul',
+        items: [
+          'Dolap, çekmece ve raflar taşıma gününden önce boşalmış olsun.',
+          'Sökülecek mobilyanın etrafında çalışma alanı kalsın.',
+          'Daha önce sökülüp yanlış monte edilmiş, sallanan bir mobilya varsa önceden söyleyin.',
+          'Yeni evde hangi mobilyanın nereye konacağına önceden karar verin, montaj ona göre yapılır.',
+          'Servis gerektiren cihazların randevusunu taşıma saatine denk getirmeyin.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Keşif sırasında hangi mobilyanın sökülmesi gerektiğini yerinde belirliyor, aynalı ve cam parçaları ayrıca not ediyoruz. Böylece taşıma günü sürpriz olmuyor ve ekip yanında doğru aparatla geliyor. Ankara içinde ya da şehirler arası taşınacaksanız ücretsiz keşif için bize ulaşabilirsiniz.',
+      },
+    ],
+  },
 ]
 
 export const postBySlug = (slug: string) => posts.find((p) => p.slug === slug)
