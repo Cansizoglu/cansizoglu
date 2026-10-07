@@ -8,6 +8,30 @@ import { site } from '@/data/site'
  */
 const isProduction = !process.env.VERCEL_ENV || process.env.VERCEL_ENV === 'production'
 
+/**
+ * SEO analiz araçlarının (Ahrefs, Semrush, Majestic vb.) tarayıcıları.
+ * Arama motorlarını etkilemez; sadece bu araçların sitemizin sayfalarını ve
+ * sitemizden çıkan linkleri görmesini engeller. Bize gelen linkler başka
+ * sitelerden tarandığı için bu araçlarda yine görünür.
+ */
+const seoToolBots = [
+  'AhrefsBot',
+  'AhrefsSiteAudit',
+  'SemrushBot',
+  'SiteAuditBot',
+  'MJ12bot',
+  'DotBot',
+  'rogerbot',
+  'BLEXBot',
+  'DataForSeoBot',
+  'serpstatbot',
+  'SEOkicks',
+  'Barkrowler',
+  'MegaIndex',
+  'linkdexbot',
+  'Screaming Frog SEO Spider',
+]
+
 export default function robots(): MetadataRoute.Robots {
   if (!isProduction) {
     return { rules: [{ userAgent: '*', disallow: '/' }] }
@@ -19,6 +43,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/'],
       },
+      { userAgent: seoToolBots, disallow: '/' },
     ],
     sitemap: `${site.url}/sitemap.xml`,
     host: site.url,
