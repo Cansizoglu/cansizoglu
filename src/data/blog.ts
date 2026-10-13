@@ -922,6 +922,115 @@ export const posts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'evcil-hayvanla-tasinmak-rehberi',
+    title: 'Evcil Hayvanla Taşınmak: Kedi ve Köpek İçin Taşınma Günü',
+    metaTitle: 'Evcil Hayvanla Taşınmak Rehberi',
+    metaDescription:
+      'Kedi ve köpekle taşınırken hangi oda ayrılır, taşıyıcı kutuya nasıl alıştırılır, yeni evde ilk gün nasıl geçer? Ankara’daki saha notlarımız.',
+    excerpt:
+      'Hayvanı asıl huzursuz eden taşıma değil, evin günler öncesinden şekil değiştirmesi. Taşıma gününü ikiniz için de sakin geçirmenin yolları.',
+    date: '2026-10-13',
+    readingMinutes: 7,
+    image: {
+      src: '/img/paketli-esyalar-oda.webp',
+      width: 1200,
+      height: 600,
+      alt: 'Boşalmış bir odada duvar kenarına dizilmiş, pembe ve mavi örtülerle sarılı eşyalar',
+      title: 'Paketlenmiş eşyalarla boşalan oda',
+      caption: 'Ev bu hâle geldiğinde hayvan için tanıdık düzen de ortadan kalkmış oluyor.',
+      description: 'Boşaltılmış bir odanın duvarlarına yaslanmış, pembe ve mavi nakliye örtüleriyle kaplanıp streç filmle sarılmış koltuk, yatak ve dolap parçaları.',
+    },
+    body: [
+      {
+        type: 'p',
+        text: 'Taşınma, evdeki en sakin canlıyı bile huzursuz eder. Kedisi günlerce kanepenin altından çıkmayan, köpeği yeni evde geceleri yerinde duramayan evleri sık görüyoruz. İyi tarafı şu: bu huzursuzluğun büyük kısmı önlenebilir bir şey. Çünkü hayvanı asıl rahatsız eden taşımanın kendisi değil, evin günler öncesinden şekil değiştirmesi. Aşağıda evcil hayvanıyla taşınanlara önerdiklerimizi topladık.',
+      },
+      { type: 'h2', text: 'Hayvanı asıl rahatsız eden, evin değişmesi' },
+      {
+        type: 'p',
+        text: 'Hayvanlar evi koku ve düzen üzerinden tanır. Kolilerin ortaya çıkması, mobilyaların yerinden oynaması ve odaların boşalması onlar için evin ortadan kalkması demektir. Bu yüzden stres taşıma gününde değil, paketleme başladığı gün başlar. Paketlemeyi birkaç güne yayar ve hayvanın en çok vakit geçirdiği odayı en sona bırakırsanız, süreci baştan yumuşatmış olursunuz.',
+      },
+      { type: 'h2', text: 'Taşıyıcı kutuyu haftalar öncesinden ortaya çıkarın' },
+      {
+        type: 'p',
+        text: 'Taşıyıcı kutuyu yılda bir kez, sadece veterinere giderken çıkarıyorsanız hayvan o kutuyu kötü bir şeyle eşleştirmiştir. Taşıma tarihinden birkaç hafta önce kutuyu salonun bir köşesine kapısı açık bırakın, içine kendi battaniyesini ve birkaç ödül maması koyun. Kendisi girip çıksın, uyusun. Taşıma günü yapmanız gereken tek şey kapısını kapatmak olur.',
+      },
+      {
+        type: 'p',
+        text: 'Köpekler için de mantık aynı. Taşıma günü kullanacağınız tasma, taşıma çantası ya da araç kemeri varsa birkaç gün önceden denenmiş olsun; o gün ilk kez takılan bir şey işi zorlaştırır.',
+      },
+      { type: 'h2', text: 'Taşıma günü bir odayı tamamen ayırın' },
+      {
+        type: 'p',
+        text: 'Taşıma günü ev kapısı saatlerce açık kalır, merdivende sürekli gidiş geliş olur. Kaçma riskinin en yüksek olduğu an burasıdır. Ekibimiz eve girmeden önce evde hayvan olup olmadığını soruyor, çünkü açık kalan bir apartman kapısı yüzünden kaybolan kedi, taşınmanın en kötü ihtimali.',
+      },
+      {
+        type: 'p',
+        text: 'Çözüm basit: en son boşaltılacak bir odayı hayvana ayırın ve kapısına “içeride hayvan var, açmayın” diye bir kâğıt asın. Odada mama, su, tuvalet kabı ve tanıdık bir battaniye bulunsun. Sıra o odaya geldiğinde hayvanı taşıyıcı kutusuna alıp doğrudan kendi aracınıza götürün.',
+      },
+      { type: 'h2', text: 'Kedi, köpek ve kafes hayvanları aynı değildir' },
+      {
+        type: 'ul',
+        items: [
+          'Kedi saklanır. Taşıma günü serbest gezerse büyük ihtimalle bir dolabın arkasına girer ve yükleme sırasında bulunamaz. Kapalı oda ve kapalı taşıyıcı şart.',
+          'Köpek huzursuzlanıp ayak altında dolaşır. Mümkünse o gün bir yakınınızda ya da gündüz bakımında kalması ikisi için de rahat olur.',
+          'Kuş ani sesten ve hava akımından etkilenir. Kafesi örtüyle gölgeleyin, kapılar açıkken kafesi koridora ya da kapı önüne koymayın.',
+          'Akvaryum en zahmetlisi. Balıklar ayrı kapta, suyun bir kısmı saklanarak taşınır; akvaryum boş ve kuru gider. Bunu taşıma gününden önce planlayın.',
+        ],
+      },
+      { type: 'h2', text: 'Hayvanı kendi aracınızda taşıyın' },
+      {
+        type: 'p',
+        text: 'Nakliye aracının kasası eşya için tasarlanmıştır. Havalandırması, ısısı ve yol boyunca aldığı sarsıntı canlı taşımaya uygun değildir; biz hiçbir koşulda hayvanı kasada taşımıyoruz. Hayvanın yeri sizin aracınızın içi. Taşıyıcı kutuyu koltuğa sabitleyin, camı tam açmayın, klimayı doğrudan kutuya üflemeyin. Yol uzunsa mola verin ama kutuyu araç dışında açmayın.',
+      },
+      { type: 'h2', text: 'Yolculuk kaygısı varsa veterinerinize önceden sorun' },
+      {
+        type: 'p',
+        text: 'Araçta aşırı huzursuzlanan, salyası akan ya da kusan bir hayvanınız varsa bunu taşıma gününe bırakmayın. Veterinerinizle önceden konuşun; yol öncesi beslenme düzeninden sakinleştirici kullanımına kadar kararı o verir, internetteki önerilerle kendi başınıza ilaç vermeyin. Uzun yol planlıyorsanız randevuyu taşımadan birkaç gün önceye alın ki önerilen yöntemi kısa bir araç yolculuğunda deneme şansınız olsun.',
+      },
+      { type: 'h2', text: 'Şehirler arası taşımada fazladan plan gerekir' },
+      {
+        type: 'p',
+        text: 'Ankara içinde taşınmak hayvan için birkaç saatlik bir mesele. Şehirler arası taşımada ise yol saatler sürer ve gün çok uzar. Böyle durumlarda hayvanı eşyadan bir gün önce yeni şehre götürmek ya da eşya yerleştikten sonra almak genellikle daha iyi sonuç veriyor. Tarihi konuşurken evde hayvan olduğunu söyleyin, programı buna göre kuralım.',
+      },
+      { type: 'h2', text: 'Yeni evde ilk gün' },
+      {
+        type: 'p',
+        text: 'Yeni eve varınca hayvanı hemen serbest bırakmayın. Önce tek bir odayı hazırlayın: mama, su, tuvalet kabı, eski battaniyesi ve eski evden gelen tanıdık bir eşya. Kapıyı kapatıp taşıyıcıyı o odada açın. Eşya yerleşip ekip evden çıktıktan sonra kapıyı aralayın, hayvan evi kendi hızında keşfetsin.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Eski battaniye ve oyuncakları ilk günlerde yıkamayın, tanıdık koku hayvanı rahatlatıyor.',
+          'Balkon kapısını, sineklikleri ve pencere kilitlerini hayvan dolaşmaya başlamadan önce kontrol edin.',
+          'Kedi tuvaletini eski evdeki kumla doldurup üstüne yeni kum ekleyin.',
+          'İlk birkaç gün hayvanı dışarı çıkarmayın, köpeği de tasmasız gezdirmeyin.',
+        ],
+      },
+      { type: 'h2', text: 'Adres değişikliğini kayıtlara da işleyin' },
+      {
+        type: 'p',
+        text: 'Hayvanın çipi varsa kayıtlı adres ve telefonu güncelletin; kaybolma durumunda bulan kişinin ulaşacağı bilgi orasıdır. Aşı karnesini kolilerin arasına koymayın, el çantanızda tutun. Yeni mahallenizdeki veterineri ve gece açık olan en yakın kliniği taşınmadan önce not edin, ihtiyaç olduğunda aramak için vakit kalmıyor.',
+      },
+      { type: 'h2', text: 'Kısa liste' },
+      {
+        type: 'ul',
+        items: [
+          'Paketlemeye erken başlayın, hayvanın odasını en sona bırakın.',
+          'Taşıyıcı kutuyu haftalar öncesinden açık bırakın.',
+          'Taşıma günü kapısı kapalı bir oda ayırın, kapıya not asın.',
+          'Hayvanı kendi aracınızda taşıyın, asla araç kasasında değil.',
+          'Yeni evde önce tek oda, sonra bütün ev.',
+          'Çip kaydını ve aşı karnesini yanınızda tutun.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Evinde hayvan olan taşımalarda bize önceden haber verirseniz kapıları daha dikkatli kullanır, hayvanın bulunduğu odayı en son boşaltırız. Ücretsiz keşif sırasında bunu da konuşuyoruz; Ankara içinde ya da şehirler arası taşınacaksanız bize ulaşabilirsiniz.',
+      },
+    ],
+  },
 ]
 
 export const postBySlug = (slug: string) => posts.find((p) => p.slug === slug)
