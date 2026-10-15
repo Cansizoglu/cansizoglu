@@ -9,9 +9,9 @@ import { site } from '@/data/site'
 import { pageMeta, localBusinessJsonLd } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
-  title: 'İletişim | Ankara Taşıma Evden Eve Nakliyat',
+  title: 'İletişim ve Adres | Çayyolu, Çankaya',
   description:
-    'Ankara evden eve nakliyat için bize ulaşın. Telefon ve WhatsApp 0312 341 53 40. Adres: Çayyolu, Çankaya / Ankara.',
+    'Taşınma, keşif ve fiyat için bize ulaşın. Telefon ve WhatsApp 0312 341 53 40. Adres: Çayyolu, Çankaya / Ankara.',
   path: '/iletisim',
 })
 

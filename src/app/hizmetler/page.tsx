@@ -9,7 +9,7 @@ import { pageMeta } from '@/lib/seo'
 export const metadata: Metadata = pageMeta({
   title: 'Hizmetlerimiz | Ankara Nakliyat ve Taşımacılık Hizmetleri',
   description:
-    'Ankara evden eve nakliyat, ofis taşıma, asansörlü nakliyat, asansör kiralama, piyano ve kasa taşıma, depolama hizmetlerimizin tamamı.',
+    'Ankara’da ev ve ofis taşıma, asansörlü nakliyat, asansör kiralama, piyano ve kasa taşıma, depolama hizmetlerimizin tamamı.',
   path: '/hizmetler',
 })
 

@@ -10,7 +10,7 @@ import { site } from '@/data/site'
 import { pageMeta, localBusinessJsonLd } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
-  title: 'Hakkımızda | Ankara Taşıma Evden Eve Nakliyat',
+  title: 'Hakkımızda | Kendi Araç ve Ekibimizle Nakliyat',
   description:
     'Ankara Taşıma, Ankara’nın her ilçesinde evden eve nakliyat, ofis taşıma, asansörlü taşımacılık ve depolama hizmeti veren nakliyat firmasıdır.',
   path: '/hakkimizda',

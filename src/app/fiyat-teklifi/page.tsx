@@ -9,9 +9,9 @@ import { site } from '@/data/site'
 import { pageMeta } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
-  title: 'Fiyat Teklifi Al | Ankara Evden Eve Nakliyat Fiyatları',
+  title: 'Nakliyat Fiyat Teklifi Al | Ücretsiz Keşif, Yazılı Fiyat',
   description:
-    'Ankara evden eve nakliyat fiyat teklifi alın. Nereden nereye, kat, oda sayısı ve tarih bilgisini paylaşın; en kısa sürede size dönelim.',
+    'Ücretsiz keşif ve yazılı nakliyat fiyat teklifi alın. Nereden nereye, kat, oda sayısı ve tarih bilgisini paylaşın; en kısa sürede size dönelim.',
   path: '/fiyat-teklifi',
 })
 

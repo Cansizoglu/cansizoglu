@@ -14,9 +14,9 @@ import {
 import { pageMeta } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
-  title: 'Ankara Evden Eve Nakliyat Bölgeleri | 25 İlçe, Tüm Semtler',
+  title: 'Ankara Nakliyat Hizmet Bölgeleri | 25 İlçe ve Semtleri',
   description:
-    'Ankara evden eve nakliyat hizmeti verdiğimiz 25 ilçe ve semtleri. Keçiören, Çankaya, Yenimahalle, Altındağ, Mamak, Etimesgut ve tüm çevre ilçeler.',
+    'Nakliyat hizmeti verdiğimiz Ankara’nın 25 ilçesi ve semtleri. Keçiören, Çankaya, Yenimahalle, Altındağ, Mamak, Etimesgut ve tüm çevre ilçeler.',
   path: '/bolgeler',
 })
 
@@ -68,7 +68,7 @@ export default function DistrictsPage() {
                 Ankara <span className="hl">evden eve nakliyat</span> bölgeleri
               </>
             }
-            description={`Ankara evden eve nakliyat hizmetimiz 25 ilçenin tamamını ve ${neighborhoodCount} semti kapsıyor. Her ilçenin taşımayı zorlaştıran kendine özgü şartları var: sokak genişliği, bina yaşı, kat sayısı ve park imkânı. Aşağıdaki sayfalarda her ilçede nasıl çalıştığımızı, hangi semtte neye dikkat ettiğimizi tek tek anlattık.`}
+            description={`Nakliyat hizmetimiz Ankara’nın 25 ilçesinin tamamını ve ${neighborhoodCount} semti kapsıyor. Her ilçenin taşımayı zorlaştıran kendine özgü şartları var: sokak genişliği, bina yaşı, kat sayısı ve park imkânı. Aşağıdaki sayfalarda her ilçede nasıl çalıştığımızı, hangi semtte neye dikkat ettiğimizi tek tek anlattık.`}
           />
 
           <h2 className="text-xl">Merkez ilçeler</h2>
