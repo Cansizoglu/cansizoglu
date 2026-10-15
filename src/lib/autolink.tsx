@@ -4,6 +4,7 @@ import { services } from '@/data/services'
 import { districts } from '@/data/districts'
 import { posts } from '@/data/blog'
 import { routes } from '@/data/routes'
+import { countries } from '@/data/countries'
 
 /**
  * Metin içi otomatik iç linkleme.
@@ -23,6 +24,11 @@ const staticTerms: LinkTerm[] = [
   { term: 'şehirler arası nakliyat', href: '/sehirler-arasi' },
   { term: 'şehirler arası taşıma', href: '/sehirler-arasi' },
   { term: 'şehirler arası', href: '/sehirler-arasi' },
+  // Uluslararası
+  { term: 'uluslararası evden eve nakliyat', href: '/uluslararasi' },
+  { term: 'uluslararası nakliyat', href: '/uluslararasi' },
+  { term: 'yurt dışı nakliyat', href: '/uluslararasi' },
+  { term: 'yurt dışına taşınma', href: '/uluslararasi' },
   // Hesaplama ve teklif
   { term: 'fiyat ve km hesaplama aracı', href: '/nakliyat-fiyat-hesaplama' },
   { term: 'fiyat ve km hesaplama', href: '/nakliyat-fiyat-hesaplama' },
@@ -120,6 +126,11 @@ function buildTerms(): LinkTerm[] {
       term: `Ankara ${route.city} nakliyat`,
       href: `/sehirler-arasi/${route.slug}`,
     })
+  }
+
+  for (const c of countries) {
+    terms.push({ term: `Ankara ${c.name} evden eve nakliyat`, href: `/uluslararasi/${c.slug}` })
+    terms.push({ term: `Ankara ${c.name} nakliyat`, href: `/uluslararasi/${c.slug}` })
   }
 
   // Uzun ifadeler kısa olanların içinde kaybolmasın diye uzunluğa göre sırala.

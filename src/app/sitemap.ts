@@ -5,6 +5,7 @@ import { districts } from '@/data/districts'
 import { posts } from '@/data/blog'
 import { aboutPages } from '@/data/aboutPages'
 import { routes } from '@/data/routes'
+import { countries } from '@/data/countries'
 
 /**
  * Yalnızca indexlenmesi gereken kanonik adresler. `lastModified` sadece gerçek
@@ -32,6 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/tasinma-kontrol-listesi`, changeFrequency: 'yearly', priority: 0.7 },
     { url: `${site.url}/blog`, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${site.url}/sehirler-arasi`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${site.url}/uluslararasi`, changeFrequency: 'monthly', priority: 0.9 },
+    ...countries.map((c) => ({
+      url: `${site.url}/uluslararasi/${c.slug}`,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     ...routes.map((route) => ({
       url: `${site.url}/sehirler-arasi/${route.slug}`,
      

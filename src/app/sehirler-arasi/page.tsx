@@ -92,6 +92,14 @@ export default function RoutesHubPage() {
               planını yazdığımız ayrı sayfalar hazırladık. Aşağıdan ilinizi seçin.
               Listede olmayan bir il için de taşıma yapıyoruz, bizi arayın.
             </p>
+            <p>
+              Yurt dışına taşınıyorsanız Almanya, Hollanda, Fransa, İngiltere ve Kıbrıs gibi
+              ülkeler için gümrük ve evrak bilgisini{' '}
+              <Link href="/uluslararasi" className="font-semibold text-accent-700">
+                uluslararası evden eve nakliyat
+              </Link>{' '}
+              sayfamızda topladık.
+            </p>
           </div>
 
           <div className="mt-10 space-y-10">
