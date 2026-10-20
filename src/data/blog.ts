@@ -1031,6 +1031,113 @@ export const posts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'apartman-yonetimi-tasinma-izni',
+    title: 'Apartman Yönetiminden Taşınma İzni: Asansör ve Araç Kuralları',
+    metaTitle: 'Apartman Yönetiminden Taşınma İzni',
+    metaDescription:
+      'Site ve apartman yönetimleri taşınmaya saat, araç ve asansör kuralı koyuyor. Taşınma gününden önce kime ne sorulur, neler ayarlanır? Saha notlarımız.',
+    excerpt:
+      'Taşınmanın en çok aksayan yeri çoğu zaman eşya değil bina oluyor. Yöneticiyle önceden yapılan iki telefon, taşıma gününü kurtarıyor.',
+    date: '2026-10-20',
+    readingMinutes: 7,
+    image: {
+      src: '/img/kamyon-ici-yukleme.webp',
+      width: 1536,
+      height: 2048,
+      alt: 'Kapalı kasa aracın içinde yan yana duran, balonlu naylonla sarılıp iple bağlanmış iki dolap',
+      title: 'Araç kasasında sabitlenmiş dolaplar',
+      caption: 'Araç binaya ne kadar yakın durursa yükleme o kadar hızlı ve güvenli ilerliyor.',
+      description: 'Kırmızı ahşap kaplı bir nakliye aracının kasasında, mavi balonlu naylonla sarılmış ve biri iple bağlanmış iki uzun dolap yan yana duruyor; arkada yatak bazası, yerde katlanmış nakliye örtüleri var.',
+    },
+    body: [
+      {
+        type: 'p',
+        text: 'Taşınmada en çok aksayan yer çoğu zaman eşya değil binadır. Araç kapıya yanaşamaz, güvenlik aracı siteye almaz, asansör taşımada kullanılamaz ve ekip kaldırımda bekler. Bunların neredeyse hepsi, taşınmadan önce yapılacak iki üç telefonla çözülebilen şeyler. Aşağıda Ankara’daki sitelerde ve apartmanlarda en sık karşılaştığımız kuralları ve yöneticiye ne sormanız gerektiğini topladık.',
+      },
+      { type: 'h2', text: 'Önce şunu öğrenin: binanın yazılı bir kuralı var mı?' },
+      {
+        type: 'p',
+        text: 'Normal apartmanların çoğunda yazılı bir taşınma kuralı yoktur, yönetici ya da kapıcıyla konuşmak yeter. Kapalı sitelerde durum farklı: taşınma saatleri, kullanılacak kapı, aracın gireceği yol ve asansörün taşımada kullanılıp kullanılamayacağı çoğu zaman site kurallarında yazılıdır. Bu kuralları kiralama ya da satın alma aşamasında isteyin. Taşıma gününden bir hafta önce öğrenmek bazen geç kalıyor, çünkü bazı kısıtlar tarihin kendisini değiştiriyor.',
+      },
+      { type: 'h2', text: 'Taşınma saatine sınır koyan siteler var' },
+      {
+        type: 'p',
+        text: 'En yaygın kural saat sınırı. Bazı siteler taşınmayı hafta içi mesai saatlerine bağlıyor, bazıları sabah belirli bir saatten önce araç sokmuyor, pazar günü taşınmaya hiç izin vermeyenler de var. Biz programı buna göre kurabiliyoruz, yeter ki kuralı bilelim. Saat sınırı olan bir binaya sabahın köründe gitmek yerine, izin verilen ilk saatte kapıda olacak şekilde planlıyoruz.',
+      },
+      { type: 'h2', text: 'Aracın duracağı yeri önceden ayırtın' },
+      {
+        type: 'p',
+        text: 'Araç binaya ne kadar yakın durursa iş o kadar hızlı ve güvenli ilerler. Ankara’da en sık yaşadığımız sorun, bina önündeki yerlerin dolu olması. Yöneticiye ya da güvenliğe önceden haber verip o alanı taşıma saatinde boş tutturmak çoğu zaman mümkün oluyor. Sitelerde ayrıca araç boyuna göre kısıt çıkabiliyor: bariyer yüksekliği, kapalı otopark girişi ve dönüş yarıçapı büyük araç için sorun yaratır. Siteden gelen “büyük araç giremez” cevabı planı baştan değiştirdiği için bunu erken öğrenmek istiyoruz.',
+      },
+      { type: 'h2', text: 'Bina asansörü ve kabin koruması' },
+      {
+        type: 'p',
+        text: 'Bina asansörünü kullanmak serbest olsa bile kabine sığmayan eşyayı zorlamak doğru değildir. Kabinin kapı genişliği, derinliği ve taşıma kapasitesi bellidir; kapıyı açık tutup eşya sıkıştırmak hem kapı mekanizmasına hem eşyaya zarar verir. Yönetimlerin çoğu taşıma boyunca kabine koruyucu örtü serilmesini ister, biz bunu zaten standart yapıyoruz.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Asansörün kapı ölçüsünü, kabin derinliğini ve kaç kiloya kadar taşıdığını önceden öğrenin.',
+          'Binada yük asansörü varsa hangi saatlerde kullanılabildiğini sorun.',
+          'Kabinde mevcut bir çizik ya da arıza varsa taşıma başlamadan yöneticiyle birlikte görün.',
+          'Asansör taşımada kullanılamıyorsa bunu tarih verirken bize söyleyin, plan tamamen değişir.',
+        ],
+      },
+      { type: 'h2', text: 'Mobil asansör kurulacaksa yer gerekir' },
+      {
+        type: 'p',
+        text: 'Eşya kabine sığmıyorsa ya da bina asansörsüzse mobil asansör kuruyoruz. Bunun için binanın önünde düz ve boş bir alan gerekiyor: aracın ayakları açılır, merdiven balkona veya pencereye dayanır. Buradaki iki klasik engel, alanın park etmiş araçlarla dolu olması ve balkonun üstünden geçen elektrik ya da telefon hattı. Bazı site yönetimleri asansör kiralama gerektiren kurulumlar için ayrıca haber verilmesini istiyor; bu izni gün öncesinden almak gerekiyor.',
+      },
+      { type: 'h2', text: 'Güvenliğe isim bildirmek işi hızlandırır' },
+      {
+        type: 'p',
+        text: 'Kapalı sitelerde ekip ve araç çoğu zaman güvenlikten kaydını yaptırmadan içeri giremiyor. Taşıma gününden bir gün önce yönetime ya da güvenliğe haber verin: gelecek aracın plakası ve kaç kişilik ekip geleceği sorulursa bize sorun, hemen iletiyoruz. Kapıda yapılan kayıt bazen yarım saat yiyor ve o yarım saat, saat sınırı olan bir sitede doğrudan taşımadan eksiliyor.',
+      },
+      {
+        type: 'p',
+        text: 'Aynı şekilde yeni binaya girişte size verilecek giriş kartı, otopark yeri ve posta kutusu anahtarını taşınma gününe bırakmayın. Bunlar küçük işler ama hepsi aynı güne denk gelince ev yerleşirken siz kapıda kalıyorsunuz.',
+      },
+      { type: 'h2', text: 'Depozito ve taşınma bedeli isteyen siteler' },
+      {
+        type: 'p',
+        text: 'Bazı kapalı siteler, ortak alanlarda oluşabilecek hasara karşı iade edilen bir depozito istiyor; bazıları asansör kullanımı için sabit bir bedel alıyor. Bu uygulamalar siteden siteye değişiyor ve yönetim kararına bağlı. Taşınmadan önce yöneticiye sorun, çünkü taşıma günü kapıda öğrenilen bir ödeme işi saatlerce durdurabiliyor. Bu bedeller siteye ödenir, bizim verdiğimiz fiyatla ilgisi yoktur.',
+      },
+      { type: 'h2', text: 'Yöneticiye sormanız gereken sorular' },
+      {
+        type: 'ul',
+        items: [
+          'Taşınma için izin verilen gün ve saat aralığı nedir?',
+          'Araç siteye girebilir mi, boy ya da yükseklik sınırı var mı?',
+          'Aracın duracağı yer taşıma saatinde boş tutulabilir mi?',
+          'Bina asansörü taşımada kullanılabilir mi, yük asansörü var mı?',
+          'Mobil asansör kurulacaksa ayrıca izin gerekiyor mu?',
+          'Depozito ya da taşınma bedeli alınıyor mu, nasıl ödeniyor?',
+          'Hangi kapı kullanılacak, güvenliğe önceden isim bildirmek gerekiyor mu?',
+        ],
+      },
+      { type: 'h2', text: 'Çıktığınız binayı da teslim ediyorsunuz' },
+      {
+        type: 'p',
+        text: 'Sorumluluk sadece taşındığınız binada değil, çıktığınız binada da sürüyor. Merdiven, asansör ve giriş holü taşıma sonrası kirli kalırsa eski yöneticinizle sorun yaşarsınız. Biz iki adreste de koridorlara koruyucu örtü seriyor, iş bitince ambalaj artıklarını topluyoruz. Siz de çıkarken kapıcıya haber verin, varsa anahtar ve giriş kartı teslimini aynı gün yapın; sonraya kalan teslimler depozito görüşmesini uzatıyor.',
+      },
+      { type: 'h2', text: 'Kısa liste' },
+      {
+        type: 'ul',
+        items: [
+          'Site kurallarını, taşınma tarihini belirlemeden önce öğrenin.',
+          'Yöneticiye taşınma gününü ve saatini önceden bildirin.',
+          'Araç yerini ve asansör kullanımını ayırtın.',
+          'Varsa depozitoyu, bedeli ve ödeme şeklini öğrenin.',
+          'Öğrendiğiniz bütün kısıtları keşif sırasında bize aktarın.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Ücretsiz keşif sırasında eşyanın yanında binayı da inceliyoruz: kapı ölçüleri, merdiven sahanlığı, asansör kabini ve aracın yanaşacağı yer. Site kurallarını bize iletirseniz programı ilk seferde doğru kurar, taşıma gününe kapıda tartışarak başlamayız.',
+      },
+    ],
+  },
 ]
 
 export const postBySlug = (slug: string) => posts.find((p) => p.slug === slug)
