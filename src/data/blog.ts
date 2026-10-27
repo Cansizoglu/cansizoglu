@@ -1138,6 +1138,113 @@ export const posts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'ogrenci-evi-tasima-rehberi',
+    title: 'Öğrenci Evi Taşıma: Ankara’da Az Eşyayla Taşınma Rehberi',
+    metaTitle: 'Öğrenci Evi Taşıma Rehberi',
+    metaDescription:
+      'Yurttan eve, evden eve taşınan öğrenciler için: az eşya nasıl taşınır, ev arkadaşıyla eşya nasıl ayrılır, yaz tatilinde eşya nerede kalır?',
+    excerpt:
+      'Öğrenci taşımasında eşya az ama tarih sıkışık. Dönem başı ve dönem sonu yoğunluğunda işi kolaylaştıran şeyleri topladık.',
+    date: '2026-10-27',
+    readingMinutes: 7,
+    image: {
+      src: '/img/ambalajli-kanepe.webp',
+      width: 901,
+      height: 1600,
+      alt: 'Streç filmle baştan aşağı sarılıp odada dik bekletilen tek kanepe',
+      title: 'Ambalajlanmış tek kanepe',
+      caption: 'Az eşyalı taşımalarda da ambalaj aynı: her parça tek tek sarılıyor.',
+      description: 'Perdeli bir odada, koyu mavi bir kanepe streç filmle tamamen sarılmış hâlde dik duruyor; sağ tarafında kapatılmış bir karton koli var.',
+    },
+    body: [
+      {
+        type: 'p',
+        text: 'Ankara’da öğrenci taşıması kendi başına bir iş. Eşya az, mesafe çoğu zaman kısa, ama tarih sıkışıktır: herkes aynı iki haftada taşınır. Yurttan eve geçen, ev arkadaşı değiştiren, dönem sonunda eşyasını bırakıp memlekete giden çok öğrenci var ve bunların her birinin kendine göre bir zorluğu oluyor. Aşağıda öğrenci taşımalarında işi kolaylaştıran şeyleri topladık.',
+      },
+      { type: 'h2', text: 'Eşya az ama iş aynı' },
+      {
+        type: 'p',
+        text: 'Bir öğrenci evinde genelde bir yatak, bir dolap, çalışma masası, birkaç koli ve mutfak eşyası olur. Bu hacim için koca bir kamyon gerekmiyor; parça eşya taşıma dediğimiz hizmet tam olarak bunun için var. Küçük araç, iki kişilik ekip ve yarım günlük bir program çoğu öğrenci taşımasını bitiriyor.',
+      },
+      {
+        type: 'p',
+        text: 'Eşyanın az olması ambalajı gereksiz kılmıyor. Tek yatağınız varsa da kılıfa giriyor, dolap sökülüyorsa parçaları ayrı sarılıyor. Arkadaş arabasıyla taşınan eşyalarda en çok çizilen şeyler masa kenarları ve dolap kapakları oluyor, çünkü araca doğrudan atılıyorlar.',
+      },
+      {
+        type: 'p',
+        text: 'Koli konusunda öğrenciler genelde market kolisiyle idare ediyor. Kitap ve ders notu taşıyacaksanız bu riskli: market kolisinin dibi ağırlığı kaldırmıyor ve yolda açılıyor. Kitapları küçük kolilere bölüp ağırlığı dağıtmak en sağlamı. Ambalaj malzemesi ve koli düzeni hakkında ayrıntıları eşya paketleme yazımızda anlattık.',
+      },
+      { type: 'h2', text: 'Dönem başı ve dönem sonu en yoğun iki dönem' },
+      {
+        type: 'p',
+        text: 'Eylül ile ekim başı ve haziran ayı, öğrenci bölgelerinde taşımanın en yoğun olduğu zamanlar. Bu dönemlerde istediğiniz günü bulmak zorlaşıyor, özellikle hafta sonları hızlı doluyor. Kira sözleşmenizin başlangıç tarihini biliyorsanız bir hafta öncesinden tarih ayırtın. Sınav takviminiz belliyse taşımayı sınav gününe denk getirmemek de hayatınızı kolaylaştırır.',
+      },
+      { type: 'h2', text: 'Ev arkadaşıyla taşınırken eşyayı ayırın' },
+      {
+        type: 'p',
+        text: 'Ortak evden ayrılırken en çok karışan şey, kimin neyi aldığıdır. Mikrodalga kimin, ütü kimin, perde kalacak mı? Bunu taşıma günü kapıda konuşmak zaman kaybı. Yapılacak şey basit: taşınacak eşyaları önceden bir odada toplayın ve kendinize ait kolilerin üstüne adınızı yazın.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Kendi kolilerinizi tek bir odada toplayın, kalacak eşyayı ayrı tutun.',
+          'Kolinin üstüne odanın adını değil, kendi adınızı ve içindekini yazın.',
+          'Ortak alınmış eşyaların kimde kalacağına taşıma gününden önce karar verin.',
+          'Kalacak eşyaların fotoğrafını çekin, depozito görüşmesinde işinize yarıyor.',
+        ],
+      },
+      { type: 'h2', text: 'Yurttan eve taşınıyorsanız' },
+      {
+        type: 'p',
+        text: 'Yurt çıkışları genellikle belirli bir saate ve kapıya bağlıdır; aracın yurt bahçesine girip giremeyeceğini önceden sorun. Bazı yurtlarda eşya ana kapıya kadar elle taşınıyor, bu da süreyi uzatıyor. Çıkış saatinizi ve aracın yanaşabileceği noktayı bize söylerseniz ekibi ona göre gönderiyoruz. Oda teslimini yaparken odanın fotoğrafını çekmeyi de unutmayın.',
+      },
+      { type: 'h2', text: 'Öğrenci bölgelerinde binalar çoğu zaman asansörsüz' },
+      {
+        type: 'p',
+        text: 'Ankara’da öğrencilerin yoğun oturduğu bölgelerde eski yapı stoğu fazla; dört beş katlı, asansörsüz ve dar merdivenli binalar sık karşımıza çıkıyor. Az eşyada bu genelde sorun olmuyor, ekip elle çıkarıyor. Ama yatak, gardırop ya da üç kapılı dolap gibi merdivenden dönmeyen bir parça varsa mobil asansör gerekebiliyor.',
+      },
+      {
+        type: 'p',
+        text: 'Bunu taşıma günü anlamak kötü bir sürpriz. Kaçıncı katta olduğunuzu, binada asansör olup olmadığını ve merdivenin dar olup olmadığını tarih verirken söyleyin. Aynı şey yeni ev için de geçerli: çoğu öğrenci çıkış adresini anlatıyor, varış adresinin kat durumunu atlıyor.',
+      },
+      { type: 'h2', text: 'Yaz tatilinde eşya nerede kalacak?' },
+      {
+        type: 'p',
+        text: 'Haziranda memlekete dönüp eylülde geri gelen öğrenciler için üç yol var: eşyayı yanınızda götürmek, evi yaz boyunca kiralamaya devam etmek ya da eşya depolama ile yazı geçirmek. Üçünün de mantıklı olduğu durumlar var; yazın boş duran bir evin kirası ile depolama arasındaki farkı kendiniz hesaplayın. Depoya giren eşyayı liste hâline getirip fotoğraflamak, eylülde ne çıkacağını bilmek açısından işinizi kolaylaştırıyor.',
+      },
+      {
+        type: 'p',
+        text: 'Yaz boyunca kalacak eşyada iki şeye dikkat edin: yiyecek hiçbir şey kutuya girmesin ve elektronik cihazlar nemden uzak dursun. Kitap ve defterleri de doğrudan zemine değil, palet ya da raf üstüne koyun.',
+      },
+      { type: 'h2', text: 'Mobilyalı ev tutuyorsanız' },
+      {
+        type: 'p',
+        text: 'Öğrenci evlerinin çoğu eşyalı kiralanıyor ve bu eşya ev sahibine ait oluyor. Girerken var olan hasarları fotoğraflayıp ev sahibine göndermek, çıkarken yaşanacak tartışmanın yarısını baştan bitiriyor. Siz bir eşya eklediyseniz, ona ait fatura ya da kutu sizde kalsın. Çıkışta ev sahibinin eşyasını yerine koymak size, kendi eşyanızı taşımak bize kalıyor.',
+      },
+      { type: 'h2', text: 'Memlekete taşınacaksanız' },
+      {
+        type: 'p',
+        text: 'Okul bitince eşyayı başka bir şehre götürmek isteyen öğrencilerle sık çalışıyoruz. Bu şehirler arası bir taşıma olduğu için planı daha erken kurmak gerekiyor: çıkış ve varış adreslerinin ikisinde de kimin karşılayacağı, varış şehrinde eve kimin gireceği baştan belli olmalı. Tek bir öğrenci evinin eşyası tek başına bir araç doldurmadığı için tarihi esnek tutabilirseniz daha rahat program çıkıyor.',
+      },
+      { type: 'h2', text: 'Kısa liste' },
+      {
+        type: 'ul',
+        items: [
+          'Tarihi dönem başı ve dönem sonu yoğunluğundan önce ayırtın.',
+          'Kolilerin üstüne adınızı ve içindekini yazın.',
+          'Ev arkadaşıyla eşya paylaşımını taşıma gününden önce bitirin.',
+          'Yurt ya da site için çıkış saatini ve araç yanaşma yerini öğrenin.',
+          'Eşyalı evde hem girişte hem çıkışta fotoğraf çekin.',
+          'Yaz için depolama mı, taşıma mı, kararı haziran gelmeden verin.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Öğrenci taşımalarında da ücretsiz keşif yapıyoruz; eşya azsa fotoğraf üzerinden de konuşabiliyoruz. Taşınma tarihinizi ve iki adresi paylaşmanız yeterli, gerisini biz planlarız.',
+      },
+    ],
+  },
 ]
 
 export const postBySlug = (slug: string) => posts.find((p) => p.slug === slug)
