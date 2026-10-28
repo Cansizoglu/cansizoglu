@@ -195,6 +195,35 @@ export default function RoutePage({ params }: Props) {
               ))}
             </ul>
 
+            {route.partner ? (
+              <section className="mt-12 rounded-xl border border-brand-100 bg-brand-50/60 p-6">
+                <h2 className="text-2xl">{route.partner.heading}</h2>
+                <div className="mt-3 space-y-4">
+                  {route.partner.paragraphs.map((paragraph) => {
+                    const [before, after] = paragraph.split('{partner}')
+                    return (
+                      <p key={paragraph.slice(0, 24)} className="leading-8 text-slate-700">
+                        {before}
+                        {after === undefined ? null : (
+                          <>
+                            <a
+                              href={route.partner!.url}
+                              target="_blank"
+                              rel="noopener"
+                              className="font-semibold text-brand-700 underline underline-offset-2"
+                            >
+                              {route.partner!.anchor}
+                            </a>
+                            {after}
+                          </>
+                        )}
+                      </p>
+                    )
+                  })}
+                </div>
+              </section>
+            ) : null}
+
             <h2 className="mb-4 mt-12 text-2xl">{route.city}’de teslim yaptığımız ilçeler</h2>
             <p className="mb-5 leading-7 text-slate-700">
               {route.city} genelinde teslim yapıyoruz. Taşımanın en çok yoğunlaştığı

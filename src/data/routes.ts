@@ -29,6 +29,14 @@ export type Route = {
   notes: string[]
   /** Taşımanın yoğunlaştığı ilçeler */
   popular: string[]
+  /** Varış ilinde birlikte çalıştığımız firma; paragraflardaki {partner} linke dönüşür */
+  partner?: {
+    url: string
+    /** Link metni */
+    anchor: string
+    heading: string
+    paragraphs: string[]
+  }
 }
 
 export const routes: Route[] = [
@@ -210,6 +218,15 @@ export const routes: Route[] = [
       'Adana üzerinden Mersin, Osmaniye ve Hatay’a da taşıma yapıyoruz; aynı sefer içinde planlanabiliyor.',
     ],
     popular: ['Seyhan', 'Çukurova', 'Yüreğir', 'Sarıçam', 'Ceyhan'],
+    partner: {
+      url: 'https://barajasansorlutasimacilik.com.tr/',
+      anchor: 'Adana evden eve nakliyat',
+      heading: 'Adana’da iş ortağımız',
+      paragraphs: [
+        'Adana tarafında boşaltmayı, montajı ve yüksek katlarda dış cephe asansörünü uzun süredir birlikte çalıştığımız Baraj Asansörlü Taşımacılık ile yürütüyoruz. Aracımız şehre girdiğinde asansör ve yardımcı ekip adreste hazır oluyor, eşyalar beklemeden yeni evinize çıkıyor.',
+        'Taşındıktan sonra şehir içinde başka bir adrese geçecek ya da Adana’da yaşayan yakınlarınız için {partner} hizmeti arıyorsanız Baraj’ı gönül rahatlığıyla öneriyoruz.',
+      ],
+    },
   },
   {
     slug: 'ankara-mersin-evden-eve-nakliyat',
