@@ -1245,6 +1245,123 @@ export const posts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'tasinma-sonrasi-ilk-gun',
+    title: 'Taşınma Sonrası İlk Gün: Yeni Evde Önce Ne Yapmalı?',
+    metaTitle: 'Taşınma Sonrası İlk Gün Rehberi',
+    metaDescription:
+      'Eşya indi, ekip gitti. Yeni evde ilk gün hangi işi önce yapmalı, kutular hangi sırayla açılır, beyaz eşya ne zaman çalıştırılır? Saha notlarımız.',
+    excerpt:
+      'Taşımanın bitmesi evin kurulması demek değil. İlk günü doğru sırayla geçirirseniz kalan işler haftaya kendiliğinden yayılıyor.',
+    date: '2026-11-03',
+    readingMinutes: 7,
+    image: {
+      src: '/img/koltuk-takimi-ambalaj.webp',
+      width: 1600,
+      height: 1200,
+      alt: 'Yeni evin salonunda yerine yerleştirilmiş, hâlâ streç filmle sarılı mavi koltuk takımı',
+      title: 'Yeni evde ambalajı açılmayı bekleyen koltuk takımı',
+      caption: 'Eşya yerine konduktan sonra ambalajı açmak için acele etmeye gerek yok.',
+      description: 'Perdeleri takılı, klimalı bir salonda; üçlü kanepe, iki berjer ve puf streç filmle sarılı ve iple bağlı hâlde yerlerine yerleştirilmiş duruyor.',
+    },
+    body: [
+      {
+        type: 'p',
+        text: 'Eşya indi, ekip evden çıktı, kapı kapandı. Salonun ortasında koliler duruyor, hangisinde ne olduğu tam belli değil ve akşam olmak üzere. Taşınmanın en yorucu kısmı çoğu zaman burasıdır: taşıma bitmiştir ama ev henüz ev değildir. İlk günü doğru sırayla geçirirseniz kalan işler haftaya kendiliğinden yayılıyor. Aşağıda yeni evde ilk gün ne yapılır, hangi iş sabaha kalır, onu anlattık.',
+      },
+      { type: 'h2', text: 'İlk ihtiyaç kutusunu açın, diğerlerini açmayın' },
+      {
+        type: 'p',
+        text: 'Taşınmadan önce hazırladığınız ilk ihtiyaç kutusu tam burada işe yarıyor. İçinde bir geceyi çıkaracak kadar şey olması yeterli: havlu, el sabunu, tuvalet kâğıdı, temizlik bezi, ilaçlar, şarj kablosu, birkaç bardak ve çatal kaşık, bir değişiklik kıyafet. Bu kutuyu araca en son yükleyip yeni evde ilk indiriyoruz, tam da ilk akşam başka kutu açmak zorunda kalmayın diye.',
+      },
+      { type: 'h2', text: 'İlk iş yatağı kurmak' },
+      {
+        type: 'p',
+        text: 'Yeni evde ilk akşam yorgunluk beklediğinizden fazla oluyor. Bu yüzden ekip evden çıkmadan yatak odasını bitiriyoruz: karyola kuruluyor, yatak yerine konuyor. Siz de nevresimi ilk ihtiyaç kutusunda ya da üstüne “yatak” yazdığınız tek bir kolide tutarsanız, gece yatacak yer hazırlamakla uğraşmazsınız. Koltuğun naylonunu açmak sabaha kalabilir, yatak kalamaz.',
+      },
+      { type: 'h2', text: 'Su, elektrik ve gazı ilk saatte kontrol edin' },
+      {
+        type: 'p',
+        text: 'Abonelikleri önceden açtırmış olsanız bile ilk gün bizzat kontrol etmek gerekiyor. Sayaçlar çalışıyor mu, kombi yanıyor mu, sıcak su geliyor mu, elektrik bütün odalarda var mı? Bir aksaklık varsa akşam olmadan fark etmek önemli, çünkü servisler mesai bitiminde kapanıyor ve ilk geceyi soğuk ya da susuz geçirmek kimsenin istediği şey değil.',
+      },
+      {
+        type: 'p',
+        text: 'Aynı saatlerde su vanasının, elektrik sigortasının ve gaz vanasının yerini de öğrenin. Bunlar lazım olduğunda aranacak şeyler değil, önceden bilinecek şeyler. Evde yaşayan herkese gösterin.',
+      },
+      { type: 'h2', text: 'Beyaz eşyayı ilk gün çalıştırmayın' },
+      {
+        type: 'p',
+        text: 'Buzdolabı yol boyunca yatırılmışsa ya da soğukta geldiyse, fişe takmadan önce dik şekilde birkaç saat bekletilmesi gerekir. Çamaşır makinesini nakliye cıvataları sökülmeden çalıştırmak da makineyi hırpalar. En güvenlisi, cihazları ilk gün yerine kurup ertesi gün çalıştırmak. Hangi cihazın nasıl hazırlandığını ayrı bir yazıda tek tek anlattık.',
+      },
+      { type: 'h2', text: 'Hasar kontrolünü ekip evden çıkmadan yapın' },
+      {
+        type: 'p',
+        text: 'Taşımada bir sorun çıkmışsa bunu fark etmenin en iyi anı, ekip hâlâ evdeyken. Eşya yerine konduktan sonra büyük parçaları birlikte gözden geçiriyoruz: dolap kapakları kapanıyor mu, masa sallanıyor mu, cam ve ayna parçalarında çatlak var mı. Ufak bir hizalama sorunu biz oradayken birkaç dakikada çözülür, ertesi güne kalırsa ayrı bir randevu gerekir.',
+      },
+      {
+        type: 'p',
+        text: 'Kolilerin içini aynı anda tek tek kontrol etmeniz beklenmiyor, o zaten mümkün değil. Ama kırılacak eşya yazdığınız kolileri açarken bir aksaklık görürseniz vakit geçirmeden haber verin. Nakliyat sigortası bu gibi durumlar için var ve süreç ne kadar erken başlarsa o kadar hızlı ilerliyor.',
+      },
+      { type: 'h2', text: 'Kutuları hangi sırayla açmalı?' },
+      {
+        type: 'p',
+        text: 'En yaygın hata, bütün kutuları aynı anda açmak. Hepsi açılınca ev bir anda dağılıyor ve hiçbir oda bitmiyor. Oda oda ilerleyin; ilk gün şu dördü yeter:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Yatak odası: yatak, nevresim, ertesi gün giyeceğiniz kıyafetler.',
+          'Banyo: havlu, sabun, diş fırçası, tuvalet kâğıdı.',
+          'Mutfak: su ısıtıcısı, birkaç tabak, bardak, çatal kaşık.',
+          'Salon: oturulacak bir yer ve çalışan bir lamba.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Kalan kutular haftaya yayılabilir; kitap, dekorasyon ve mevsimlik eşyanın acelesi yok. Açtığınız boş kolileri de bir odada toplayın, çünkü ortalıkta duran boş koli kadar evi küçük ve dağınık gösteren bir şey yok.',
+      },
+      { type: 'h2', text: 'Kilit, anahtar ve güvenlik' },
+      {
+        type: 'ul',
+        items: [
+          'Kapı kilidini değiştirecekseniz ilk günlerde yaptırın; eski anahtarın kimlerde olduğunu bilemezsiniz.',
+          'Balkon ve pencere kilitlerini, varsa çocuk kilitlerini kontrol edin.',
+          'Duman ya da gaz dedektörü varsa çalıştığını test edin.',
+          'Apartman giriş kartı ve posta kutusu anahtarını aynı gün teslim alın.',
+        ],
+      },
+      { type: 'h2', text: 'Temizliği ilk güne sıkıştırmayın' },
+      {
+        type: 'p',
+        text: 'İdeali, ev boşken temizliğin yapılmış olması. Olmadıysa ilk gün evin tamamını temizlemeye çalışmayın; banyo ve mutfak tezgâhı yeter. Eşya yerleşirken zaten toz kalkıyor, asıl temizlik birkaç gün sonra çok daha verimli oluyor.',
+      },
+      { type: 'h2', text: 'Apartmana ve komşulara kendinizi tanıtın' },
+      {
+        type: 'p',
+        text: 'İlk gün yöneticiye ya da kapıcıya haber vermek, aidat tutarını ve çöp saatlerini öğrenmek beş dakikalık bir iş ama sonraki ayların tamamını rahatlatıyor. Varsa otopark yerinizi ve depo bölümünüzü de aynı gün öğrenin; sonradan sormak hep ertelenen şeylerden biri oluyor.',
+      },
+      { type: 'h2', text: 'İlk gece için beklentiyi düşük tutun' },
+      {
+        type: 'p',
+        text: 'Taşınma günü akşamı yemek yapmaya çalışmak, bütün odaları bitirmeye uğraşmak ya da misafir çağırmak işi zorlaştırıyor. Dışarıdan bir şeyler söyleyip erken yatmak, ertesi sabah dinlenmiş başlamak çok daha verimli. Evde çocuk varsa kendi odasını ilk bitirilen oda yapın; tanıdık yatağını ve birkaç oyuncağını görmesi geceyi kolaylaştırıyor.',
+      },
+      { type: 'h2', text: 'İlk hafta listesi' },
+      {
+        type: 'ul',
+        items: [
+          'Adres değişikliğini nüfus kaydınıza işletin.',
+          'Kargo, banka ve fatura adreslerinizi güncelleyin.',
+          'İnternet kurulumu için randevu almadıysanız hemen alın.',
+          'Mahalledeki eczaneyi, marketi ve en yakın sağlık kuruluşunu not edin.',
+          'Taşımada bir hasar fark ederseniz bekletmeden bize bildirin.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Biz evden çıkmadan önce yatak odasını kuruyor, beyaz eşyayı yerine alıyor ve ambalaj artıklarını topluyoruz; ilk günü kolaylaştıran şey büyük ölçüde bu. Ücretsiz keşif sırasında yeni evde neyin nereye konacağını da konuşursak montaj ilk seferde doğru yapılıyor, siz de eşya yerleşirken ikinci kez yer değiştirmek zorunda kalmıyorsunuz.',
+      },
+    ],
+  },
 ]
 
 export const postBySlug = (slug: string) => posts.find((p) => p.slug === slug)
