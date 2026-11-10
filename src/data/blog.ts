@@ -1362,6 +1362,109 @@ export const posts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'sehirler-arasi-tasima-yol-plani',
+    title: 'Şehirler Arası Taşımada Yol Planı: Eşya Ne Zaman Varır?',
+    metaTitle: 'Şehirler Arası Taşımada Yol Planı',
+    metaDescription:
+      'Şehirler arası taşımada varış günü neye göre belirlenir? Tek araç ile parsiyel farkı, yükleme ve boşaltma günleri, kış yolu ve varışta bekleme.',
+    excerpt:
+      'Şehirler arası taşımada varış saatini mesafe kadar başka şeyler belirliyor: araç tipi, yükleme saati, varış adresinin şartları ve yolun durumu.',
+    date: '2026-11-10',
+    readingMinutes: 7,
+    image: {
+      src: '/img/ankara-tasima-banner-2.webp',
+      width: 2048,
+      height: 768,
+      alt: 'Ankara Taşıma yazılı beyaz kapalı kasa nakliye kamyonu otoyolda ilerliyor',
+      title: 'Otoyolda ilerleyen Ankara Taşıma aracı',
+      caption: 'Şehirler arası taşımada yol planı, eşya araca girmeden önce kuruluyor.',
+      description: 'Arka planda Ankara silueti ve Atakule görünen bir otoyolda, üzerinde Ankara Taşıma Evden Eve Nakliyat yazan beyaz kapalı kasa kamyon ilerliyor.',
+    },
+    body: [
+      {
+        type: 'p',
+        text: 'Şehirler arası taşımada en çok sorulan soru hep aynı: eşya ne zaman varır? Cevap yalnızca mesafeye bağlı değil. Aracın sadece sizin eviniz için mi çalıştığı, yüklemenin kaçta bittiği, varış şehrinde adrese ne zaman girilebileceği ve yolun durumu, varış saatini kilometre kadar etkiliyor. Aşağıda bir şehirler arası taşımanın yol planını nasıl kurduğumuzu anlattık.',
+      },
+      { type: 'h2', text: 'Önce şu karar: tek araç mı, parsiyel mi?' },
+      {
+        type: 'p',
+        text: 'İki ayrı çalışma şekli var. Tek araçta araç sadece sizin eşyanızı alır ve doğrudan varış adresine gider. Parsiyelde ise aynı araçta birden fazla evin eşyası taşınır. Parsiyel genelde daha uygun oluyor ama tarih esnekliği istiyor: araç dolmadan yola çıkmaz ve yolda başka adreslere de uğrayabilir.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Tek araç: tarih nettir, varış günü bellidir, maliyeti daha yüksektir.',
+          'Parsiyel: maliyeti daha uygundur, varış günü bir aralık olarak verilir.',
+          'Tarihiniz sabit ve kısa süreliyse tek araç daha az riskli.',
+          'Eşyanız azsa ve birkaç gün bekleyebiliyorsanız parsiyel mantıklı.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Hangisinin size uyduğunu keşif sırasında konuşuyoruz. Bu karar yol planının tamamını belirlediği için en başta veriliyor, sonradan değiştirmek tarihi de değiştiriyor.',
+      },
+      { type: 'h2', text: 'Yükleme günü ile varış günü aynı gün olmayabilir' },
+      {
+        type: 'p',
+        text: 'Yükleme, evin büyüklüğüne göre yarım günle bir gün arasında sürüyor. Öğleden sonra biten bir yüklemeden sonra araç o gün çok uzağa gidemez. Bu yüzden uzun mesafelerde yükleme bir gün, yol ve boşaltma ertesi gün olacak şekilde planlıyoruz. Size tarih verirken “şu gün yüklenir, şu gün boşaltılır” diye iki ayrı gün söylememizin sebebi bu. Tek bir güne sıkıştırılan program, gecikmenin en sık sebebi.',
+      },
+      { type: 'h2', text: 'Mesafe kadar şehir içi kısımlar da önemli' },
+      {
+        type: 'p',
+        text: 'İki şehir arasındaki yol genelde tahmin edilebilir; asıl sürpriz iki uçtaki şehir içi bölümlerde çıkıyor. Varış şehrinde dar sokak, araç giriş kısıtı olan bir bölge ya da taşınma saatine sınır koyan bir site varsa, araç şehre girse bile boşaltma gecikir. Varış adresinin kat durumunu, asansörünü ve aracın yanaşacağı yeri en az çıkış adresi kadar iyi bilmemiz gerekiyor. Çoğu kişi çıkış adresini ayrıntılı anlatıp varış adresini atlıyor.',
+      },
+      { type: 'h2', text: 'Sürücünün dinlenmesi de planın parçası' },
+      {
+        type: 'p',
+        text: 'Uzun yolda sürücülerin dinlenme süreleri var ve bu süreler pazarlık konusu değil. Yorgun sürücüyle yola devam etmek hem eşyanız hem de yoldaki herkes için risk demek. Bu yüzden geceyi boydan boya yol alarak geçiren bir program yerine, molası baştan belirlenmiş bir plan kuruyoruz. Varışı bir saat öne almak için kimsenin direksiyonda zorlanmasını istemiyoruz.',
+      },
+      { type: 'h2', text: 'Kış aylarında yol planı değişir' },
+      {
+        type: 'p',
+        text: 'Kar ve buz, özellikle yüksek rakımlı geçişlerde yolu saatlerce uzatabiliyor. Kış aylarında tarih verirken bir gün pay bırakıyor ve hava durumunu taşımadan önceki günlerde takip ediyoruz. Yol kapanma ihtimali olan bir güne denk geliyorsa tarihi bir gün öne ya da arkaya almayı öneriyoruz; bu genelde tek bir telefonla çözülen bir şey, ama yola çıktıktan sonra çözülmüyor.',
+      },
+      { type: 'h2', text: 'Şehirler arası ambalaj daha kalın olur' },
+      {
+        type: 'p',
+        text: 'Şehir içinde eşya kısa bir yol gider; şehirler arasında ise saatlerce araçta kalır ve yol boyunca titreşime maruz kalır. Bu yüzden ambalaj aynı değil: köşeler ayrıca korunur, parçalar birbirine sürtmeyecek şekilde istiflenir ve yük kayışla sabitlenir. Yarı dolu bir kasa uzun yolda eşyanın birbirine vurması demek, bu yüzden boşluklar örtüyle doldurulur.',
+      },
+      { type: 'h2', text: 'Eşya yoldayken iletişim kopmasın' },
+      {
+        type: 'p',
+        text: 'Şehir içi taşımada eşya gözünüzün önünde, şehirler arasında ise saatlerce başka bir şehirdedir. Bu yüzden yola çıkıştan sonra sizi bilgilendiriyoruz: araç ne zaman yola çıktı, nerede mola verdi, varışa ne kadar kaldı. Siz de telefonunuzun açık olmasına dikkat edin, çünkü varış şehrinde adres tarifi ya da kapı kodu gerektiğinde ulaşılamayan bir numara aracı sokakta bekletiyor.',
+      },
+      {
+        type: 'p',
+        text: 'Uzun yolda sigortanın önemi de artıyor. Kısa mesafede düşük olan riskler, saatlerce süren bir yolculukta büyüyor. Neyin kapsama girdiğini ve hasar durumunda nasıl ilerlendiğini nakliyat sigortası yazımızda anlattık; şehirler arası bir taşımaya çıkmadan okumanızı öneriyoruz.',
+      },
+      { type: 'h2', text: 'Varış adresine hemen girilemiyorsa' },
+      {
+        type: 'p',
+        text: 'Kira başlangıcı birkaç gün sonraysa ya da yeni evde boya badana bitmediyse eşyanın bir yerde beklemesi gerekiyor. Bunun için eşya depolama çözümü var: eşya varıştan önce ya da sonra depoda bekler, tarih gelince teslim edilir. Önemli olan bunu yola çıkmadan planlamak, çünkü dolu bir aracı varış şehrinde bekletmek en pahalı seçenek oluyor.',
+      },
+      { type: 'h2', text: 'Eşyayı azaltmanın en çok işe yaradığı yer burası' },
+      {
+        type: 'p',
+        text: 'Şehir içinde fazladan birkaç koli programı pek değiştirmez, ama şehirler arasında her ek hacim doğrudan araç boyutuna ve maliyete yansıyor. Taşınmadan önce elden çıkarmayı düşündüğünüz eşya varsa kararı yola çıkmadan verin. Yıllardır açılmamış kolileri yeni şehre taşımak, orada da aynı dolabın içinde durmaları anlamına geliyor.',
+      },
+      { type: 'h2', text: 'Tarih seçerken' },
+      {
+        type: 'ul',
+        items: [
+          'Kira ya da tapu tarihlerini netleştirmeden gün vermeyin.',
+          'Ay sonları ve yaz ayları en yoğun dönem; erken tarih alın.',
+          'Varış şehrindeki site ve apartman kurallarını önceden öğrenin.',
+          'İki adreste de eşyayı kimin karşılayacağı belli olsun.',
+          'Değerli, kırılacak ve özel taşıma gerektiren parçaları baştan bildirin.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Yol planını ücretsiz keşif sonrasında birlikte kuruyoruz: hangi gün yükleme, hangi gün boşaltma, hangi araç, kaç kişilik ekip. Ankara’dan gideceğiniz şehri, tarihinizi ve iki adresi paylaşmanız yeterli; gerisini programa biz döküyoruz.',
+      },
+    ],
+  },
 ]
 
 export const postBySlug = (slug: string) => posts.find((p) => p.slug === slug)
