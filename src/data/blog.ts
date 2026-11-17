@@ -1465,6 +1465,119 @@ export const posts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'koli-etiketleme-ve-numaralandirma',
+    title: 'Koli Etiketleme: Taşınmada Hangi Kutuda Ne Var?',
+    metaTitle: 'Koli Etiketleme ve Numaralandırma',
+    metaDescription:
+      'Taşınmada koliler nasıl etiketlenir, numaralandırma neden işe yarar, hangi bilgi kutunun neresine yazılır? Kayıp kutu yaşamamak için saha notlarımız.',
+    excerpt:
+      'Yeni evde en çok vakit, hangi kutuda ne olduğunu aramakla geçiyor. Doğru etiketleme bunu baştan bitiriyor.',
+    date: '2026-11-17',
+    readingMinutes: 7,
+    image: {
+      src: '/img/tasima-oncesi-salon.webp',
+      width: 1600,
+      height: 1200,
+      alt: 'Taşınma öncesi salonda streç filmle sarılmış mobilyalar, karton koliler ve içi dolu variller',
+      title: 'Paketlenmiş eşyalar ve koliler',
+      caption: 'Kutu sayısı arttıkça, üstünde ne yazdığı daha çok önem kazanıyor.',
+      description: 'Yarı boşalmış bir salonda streç filmle sarılmış sandalyeler ve koltuklar, duvara dayalı kapatılmış karton koliler ve içi küçük parçalarla dolu variller duruyor.',
+    },
+    body: [
+      {
+        type: 'p',
+        text: 'Taşınmanın en sinir bozucu anı, yeni evde yirmi kutunun ortasında durup çaydanlığın hangisinde olduğunu bilememektir. Eşyanın taşınması bir günde biter, ama kötü etiketlenmiş kutular haftalarca peşinizi bırakmaz. Oysa bu, taşınmadan önce yapılan on dakikalık bir işle çözülüyor. Aşağıda sahada en çok işe yaradığını gördüğümüz etiketleme düzenini anlattık.',
+      },
+      { type: 'h2', text: 'Kutunun üstüne değil, yanına yazın' },
+      {
+        type: 'p',
+        text: 'En sık yapılan hata, yazıyı kutunun kapağına yazmak. Kutular üst üste istiflenince kapaklar görünmez olur ve her kutuyu kaldırıp bakmak gerekir. Yazıyı kutunun iki yan yüzüne yazın; hangi tarafı dönük olursa olsun okunur. Kalın uçlu siyah kalem kullanın, tükenmez kalem karton üzerinde uzaktan okunmuyor.',
+      },
+      { type: 'h2', text: 'Üç bilgi yeter' },
+      {
+        type: 'p',
+        text: 'Etiketi roman gibi yazmaya gerek yok. Üç şey yeterli ve bu üçü eksikse sistem çalışmıyor:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Numara: her kutuya bir sıra numarası. 1, 2, 3 diye gider.',
+          'Oda: kutunun yeni evde gireceği oda. Çıktığı oda değil, gireceği oda.',
+          'İçerik: iki üç kelime. “Mutfak tabaklar”, “banyo havlular”, “kitaplar roman”.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Oda bilgisini yeni eve göre yazmak küçük ama önemli bir ayrıntı. Eski evde misafir odasında duran kutular yeni evde çocuk odasına girecekse, kutunun üstünde “çocuk odası” yazmalı. Ekip kutuyu doğrudan doğru odaya bırakır, siz de sonradan kutu taşımazsınız.',
+      },
+      { type: 'h2', text: 'Numara ne işe yarıyor?' },
+      {
+        type: 'p',
+        text: 'Numara, kutuyu bir listeye bağlıyor. Telefonunuzun not uygulamasına ya da bir kâğıda basit bir liste tutun: “7 numara: mutfak, tencereler ve tava”. Böylece bir şey aradığınızda bütün kutuları açmak yerine listeye bakıp tek kutuyu açıyorsunuz. Aynı liste, varışta eksik olup olmadığını anlamanın da en hızlı yolu: en büyük numara kaçsa o kadar kutu olmalı.',
+      },
+      {
+        type: 'p',
+        text: 'Liste tutmak zor geliyorsa en azından numaralayın. Numarasız bir yığında bir kutunun eksik olduğunu günler sonra fark ediyorsunuz, numaralıda aynı akşam.',
+      },
+      { type: 'h2', text: 'Renk kullanmak işi hızlandırıyor' },
+      {
+        type: 'p',
+        text: 'Odalara renk vermek, özellikle kalabalık evlerde yükleme ve boşaltmayı hızlandırıyor. Her odaya bir renk bant ya da renkli etiket: mutfak sarı, yatak odası mavi, çocuk odası yeşil. Yeni evde kapılara aynı renkten bir parça yapıştırın. Ekip yazıyı okumadan, renge bakarak kutuyu doğru odaya götürür. Bu yöntem Türkçe okumayan ya da acele eden herkes için işe yarıyor.',
+      },
+      { type: 'h2', text: 'Kırılacak eşya etiketi ayrı bir iştir' },
+      {
+        type: 'p',
+        text: 'Kırılacak yazısı tek bir yüze yazılırsa işe yaramaz, çünkü kutu ters durabilir. Kırılacak eşya kutusunun dört yüzüne de yazın ve üstüne yukarı yönü gösteren bir ok çizin. Biz bu kutuları istifin üstüne alıyoruz, ama bunu ancak görebilirsek yapabiliyoruz. Kolinin içini de doğru doldurmak gerekiyor; ambalaj malzemesinin hangisinin nerede kullanıldığını eşya paketleme yazımızda anlattık.',
+      },
+      { type: 'h2', text: 'Ağırlığı da etikete yazın' },
+      {
+        type: 'p',
+        text: 'Aynı boyda iki kutudan biri yorgan, diğeri kitap olabiliyor ve ikisini aynı şekilde kaldırmak hem ekip hem kutu için kötü. Ağır kutulara etikete küçük bir “ağır” notu düşmek, istifte onların alta konmasını sağlıyor. Kitap ve dosya gibi şeyleri zaten küçük kutulara bölün; büyük bir kutuyu kitapla doldurmak kutunun dibini açıyor.',
+      },
+      { type: 'h2', text: 'Depoya girecek eşyada etiket daha da önemli' },
+      {
+        type: 'p',
+        text: 'Kutular doğrudan yeni eve değil de bir süreliğine depoya gidecekse, etiket haftalar sonra okunacak demektir. Eşya depolama durumunda numara listesini mutlaka tutun ve listeyi telefonunuzda saklayın. Depodan tek bir kutu çağırmanız gerektiğinde, numarayı söylemek bütün kutuları açtırmaktan çok daha hızlı oluyor.',
+      },
+      { type: 'h2', text: 'İlk gün açılacak kutuları işaretleyin' },
+      {
+        type: 'p',
+        text: 'Yeni evde ilk akşam açılacak birkaç kutu var: yatak takımı, havlu, temizlik malzemesi, birkaç tabak. Bunların üstüne numara ve oda dışında büyükçe bir işaret koyun. Biz bu kutuları araca en son yüklüyor ve yeni evde ilk indiriyoruz, böylece diğer kutuların arkasında kalmıyorlar. Hangi işareti kullandığınızı bize söyleyin, yeter.',
+      },
+      { type: 'h2', text: 'Dolap ve çekmece içindekiler ne olacak?' },
+      {
+        type: 'p',
+        text: 'Kutuya girmeyen ama kaybolan şeyler de var: perde askıları, raf pimleri, uzaktan kumandalar, kablolar. Bunlar için ayrı küçük bir kutu açıp üstüne “ilk hafta lazım olacak küçük parçalar” yazın. Söküm sırasında çıkan vidaları ise o mobilyanın kendi poşetinde tutuyoruz, kutuya karıştırmıyoruz. Taşınmadan önce bir tur atıp çekmecelerin boş olduğundan emin olun; dolu çekmeceyle taşınan bir komodin hem ağırlaşıyor hem içi karışıyor.',
+      },
+      { type: 'h2', text: 'Yazmaya değmeyen şeyler' },
+      {
+        type: 'ul',
+        items: [
+          'Kutunun içindeki her parçayı tek tek yazmak: vakit alır, kimse okumaz.',
+          'Sadece “mutfak” yazmak: on tane mutfak kutusu olunca hiçbir işe yaramaz.',
+          'Marka kutusunun üstündeki eski yazıyı silmemek: ekip yanlış okuyor, kutuyu yanlış odaya bırakıyor.',
+          'Değerli eşyanın ne olduğunu kutunun üstüne yazmak: bunları zaten kendi yanınızda taşıyın.',
+        ],
+      },
+      { type: 'h2', text: 'Kısa liste' },
+      {
+        type: 'ul',
+        items: [
+          'Numara, gireceği oda ve iki kelimelik içerik yazın.',
+          'Yazıyı kapağa değil, yan yüzlere yazın.',
+          'Odalara renk verin, yeni evde kapılara aynı rengi yapıştırın.',
+          'Kırılacak kutulara dört yüzden yazıp yukarı oku çizin.',
+          'İlk gün açılacakları ayrıca işaretleyin.',
+          'Basit bir numara listesi tutun, eksik kontrolü için en hızlı yol bu.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Paketlemeyi biz yapıyorsak etiketleme de bize ait; siz sadece hangi kutunun hangi odaya gideceğini söylüyorsunuz. Kendiniz paketliyorsanız bu düzeni kurmanız taşıma gününü belirgin biçimde kısaltıyor. Ücretsiz keşif sırasında kaç koli çıkacağını da tahmin ediyoruz, malzemeyi ona göre getiriyoruz.',
+      },
+    ],
+  },
 ]
 
 export const postBySlug = (slug: string) => posts.find((p) => p.slug === slug)
