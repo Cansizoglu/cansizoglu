@@ -1578,6 +1578,97 @@ export const posts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'kiraci-tasinma-gunu-ve-depozito',
+    title: 'Kiracı Taşınma Günü: Depozito ve Ev Teslimi',
+    metaTitle: 'Kiracı Taşınma Günü ve Depozito',
+    metaDescription:
+      'Kiracıysanız taşınma gününde evi nasıl teslim edersiniz, depozito hangi durumlarda kesilir, sayaç ve anahtar işleri nasıl kapanır? Sahadan notlarımız.',
+    excerpt:
+      'Kiracının taşınma günü sadece eşya taşımakla bitmiyor; evin teslimi ve depozito da aynı güne denk geliyor.',
+    date: '2026-11-24',
+    readingMinutes: 7,
+    image: {
+      src: '/img/paketli-esyalar-oda.webp',
+      width: 1200,
+      height: 600,
+      alt: 'Boşalmış bir odada pembe balonlu naylonla sarılmış koltuk ve dolaplar, duvara dayalı mavi örtüyle sarılı yatak',
+      title: 'Teslime hazır, eşyası paketlenmiş oda',
+      caption: 'Eşya çıkmadan önceki son hal: oda boşalıyor, sıra evin tesliminde.',
+      description: 'Beyaz duvarlı, laminat zeminli bir odada pembe balonlu naylon ve streç filmle sarılmış koltuk, dolap ve minderler üst üste duruyor; duvara dayalı mavi örtüyle sarılmış bir yatak ve yanında kapalı bir koli bulunuyor.',
+    },
+    body: [
+      {
+        type: 'p',
+        text: 'Kiracı olarak taşınmak, kendi evinden taşınmaktan biraz farklı ilerliyor. Eşyayı çıkarmak işin sadece bir yarısı, diğer yarısı evi geri teslim etmek. Depozitonun ne kadarını geri alacağınız da çoğu zaman o bir iki saatte belli oluyor. Sahada en çok tartışmanın bu anda çıktığını görüyoruz. Aşağıda kiracıların taşınma gününü sorunsuz kapatması için nelere dikkat ettiğimizi topladık.',
+      },
+      { type: 'h2', text: 'Çıkış tarihini kira bitişine göre seçin' },
+      {
+        type: 'p',
+        text: 'İlk iş kira kontratındaki bitiş tarihine bakmak. Çoğu kişi yeni evin anahtarını alacağı güne göre plan yapıyor, oysa asıl kritik olan eski evi hangi gün boşaltmanız gerektiği. İki tarih arasında bir iki günlük pay bırakabiliyorsanız bırakın; temizlik, küçük tamirler ve son kontroller için bu pay çok işinize yarıyor. Aynı gün hem çıkıp hem gireceksiniz diyorsanız yükleme saatini sabahın erkenine almak gerekiyor. Biz böyle günlerde ekibi normalden geniş tutuyoruz, çünkü iki adresin işi tek güne sığıyor.',
+      },
+      { type: 'h2', text: 'Evi ev sahibiyle birlikte gezin' },
+      {
+        type: 'p',
+        text: 'Taşınmadan önce ev sahibini ya da emlakçıyı eve çağırıp evi birlikte gezmek, sonradan çıkacak tartışmaların çoğunu baştan bitiriyor. Ev hâlâ doluyken yapılan bu tur, duvardaki izlerin, zemindeki çiziklerin ve akan bir musluğun kimin döneminden kaldığını konuşmanın en rahat yolu. Eve girerken çektiğiniz fotoğraflar varsa yanınızda bulundurun. Yoksa bile eşya çıkmadan önce bütün odaların fotoğrafını çekin, eşya çıktıktan sonra bir tur daha çekin. Bu iki set fotoğraf, depozito konuşmasında elinizdeki en somut şey oluyor.',
+      },
+      { type: 'h2', text: 'Depozito hangi durumlarda kesiliyor?' },
+      {
+        type: 'p',
+        text: 'Depozito, kira borcuna ve evde oluşan hasara karşılık tutulan paradır. Normal kullanımdan doğan yıpranma için kesinti yapılmaması beklenir, ama pratikte en çok şu başlıklar konuşuluyor:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Duvarda dübel delikleri, raf izleri, silinmeyen lekeler.',
+          'Zeminde derin çizikler ya da su ile kabarmış bölgeler.',
+          'Kırık priz kapağı, bozuk kapı kolu, çalışmayan duş başlığı gibi küçük parçalar.',
+          'Ödenmemiş son dönem faturaları ve aidat borcu.',
+          'Evin temizlenmemiş halde bırakılması.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Bu kalemlerin çoğu, taşınma gününden önceki hafta yarım günlük bir çalışmayla kapanıyor. Dübel deliklerini macunla kapatıp üstünden fırça geçirmek, kırılan bir priz kapağını değiştirmek hem kolay hem hızlı. Kesinti rakamını tartışmak yerine işi kendiniz halletmek neredeyse her zaman daha iyi sonuç veriyor.',
+      },
+      { type: 'h2', text: 'Eşya çıkarken evi de koruyun' },
+      {
+        type: 'p',
+        text: 'İşin tuhaf tarafı şu: kiracının depozitosuna en çok zarar veren şey evde geçirdiği yıllar değil, taşındığı gün oluyor. Dar koridorda dönmeyen bir gardırop kapı pervazını götürüyor, elden indirilen bir koltuk merdiven boşluğundaki duvarı çiziyor, sürüklenen bir çekmeceli dolap zeminde iz bırakıyor. Biz çıkışta sadece eşyayı değil evi de koruyoruz: kapı pervazlarına ve asansör kapısına koruma takıyoruz, merdiven basamaklarına örtü seriyoruz, geçiş güzergâhındaki duvarları yastıklıyoruz. Ambalajlı taşıma dediğimiz işin bir yarısı eşya için, bir yarısı evin kendisi için.',
+      },
+      {
+        type: 'p',
+        text: 'Üst katlarda ve dar merdivenlerde en güvenli yol, büyük parçaları pencereden indirmek. Eşya merdivene hiç girmediği için duvarlara, korkuluğa ve komşu kapılarına temas da olmuyor. Kiracı açısından bu, hem eşya riskini hem depozito riskini aynı anda düşürüyor.',
+      },
+      { type: 'h2', text: 'Sayaçlar, faturalar ve anahtar' },
+      {
+        type: 'p',
+        text: 'Teslim gününde üç şeyin kapanmış olması gerekiyor. Birincisi sayaçlar: elektrik, su ve doğalgaz sayaçlarının son endeksini çıkarken fotoğraflayın, ev sahibine de gösterin. İkincisi abonelikler; kapatmak yerine yeni adrese nakletmek çoğu durumda daha pratik oluyor. Üçüncüsü aidat: site ya da apartman yönetiminden borcunuzun kalmadığını yazılı olarak teyit alın. Anahtarı bunlar netleşmeden bırakmayın, çünkü anahtar teslim edildikten sonra eve girip ölçüm yapmak mümkün olmuyor.',
+      },
+      { type: 'h2', text: 'Çıkış ve giriş tarihleri tutmuyorsa' },
+      {
+        type: 'p',
+        text: 'Kiracılarda sık karşılaştığımız bir durum var: eski evden çıkış tarihi geldi ama yeni eve giriş bir hafta sonra. Böyle günlerde eşyayı akrabaya ya da garaja yığmak yerine depoya almak daha güvenli. Eşya depolama tarafında eşya sarılı halde alınıyor, listeleniyor, depoya giriyor ve giriş gününüzde aynı ekiple yeni adrese çıkıyor. Eşyanın birkaç kez elden geçmesi gerekmediği için hasar ihtimali de azalıyor.',
+      },
+      { type: 'h2', text: 'Teslim günü için kısa liste' },
+      {
+        type: 'ul',
+        items: [
+          'Kira kontratındaki çıkış tarihini ve bildirim süresini kontrol edin.',
+          'Eşya çıkmadan ve çıktıktan sonra her odanın fotoğrafını çekin.',
+          'Dübel deliklerini ve küçük arızaları bir hafta önceden kapatın.',
+          'Sayaç endekslerini fotoğraflayıp ev sahibine iletin.',
+          'Aidat ve fatura borcu kalmadığını yazılı teyit edin.',
+          'Evi süpürülmüş ve silinmiş halde bırakın.',
+          'Anahtarı, depozito konusu konuşulduktan sonra teslim edin.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Taşınma gününü biz yönetiyorsak çıkış saatini kira teslimine göre kuruyoruz; son eşya çıktıktan sonra odaları birlikte geziyor, unutulan bir şey kalmadığından emin olduktan sonra adresten ayrılıyoruz. Ücretsiz keşif sırasında çıkış ve giriş tarihlerinizi söylemeniz yeterli, programı ona göre çıkarıyoruz.',
+      },
+    ],
+  },
 ]
 
 export const postBySlug = (slug: string) => posts.find((p) => p.slug === slug)
