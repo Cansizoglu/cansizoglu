@@ -7,7 +7,7 @@ export const sincan: District = {
   zone: 'merkez',
   lat: 39.965,
   lon: 32.58,
-  metaTitle: 'Sincan Evden Eve Nakliyat | Fatih, Yenikent ve Törekent Taşıma',
+  metaTitle: 'Sincan Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Sincan evden eve nakliyat: Fatih, Yenikent, Törekent, Plevne ve çevresinde asansörlü, ambalajlı ve sigortalı ev taşıma hizmeti. Ücretsiz keşif.',
   intro: [
@@ -151,7 +151,7 @@ export const pursaklar: District = {
   zone: 'merkez',
   lat: 40.04,
   lon: 32.9,
-  metaTitle: 'Pursaklar Evden Eve Nakliyat | Saray ve Altınova Taşıma',
+  metaTitle: 'Pursaklar Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Pursaklar evden eve nakliyat: Saray, Altınova, Sirkeli ve çevresinde asansörlü, ambalajlı ve sigortalı ev taşıma hizmeti. Ücretsiz keşif ve yazılı fiyat.',
   intro: [
@@ -253,7 +253,7 @@ export const golbasi: District = {
   zone: 'merkez',
   lat: 39.79,
   lon: 32.81,
-  metaTitle: 'Gölbaşı Evden Eve Nakliyat | İncek ve Karşıyaka Taşıma',
+  metaTitle: 'Gölbaşı Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Gölbaşı evden eve nakliyat: İncek, Karşıyaka, Taşpınar ve çevresinde villa ve site taşımacılığı. Asansörlü, ambalajlı ve sigortalı taşıma.',
   intro: [
@@ -369,7 +369,7 @@ export const cubuk: District = {
   zone: 'cevre',
   lat: 40.24,
   lon: 33.03,
-  metaTitle: 'Çubuk Evden Eve Nakliyat | Ankara Çubuk Taşıma',
+  metaTitle: 'Çubuk Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Çubuk evden eve nakliyat: Çubuk merkez, Esenboğa ve çevresinde ambalajlı, asansörlü ve sigortalı ev taşıma hizmeti. Ücretsiz keşif.',
   intro: [
@@ -443,7 +443,7 @@ export const kahramankazan: District = {
   zone: 'cevre',
   lat: 40.2,
   lon: 32.68,
-  metaTitle: 'Kahramankazan Evden Eve Nakliyat | Ankara Kazan Taşıma',
+  metaTitle: 'Kahramankazan Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Kahramankazan evden eve nakliyat: merkez, Saray ve çevresinde ambalajlı, sigortalı ev ve iş yeri taşıma hizmeti. Ücretsiz keşif ve yazılı fiyat.',
   intro: [
@@ -503,7 +503,7 @@ export const akyurt: District = {
   zone: 'cevre',
   lat: 40.13,
   lon: 33.09,
-  metaTitle: 'Akyurt Evden Eve Nakliyat | Ankara Akyurt Taşıma',
+  metaTitle: 'Akyurt Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Akyurt evden eve nakliyat: merkez ve organize sanayi çevresinde ambalajlı, sigortalı ev ve iş yeri taşıma hizmeti. Ücretsiz keşif.',
   intro: [
@@ -563,7 +563,7 @@ export const elmadag: District = {
   zone: 'cevre',
   lat: 39.92,
   lon: 33.23,
-  metaTitle: 'Elmadağ Evden Eve Nakliyat | Hasanoğlan ve Lalahan Taşıma',
+  metaTitle: 'Elmadağ Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Elmadağ evden eve nakliyat: merkez, Hasanoğlan ve Lalahan çevresinde ambalajlı, sigortalı ev taşıma hizmeti. Ücretsiz keşif ve yazılı fiyat.',
   intro: [
@@ -637,7 +637,7 @@ export const polatli: District = {
   zone: 'cevre',
   lat: 39.58,
   lon: 32.145,
-  metaTitle: 'Polatlı Evden Eve Nakliyat | Ankara Polatlı Taşıma',
+  metaTitle: 'Polatlı Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Polatlı evden eve nakliyat: merkez mahalleler ve çevresinde ambalajlı, asansörlü ve sigortalı ev taşıma hizmeti. Ankara ve şehirler arası taşıma.',
   intro: [

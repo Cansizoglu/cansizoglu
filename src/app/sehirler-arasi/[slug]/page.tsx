@@ -13,6 +13,7 @@ import { routeSections, routeFaq } from '@/lib/routeSections'
 import { site } from '@/data/site'
 import { createLinker } from '@/lib/autolink'
 import { pageMeta } from '@/lib/seo'
+import { ek } from '@/lib/tr'
 
 type Props = { params: { slug: string } }
 
@@ -118,7 +119,7 @@ export default function RoutePage({ params }: Props) {
               </p>
               <p>
                 {linkify(
-                  `Taşımadan önce Ankara’daki adrese ücretsiz keşfe geliyor, eşya listesini çıkarıyor ve fiyatı yazılı olarak veriyoruz. ${route.city}’deki varış adresinin kat durumunu, asansör ihtiyacını ve aracın yanaşabileceği alanı da bu görüşmede konuşuyoruz; taşıma günü sürpriz çıkmasının önüne böyle geçiliyor.`,
+                  `Taşımadan önce Ankara’daki adrese ücretsiz keşfe geliyor, eşya listesini çıkarıyor ve fiyatı yazılı olarak veriyoruz. ${ek(route.city, 'deki')} varış adresinin kat durumunu, asansör ihtiyacını ve aracın yanaşabileceği alanı da bu görüşmede konuşuyoruz; taşıma günü sürpriz çıkmasının önüne böyle geçiliyor.`,
                 )}
               </p>
             </div>
@@ -224,7 +225,7 @@ export default function RoutePage({ params }: Props) {
               </section>
             ) : null}
 
-            <h2 className="mb-4 mt-12 text-2xl">{route.city}’de teslim yaptığımız ilçeler</h2>
+            <h2 className="mb-4 mt-12 text-2xl">{ek(route.city, 'de')} teslim yaptığımız ilçeler</h2>
             <p className="mb-5 leading-7 text-slate-700">
               {route.city} genelinde teslim yapıyoruz. Taşımanın en çok yoğunlaştığı
               ilçeler şunlar; listede olmayan bir adres için de aynı hizmeti veriyoruz.

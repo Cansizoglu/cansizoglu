@@ -1,5 +1,6 @@
 import type { Route } from '@/data/routes'
 import type { DistrictSection } from './districtSections'
+import { ek } from '@/lib/tr'
 
 /**
  * Şehirler arası rota sayfalarının bölümleri.
@@ -33,7 +34,7 @@ export function routeSections(route: Route): DistrictSection[] {
       heading: `Ankara ${c} Evden Eve Nakliyat Nasıl Yapılır`,
       paragraphs: [
         `Ankara ${c} evden eve nakliyat işini baştan sona kendi ekibimizle yürütüyoruz. Taşımadan önce Ankara’daki adrese gelip ücretsiz keşif yapıyor, eşya listesini çıkarıyor ve fiyatı yazılı olarak veriyoruz. Şehirler arası taşımada fiyatın sonradan değişmesi en sık yaşanan sorun; biz sözleşmeye yazdığımız rakamı taşıma günü değiştirmiyoruz.`,
-        `Taşıma günü mobilyalar marangoz ekibimizce sökülür, kırılacak eşya balonlu naylonla, mobilya streç filmle ambalajlanır. ${route.km} kilometrelik bir yolculuk söz konusu olduğu için ambalaj şehir içi taşımaya göre daha kalın yapılır ve yük araç içinde kuşaklarla sabitlenir. ${c}’de ${ilkUc} başta olmak üzere il genelinde teslim yapıyoruz.`,
+        `Taşıma günü mobilyalar marangoz ekibimizce sökülür, kırılacak eşya balonlu naylonla, mobilya streç filmle ambalajlanır. ${route.km} kilometrelik bir yolculuk söz konusu olduğu için ambalaj şehir içi taşımaya göre daha kalın yapılır ve yük araç içinde kuşaklarla sabitlenir. ${ek(c, 'de')} ${ilkUc} başta olmak üzere il genelinde teslim yapıyoruz.`,
       ],
       points: [
         'Ücretsiz keşif ve değişmeyen yazılı fiyat',
@@ -77,7 +78,7 @@ export function routeSections(route: Route): DistrictSection[] {
       heading: `Ankara ${c} Küçük Nakliye ve Parça Eşya Taşıma`,
       serviceSlug: 'parca-esya-tasima',
       paragraphs: [
-        `Her taşınma bir ev dolusu eşya olmuyor. Ankara’dan ${c}’ye tek koltuk, buzdolabı, birkaç koli ya da bir odalık eşya göndermek isteyenler için küçük nakliye yapıyoruz. Bu işlerde kamyon yerine küçük araç kullanılıyor ve ödediğiniz ücret tam taşıma fiyatı değil, eşyanın kapladığı hacim kadar oluyor.`,
+        `Her taşınma bir ev dolusu eşya olmuyor. Ankara’dan ${ek(c, 'ye')} tek koltuk, buzdolabı, birkaç koli ya da bir odalık eşya göndermek isteyenler için küçük nakliye yapıyoruz. Bu işlerde kamyon yerine küçük araç kullanılıyor ve ödediğiniz ücret tam taşıma fiyatı değil, eşyanın kapladığı hacim kadar oluyor.`,
         `Öğrenci evi kurulumu, tayin sonrası kısmi taşınma, ikinci el mobilya teslimi ve depoya birkaç kutu gönderme bu kapsamda en çok gelen talepler. “Evden eve kargo” diye aranan hizmet de budur; farkı, eşyanın kargo gibi elden ele değil, tek araçla adresten adrese gitmesidir.`,
       ],
       points: [
@@ -119,10 +120,10 @@ export function routeFaq(route: Route) {
     },
     {
       q: `Eşyam başka müşterilerin eşyasıyla birlikte mi taşınıyor?`,
-      a: `Hayır. Araç sizin evinizden yüklenir ve ${c}’deki adresinizde boşaltılır, arada aktarma yapılmaz. Ucuz görünen bazı tekliflerdeki depoda toplama ve aktarma yöntemini kullanmıyoruz; hasar ve gecikme riski oradan çıkıyor.`,
+      a: `Hayır. Araç sizin evinizden yüklenir ve ${ek(c, 'deki')} adresinizde boşaltılır, arada aktarma yapılmaz. Ucuz görünen bazı tekliflerdeki depoda toplama ve aktarma yöntemini kullanmıyoruz; hasar ve gecikme riski oradan çıkıyor.`,
     },
     {
-      q: `${c}’ye tek parça eşya veya birkaç koli gönderebilir miyim?`,
+      q: `${ek(c, 'ye')} tek parça eşya veya birkaç koli gönderebilir miyim?`,
       a: `Gönderebilirsiniz. Bu işler için kamyon yerine küçük nakliye aracı kullanıyoruz ve ücreti eşyanın kapladığı hacme göre hesaplıyoruz. Tek koltuk, buzdolabı, öğrenci evi eşyası veya birkaç koli bu kapsamda taşınıyor.`,
     },
     {

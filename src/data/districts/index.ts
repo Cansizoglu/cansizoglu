@@ -29,10 +29,12 @@ import {
   evren,
 } from './cevre-uzak'
 
+import { districtIntros } from './intros'
+
 export type { District, Neighborhood } from './types'
 
 /** Ankara'nın 25 ilçesi. Merkez ilçeler önce, çevre ilçeler mesafeye göre sonra. */
-export const districts: District[] = [
+const base: District[] = [
   kecioren,
   cankaya,
   yenimahalle,
@@ -59,6 +61,15 @@ export const districts: District[] = [
   nallihan,
   evren,
 ]
+
+/**
+ * İlçe başlıkları (metaTitle) "{İlçe} Evden Eve Nakliyat - Asansörlü Taşımacılık" kalıbında, semt adı geçmez (2026-11-24).
+ * Giriş yazıları intros.ts dosyasından gelir.
+ */
+export const districts: District[] = base.map((d) => ({
+  ...d,
+  intro: districtIntros[d.slug] ?? d.intro,
+}))
 
 /** Ana menüde ve anasayfada öne çıkan merkez ilçeler. */
 export const centralDistricts = districts.filter((d) => d.zone === 'merkez')

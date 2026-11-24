@@ -16,6 +16,7 @@ import { createLinker } from '@/lib/autolink'
 import RelatedLinks from '@/components/RelatedLinks'
 import { relatedForNeighborhood } from '@/lib/related'
 import { pageMeta, serviceJsonLd } from '@/lib/seo'
+import { ek } from '@/lib/tr'
 
 type Props = { params: { ilce: string; semt: string } }
 
@@ -50,15 +51,15 @@ export default function NeighborhoodPage({ params }: Props) {
 
   const faq = [
     {
-      q: `${neighborhood.name}'de evden eve nakliyat fiyatı nasıl belirleniyor?`,
+      q: `${ek(neighborhood.name, 'de')} evden eve nakliyat fiyatı nasıl belirleniyor?`,
       a: `Eşya miktarı, çıkış ve varış katı, asansör ihtiyacı ve mesafe fiyatı belirler. ${neighborhood.name} içinde ücretsiz keşif yapıp yazılı fiyat veriyoruz.`,
     },
     {
-      q: `${neighborhood.name}'de asansörlü taşıma yapıyor musunuz?`,
+      q: `${ek(neighborhood.name, 'de')} asansörlü taşıma yapıyor musunuz?`,
       a: `Evet. ${neighborhood.name} ve çevresindeki taşımalarda kendi mobil asansör araçlarımızı kullanıyoruz.`,
     },
     {
-      q: `${neighborhood.name}'den Ankara dışına taşıma yapıyor musunuz?`,
+      q: `${ek(neighborhood.name, 'den')} Ankara dışına taşıma yapıyor musunuz?`,
       a: 'Evet, şehirler arası taşımalarda da hizmet veriyoruz. Adres ve tarih bilgisini paylaşmanız yeterli.',
     },
   ]
@@ -83,7 +84,7 @@ export default function NeighborhoodPage({ params }: Props) {
             {neighborhood.name} Evden Eve Nakliyat
           </h1>
           <p className="mt-4 text-lg leading-8 text-brand-100">
-            {district.name} {neighborhood.name}&apos;de asansörlü, ambalajlı ve sigortalı
+            {district.name} {ek(neighborhood.name, 'de')} asansörlü, ambalajlı ve sigortalı
             ev taşıma hizmeti.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
@@ -118,7 +119,7 @@ export default function NeighborhoodPage({ params }: Props) {
             {neighborhood.body?.length ? (
               <>
                 <h2 className="mb-4 mt-10 text-2xl">
-                  {neighborhood.name}&apos;de taşınma nasıl planlanıyor?
+                  {ek(neighborhood.name, 'de')} taşınma nasıl planlanıyor?
                 </h2>
                 <div className="prose-tr max-w-none">
                   {neighborhood.body.map((paragraph) => (
@@ -129,7 +130,7 @@ export default function NeighborhoodPage({ params }: Props) {
             ) : null}
 
             <h2 className="mb-5 mt-10 text-2xl">
-              {neighborhood.name}&apos;de taşımada nelere dikkat ediyoruz?
+              {ek(neighborhood.name, 'de')} taşımada nelere dikkat ediyoruz?
             </h2>
             <ul className="space-y-3">
               {neighborhood.notes.map((note) => (
@@ -197,7 +198,7 @@ export default function NeighborhoodPage({ params }: Props) {
             </div>
 
             <h2 className="mb-4 mt-12 text-2xl">
-              {neighborhood.name}&apos;de verdiğimiz diğer hizmetler
+              {ek(neighborhood.name, 'de')} verdiğimiz diğer hizmetler
             </h2>
             <div className="grid gap-3 sm:grid-cols-2">
               {services.slice(0, 6).map((service) => (

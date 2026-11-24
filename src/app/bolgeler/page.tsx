@@ -12,6 +12,7 @@ import {
   type District,
 } from '@/data/districts'
 import { pageMeta } from '@/lib/seo'
+import { stripMarkup } from '@/lib/richText'
 
 export const metadata: Metadata = pageMeta({
   title: 'Ankara Nakliyat Hizmet Bölgeleri | 25 İlçe ve Semtleri',
@@ -29,7 +30,7 @@ function DistrictCard({ district }: { district: District }) {
         </Link>
       </h3>
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        {district.intro[0].slice(0, 130)}…
+        {stripMarkup(district.intro[0]).slice(0, 130)}…
       </p>
       <ul className="mt-4 flex flex-wrap gap-1.5">
         {district.neighborhoods.slice(0, 5).map((n) => (

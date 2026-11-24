@@ -152,7 +152,10 @@ const pattern = new RegExp(
 
 const hrefByTerm = new Map(allTerms.map((t) => [t.term.toLocaleLowerCase('tr'), t.href]))
 
-export type Linker = (text: string) => ReactNode
+export type Linker = ((text: string) => ReactNode) & {
+  /** Elle verilen bir linkin hedefini kullanılmış say; otomatik linkleme tekrar etmesin. */
+  use: (href: string) => void
+}
 
 /**
  * Bir sayfa için linkleyici üretir. Dönen fonksiyon aynı sayfadaki tüm
@@ -165,7 +168,7 @@ export function createLinker(currentPath: string, maxLinks = 8): Linker {
   const used = new Set<string>([currentPath])
   let count = 0
 
-  return function linkify(text: string): ReactNode {
+  function linkify(text: string): ReactNode {
     if (count >= maxLinks) return text
 
     const parts: ReactNode[] = []
@@ -200,4 +203,13 @@ export function createLinker(currentPath: string, maxLinks = 8): Linker {
     parts.push(text.slice(lastIndex))
     return parts
   }
+
+  return Object.assign(linkify, {
+    use(href: string) {
+      if (!used.has(href)) {
+        used.add(href)
+        count += 1
+      }
+    },
+  })
 }

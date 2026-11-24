@@ -13,7 +13,7 @@ export const beypazari: District = {
   zone: 'cevre',
   lat: 40.167,
   lon: 31.921,
-  metaTitle: 'Beypazarı Evden Eve Nakliyat | Ankara Beypazarı Taşıma',
+  metaTitle: 'Beypazarı Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Beypazarı evden eve nakliyat: tarihi konaklar ve dar sokaklar için özel planlama, asansörlü ve sigortalı taşıma. Ankara Beypazarı arası aynı gün teslim.',
   intro: [
@@ -89,7 +89,7 @@ export const nallihan: District = {
   zone: 'cevre',
   lat: 40.186,
   lon: 31.349,
-  metaTitle: 'Nallıhan Evden Eve Nakliyat | Ankara Nallıhan Taşıma',
+  metaTitle: 'Nallıhan Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Nallıhan evden eve nakliyat: Ankara’nın en batı ilçesine sigortalı, ambalajlı ve planlı taşıma. Ücretsiz keşif, sabit fiyat, aynı gün teslim.',
   intro: [
@@ -149,7 +149,7 @@ export const ayas: District = {
   zone: 'cevre',
   lat: 40.018,
   lon: 32.334,
-  metaTitle: 'Ayaş Evden Eve Nakliyat | Ankara Ayaş Taşıma Firması',
+  metaTitle: 'Ayaş Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Ayaş evden eve nakliyat: Ankara Ayaş arası asansörlü, ambalajlı ve sigortalı taşıma. Dar sokaklarda aktarmalı çözüm, ücretsiz keşif ve sabit fiyat.',
   intro: [
@@ -209,7 +209,7 @@ export const bala: District = {
   zone: 'cevre',
   lat: 39.556,
   lon: 33.122,
-  metaTitle: 'Balâ Evden Eve Nakliyat | Ankara Balâ Taşıma',
+  metaTitle: 'Balâ Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Balâ evden eve nakliyat: Ankara Balâ arası sigortalı ve ambalajlı taşıma, ücretsiz keşif, sabit fiyat ve aynı gün kurulum.',
   intro: [
@@ -269,7 +269,7 @@ export const sereflikochisar: District = {
   zone: 'cevre',
   lat: 38.938,
   lon: 33.542,
-  metaTitle: 'Şereflikoçhisar Evden Eve Nakliyat | Ankara Taşıma',
+  metaTitle: 'Şereflikoçhisar Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Şereflikoçhisar evden eve nakliyat: Ankara’nın güneydoğusuna sigortalı, ambalajlı ve planlı taşıma. Ücretsiz keşif, sabit fiyat, tek seferde teslim.',
   intro: [
@@ -329,7 +329,7 @@ export const haymana: District = {
   zone: 'cevre',
   lat: 39.433,
   lon: 32.497,
-  metaTitle: 'Haymana Evden Eve Nakliyat | Ankara Haymana Taşıma',
+  metaTitle: 'Haymana Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Haymana evden eve nakliyat: Ankara Haymana arası asansörlü, ambalajlı ve sigortalı taşıma. Ücretsiz keşif, sabit fiyat, aynı gün teslim.',
   intro: [
@@ -389,7 +389,7 @@ export const kizilcahamam: District = {
   zone: 'cevre',
   lat: 40.469,
   lon: 32.646,
-  metaTitle: 'Kızılcahamam Evden Eve Nakliyat | Ankara Kızılcahamam Taşıma',
+  metaTitle: 'Kızılcahamam Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Kızılcahamam evden eve nakliyat: villa ve yazlık taşımalarında tecrübeli ekip, asansörlü ve sigortalı taşıma, ücretsiz keşif ve sabit fiyat.',
   intro: [
@@ -463,7 +463,7 @@ export const gudul: District = {
   zone: 'cevre',
   lat: 40.213,
   lon: 32.245,
-  metaTitle: 'Güdül Evden Eve Nakliyat | Ankara Güdül Taşıma',
+  metaTitle: 'Güdül Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Güdül evden eve nakliyat: Ankara Güdül arası ambalajlı, sigortalı ve planlı taşıma. Dar sokaklarda aktarmalı çözüm, ücretsiz keşif.',
   intro: [
@@ -523,7 +523,7 @@ export const camlidere: District = {
   zone: 'cevre',
   lat: 40.489,
   lon: 32.474,
-  metaTitle: 'Çamlıdere Evden Eve Nakliyat | Ankara Çamlıdere Taşıma',
+  metaTitle: 'Çamlıdere Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Çamlıdere evden eve nakliyat: dağ evi ve yazlık taşımalarında tecrübeli ekip, ambalajlı ve sigortalı taşıma, ücretsiz keşif ve sabit fiyat.',
   intro: [
@@ -583,7 +583,7 @@ export const kalecik: District = {
   zone: 'cevre',
   lat: 40.097,
   lon: 33.409,
-  metaTitle: 'Kalecik Evden Eve Nakliyat | Ankara Kalecik Taşıma',
+  metaTitle: 'Kalecik Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Kalecik evden eve nakliyat: Ankara Kalecik arası asansörlü, ambalajlı ve sigortalı taşıma. Ücretsiz keşif, sabit fiyat ve aynı gün teslim.',
   intro: [
@@ -643,7 +643,7 @@ export const evren: District = {
   zone: 'cevre',
   lat: 39.023,
   lon: 33.805,
-  metaTitle: 'Evren Evden Eve Nakliyat | Ankara Evren Taşıma',
+  metaTitle: 'Evren Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Evren evden eve nakliyat: Ankara’nın en küçük ilçesine sigortalı, ambalajlı ve tek seferde taşıma. Ücretsiz keşif ve sabit fiyat.',
   intro: [

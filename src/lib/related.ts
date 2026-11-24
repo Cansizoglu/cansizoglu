@@ -2,6 +2,7 @@ import type { RelatedLink } from '@/components/RelatedLinks'
 import { services } from '@/data/services'
 import { posts } from '@/data/blog'
 import { districts, type District } from '@/data/districts'
+import { stripMarkup } from '@/lib/richText'
 
 /** Her hizmet için konuyla gerçekten ilgili blog yazısı eşleşmesi. */
 const serviceToPost: Record<string, string> = {
@@ -65,7 +66,7 @@ export function relatedForDistrict(district: District): RelatedLink[] {
     .map<RelatedLink>((d) => ({
       href: `/bolgeler/${d.path}`,
       title: `${d.name} Evden Eve Nakliyat`,
-      text: d.intro[0].slice(0, 95) + '…',
+      text: stripMarkup(d.intro[0]).slice(0, 95) + '…',
     }))
 
   return compact(

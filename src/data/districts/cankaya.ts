@@ -7,7 +7,7 @@ export const cankaya: District = {
   zone: 'merkez',
   lat: 39.9,
   lon: 32.855,
-  metaTitle: 'Çankaya Evden Eve Nakliyat | Ankara Çankaya Taşıma',
+  metaTitle: 'Çankaya Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Çankaya evden eve nakliyat: Kızılay, Bahçelievler, Çukurambar, Çayyolu ve tüm Çankaya semtlerinde asansörlü, ambalajlı ve sigortalı taşımacılık.',
   intro: [

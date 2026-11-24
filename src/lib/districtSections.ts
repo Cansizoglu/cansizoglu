@@ -1,4 +1,5 @@
 import type { District } from '@/data/districts'
+import { ek } from '@/lib/tr'
 
 export type DistrictSection = {
   id: string
@@ -51,8 +52,8 @@ export function districtSections(district: District): DistrictSection[] {
       id: 'evden-eve-nakliyat',
       heading: `${d} Evden Eve Nakliyat`,
       paragraphs: [
-        `${d} evden eve nakliyat hizmetimiz, eşyanıza ilk dokunulduğu andan yeni evinizde son vida sıkılana kadar tek ekiple yürür. Taşımadan önce adresinize gelip ücretsiz keşif yapıyor, eşya listesini çıkarıyor ve fiyatı yazılı olarak veriyoruz. Keşifte binanın kat durumu, merdiven genişliği ve aracın yanaşacağı alan yerinde görülür; böylece taşıma gününde plan dışı bir durumla karşılaşılmaz.`,
-        `Taşıma günü mobilyalar marangoz ekibimizce sökülür, kırılacak eşya balonlu naylonla, mobilya streç filmle ambalajlanır. Yükleme kapalı kasa araçlara yapılır ve eşya araç içinde sabitlenir. Yeni adreste montaj ve yerleşim aynı gün tamamlanır. ${ilkUc} başta olmak üzere ${d}'nin ${semtSayisi} semtinde bu hizmeti veriyoruz.`,
+        `**${d} evden eve nakliyat** hizmetimiz, eşyanıza ilk dokunulduğu andan yeni evinizde son vida sıkılana kadar tek ekiple yürür. Taşımadan önce adresinize gelip ücretsiz keşif yapıyor, eşya listesini çıkarıyor ve fiyatı yazılı olarak veriyoruz. Keşifte binanın kat durumu, merdiven genişliği ve aracın yanaşacağı alan yerinde görülür; böylece taşıma gününde plan dışı bir durumla karşılaşılmaz.`,
+        `Taşıma günü mobilyaları kendi marangoz ekibimizle **söküyor**, kırılacak eşyayı balonlu naylonla, mobilyayı streç filmle **ambalajlıyoruz**. Yükleme kapalı kasa araçlara yapılır ve eşya araç içinde sabitlenir. Yeni adreste **montajı** ve yerleşimi aynı gün tamamlıyoruz. ${ilkUc} başta olmak üzere ${ek(d, 'nin')} ${semtSayisi} semtinde bu hizmeti veriyoruz.`,
       ],
       points: [
         'Ücretsiz keşif ve değişmeyen yazılı fiyat',
@@ -63,10 +64,10 @@ export function districtSections(district: District): DistrictSection[] {
     },
     {
       id: 'asansorlu-nakliyat',
-      heading: `${d} Asansörlü Nakliyat`,
+      heading: `${d} Asansörlü Taşımacılık`,
       serviceSlug: 'ankara-asansorlu-nakliyat',
       paragraphs: [
-        `${d}'de yaptığımız taşımaların önemli bölümü mobil taşıma asansörüyle yapılıyor. Dar merdiven boşluklarında gardırop, koltuk ve beyaz eşya dönmediği için eşyayı merdivenden indirmek hem zaman kaybı hem de hasar riskidir. Asansör, eşyayı balkondan veya geniş pencereden doğrudan araca indirir; duvar, korkuluk ve mobilya zarar görmez.`,
+        `${ek(d, 'de')} yaptığımız taşımaların önemli bölümü mobil taşıma asansörüyle yapılıyor. Dar merdiven boşluklarında gardırop, koltuk ve beyaz eşya dönmediği için eşyayı merdivenden indirmek hem zaman kaybı hem de hasar riskidir. Asansör, eşyayı balkondan veya geniş pencereden doğrudan araca indirir; duvar, korkuluk ve mobilya zarar görmez.`,
         `Asansör araçlarımız firmamıza ait olduğu için ${d} taşımalarında asansör ekiple aynı saatte adreste olur, dışarıdan asansör bekleme sorunu yaşanmaz. Asansörü yalnızca eğitimli operatörlerimiz kullanır ve kurulum öncesi zemin eğimi, ağaç dalları ve elektrik hatları kontrol edilir.`,
         ...(asansorNotu ? [asansorNotu] : []),
       ],
@@ -82,7 +83,7 @@ export function districtSections(district: District): DistrictSection[] {
       heading: `${d} Ofis Taşıma`,
       serviceSlug: 'ankara-ofis-tasima',
       paragraphs: [
-        `${d}'deki ofis ve iş yeri taşımalarını mesai dışında planlıyoruz. Amaç, iş gününüzün bölünmemesidir; bu yüzden taşımaların çoğunu cuma akşamı başlatıp pazartesi sabahına yetiştirecek şekilde kuruyoruz. Her masa, dolap ve arşiv kutusu numaralandırılır, yeni ofiste aynı numaraya göre yerleşim yapılır.`,
+        `${ek(d, 'deki')} ofis ve iş yeri taşımalarını mesai dışında planlıyoruz. Amaç, iş gününüzün bölünmemesidir; bu yüzden taşımaların çoğunu cuma akşamı başlatıp pazartesi sabahına yetiştirecek şekilde kuruyoruz. Her masa, dolap ve arşiv kutusu numaralandırılır, yeni ofiste aynı numaraya göre yerleşim yapılır.`,
         `Sunucu, ağ dolabı ve hassas cihazlar darbe emici ambalajla ayrı taşınır. Evrak ve arşiv kutuları kapalı ve mühürlü olarak nakledilir. ${d} içindeki iş yeri taşımalarında kurumsal fatura kesiyor ve sözleşmeli çalışıyoruz.`,
         ...(isYeriNotu ? [isYeriNotu] : []),
       ],
@@ -110,11 +111,11 @@ export function districtSections(district: District): DistrictSection[] {
     },
     {
       id: 'parca-esya-tasima',
-      heading: `${d} Parça Eşya Taşıma`,
+      heading: `${d} Parça Eşya Taşıma ve Küçük Nakliye`,
       serviceSlug: 'parca-esya-tasima',
       paragraphs: [
         `Her taşınma bir ev dolusu eşya olmuyor. ${d} içinde tek koltuk, buzdolabı, çamaşır makinesi, birkaç koli ya da bir odalık eşya taşıtmak isteyenler için parça eşya taşıma yapıyoruz. Bu işler için kamyon yerine küçük nakliye aracı veya panelvan gönderiyoruz; ödediğiniz ücret de tam taşıma fiyatı değil, kapladığı hacim kadar oluyor.`,
-        `Öğrenci evi kurulumu, ikinci el mobilya teslimi, tek parça beyaz eşya nakliyesi ve depoya birkaç kutu kaldırma ${d}'de en çok gelen parça eşya taleplerimiz. Yüksek kata çıkacak tek bir eşya varsa mobil asansörümüzü aynı işe yönlendirebiliyoruz.`,
+        `Öğrenci evi kurulumu, ikinci el mobilya teslimi, tek parça beyaz eşya nakliyesi ve depoya birkaç kutu kaldırma ${ek(d, 'de')} en çok gelen parça eşya taleplerimiz. Yüksek kata çıkacak tek bir eşya varsa mobil asansörümüzü aynı işe yönlendirebiliyoruz.`,
         ...(darSokakNotu ? [darSokakNotu] : []),
       ],
       points: [
@@ -129,7 +130,7 @@ export function districtSections(district: District): DistrictSection[] {
       heading: `${d} Eşya Depolama`,
       serviceSlug: 'esya-depolama',
       paragraphs: [
-        `Yeni ev hazır olmadığında ya da tadilat uzadığında eşyanın bekleyeceği bir yer gerekiyor. ${d}'deki taşımalarda eşyanızı depomuza alıyor, listeleyip etiketliyor ve siz hazır olduğunuzda aynı ekiple yeni adrese taşıyoruz. Depoya giren her parça listeye işlendiği için çıkarken eşya aranmıyor.`,
+        `Yeni ev hazır olmadığında ya da tadilat uzadığında eşyanın bekleyeceği bir yer gerekiyor. ${ek(d, 'deki')} taşımalarda eşyanızı depomuza alıyor, listeleyip etiketliyor ve siz hazır olduğunuzda aynı ekiple yeni adrese taşıyoruz. Depoya giren her parça listeye işlendiği için çıkarken eşya aranmıyor.`,
         `Depolama süresi bir hafta da olabilir, bir yıl da. Kısa süreli depolamada eşya paletlenip ambalajlı bekler; uzun süreli depolamada mobilya ayrıca örtülür ve nem kontrolü yapılır. ${d} içindeki taşımalarda depoya giriş ve depodan çıkış nakliyesini tek sözleşmede birleştiriyoruz.`,
       ],
       points: [
@@ -144,7 +145,7 @@ export function districtSections(district: District): DistrictSection[] {
       heading: `${d} Nakliyeci Seçerken Nelere Bakmalı`,
       paragraphs: [
         `${d} nakliyat firmaları arasından seçim yaparken bakılacak ilk şey, işi yapacak olanın firmanın kendi ekibi mi yoksa taşeron mu olduğudur. Telefonda fiyat verip taşımayı başkasına devreden bir nakliyeci, taşıma günü çıkan sorunun muhatabı olmaz. Kendi aracı, kendi asansörü ve kendi kadrosu olan bir firmada bu sorun yaşanmaz.`,
-        `İkinci bakılacak şey fiyatın neyi kapsadığıdır. Ambalaj malzemesi, paketleme işçiliği, söküm ve montaj ile sigorta ayrı kalem olarak eklenirse, ilk duyduğunuz düşük fiyat taşıma günü ikiye katlanabilir. Üçüncüsü de açık adres ve yazılı sözleşmedir: ${d}'de ve Ankara genelinde çalışan firmaların bir kısmı yalnızca cep telefonu numarasıyla iş alıyor.`,
+        `İkinci bakılacak şey fiyatın neyi kapsadığıdır. Ambalaj malzemesi, paketleme işçiliği, söküm ve montaj ile sigorta ayrı kalem olarak eklenirse, ilk duyduğunuz düşük fiyat taşıma günü ikiye katlanabilir. Üçüncüsü de açık adres ve yazılı sözleşmedir: ${ek(d, 'de')} ve Ankara genelinde çalışan firmaların bir kısmı yalnızca cep telefonu numarasıyla iş alıyor.`,
       ],
       points: [
         'Taşeron değil, firmanın kendi ekibi',
@@ -201,7 +202,7 @@ export function neighborhoodSections(
     ? district.highlights[Math.max(index, 0) % district.highlights.length]
     : undefined
   const caddeler = neighborhood.streets?.length
-    ? ` ${s}'de en çok ${neighborhood.streets.join(', ')} çevresindeki adreslerden taşıma alıyoruz.`
+    ? ` ${ek(s, 'de')} en çok ${neighborhood.streets.join(', ')} çevresindeki adreslerden taşıma alıyoruz.`
     : ''
 
   return [
@@ -221,10 +222,10 @@ export function neighborhoodSections(
     },
     {
       id: 'asansorlu-nakliyat',
-      heading: `${s} Asansörlü Nakliyat`,
+      heading: `${s} Asansörlü Taşımacılık`,
       serviceSlug: 'ankara-asansorlu-nakliyat',
       paragraphs: [
-        `${s}'de asansörsüz veya dar merdivenli binalarda taşımayı mobil asansörle yapıyoruz. Eşya balkondan ya da geniş pencereden doğrudan araca iner; merdivende taşıma sırasında oluşabilecek çizik ve darbe riski ortadan kalkar. Asansör araçları firmamıza ait olduğu için taşıma saatinde hazır olur.`,
+        `${ek(s, 'de')} asansörsüz veya dar merdivenli binalarda taşımayı mobil asansörle yapıyoruz. Eşya balkondan ya da geniş pencereden doğrudan araca iner; merdivende taşıma sırasında oluşabilecek çizik ve darbe riski ortadan kalkar. Asansör araçları firmamıza ait olduğu için taşıma saatinde hazır olur.`,
         ...(ikinciNot ? [`${s} için ikinci saha notumuz: ${ikinciNot}`] : []),
       ],
       points: [

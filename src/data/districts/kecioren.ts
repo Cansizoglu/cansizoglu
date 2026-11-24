@@ -7,7 +7,7 @@ export const kecioren: District = {
   zone: 'merkez',
   lat: 39.985,
   lon: 32.865,
-  metaTitle: 'Keçiören Evden Eve Nakliyat | Asansörlü ve Sigortalı Taşıma',
+  metaTitle: 'Keçiören Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Keçiören evden eve nakliyat: Etlik, Kalaba, Aşağı Eğlence ve tüm Keçiören semtlerinde asansörlü, ambalajlı ve sigortalı taşıma. Ücretsiz keşif.',
   intro: [

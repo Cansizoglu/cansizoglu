@@ -16,6 +16,8 @@ import { createLinker } from '@/lib/autolink'
 import RelatedLinks from '@/components/RelatedLinks'
 import { relatedForDistrict } from '@/lib/related'
 import { pageMeta, serviceJsonLd } from '@/lib/seo'
+import { ek } from '@/lib/tr'
+import { richText } from '@/lib/richText'
 
 type Props = { params: { ilce: string } }
 
@@ -47,11 +49,11 @@ export default function DistrictPage({ params }: Props) {
       a: `${district.name} içinde yapılan taşımalarda fiyat; eşya miktarı, kat durumu, asansör ihtiyacı ve adresler arası mesafeye göre belirlenir. Ücretsiz keşif sonrası yazılı ve değişmeyen fiyat veriyoruz.`,
     },
     {
-      q: `${district.name}'de asansörlü taşıma yapıyor musunuz?`,
+      q: `${ek(district.name, 'de')} asansörlü taşıma yapıyor musunuz?`,
       a: `Evet. Kendi asansör araçlarımızla çalışıyoruz, bu yüzden ${district.name} taşımalarında asansör ekiple aynı saatte adreste oluyor.`,
     },
     {
-      q: `${district.name}'de aynı gün taşıma mümkün mü?`,
+      q: `${ek(district.name, 'de')} aynı gün taşıma mümkün mü?`,
       a: 'Program müsaitse aynı gün taşıma yapıyoruz. Yoğun dönemlerde tarihi birkaç gün önceden ayırtmanızı öneriyoruz.',
     },
   ]
@@ -73,6 +75,9 @@ export default function DistrictPage({ params }: Props) {
           </p>
           <h1 className="text-3xl text-white sm:text-4xl">
             {district.name} Evden Eve Nakliyat
+            <span className="mt-1 block text-2xl text-brand-100 sm:text-3xl">
+              Asansörlü Taşımacılık
+            </span>
           </h1>
           <p className="mt-4 text-lg leading-8 text-brand-100">
             {district.name} ve çevresinde asansörlü, ambalajlı ve sigortalı taşımacılık.
@@ -99,7 +104,9 @@ export default function DistrictPage({ params }: Props) {
           <div>
             <div className="prose-tr max-w-none">
               {district.intro.map((paragraph) => (
-                <p key={paragraph.slice(0, 30)}>{linkify(paragraph)}</p>
+                <p key={paragraph.slice(0, 30)}>
+                  {richText(paragraph, linkify, { semtBase: `/bolgeler/${district.path}` })}
+                </p>
               ))}
             </div>
 
@@ -123,7 +130,7 @@ export default function DistrictPage({ params }: Props) {
             </nav>
 
             <h2 className="mb-5 mt-10 text-2xl">
-              {district.name}&apos;de taşımayı nasıl planlıyoruz?
+              {ek(district.name, 'de')} taşımayı nasıl planlıyoruz?
             </h2>
             <div className="grid gap-4 sm:grid-cols-3">
               {district.highlights.map((item) => (
@@ -184,7 +191,7 @@ export default function DistrictPage({ params }: Props) {
                   <div className="space-y-4">
                     {section.paragraphs.map((paragraph) => (
                       <p key={paragraph.slice(0, 24)} className="leading-8 text-slate-700">
-                        {linkify(paragraph)}
+                        {richText(paragraph, linkify)}
                       </p>
                     ))}
                   </div>
@@ -220,7 +227,7 @@ export default function DistrictPage({ params }: Props) {
             </div>
 
             <h2 className="mb-4 mt-12 text-2xl">
-              {district.name}&apos;de hizmet verdiğimiz semtler
+              {ek(district.name, 'de')} hizmet verdiğimiz semtler
             </h2>
             <p className="mb-5 leading-7 text-slate-700">
               {district.name} ilçesinin tüm mahallelerinde taşıma yapıyoruz. Aşağıdaki
@@ -246,7 +253,7 @@ export default function DistrictPage({ params }: Props) {
             </div>
 
             <h2 className="mb-4 mt-12 text-2xl">
-              {district.name}&apos;de verdiğimiz özel taşıma hizmetleri
+              {ek(district.name, 'de')} verdiğimiz özel taşıma hizmetleri
             </h2>
             <p className="mb-4 leading-8 text-slate-700">
               Ev, ofis ve asansörlü taşımanın yanında {district.name} içinde piyano,

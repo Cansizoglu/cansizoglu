@@ -7,7 +7,7 @@ export const yenimahalle: District = {
   zone: 'merkez',
   lat: 39.965,
   lon: 32.76,
-  metaTitle: 'Yenimahalle Evden Eve Nakliyat | Batıkent ve Demetevler Taşıma',
+  metaTitle: 'Yenimahalle Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Yenimahalle evden eve nakliyat: Batıkent, Demetevler, Ostim, İvedik ve çevresinde asansörlü, ambalajlı ve sigortalı ev ve ofis taşıma hizmeti.',
   intro: [

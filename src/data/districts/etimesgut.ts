@@ -7,7 +7,7 @@ export const etimesgut: District = {
   zone: 'merkez',
   lat: 39.95,
   lon: 32.67,
-  metaTitle: 'Etimesgut Evden Eve Nakliyat | Eryaman ve Elvankent Taşıma',
+  metaTitle: 'Etimesgut Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Etimesgut evden eve nakliyat: Eryaman, Elvankent, Bağlıca ve çevresinde asansörlü, ambalajlı ve sigortalı ev ve ofis taşıma hizmeti.',
   intro: [

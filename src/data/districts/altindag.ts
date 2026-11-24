@@ -7,7 +7,7 @@ export const altindag: District = {
   zone: 'merkez',
   lat: 39.955,
   lon: 32.87,
-  metaTitle: 'Altındağ Evden Eve Nakliyat | Ulus ve Siteler Taşıma',
+  metaTitle: 'Altındağ Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Altındağ evden eve nakliyat: Ulus, Siteler, Hacettepe, Aydınlıkevler ve çevresinde asansörlü, ambalajlı ve sigortalı taşıma.',
   intro: [

@@ -7,7 +7,7 @@ export const mamak: District = {
   zone: 'merkez',
   lat: 39.93,
   lon: 32.93,
-  metaTitle: 'Mamak Evden Eve Nakliyat | Abidinpaşa ve Natoyolu Taşıma',
+  metaTitle: 'Mamak Evden Eve Nakliyat - Asansörlü Taşımacılık',
   metaDescription:
     'Mamak evden eve nakliyat: Abidinpaşa, Natoyolu, Kayaş ve çevresinde asansörlü, ambalajlı ve sigortalı ev taşıma hizmeti. Ücretsiz keşif.',
   intro: [
